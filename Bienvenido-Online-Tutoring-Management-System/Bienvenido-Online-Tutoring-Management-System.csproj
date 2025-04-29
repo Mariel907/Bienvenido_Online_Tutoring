@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5102DC09-CF99-4FDF-8646-3BA93EA809C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bienvenido_Online_Tutoring_Management_System</RootNamespace>
+    <AssemblyName>Bienvenido-Online-Tutoring-Management-System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\CAutoIncrementID.cs" />
+    <Compile Include="Class\CFSubjects.cs" />
+    <Compile Include="Class\CSchedule.cs" />
+    <Compile Include="Class\CStudents.cs" />
+    <Compile Include="Class\CTutor.cs" />
+    <Compile Include="Class\CTutorProfile.cs" />
+    <Compile Include="Class\DataLoader.cs" />
+    <Compile Include="Class\FormManager.cs" />
+    <Compile Include="Class\Testing.cs" />
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\AddTutorProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\AddTutorProfile.Designer.cs">
+      <DependentUpon>AddTutorProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EditTutorProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EditTutorProfile.Designer.cs">
+      <DependentUpon>EditTutorProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFAddStudent.Designer.cs">
+      <DependentUpon>EFAddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFEditStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFEditStudents.Designer.cs">
+      <DependentUpon>EFEditStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFSChedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFSChedule.Designer.cs">
+      <DependentUpon>EFSChedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFSelectStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFSelectStudent.Designer.cs">
+      <DependentUpon>EFSelectStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDashboard.Designer.cs">
+      <DependentUpon>FDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPayments.Designer.cs">
+      <DependentUpon>FPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FStudents.Designer.cs">
+      <DependentUpon>FStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSubjects.Designer.cs">
+      <DependentUpon>FSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FTransaction.Designer.cs">
+      <DependentUpon>FTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FTutorProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FTutorProfile.Designer.cs">
+      <DependentUpon>FTutorProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Slots.cs" />
+    <Compile Include="Model\GlobalConnection.cs" />
+    <Compile Include="Model\MSession.cs" />
+    <Compile Include="Model\MStudent.cs" />
+    <Compile Include="Model\MSubjects.cs" />
+    <Compile Include="Model\MTutorProfile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\AddTutorProfile.resx">
+      <DependentUpon>AddTutorProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EditTutorProfile.resx">
+      <DependentUpon>EditTutorProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFAddStudent.resx">
+      <DependentUpon>EFAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFEditStudents.resx">
+      <DependentUpon>EFEditStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFSChedule.resx">
+      <DependentUpon>EFSChedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFSelectStudent.resx">
+      <DependentUpon>EFSelectStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDashboard.resx">
+      <DependentUpon>FDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPayments.resx">
+      <DependentUpon>FPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FStudents.resx">
+      <DependentUpon>FStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSubjects.resx">
+      <DependentUpon>FSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FTransaction.resx">
+      <DependentUpon>FTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FTutorProfile.resx">
+      <DependentUpon>FTutorProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bienvenido_Online_Tutoring_Management_System.Model.MStudent.datasource" />
+    <None Include="Properties\DataSources\Bienvenido_Online_Tutoring_Management_System.Model.MSubjects.datasource" />
+    <None Include="Properties\DataSources\Bienvenido_Online_Tutoring_Management_System.Model.MTutorProfile.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment_Bien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transaction_Bien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tutor_Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard_Bien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subjects_Bien.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
