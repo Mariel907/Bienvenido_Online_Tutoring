@@ -29,5 +29,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             EFSelectStudent select = new EFSelectStudent(_dashboard);
             _FormManager.OpenForm(select, _dashboard.Panel);
         }
+
+        private void DGVStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             
+        }
+
+        private void FTransaction_Load(object sender, EventArgs e)
+        {
+            DGVScheduled.DataSource = CSchedule.Scheduled();
+        }
     }
 }

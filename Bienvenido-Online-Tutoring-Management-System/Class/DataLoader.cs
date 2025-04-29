@@ -72,7 +72,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             }
         }
 
-        public static List<T> ExecuteStoredProcedure<T>(string storeProcedureName, Dictionary<string, object> parameters, Func<SqlDataReader, T> mapFunction)
+        public static List<T> ExecuteStoredProcedure<T>(string storeProcedureName, Dictionary<string, object> parameters = null, Func<SqlDataReader, T> mapFunction = null)
         {
             List<T> result = new List<T>();
             using (SqlConnection con = new SqlConnection(GlobalConnection.Connection))
@@ -81,11 +81,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 using (SqlCommand cmd = new SqlCommand(storeProcedureName, con))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
+                    if(parameters != null)
                     foreach (var parameter in parameters)
                     {
                         cmd.Parameters.AddWithValue(parameter.Key, parameter.Value ?? DBNull.Value);
                     }
+
+                    if (mapFunction != null)
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())

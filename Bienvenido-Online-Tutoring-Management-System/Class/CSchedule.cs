@@ -37,6 +37,24 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 DaysAvailable = reader["AvailableDay"].ToString(),
             });
         }
+
+        public static List<MSession> Scheduled()
+        {
+            return DataLoader.ExecuteStoredProcedure("Session_", null, reader => new MSession
+            {
+                StudentID = int.Parse(reader["StudentID"].ToString()),
+                TutorID = int.Parse(reader["TutorID"].ToString()),
+                SessionID = int.Parse(reader["SessionID"].ToString()),
+                TutorFullname = reader["TutorName"].ToString(),
+                StudFullname = reader["StudName"].ToString(),
+                Subject = reader["Subject"].ToString(),
+                StartTime = Convert.ToDateTime(reader["StartTme"].ToString()).TimeOfDay,
+                EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
+                SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
+                HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
+                TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString())
+            });
+        }
         public static Dictionary<DateTime, List<TimeSpan>> GetTimeslotsByDate(string TutorID, string Day)
         {
             Slots slots = new Slots { GroupedTimeslots = new Dictionary<DateTime, List<TimeSpan>>() };
@@ -46,12 +64,11 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new Dictionary<string, object>
                 {
             { "Action", Day },
-            { "TutorID", TutorID },
-                    {"SlotInterval", }
+            { "TutorID", TutorID }
                 },
                 reader =>
                 {
-                    string timeSlotsAvailable = reader["TimeSlotsAvailable"]?.ToString() ?? string.Empty;
+                    string timeSlotsAvailable = reader["TimeSlot"]?.ToString() ?? string.Empty;
                     if (!string.IsNullOrEmpty(timeSlotsAvailable))
                     {
                         if (DateTime.TryParse(reader["NextTargetDate"]?.ToString(), out DateTime dateSlot))
@@ -90,7 +107,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             Label = "P" + totalAmount.ToString("N2");
         }
 
-        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date)
+        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date, decimal totalAmount)
         {
             int SessionID = CAutoIncrementID.NextSessionID();
             SqlParameter[] sp = new SqlParameter[]
@@ -102,23 +119,57 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("StartTime",SDate),
                 new SqlParameter("EndTime", EDate),
                 new SqlParameter("Action", "AddSchedule"),
+                new SqlParameter("TotalAmount", totalAmount),
+                new SqlParameter("Subject", sub.SubjectName)
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
 
-        public void Void(MSession session)
+        public void Void(DataGridView DGV)
         {
+            DataGridViewRow row = DGV.SelectedRows[0];
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("SessionID", session.SessionID),
+                new SqlParameter("SessionID", row.Cells["SessionID"].Value),
                 new SqlParameter("Action", "Void")
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
-        
-        public void Validation()
-        {
 
+        public void SubtractCancel(DataGridView DGV, string label, ref string _UpdateLabel)
+        {
+            if(DGV.SelectedRows.Count > 0)
+            {
+                decimal TotalAmountToSubtract = 0;
+                foreach (DataGridViewRow row in DGV.SelectedRows)
+                {
+                    TotalAmountToSubtract += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
+                    DGV.Rows.RemoveAt(row.Index);
+                }
+                decimal GrandTotal = Convert.ToDecimal(label.Replace("P", "").ToString());
+
+                GrandTotal -= TotalAmountToSubtract;
+                _UpdateLabel = "P" + GrandTotal.ToString("N2");
+            }
+        }
+
+        public void CalculateChange(decimal totalAmount, decimal Cash, ref string Change)
+        {
+            decimal cashGiven = Cash;
+            decimal change = cashGiven - totalAmount;
+            Change = change.ToString("N2");
+        }
+        public void Validation(MSession session)
+        {
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("Action", "Validation"),
+                new SqlParameter("StartTime", session.StartTime),
+                new SqlParameter("EndTime", session.EndTime),
+                new SqlParameter("SessionDate", session.SessionDate),
+                new SqlParameter("TutorID", session.TutorID)
+            };
+            _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
     }
 }

@@ -2,6 +2,8 @@
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -62,11 +64,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         }
 
-        private void G2NmrcUPDown_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void G2CmbxTutorName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (G2CmbxTutorName.SelectedValue != null)
@@ -91,11 +88,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
                 if (groupedSlots.TryGetValue(selectedDate, out List<TimeSpan> timeslots))
                 {
-                    G2CmbxAvailableTime.DataSource = timeslots;
-                    G2CmbxAvailableTime.DisplayMember = "ToString";
+                    G2CmbxStartTime.DataSource = new List<TimeSpan>(timeslots);
+                    G2CmbxStartTime.DisplayMember = "ToString";
+                    G2CmbxEndTime.DataSource = new List<TimeSpan>(timeslots);
+                    G2CmbxEndTime.DisplayMember = "ToString";
                 }
                 else
-                    G2CmbxAvailableTime.DataSource = null;
+                {
+                    G2CmbxStartTime.DataSource = null;
+                    G2CmbxEndTime.DataSource = null;
+                }
             }
             else
                 MessageBox.Show("Invalid date selected.", "An Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -105,12 +107,21 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             MSubjects sub = G2CmbxPreferredSubjects.SelectedItem as MSubjects;
             MTutorProfile tutor = G2CmbxTutorName.SelectedItem as MTutorProfile;
+            string Result = string.Empty;
             try
             {
-                int sessionID = CAutoIncrementID.NextSessionID();
+                ValidateStartAndEndTime();
+                validationSched();
+                TimeSpan STime = (TimeSpan) G2CmbxStartTime.SelectedValue;
+                TimeSpan ETime = (TimeSpan) G2CmbxEndTime.SelectedValue;
 
-                decimal totalHours = (decimal)(DTPEndTime.Value - DTPStartTime.Value).TotalHours;
-                decimal totalAmount = totalHours * tutor.HourlyRate;
+                DateTime selectedDate = Convert.ToDateTime(G2CmbxDateAvailable.SelectedItem);
+                DateTime Startdate = selectedDate.Add(STime);
+                DateTime EndTime = selectedDate.Add(ETime);
+
+                int sessionID = CAutoIncrementID.NextSessionID();
+                decimal totalHours = (decimal)(EndTime - Startdate).TotalHours;
+                decimal totalAmount = Math.Round(totalHours * tutor.HourlyRate, 2);
 
                 int rowIndex = DGVStudent.Rows.Add();
                 DataGridViewRow row = DGVStudent.Rows[rowIndex];
@@ -118,24 +129,47 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["TutorID"].Value = tutor.TutorID;
                 row.Cells["TutorName"].Value = tutor.Fullname;
                 row.Cells["Subject"].Value = sub.SubjectName;
-                row.Cells["StartTime"].Value = DTPStartTime.Value.TimeOfDay;
-                row.Cells["EndTime"].Value = DTPEndTime.Value.TimeOfDay;
+                row.Cells["StartTime"].Value = STime;
+                row.Cells["EndTime"].Value = ETime;
                 row.Cells["HourlyRate"].Value = tutor.HourlyRate;
                 row.Cells["TotalAmount"].Value = totalAmount;
                 row.Cells["SessionDate"].Value = G2CmbxDateAvailable.SelectedValue;
 
-                schedule.Insert(sub, tutor, LblStudentID.Text, DTPStartTime.Value, DTPEndTime.Value,G2CmbxDateAvailable.SelectedValue);
+                schedule.Insert(sub, tutor, LblStudentID.Text, STime, ETime, G2CmbxDateAvailable.SelectedValue, totalAmount);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Number == 16)
+                    Result = ex.Message;
+                else
+                    MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             string total = string.Empty;
             schedule.UpdateTotal(DGVStudent, ref total);
-            labelTotal.Text = total;
+            LblGrandTotal.Text = total;
 
             SlotsDateAvailable();
+        }
+        private void validationSched()
+        {
+            MSession session = new MSession();
+            session.StartTime = (TimeSpan) G2CmbxStartTime.SelectedValue;
+            session.EndTime = (TimeSpan) G2CmbxEndTime.SelectedValue;
+            session.SessionDate = Convert.ToDateTime(G2CmbxDateAvailable.SelectedValue);
+            session.TutorID = Convert.ToInt32(LblTutorID.Text);
+            schedule.Validation(session);
+        }
+        private void ValidateStartAndEndTime()
+        {
+            TimeSpan STime = (TimeSpan)G2CmbxStartTime.SelectedValue;
+            TimeSpan ETime = (TimeSpan)G2CmbxEndTime.SelectedValue;
+
+            if (STime == ETime)
+            {
+                MessageBox.Show("StartTime and EndTime must not be equal", "An erro occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void G2CmbxPreferredSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,24 +177,70 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             TutorExprtise();
         }
 
-        private void G2TxbxFullname_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void LblStudentID_TextChanged(object sender, EventArgs e)
-        {
-        }
-
         private void G2BtnVoid_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = DGVStudent.SelectedRows[0];
-            MSession session = new MSession();
-            session.SessionID = Convert.ToInt32(selectedRow.Cells["SessionID"].Value.ToString());
+            schedule.Void(DGVStudent);
 
-            schedule.Void(session);
+            string GrandTotal = LblGrandTotal.Text;
+            string UpdateGrandTotal = string.Empty;
+            schedule.SubtractCancel(DGVStudent, GrandTotal, ref UpdateGrandTotal );
+
+            LblGrandTotal.Text = UpdateGrandTotal;
+
+            SlotsDateAvailable();
         }
 
-        private void DTPStartTime_ValueChanged(object sender, EventArgs e)
+        private void guna2TextBoxCash_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+        private bool IsSufficientCash()
+        {
+            decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+            decimal TotalAmount = Convert.ToDecimal(LblGrandTotal.Text.Replace("P", "").Trim());
+
+            if (cash < TotalAmount)
+            {
+                MessageBox.Show("Insufficient cash amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
+        }
+
+        private void guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode != Keys.Enter) return;
+                if (IsSufficientCash()) return;
+
+                decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+                decimal TotalAmount = Convert.ToDecimal(LblGrandTotal.Text.Replace("P", "").Trim());
+                string change = string.Empty;
+
+                schedule.CalculateChange(TotalAmount, cash, ref change);
+                guna2TextBoxCash.Text = cash.ToString("N2");
+                guna2TextBoxChange.Text = change;
+                e.SuppressKeyPress = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void G2BtnGenerateSchedule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2CmbxAvailableTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void G2CmbxStartTime_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
