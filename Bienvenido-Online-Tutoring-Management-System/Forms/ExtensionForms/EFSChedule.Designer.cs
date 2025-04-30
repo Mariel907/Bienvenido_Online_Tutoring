@@ -38,16 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVStudent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.G2TxbxFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,6 +73,21 @@
             this.G2CmbxDateAvailable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.G2CmbxEndTime = new Guna.UI2.WinForms.Guna2ComboBox();
             this.G2CmbxStartTime = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudent)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -149,6 +154,11 @@
             this.DGVStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TutorName,
+            this.StatusBill,
+            this.Status,
+            this.StudentID,
+            this.InvoiceID,
+            this.TotalHours,
             this.TutorID,
             this.SessionID,
             this.Subject,
@@ -211,71 +221,6 @@
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStudent_CellContentClick);
-            // 
-            // TutorName
-            // 
-            this.TutorName.HeaderText = "Tutor Name";
-            this.TutorName.Name = "TutorName";
-            this.TutorName.ReadOnly = true;
-            // 
-            // TutorID
-            // 
-            this.TutorID.DataPropertyName = "TutorID";
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
-            // 
-            // SessionID
-            // 
-            this.SessionID.HeaderText = "SessionID";
-            this.SessionID.Name = "SessionID";
-            this.SessionID.ReadOnly = true;
-            this.SessionID.Visible = false;
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // StartTime
-            // 
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.HeaderText = "Subject ID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
-            // 
-            // SessionDate
-            // 
-            this.SessionDate.DataPropertyName = "SessionDate";
-            this.SessionDate.HeaderText = "Session Date";
-            this.SessionDate.Name = "SessionDate";
-            this.SessionDate.ReadOnly = true;
-            // 
-            // HourlyRate
-            // 
-            this.HourlyRate.HeaderText = "Hourly Rate";
-            this.HourlyRate.Name = "HourlyRate";
-            this.HourlyRate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.HeaderText = "Total Amount";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
             // 
             // label6
             // 
@@ -833,6 +778,107 @@
             this.G2CmbxStartTime.TabIndex = 638;
             this.G2CmbxStartTime.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStartTime_SelectedIndexChanged);
             // 
+            // TutorName
+            // 
+            this.TutorName.HeaderText = "Tutor Name";
+            this.TutorName.Name = "TutorName";
+            this.TutorName.ReadOnly = true;
+            // 
+            // StatusBill
+            // 
+            this.StatusBill.HeaderText = "StatusBill";
+            this.StatusBill.Name = "StatusBill";
+            this.StatusBill.ReadOnly = true;
+            this.StatusBill.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // StudentID
+            // 
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            this.StudentID.Visible = false;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            this.InvoiceID.Visible = false;
+            // 
+            // TotalHours
+            // 
+            this.TotalHours.HeaderText = "TotalHours";
+            this.TotalHours.Name = "TotalHours";
+            this.TotalHours.ReadOnly = true;
+            this.TotalHours.Visible = false;
+            // 
+            // TutorID
+            // 
+            this.TutorID.DataPropertyName = "TutorID";
+            this.TutorID.HeaderText = "TutorID";
+            this.TutorID.Name = "TutorID";
+            this.TutorID.ReadOnly = true;
+            this.TutorID.Visible = false;
+            // 
+            // SessionID
+            // 
+            this.SessionID.HeaderText = "SessionID";
+            this.SessionID.Name = "SessionID";
+            this.SessionID.ReadOnly = true;
+            this.SessionID.Visible = false;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "StartTime";
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.HeaderText = "Subject ID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
+            // 
+            // SessionDate
+            // 
+            this.SessionDate.DataPropertyName = "SessionDate";
+            this.SessionDate.HeaderText = "Session Date";
+            this.SessionDate.Name = "SessionDate";
+            this.SessionDate.ReadOnly = true;
+            // 
+            // HourlyRate
+            // 
+            this.HourlyRate.HeaderText = "Hourly Rate";
+            this.HourlyRate.Name = "HourlyRate";
+            this.HourlyRate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.HeaderText = "Total Amount";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
             // EFSChedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -930,7 +976,14 @@
         private Guna.UI2.WinForms.Guna2Button G2BtnGenerateSchedule;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxDateAvailable;
+        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxEndTime;
+        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
@@ -940,7 +993,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn HourlyRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
-        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxEndTime;
-        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStartTime;
     }
 }

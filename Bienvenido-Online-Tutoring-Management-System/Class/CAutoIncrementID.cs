@@ -18,6 +18,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         private static int AvailalbilityID;
         private static int StudentID;
         private static int SessionID;
+        private static int InvoiceID;
         private static int GetNextID(string storedProcedure, int defaultValue, ref int counter, string Action)
         {
             try
@@ -40,38 +41,44 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             return counter++;
         }
 
-        public static int SSubjectID() => GetNextID("NextID", 10000, ref SubjectID, "SubjectsID");
+        private static int SSubjectID() => GetNextID("NextID", 10000, ref SubjectID, "SubjectsID");
         public static int NextSubjectID()
         {
             SSubjectID();
             return SubjectID;
         }
 
-        public static int TTutor() => GetNextID("NextID", 1000, ref TutorID, "TutorsID");
+        private static int TTutor() => GetNextID("NextID", 1000, ref TutorID, "TutorsID");
         public static int NextTutorID()
         {
             TTutor();
             return TutorID;
         }
-        public static int AAvailability() => GetNextID("NextID", 100, ref AvailalbilityID, "TutorAvailability");
+        private static int AAvailability() => GetNextID("NextID", 100, ref AvailalbilityID, "TutorAvailability");
         public static int NextAvailability()
         {
             AAvailability();
             return AvailalbilityID;
         }
 
-        public static void SStudent() => GetNextID("NextID", 100000, ref StudentID, "Students");
+        private static void SStudent() => GetNextID("NextID", 100000, ref StudentID, "Students");
         public static int NextStudentID()
         {
             SStudent();
             return StudentID;
         }
 
-        public static void Session() => GetNextID("NextID", 1000000, ref SessionID, "Sessions");
+        private static void Session() => GetNextID("NextID", 1000000, ref SessionID, "Sessions");
         public static int NextSessionID()
         {
             Session();
             return SessionID;
+        }
+        private static int Invoices() => GetNextID("NextID", 100, ref InvoiceID, "Invoices");
+        public static int NextInvoiceID()
+        {
+            Invoices();
+            return InvoiceID;
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using Bienvenido_Online_Tutoring_Management_System.Model;
+﻿using Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms;
+using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
@@ -48,7 +48,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 TutorFullname = reader["TutorName"].ToString(),
                 StudFullname = reader["StudName"].ToString(),
                 Subject = reader["Subject"].ToString(),
-                StartTime = Convert.ToDateTime(reader["StartTme"].ToString()).TimeOfDay,
+                StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
                 EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
                 SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
                 HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
@@ -107,7 +107,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             Label = "P" + totalAmount.ToString("N2");
         }
 
-        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date, decimal totalAmount)
+        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date, decimal totalAmount, int InvoiceID)
         {
             int SessionID = CAutoIncrementID.NextSessionID();
             SqlParameter[] sp = new SqlParameter[]
@@ -120,7 +120,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("EndTime", EDate),
                 new SqlParameter("Action", "AddSchedule"),
                 new SqlParameter("TotalAmount", totalAmount),
-                new SqlParameter("Subject", sub.SubjectName)
+                new SqlParameter("Subject", sub.SubjectName),
+                new SqlParameter("InvoiceID", InvoiceID)
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
@@ -138,7 +139,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
 
         public void SubtractCancel(DataGridView DGV, string label, ref string _UpdateLabel)
         {
-            if(DGV.SelectedRows.Count > 0)
+            if (DGV.SelectedRows.Count > 0)
             {
                 decimal TotalAmountToSubtract = 0;
                 foreach (DataGridViewRow row in DGV.SelectedRows)
@@ -159,6 +160,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             decimal change = cashGiven - totalAmount;
             Change = change.ToString("N2");
         }
+
         public void Validation(MSession session)
         {
             SqlParameter[] sp = new SqlParameter[]
@@ -167,9 +169,48 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("StartTime", session.StartTime),
                 new SqlParameter("EndTime", session.EndTime),
                 new SqlParameter("SessionDate", session.SessionDate),
-                new SqlParameter("TutorID", session.TutorID)
+                new SqlParameter("TutorID", session.TutorID),
+                new SqlParameter("StudentID", session.StudentID)
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);
+        }
+
+        public void FillInInvoices(DataGridView DGV, MStudent stud)
+        {
+            var list = new List<MSession>();
+            foreach (DataGridViewRow row in DGV.Rows)
+            {
+                if ("Pending" == row.Cells["Status"].Value) continue;
+                var session = new MSession();
+
+                session.TutorFullname = row.Cells["TutorName"].Value.ToString();
+                session.Subject = row.Cells["Subject"].Value.ToString();
+                session.SessionDate = Convert.ToDateTime(row.Cells["SessionDate"].Value.ToString());
+                session.StartTime = Convert.ToDateTime(row.Cells["StartTime"].Value.ToString()).TimeOfDay;
+                session.EndTime = Convert.ToDateTime(row.Cells["EndTime"].Value.ToString()).TimeOfDay;
+                session.HourlyRate = Convert.ToDecimal(row.Cells["HourlyRate"].Value.ToString());
+                session.TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value.ToString());
+
+                list.Add(session);
+            }
+            RecieptSched rs = new RecieptSched(list, stud);
+            rs.ShowDialog();
+        }
+
+        public void PaidStatusBill(DataGridView DGV)
+        {
+            foreach (DataGridViewRow row in DGV.Rows)
+            {
+                int InvoiceID = CAutoIncrementID.NextInvoiceID();
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                  new SqlParameter("Action", "Paid"),
+                  new SqlParameter("InvoiceID", row.Cells["InvoiceID"].Value),
+                  new SqlParameter("SessionID", row.Cells["SessionID"].Value)
+                };
+
+                _loader.ExecuteData("Schedule_ShowAdd", sp);
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web.Management;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -110,7 +111,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             string Result = string.Empty;
             try
             {
-                ValidateStartAndEndTime();
+                if(ValidateStartAndEndTime()) return;
                 validationSched();
                 TimeSpan STime = (TimeSpan) G2CmbxStartTime.SelectedValue;
                 TimeSpan ETime = (TimeSpan) G2CmbxEndTime.SelectedValue;
@@ -120,6 +121,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 DateTime EndTime = selectedDate.Add(ETime);
 
                 int sessionID = CAutoIncrementID.NextSessionID();
+                int InvoiceID = CAutoIncrementID.NextInvoiceID();
                 decimal totalHours = (decimal)(EndTime - Startdate).TotalHours;
                 decimal totalAmount = Math.Round(totalHours * tutor.HourlyRate, 2);
 
@@ -134,8 +136,10 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["HourlyRate"].Value = tutor.HourlyRate;
                 row.Cells["TotalAmount"].Value = totalAmount;
                 row.Cells["SessionDate"].Value = G2CmbxDateAvailable.SelectedValue;
+                row.Cells["TotalHours"].Value = totalHours;
+                row.Cells["InvoiceID"].Value = InvoiceID;
 
-                schedule.Insert(sub, tutor, LblStudentID.Text, STime, ETime, G2CmbxDateAvailable.SelectedValue, totalAmount);
+                schedule.Insert(sub, tutor, LblStudentID.Text, STime, ETime, G2CmbxDateAvailable.SelectedValue, totalAmount, InvoiceID);
             }
             catch (SqlException ex)
             {
@@ -151,6 +155,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             SlotsDateAvailable();
         }
+        
         private void validationSched()
         {
             MSession session = new MSession();
@@ -158,18 +163,26 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             session.EndTime = (TimeSpan) G2CmbxEndTime.SelectedValue;
             session.SessionDate = Convert.ToDateTime(G2CmbxDateAvailable.SelectedValue);
             session.TutorID = Convert.ToInt32(LblTutorID.Text);
+            session.StudentID = Convert.ToInt32(LblStudentID.Text);
             schedule.Validation(session);
         }
-        private void ValidateStartAndEndTime()
+
+        private bool ValidateStartAndEndTime()
         {
             TimeSpan STime = (TimeSpan)G2CmbxStartTime.SelectedValue;
             TimeSpan ETime = (TimeSpan)G2CmbxEndTime.SelectedValue;
 
-            if (STime == ETime)
+            if (STime == ETime || ETime < STime)
             {
-                MessageBox.Show("StartTime and EndTime must not be equal", "An erro occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Start time and End time must not be equal", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
             }
+            else if(ETime < STime)
+            {
+                MessageBox.Show("End time must not be less than the start time ", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+                return false;
         }
 
         private void G2CmbxPreferredSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -232,11 +245,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2BtnGenerateSchedule_Click(object sender, EventArgs e)
         {
+            MStudent stud = new MStudent();
+            stud.StudentID = Convert.ToInt32(LblStudentID.Text);
+            stud.Fullname = G2TxbxFullname.Text;
+            stud.Cash = Convert.ToDecimal(guna2TextBoxCash.Text);
+            stud.Changed = Convert.ToDecimal(guna2TextBoxChange.Text);
 
-        }
-
-        private void G2CmbxAvailableTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            schedule.PaidStatusBill(DGVStudent);
+            schedule.FillInInvoices(DGVStudent, stud);
 
         }
 

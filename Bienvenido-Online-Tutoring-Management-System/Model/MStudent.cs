@@ -14,5 +14,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public string ContactDetails { get; set; }
         public string PrefferedSubjects { get; set; }
         public string Fullname { get; set; }
+        public decimal Cash { get; set; }
+        public decimal Changed { get; set; }
     }
 }
