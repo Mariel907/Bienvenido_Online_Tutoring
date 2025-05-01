@@ -40,7 +40,7 @@
             this.G2TxbxAdd = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2TextBoxCustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGVSubjects = new Guna.UI2.WinForms.Guna2DataGridView();
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxEdit = new Guna.UI2.WinForms.Guna2TextBox();
@@ -136,31 +136,32 @@
             this.label2.Text = "Edit Subject";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2TextBoxCustomer
+            // G2TxbxSearch
             // 
-            this.guna2TextBoxCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.G2TxbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBoxCustomer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.guna2TextBoxCustomer.BorderThickness = 2;
-            this.guna2TextBoxCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxCustomer.DefaultText = "";
-            this.guna2TextBoxCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.guna2TextBoxCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxCustomer.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBoxCustomer.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBoxCustomer.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBoxCustomer.IconLeft")));
-            this.guna2TextBoxCustomer.Location = new System.Drawing.Point(20, 23);
-            this.guna2TextBoxCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBoxCustomer.Name = "guna2TextBoxCustomer";
-            this.guna2TextBoxCustomer.PlaceholderText = "";
-            this.guna2TextBoxCustomer.SelectedText = "";
-            this.guna2TextBoxCustomer.Size = new System.Drawing.Size(665, 36);
-            this.guna2TextBoxCustomer.TabIndex = 243;
+            this.G2TxbxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2TxbxSearch.BorderThickness = 2;
+            this.G2TxbxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.G2TxbxSearch.DefaultText = "";
+            this.G2TxbxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.G2TxbxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.G2TxbxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.G2TxbxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.G2TxbxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.G2TxbxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.G2TxbxSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2TxbxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2TxbxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.G2TxbxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("G2TxbxSearch.IconLeft")));
+            this.G2TxbxSearch.Location = new System.Drawing.Point(20, 23);
+            this.G2TxbxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.G2TxbxSearch.Name = "G2TxbxSearch";
+            this.G2TxbxSearch.PlaceholderText = "";
+            this.G2TxbxSearch.SelectedText = "";
+            this.G2TxbxSearch.Size = new System.Drawing.Size(665, 36);
+            this.G2TxbxSearch.TabIndex = 243;
+            this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
             // DGVSubjects
             // 
@@ -308,11 +309,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.Location = new System.Drawing.Point(818, 346);
+            this.LblID.Location = new System.Drawing.Point(811, 346);
             this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(45, 19);
+            this.LblID.Size = new System.Drawing.Size(0, 19);
             this.LblID.TabIndex = 439;
-            this.LblID.Text = "label4";
             // 
             // mSubjectsBindingSource
             // 
@@ -339,7 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 532);
-            this.Controls.Add(this.guna2TextBoxCustomer);
+            this.Controls.Add(this.G2TxbxSearch);
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.G2BtnEdit);
             this.Controls.Add(this.G2TxbxEdit);
@@ -369,7 +369,7 @@
         private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource mSubjectsBindingSource;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCustomer;
+        private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
         private Guna.UI2.WinForms.Guna2DataGridView DGVSubjects;
         private Guna.UI2.WinForms.Guna2Button G2BtnEdit;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxEdit;

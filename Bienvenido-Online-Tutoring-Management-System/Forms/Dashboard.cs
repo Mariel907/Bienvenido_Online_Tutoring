@@ -34,7 +34,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         }
         private void SetButtonNames()
         {
-            G2BtnPayments.Name = "Payments";
             G2BtnStudents.Name = "Students";
             G2BtnTransaction.Name = "Transaction";
             G2BtnTutorsProfile.Name = "TutorProfile";
@@ -48,7 +47,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             Color Active = Color.FromArgb(188, 184, 177);
 
             G2BtnDashboard.FillColor = ActiveButton == "Dashboard" ? Active : InActive;
-            G2BtnPayments.FillColor = ActiveButton == "Payments" ? Active : InActive;
             G2BtnStudents.FillColor = ActiveButton == "Students" ? Active : InActive;
             G2BtnTransaction.FillColor = ActiveButton == "Transaction" ? Active : InActive;
             G2BtnTutorsProfile.FillColor = ActiveButton == "TutorProfile" ? Active : InActive;
@@ -64,23 +62,18 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                     FDashboard fDashboard = new FDashboard();
                     form.OpenForm(fDashboard, PnlDashboard);
                     break;
-                case "Payments":
-                    LblTitle.Text = "Payments";
-                    FPayments fPayments = new FPayments();
-                    form.OpenForm(fPayments, PnlDashboard);
-                    break;
                 case "Students":
                     LblTitle.Text = "Students";
                     FStudents fStudents = new FStudents(this);
                     form.OpenForm(fStudents, PnlDashboard);
                     break;
                 case "Transaction":
-                    LblTitle.Text = "Transaction";
+                    LblTitle.Text = "Transactions";
                     FTransaction fTransaction = new FTransaction(this);
                     form.OpenForm(fTransaction, PnlDashboard);
                     break;
                 case "TutorProfile":
-                    LblTitle.Text = "TutorProfile";
+                    LblTitle.Text = "Tutors Profile";
                     MTutorProfile tutor = new MTutorProfile();  
                     EditTutorProfile edit = new EditTutorProfile(this, tutor);
                     FTutorProfile fTutorProfile = new FTutorProfile(edit, this);

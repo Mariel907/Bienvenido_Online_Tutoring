@@ -13,7 +13,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public string Lastname { get; set; }
         public string ContactDetails { get; set; }
         public string PrefferedSubjects { get; set; }
-        public string Fullname { get; set; }
+        public string StudentName { get; set; }
         public decimal Cash { get; set; }
         public decimal Changed { get; set; }
     }

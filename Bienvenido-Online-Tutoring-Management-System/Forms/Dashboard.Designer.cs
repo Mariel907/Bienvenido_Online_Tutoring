@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.G2Subjects = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnPayments = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnTransaction = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnStudents = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnTutorsProfile = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +54,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.G2Subjects);
-            this.panel1.Controls.Add(this.G2BtnPayments);
             this.panel1.Controls.Add(this.G2BtnTransaction);
             this.panel1.Controls.Add(this.G2BtnStudents);
             this.panel1.Controls.Add(this.G2BtnTutorsProfile);
@@ -81,34 +79,13 @@
             this.G2Subjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2Subjects.Image = global::Bienvenido_Online_Tutoring_Management_System.Properties.Resources.Subjects_Bien;
             this.G2Subjects.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.G2Subjects.Location = new System.Drawing.Point(10, 405);
+            this.G2Subjects.Location = new System.Drawing.Point(10, 360);
             this.G2Subjects.Name = "G2Subjects";
             this.G2Subjects.Size = new System.Drawing.Size(164, 45);
             this.G2Subjects.TabIndex = 6;
             this.G2Subjects.Text = "Subjects";
             this.G2Subjects.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.G2Subjects.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // G2BtnPayments
-            // 
-            this.G2BtnPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(246)))), ((int)(((byte)(241)))));
-            this.G2BtnPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnPayments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnPayments.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2BtnPayments.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2BtnPayments.Dock = System.Windows.Forms.DockStyle.Top;
-            this.G2BtnPayments.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnPayments.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.G2BtnPayments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnPayments.Image = global::Bienvenido_Online_Tutoring_Management_System.Properties.Resources.Payment_Bien;
-            this.G2BtnPayments.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.G2BtnPayments.Location = new System.Drawing.Point(10, 360);
-            this.G2BtnPayments.Name = "G2BtnPayments";
-            this.G2BtnPayments.Size = new System.Drawing.Size(164, 45);
-            this.G2BtnPayments.TabIndex = 5;
-            this.G2BtnPayments.Text = "Payments";
-            this.G2BtnPayments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.G2BtnPayments.Click += new System.EventHandler(this.Form_Click);
             // 
             // G2BtnTransaction
             // 
@@ -312,7 +289,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button G2BtnDashboard;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button G2BtnPayments;
         private Guna.UI2.WinForms.Guna2Button G2BtnTransaction;
         private Guna.UI2.WinForms.Guna2Button G2BtnStudents;
         private Guna.UI2.WinForms.Guna2Button G2BtnTutorsProfile;

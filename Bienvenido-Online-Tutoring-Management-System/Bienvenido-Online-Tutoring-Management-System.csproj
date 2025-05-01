@@ -74,6 +74,7 @@
     <Compile Include="Class\CFSubjects.cs" />
     <Compile Include="Class\CSchedule.cs" />
     <Compile Include="Class\CStudents.cs" />
+    <Compile Include="Class\CTransaction.cs" />
     <Compile Include="Class\CTutor.cs" />
     <Compile Include="Class\CTutorProfile.cs" />
     <Compile Include="Class\DataLoader.cs" />

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
 {
@@ -51,5 +52,18 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             dataLoader.ExecuteData("Subject_UpdateDeleteAdd", parameters.ToArray());
         }
 
+        public void SearchSubject(string search,DataGridView DGV)
+        {
+            dataLoader.SearchTxbx("Subject_Search", search, DGV, "Search");
+        }
+        public void RefreshInSearch(string search, DataGridView DGV)
+        {
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("Action", "ShowEditedInSearch"),
+                new SqlParameter("SubjectID", search)
+            };
+            dataLoader.LoadData("Subject_Search", DGV, sp);
+        }
     }
 }

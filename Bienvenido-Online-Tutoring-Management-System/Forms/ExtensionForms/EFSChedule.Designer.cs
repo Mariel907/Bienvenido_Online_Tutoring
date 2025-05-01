@@ -73,19 +73,33 @@
             this.G2CmbxDateAvailable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.G2CmbxEndTime = new Guna.UI2.WinForms.Guna2ComboBox();
             this.G2CmbxStartTime = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.sessionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tutorIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tutorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sessionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hourlyRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusBillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoiceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudent)).BeginInit();
@@ -154,18 +168,17 @@
             this.DGVStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TutorName,
-            this.StatusBill,
-            this.Status,
-            this.StudentID,
-            this.InvoiceID,
-            this.TotalHours,
-            this.TutorID,
-            this.SessionID,
             this.Subject,
+            this.SessionID,
+            this.TutorID,
+            this.SessionDate,
             this.StartTime,
             this.EndTime,
-            this.SubjectID,
-            this.SessionDate,
+            this.StudentID,
+            this.Status,
+            this.StatusBill,
+            this.InvoiceID,
+            this.TotalHours,
             this.HourlyRate,
             this.TotalAmount});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -220,7 +233,6 @@
             this.DGVStudent.ThemeStyle.RowsStyle.Height = 22;
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.DGVStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVStudent_CellContentClick);
             // 
             // label6
             // 
@@ -347,9 +359,9 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.G2CmbxAvailableDay.Location = new System.Drawing.Point(625, 39);
+            this.G2CmbxAvailableDay.Location = new System.Drawing.Point(535, 39);
             this.G2CmbxAvailableDay.Name = "G2CmbxAvailableDay";
-            this.G2CmbxAvailableDay.Size = new System.Drawing.Size(126, 36);
+            this.G2CmbxAvailableDay.Size = new System.Drawing.Size(171, 36);
             this.G2CmbxAvailableDay.TabIndex = 598;
             this.G2CmbxAvailableDay.SelectedIndexChanged += new System.EventHandler(this.G2CmbxAvailableDay_SelectedIndexChanged);
             // 
@@ -360,7 +372,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(621, 15);
+            this.label5.Location = new System.Drawing.Point(531, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 21);
             this.label5.TabIndex = 599;
@@ -580,7 +592,7 @@
             this.guna2TextBoxCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxCash.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxCash.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxCash.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.guna2TextBoxCash.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.guna2TextBoxCash.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxCash.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxCash.Location = new System.Drawing.Point(204, 494);
@@ -609,7 +621,7 @@
             this.guna2TextBoxChange.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBoxChange.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2TextBoxChange.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.guna2TextBoxChange.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F);
+            this.guna2TextBoxChange.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.guna2TextBoxChange.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBoxChange.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.guna2TextBoxChange.Location = new System.Drawing.Point(387, 494);
@@ -707,7 +719,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(753, 15);
+            this.label3.Location = new System.Drawing.Point(708, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 21);
             this.label3.TabIndex = 636;
@@ -729,9 +741,9 @@
             this.G2CmbxDateAvailable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2CmbxDateAvailable.IntegralHeight = false;
             this.G2CmbxDateAvailable.ItemHeight = 30;
-            this.G2CmbxDateAvailable.Location = new System.Drawing.Point(757, 39);
+            this.G2CmbxDateAvailable.Location = new System.Drawing.Point(712, 39);
             this.G2CmbxDateAvailable.Name = "G2CmbxDateAvailable";
-            this.G2CmbxDateAvailable.Size = new System.Drawing.Size(126, 36);
+            this.G2CmbxDateAvailable.Size = new System.Drawing.Size(171, 36);
             this.G2CmbxDateAvailable.TabIndex = 635;
             this.G2CmbxDateAvailable.SelectedIndexChanged += new System.EventHandler(this.G2CmbxDateAvailable_SelectedIndexChanged);
             // 
@@ -778,54 +790,137 @@
             this.G2CmbxStartTime.TabIndex = 638;
             this.G2CmbxStartTime.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStartTime_SelectedIndexChanged);
             // 
+            // sessionIDDataGridViewTextBoxColumn
+            // 
+            this.sessionIDDataGridViewTextBoxColumn.DataPropertyName = "SessionID";
+            this.sessionIDDataGridViewTextBoxColumn.HeaderText = "SessionID";
+            this.sessionIDDataGridViewTextBoxColumn.Name = "sessionIDDataGridViewTextBoxColumn";
+            this.sessionIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sessionIDDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // tutorIDDataGridViewTextBoxColumn
+            // 
+            this.tutorIDDataGridViewTextBoxColumn.DataPropertyName = "TutorID";
+            this.tutorIDDataGridViewTextBoxColumn.HeaderText = "TutorID";
+            this.tutorIDDataGridViewTextBoxColumn.Name = "tutorIDDataGridViewTextBoxColumn";
+            this.tutorIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tutorIDDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // studNameDataGridViewTextBoxColumn
+            // 
+            this.studNameDataGridViewTextBoxColumn.DataPropertyName = "StudName";
+            this.studNameDataGridViewTextBoxColumn.HeaderText = "StudName";
+            this.studNameDataGridViewTextBoxColumn.Name = "studNameDataGridViewTextBoxColumn";
+            this.studNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studNameDataGridViewTextBoxColumn.Width = 38;
+            // 
+            // subjectDataGridViewTextBoxColumn
+            // 
+            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
+            this.subjectDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // tutorNameDataGridViewTextBoxColumn
+            // 
+            this.tutorNameDataGridViewTextBoxColumn.DataPropertyName = "TutorName";
+            this.tutorNameDataGridViewTextBoxColumn.HeaderText = "TutorName";
+            this.tutorNameDataGridViewTextBoxColumn.Name = "tutorNameDataGridViewTextBoxColumn";
+            this.tutorNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tutorNameDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // studentIDDataGridViewTextBoxColumn
+            // 
+            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
+            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
+            this.studentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.studentIDDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // startTimeDataGridViewTextBoxColumn
+            // 
+            this.startTimeDataGridViewTextBoxColumn.DataPropertyName = "StartTime";
+            this.startTimeDataGridViewTextBoxColumn.HeaderText = "StartTime";
+            this.startTimeDataGridViewTextBoxColumn.Name = "startTimeDataGridViewTextBoxColumn";
+            this.startTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startTimeDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // endTimeDataGridViewTextBoxColumn
+            // 
+            this.endTimeDataGridViewTextBoxColumn.DataPropertyName = "EndTime";
+            this.endTimeDataGridViewTextBoxColumn.HeaderText = "EndTime";
+            this.endTimeDataGridViewTextBoxColumn.Name = "endTimeDataGridViewTextBoxColumn";
+            this.endTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.endTimeDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // sessionDateDataGridViewTextBoxColumn
+            // 
+            this.sessionDateDataGridViewTextBoxColumn.DataPropertyName = "SessionDate";
+            this.sessionDateDataGridViewTextBoxColumn.HeaderText = "SessionDate";
+            this.sessionDateDataGridViewTextBoxColumn.Name = "sessionDateDataGridViewTextBoxColumn";
+            this.sessionDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sessionDateDataGridViewTextBoxColumn.Width = 38;
+            // 
+            // totalAmountDataGridViewTextBoxColumn
+            // 
+            this.totalAmountDataGridViewTextBoxColumn.DataPropertyName = "TotalAmount";
+            this.totalAmountDataGridViewTextBoxColumn.HeaderText = "TotalAmount";
+            this.totalAmountDataGridViewTextBoxColumn.Name = "totalAmountDataGridViewTextBoxColumn";
+            this.totalAmountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalAmountDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // hourlyRateDataGridViewTextBoxColumn
+            // 
+            this.hourlyRateDataGridViewTextBoxColumn.DataPropertyName = "HourlyRate";
+            this.hourlyRateDataGridViewTextBoxColumn.HeaderText = "HourlyRate";
+            this.hourlyRateDataGridViewTextBoxColumn.Name = "hourlyRateDataGridViewTextBoxColumn";
+            this.hourlyRateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.hourlyRateDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // statusBillDataGridViewTextBoxColumn
+            // 
+            this.statusBillDataGridViewTextBoxColumn.DataPropertyName = "StatusBill";
+            this.statusBillDataGridViewTextBoxColumn.HeaderText = "StatusBill";
+            this.statusBillDataGridViewTextBoxColumn.Name = "statusBillDataGridViewTextBoxColumn";
+            this.statusBillDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusBillDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // invoiceIDDataGridViewTextBoxColumn
+            // 
+            this.invoiceIDDataGridViewTextBoxColumn.DataPropertyName = "InvoiceID";
+            this.invoiceIDDataGridViewTextBoxColumn.HeaderText = "InvoiceID";
+            this.invoiceIDDataGridViewTextBoxColumn.Name = "invoiceIDDataGridViewTextBoxColumn";
+            this.invoiceIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.invoiceIDDataGridViewTextBoxColumn.Width = 39;
+            // 
+            // totalHoursDataGridViewTextBoxColumn
+            // 
+            this.totalHoursDataGridViewTextBoxColumn.DataPropertyName = "TotalHours";
+            this.totalHoursDataGridViewTextBoxColumn.HeaderText = "TotalHours";
+            this.totalHoursDataGridViewTextBoxColumn.Name = "totalHoursDataGridViewTextBoxColumn";
+            this.totalHoursDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalHoursDataGridViewTextBoxColumn.Width = 38;
+            // 
             // TutorName
             // 
             this.TutorName.HeaderText = "Tutor Name";
             this.TutorName.Name = "TutorName";
             this.TutorName.ReadOnly = true;
             // 
-            // StatusBill
+            // Subject
             // 
-            this.StatusBill.HeaderText = "StatusBill";
-            this.StatusBill.Name = "StatusBill";
-            this.StatusBill.ReadOnly = true;
-            this.StatusBill.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // StudentID
-            // 
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Visible = false;
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.HeaderText = "InvoiceID";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            this.InvoiceID.Visible = false;
-            // 
-            // TotalHours
-            // 
-            this.TotalHours.HeaderText = "TotalHours";
-            this.TotalHours.Name = "TotalHours";
-            this.TotalHours.ReadOnly = true;
-            this.TotalHours.Visible = false;
-            // 
-            // TutorID
-            // 
-            this.TutorID.DataPropertyName = "TutorID";
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
             // 
             // SessionID
             // 
@@ -834,15 +929,21 @@
             this.SessionID.ReadOnly = true;
             this.SessionID.Visible = false;
             // 
-            // Subject
+            // TutorID
             // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
+            this.TutorID.HeaderText = "TutorID";
+            this.TutorID.Name = "TutorID";
+            this.TutorID.ReadOnly = true;
+            this.TutorID.Visible = false;
+            // 
+            // SessionDate
+            // 
+            this.SessionDate.HeaderText = "Session Date";
+            this.SessionDate.Name = "SessionDate";
+            this.SessionDate.ReadOnly = true;
             // 
             // StartTime
             // 
-            this.StartTime.DataPropertyName = "StartTime";
             this.StartTime.HeaderText = "Start Time";
             this.StartTime.Name = "StartTime";
             this.StartTime.ReadOnly = true;
@@ -853,19 +954,38 @@
             this.EndTime.Name = "EndTime";
             this.EndTime.ReadOnly = true;
             // 
-            // SubjectID
+            // StudentID
             // 
-            this.SubjectID.HeaderText = "Subject ID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            this.StudentID.Visible = false;
             // 
-            // SessionDate
+            // Status
             // 
-            this.SessionDate.DataPropertyName = "SessionDate";
-            this.SessionDate.HeaderText = "Session Date";
-            this.SessionDate.Name = "SessionDate";
-            this.SessionDate.ReadOnly = true;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // StatusBill
+            // 
+            this.StatusBill.HeaderText = "StatusBill";
+            this.StatusBill.Name = "StatusBill";
+            this.StatusBill.ReadOnly = true;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            this.InvoiceID.Visible = false;
+            // 
+            // TotalHours
+            // 
+            this.TotalHours.HeaderText = "Total Hours";
+            this.TotalHours.Name = "TotalHours";
+            this.TotalHours.ReadOnly = true;
             // 
             // HourlyRate
             // 
@@ -978,19 +1098,33 @@
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxDateAvailable;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxEndTime;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sessionIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tutorIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tutorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sessionDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hourlyRateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusBillDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invoiceIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalHoursDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SessionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SessionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
         private System.Windows.Forms.DataGridViewTextBoxColumn HourlyRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmount;
     }

@@ -37,22 +37,42 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 DaysAvailable = reader["AvailableDay"].ToString(),
             });
         }
+        public static List<MSession> ShowScheduled(string StudentID)
+        {
+            return DataLoader.ExecuteStoredProcedure("Schedule_ShowAdd", new Dictionary<string, object> { { "Action", "ShowSchedStudent" }, { "StudentID", StudentID } }, reader => new MSession
+            {
+                StudentID = int.Parse(reader["StudentID"].ToString()),
+                TutorID = int.Parse(reader["TutorID"].ToString()),
+                TutorName = reader["TutorName"].ToString(),
+                Subject = reader["Subject"].ToString(),
+                StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
+                EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
+                SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()).Date,
+                HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
+                TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
+                Status = reader["Status"].ToString(),
+                StatusBill = reader["StatusBill"].ToString(),
+                InvoiceID = int.Parse(reader["InvoiceID"].ToString()),
+                TotalHours = Convert.ToDecimal(reader["TotalHours"].ToString()),
+                SessionID = int.Parse(reader["SessionID"].ToString())
+            });
+        }
 
-        public static List<MSession> Scheduled()
+        public static List<MSession> Transaction()
         {
             return DataLoader.ExecuteStoredProcedure("Session_", null, reader => new MSession
             {
                 StudentID = int.Parse(reader["StudentID"].ToString()),
                 TutorID = int.Parse(reader["TutorID"].ToString()),
                 SessionID = int.Parse(reader["SessionID"].ToString()),
-                TutorFullname = reader["TutorName"].ToString(),
-                StudFullname = reader["StudName"].ToString(),
+                TutorName = reader["TutorName"].ToString(),
+                StudName = reader["StudName"].ToString(),
                 Subject = reader["Subject"].ToString(),
                 StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
                 EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
                 SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
                 HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
-                TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString())
+                TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
             });
         }
         public static Dictionary<DateTime, List<TimeSpan>> GetTimeslotsByDate(string TutorID, string Day)
@@ -99,7 +119,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             decimal totalAmount = 0;
             foreach (DataGridViewRow row in datagridView.Rows)
             {
-                if (row.Cells["TotalAmount"].Value != null)
+                if (row.Cells["TotalAmount"].Value != null && row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase))
                 {
                     totalAmount += Convert.ToDecimal(row.Cells["TotalAmount"].Value);
                 }
@@ -107,7 +127,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             Label = "P" + totalAmount.ToString("N2");
         }
 
-        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date, decimal totalAmount, int InvoiceID)
+        public void Insert(MSubjects sub, MTutorProfile tutor, string StudID, object SDate, object EDate, object date, decimal totalAmount, int InvoiceID, decimal totalHours)
         {
             int SessionID = CAutoIncrementID.NextSessionID();
             SqlParameter[] sp = new SqlParameter[]
@@ -121,7 +141,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("Action", "AddSchedule"),
                 new SqlParameter("TotalAmount", totalAmount),
                 new SqlParameter("Subject", sub.SubjectName),
-                new SqlParameter("InvoiceID", InvoiceID)
+                new SqlParameter("InvoiceID", InvoiceID),
+                new SqlParameter("TotalHours", totalHours)
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
@@ -180,16 +201,21 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             var list = new List<MSession>();
             foreach (DataGridViewRow row in DGV.Rows)
             {
-                if ("Pending" == row.Cells["Status"].Value) continue;
+                if (row.Cells["StatusBill"].Value != null &&
+            row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase))
+                    continue;
+
+
                 var session = new MSession();
 
-                session.TutorFullname = row.Cells["TutorName"].Value.ToString();
+                session.TutorName = row.Cells["TutorName"].Value.ToString();
                 session.Subject = row.Cells["Subject"].Value.ToString();
                 session.SessionDate = Convert.ToDateTime(row.Cells["SessionDate"].Value.ToString());
                 session.StartTime = Convert.ToDateTime(row.Cells["StartTime"].Value.ToString()).TimeOfDay;
                 session.EndTime = Convert.ToDateTime(row.Cells["EndTime"].Value.ToString()).TimeOfDay;
                 session.HourlyRate = Convert.ToDecimal(row.Cells["HourlyRate"].Value.ToString());
                 session.TotalAmount = Convert.ToDecimal(row.Cells["TotalAmount"].Value.ToString());
+                session.TotalHours = Convert.ToDecimal(row.Cells["TotalHours"].Value.ToString());
 
                 list.Add(session);
             }
@@ -201,6 +227,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         {
             foreach (DataGridViewRow row in DGV.Rows)
             {
+                if (row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase)) continue;
+
                 int InvoiceID = CAutoIncrementID.NextInvoiceID();
                 SqlParameter[] sp = new SqlParameter[]
                 {

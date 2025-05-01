@@ -57,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBoxCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.G2CmbxDaysAvailable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.G2TxbxDaysAvailable = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,7 +76,6 @@
             this.LblAvailbalityID = new System.Windows.Forms.Label();
             this.LblTutorID = new System.Windows.Forms.Label();
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.G2CmbxExpertise = new Guna.UI2.WinForms.Guna2ComboBox();
             this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel21.SuspendLayout();
@@ -117,7 +115,7 @@
             this.G2TxbxFirstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.PlaceholderText = "";
             this.G2TxbxFirstname.SelectedText = "";
-            this.G2TxbxFirstname.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxFirstname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxFirstname.TabIndex = 431;
             // 
             // label5
@@ -221,7 +219,7 @@
             this.G2TxbxLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.PlaceholderText = "";
             this.G2TxbxLastname.SelectedText = "";
-            this.G2TxbxLastname.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxLastname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxLastname.TabIndex = 439;
             // 
             // label2
@@ -252,7 +250,7 @@
             this.G2TxbxExpertise.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxExpertise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxExpertise.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxExpertise.Location = new System.Drawing.Point(223, 296);
+            this.G2TxbxExpertise.Location = new System.Drawing.Point(272, 296);
             this.G2TxbxExpertise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxExpertise.Name = "G2TxbxExpertise";
             this.G2TxbxExpertise.Padding = new System.Windows.Forms.Padding(7);
@@ -380,7 +378,7 @@
             this.DTPEndTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DTPEndTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPEndTime.Location = new System.Drawing.Point(764, 301);
+            this.DTPEndTime.Location = new System.Drawing.Point(816, 301);
             this.DTPEndTime.Name = "DTPEndTime";
             this.DTPEndTime.Size = new System.Drawing.Size(163, 26);
             this.DTPEndTime.TabIndex = 466;
@@ -406,7 +404,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(762, 271);
+            this.label4.Location = new System.Drawing.Point(814, 271);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 497;
@@ -424,29 +422,6 @@
             this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 498;
             this.label6.Text = "Days Available";
-            // 
-            // guna2TextBoxCountryCode
-            // 
-            this.guna2TextBoxCountryCode.BorderColor = System.Drawing.Color.White;
-            this.guna2TextBoxCountryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBoxCountryCode.DefaultText = "";
-            this.guna2TextBoxCountryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBoxCountryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBoxCountryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCountryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBoxCountryCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.guna2TextBoxCountryCode.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCountryCode.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBoxCountryCode.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBoxCountryCode.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBoxCountryCode.Location = new System.Drawing.Point(597, 131);
-            this.guna2TextBoxCountryCode.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBoxCountryCode.Name = "guna2TextBoxCountryCode";
-            this.guna2TextBoxCountryCode.PlaceholderText = "";
-            this.guna2TextBoxCountryCode.ReadOnly = true;
-            this.guna2TextBoxCountryCode.SelectedText = "";
-            this.guna2TextBoxCountryCode.Size = new System.Drawing.Size(97, 30);
-            this.guna2TextBoxCountryCode.TabIndex = 500;
             // 
             // G2CmbxDaysAvailable
             // 
@@ -473,7 +448,7 @@
             "Sunday"});
             this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(593, 129);
             this.G2CmbxDaysAvailable.Name = "G2CmbxDaysAvailable";
-            this.G2CmbxDaysAvailable.Size = new System.Drawing.Size(126, 36);
+            this.G2CmbxDaysAvailable.Size = new System.Drawing.Size(172, 36);
             this.G2CmbxDaysAvailable.TabIndex = 499;
             this.G2CmbxDaysAvailable.SelectedIndexChanged += new System.EventHandler(this.G2CmbxDaysAvailable_SelectedIndexChanged);
             // 
@@ -492,14 +467,14 @@
             this.G2TxbxDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxDaysAvailable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(717, 129);
+            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(763, 129);
             this.G2TxbxDaysAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxDaysAvailable.Name = "G2TxbxDaysAvailable";
             this.G2TxbxDaysAvailable.Padding = new System.Windows.Forms.Padding(7);
             this.G2TxbxDaysAvailable.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.PlaceholderText = "";
             this.G2TxbxDaysAvailable.SelectedText = "";
-            this.G2TxbxDaysAvailable.Size = new System.Drawing.Size(213, 36);
+            this.G2TxbxDaysAvailable.Size = new System.Drawing.Size(216, 36);
             this.G2TxbxDaysAvailable.TabIndex = 501;
             // 
             // label7
@@ -537,14 +512,14 @@
             this.G2TxbxHourlyRate.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxHourlyRate.PlaceholderText = "";
             this.G2TxbxHourlyRate.SelectedText = "";
-            this.G2TxbxHourlyRate.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxHourlyRate.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxHourlyRate.TabIndex = 502;
             // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(763, 330);
+            this.panel23.Location = new System.Drawing.Point(815, 330);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(163, 2);
             this.panel23.TabIndex = 485;
@@ -561,7 +536,7 @@
             // 
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(765, 326);
+            this.panel25.Location = new System.Drawing.Point(817, 326);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(160, 2);
             this.panel25.TabIndex = 488;
@@ -578,7 +553,7 @@
             // 
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(765, 300);
+            this.panel27.Location = new System.Drawing.Point(817, 300);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(160, 2);
             this.panel27.TabIndex = 487;
@@ -595,7 +570,7 @@
             // 
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(925, 296);
+            this.panel29.Location = new System.Drawing.Point(977, 296);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(2, 36);
             this.panel29.TabIndex = 490;
@@ -612,7 +587,7 @@
             // 
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(763, 296);
+            this.panel33.Location = new System.Drawing.Point(815, 296);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(2, 36);
             this.panel33.TabIndex = 489;
@@ -629,7 +604,7 @@
             // 
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(763, 296);
+            this.panel35.Location = new System.Drawing.Point(815, 296);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(163, 2);
             this.panel35.TabIndex = 486;
@@ -662,7 +637,7 @@
             this.LblTutorID.AutoSize = true;
             this.LblTutorID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTutorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblTutorID.Location = new System.Drawing.Point(182, 100);
+            this.LblTutorID.Location = new System.Drawing.Point(174, 100);
             this.LblTutorID.Name = "LblTutorID";
             this.LblTutorID.Size = new System.Drawing.Size(19, 21);
             this.LblTutorID.TabIndex = 507;
@@ -690,29 +665,6 @@
             this.G2BtnAdd.Text = "<";
             this.G2BtnAdd.Click += new System.EventHandler(this.G2BtnAdd_Click);
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.White;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.Location = new System.Drawing.Point(105, 298);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(97, 30);
-            this.guna2TextBox1.TabIndex = 510;
-            // 
             // G2CmbxExpertise
             // 
             this.G2CmbxExpertise.BackColor = System.Drawing.Color.Transparent;
@@ -731,7 +683,7 @@
             this.G2CmbxExpertise.ItemHeight = 30;
             this.G2CmbxExpertise.Location = new System.Drawing.Point(101, 296);
             this.G2CmbxExpertise.Name = "G2CmbxExpertise";
-            this.G2CmbxExpertise.Size = new System.Drawing.Size(126, 36);
+            this.G2CmbxExpertise.Size = new System.Drawing.Size(173, 36);
             this.G2CmbxExpertise.TabIndex = 509;
             this.G2CmbxExpertise.SelectedIndexChanged += new System.EventHandler(this.G2CmbxExpertise_SelectedIndexChanged);
             // 
@@ -745,8 +697,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1033, 511);
-            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.G2CmbxExpertise);
+            this.Controls.Add(this.panel33);
             this.Controls.Add(this.G2BtnAdd);
             this.Controls.Add(this.LblTutorID);
             this.Controls.Add(this.LblAvailbalityID);
@@ -757,8 +709,6 @@
             this.Controls.Add(this.panel27);
             this.Controls.Add(this.panel29);
             this.Controls.Add(this.G2TxbxDaysAvailable);
-            this.Controls.Add(this.panel33);
-            this.Controls.Add(this.guna2TextBoxCountryCode);
             this.Controls.Add(this.panel35);
             this.Controls.Add(this.G2CmbxDaysAvailable);
             this.Controls.Add(this.label6);
@@ -837,7 +787,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxCountryCode;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxDaysAvailable;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxDaysAvailable;
         private System.Windows.Forms.Label label7;
@@ -857,7 +806,6 @@
         private System.Windows.Forms.Label LblAvailbalityID;
         private System.Windows.Forms.Label LblTutorID;
         private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxExpertise;
         private System.Windows.Forms.BindingSource mSubjectsBindingSource;
     }

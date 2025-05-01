@@ -48,11 +48,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             }
         }
 
-        public void SearchTxbx(string query, string searchtext, DataGridView dataGridView)
+        public void SearchTxbx(string query, string searchtext, DataGridView dataGridView, string Action)
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("Searchtext", searchtext)
+                new SqlParameter("Searchtext", searchtext),
+                new SqlParameter("Action", Action)
             };
             LoadData(query, dataGridView, parameters);
         }

@@ -98,5 +98,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             DTPEndTime.Value = DateTime.Now;
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTutorID_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

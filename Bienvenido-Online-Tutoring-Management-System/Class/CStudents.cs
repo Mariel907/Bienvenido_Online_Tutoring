@@ -21,7 +21,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 Lastname = reader["Lastname"].ToString(),
                 ContactDetails = reader["ContactDetails"].ToString(),
                 PrefferedSubjects = reader["PreferredSubjects"].ToString(),
-                Fullname = reader["Fullname"].ToString()
+                StudentName = reader["Fullname"].ToString()
             });
         }
         public void Insert(MStudent stud)

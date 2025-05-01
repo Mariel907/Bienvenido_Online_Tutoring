@@ -53,7 +53,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                 sub.SubID = Convert.ToInt32(LblID.Text);
                 sub.SubjectName = G2TxbxEdit.Text;
                 _fsubjects.ExecuteAction("Update", sub);
-                RefreshedDGV();
+
+                _fsubjects.RefreshInSearch(LblID.Text, DGVSubjects);
 
                 G2TxbxEdit.Text = string.Empty;
                 LblID.Text = string.Empty;
@@ -62,6 +63,11 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             {
                 MessageBox.Show(ex.Message, "An Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            _fsubjects.SearchSubject(G2TxbxSearch.Text, DGVSubjects);
         }
     }
 }

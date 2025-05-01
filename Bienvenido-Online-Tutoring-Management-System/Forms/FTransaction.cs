@@ -17,7 +17,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
     {
         private Dashboard _dashboard;
         private FormManager _FormManager = new FormManager();
-        private MStudent stud = new MStudent();
+        private CTransaction transaction = new CTransaction();
         public FTransaction(Dashboard dashboard)
         {
             InitializeComponent();
@@ -30,14 +30,21 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             _FormManager.OpenForm(select, _dashboard.Panel);
         }
 
-        private void DGVStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-             
-        }
-
         private void FTransaction_Load(object sender, EventArgs e)
         {
-            DGVScheduled.DataSource = CSchedule.Scheduled();
+            DGVScheduled.DataSource = CSchedule.Transaction();
+            ShowStudentCMBX();
+        }
+        private void ShowStudentCMBX()
+        {
+            G2CmbxStudentName.DataSource = CTransaction.StudentsName();
+            G2CmbxStudentName.DisplayMember = "StudentName";
+        }
+        private void G2CmbxStudentName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string Cmbx = G2CmbxStudentName.Text;
+
+            transaction.Search(Cmbx, DGVScheduled);
         }
     }
 }

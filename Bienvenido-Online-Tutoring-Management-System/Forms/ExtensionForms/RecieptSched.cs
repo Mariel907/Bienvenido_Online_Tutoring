@@ -31,7 +31,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             string currentDate = DateTime.Now.ToString("MM/dd/yyyy");
             ReportParameter[] p = new ReportParameter[]
             {
-                new ReportParameter("StudentName", stud.Fullname),
+                new ReportParameter("StudentName", stud.StudentName),
                 new ReportParameter("Date", currentDate),
                 new ReportParameter("Cash", stud.Cash.ToString("F2")),
                 new ReportParameter("Changed", stud.Changed.ToString("F2")),
@@ -39,7 +39,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             };
             RVSchedulePayment.LocalReport.SetParameters(p);
 
-            ReportDataSource ds = new ReportDataSource("DSScheduled", list);
+            ReportDataSource ds = new ReportDataSource("DSSchedule", list);
             RVSchedulePayment.LocalReport.DataSources.Clear() ;
             RVSchedulePayment.LocalReport.DataSources.Add(ds);
             this.RVSchedulePayment.RefreshReport();
