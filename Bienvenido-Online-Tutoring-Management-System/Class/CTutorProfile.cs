@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
 {
@@ -61,5 +62,23 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             };
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }
+        public void Search(string Txbx, DataGridView Dgv)
+        {
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("Action", "SearchTxbx"),
+                new SqlParameter("Txbx", Txbx),
+            };
+            dataLoader.LoadData("Search_Tutor", Dgv, sp);
+        }
+
+        //public void RefershSearch()
+        //{
+        //    SqlParameter[] sp = new SqlParameter[]
+        //    {
+        //        new SqlParameter("Action", "Refresh"),
+        //        new SqlParameter(""
+        //    }
+        //}
     }
 }

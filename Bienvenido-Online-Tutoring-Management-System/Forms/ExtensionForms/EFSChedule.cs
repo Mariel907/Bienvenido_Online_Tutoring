@@ -3,6 +3,7 @@ using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -200,7 +201,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             TimeSpan STime = (TimeSpan)G2CmbxStartTime.SelectedValue;
             TimeSpan ETime = (TimeSpan)G2CmbxEndTime.SelectedValue;
 
-            if (STime == ETime || ETime < STime)
+            if (STime == ETime)
             {
                 MessageBox.Show("Start time and End time must not be equal", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
@@ -288,9 +289,9 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             stud.Changed = Convert.ToDecimal(guna2TextBoxChange.Text);
 
             schedule.PaidStatusBill(DGVStudent);
+            UpdateTotallbl();
             schedule.FillInInvoices(DGVStudent, stud);
             MarkAsPaid();
-            UpdateTotallbl();
 
         }
 
@@ -308,6 +309,17 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private void G2CmbxStartTime_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DGVStudent_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewRow row = DGVStudent.Rows[e.RowIndex];
+            string status = row.Cells["StatusBill"].Value.ToString();
+
+            if (status == "Paid")
+                row.DefaultCellStyle.BackColor = Color.FromArgb(153, 255, 153);
+            else if (status == "Pending")
+                row.DefaultCellStyle.BackColor = Color.FromArgb(255, 128, 128);
         }
     }
 }

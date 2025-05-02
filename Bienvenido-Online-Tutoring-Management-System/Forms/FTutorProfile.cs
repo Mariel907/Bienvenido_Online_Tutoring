@@ -18,6 +18,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private EditTutorProfile _AddEditTutorProfile;
         private FormManager form = new FormManager();
         private Dashboard _dashboard;
+        private CTutorProfile _CTutorProfile = new CTutorProfile();
 
 
         public FTutorProfile(EditTutorProfile addEditTutorProfile, Dashboard dashboard)
@@ -65,6 +66,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
             EditTutorProfile edit= new EditTutorProfile(_dashboard, MTutor);
             form.OpenForm(edit, _dashboard.Panel);
+        }
+
+        private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string Txbx = G2TxbxSearch.Text;
+            _CTutorProfile.Search(Txbx, DGVTutor);
         }
     }
 }

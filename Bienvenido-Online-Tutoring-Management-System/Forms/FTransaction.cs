@@ -1,14 +1,7 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Class;
 using Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms;
-using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms
@@ -45,6 +38,31 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             string Cmbx = G2CmbxStudentName.Text;
 
             transaction.Search(Cmbx, DGVScheduled);
+        }
+
+        private void DGVScheduled_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewRow row = DGVScheduled.Rows[e.RowIndex];
+            string status = row.Cells["Status"].Value?.ToString();
+
+            switch (status)
+            {
+                case "Scheduled":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 128);
+                    break;
+                case "OnGoing":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(153, 255, 153);
+                    break;
+                case "Done":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 128, 128);
+                    break;
+                case "Cancel":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 194, 102);
+                    break;
+                case "Draft":
+                    //row.DefaultCellStyle.BackColor = Color.FromArgb(153, 255, 153);
+                    break;
+            }
         }
     }
 }

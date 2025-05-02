@@ -17,6 +17,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
     {
         private FormManager form = new FormManager();
         private Dashboard _Dashboard;
+        private CStudents _Students = new CStudents();
         public FStudents(Dashboard dashboard)
         {
             InitializeComponent();
@@ -46,6 +47,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
             EFEditStudents edit = new EFEditStudents(student);
             form.OpenForm(edit, _Dashboard.Panel);
+        }
+
+        private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string Txbx = G2TxbxSearch.Text;
+            _Students.Search(Txbx, DGVStudent);
         }
     }
 }

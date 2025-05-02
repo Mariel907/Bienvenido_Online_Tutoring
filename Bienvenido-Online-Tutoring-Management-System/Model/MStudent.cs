@@ -16,5 +16,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public string StudentName { get; set; }
         public decimal Cash { get; set; }
         public decimal Changed { get; set; }
+        public string Status { get; set; }
     }
 }

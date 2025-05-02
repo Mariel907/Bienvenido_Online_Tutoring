@@ -73,6 +73,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
                 HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
                 TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
+                Status = reader["Status"].ToString()
             });
         }
         public static Dictionary<DateTime, List<TimeSpan>> GetTimeslotsByDate(string TutorID, string Day)

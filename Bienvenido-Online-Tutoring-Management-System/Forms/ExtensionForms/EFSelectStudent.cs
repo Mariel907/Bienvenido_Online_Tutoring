@@ -16,6 +16,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
     {
         private FormManager form = new FormManager();
         private Dashboard dashboard;
+        private CStudents _CStudents = new CStudents();
         public EFSelectStudent(Dashboard _dashboard)
         {
             InitializeComponent();
@@ -31,12 +32,17 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             MStudent stud = new MStudent();
             DataGridViewRow selectedRow = DGVStudent.SelectedRows[0];
-            stud.StudentName = selectedRow.Cells["Fullname"].Value.ToString();
+            stud.StudentName = selectedRow.Cells["StudentName"].Value.ToString();
             stud.StudentID = Convert.ToInt32(selectedRow.Cells["StudentID"].Value.ToString());
 
             EFSChedule schedule = new EFSChedule(stud);
             form.OpenForm(schedule, dashboard.Panel);
+        }
 
+        private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string Txbx = G2TxbxSearch.Text;
+            _CStudents.Search(Txbx, DGVStudent);
         }
     }
 }

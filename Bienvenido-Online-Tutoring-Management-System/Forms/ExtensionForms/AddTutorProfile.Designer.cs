@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblTutorID = new System.Windows.Forms.Label();
-            this.LblAvailbalityID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.G2TxbxHourlyRate = new Guna.UI2.WinForms.Guna2TextBox();
             this.G2TxbxDaysAvailable = new Guna.UI2.WinForms.Guna2TextBox();
@@ -90,38 +88,12 @@
             this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LblTutorID
-            // 
-            this.LblTutorID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblTutorID.AutoSize = true;
-            this.LblTutorID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTutorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblTutorID.Location = new System.Drawing.Point(165, 111);
-            this.LblTutorID.Name = "LblTutorID";
-            this.LblTutorID.Size = new System.Drawing.Size(0, 21);
-            this.LblTutorID.TabIndex = 542;
-            this.LblTutorID.Click += new System.EventHandler(this.LblTutorID_Click);
-            // 
-            // LblAvailbalityID
-            // 
-            this.LblAvailbalityID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblAvailbalityID.AutoSize = true;
-            this.LblAvailbalityID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAvailbalityID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblAvailbalityID.Location = new System.Drawing.Point(694, 109);
-            this.LblAvailbalityID.Name = "LblAvailbalityID";
-            this.LblAvailbalityID.Size = new System.Drawing.Size(0, 21);
-            this.LblAvailbalityID.TabIndex = 541;
-            // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(583, 193);
+            this.label7.Location = new System.Drawing.Point(631, 221);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 540;
@@ -129,7 +101,6 @@
             // 
             // G2TxbxHourlyRate
             // 
-            this.G2TxbxHourlyRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxHourlyRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxHourlyRate.BorderThickness = 2;
             this.G2TxbxHourlyRate.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -143,7 +114,7 @@
             this.G2TxbxHourlyRate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxHourlyRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxHourlyRate.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxHourlyRate.Location = new System.Drawing.Point(587, 218);
+            this.G2TxbxHourlyRate.Location = new System.Drawing.Point(637, 246);
             this.G2TxbxHourlyRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxHourlyRate.Name = "G2TxbxHourlyRate";
             this.G2TxbxHourlyRate.Padding = new System.Windows.Forms.Padding(7);
@@ -155,7 +126,6 @@
             // 
             // G2TxbxDaysAvailable
             // 
-            this.G2TxbxDaysAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxDaysAvailable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.BorderThickness = 2;
             this.G2TxbxDaysAvailable.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -169,7 +139,7 @@
             this.G2TxbxDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxDaysAvailable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(757, 133);
+            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(805, 163);
             this.G2TxbxDaysAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxDaysAvailable.Name = "G2TxbxDaysAvailable";
             this.G2TxbxDaysAvailable.Padding = new System.Windows.Forms.Padding(7);
@@ -181,7 +151,6 @@
             // 
             // G2CmbxDaysAvailable
             // 
-            this.G2CmbxDaysAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2CmbxDaysAvailable.BackColor = System.Drawing.Color.Transparent;
             this.G2CmbxDaysAvailable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2CmbxDaysAvailable.BorderThickness = 2;
@@ -203,7 +172,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(583, 133);
+            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(635, 163);
             this.G2CmbxDaysAvailable.Name = "G2CmbxDaysAvailable";
             this.G2CmbxDaysAvailable.Size = new System.Drawing.Size(178, 36);
             this.G2CmbxDaysAvailable.TabIndex = 536;
@@ -211,11 +180,10 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(583, 110);
+            this.label6.Location = new System.Drawing.Point(631, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 535;
@@ -223,11 +191,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(804, 276);
+            this.label4.Location = new System.Drawing.Point(851, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 534;
@@ -235,11 +202,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(583, 277);
+            this.label3.Location = new System.Drawing.Point(635, 311);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 21);
             this.label3.TabIndex = 533;
@@ -247,11 +213,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(87, 283);
+            this.label2.Location = new System.Drawing.Point(135, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 21);
             this.label2.TabIndex = 518;
@@ -259,7 +224,6 @@
             // 
             // G2TxbxExpertise
             // 
-            this.G2TxbxExpertise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxExpertise.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxExpertise.BorderThickness = 2;
             this.G2TxbxExpertise.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -273,7 +237,7 @@
             this.G2TxbxExpertise.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxExpertise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxExpertise.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxExpertise.Location = new System.Drawing.Point(264, 306);
+            this.G2TxbxExpertise.Location = new System.Drawing.Point(312, 334);
             this.G2TxbxExpertise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxExpertise.Name = "G2TxbxExpertise";
             this.G2TxbxExpertise.Padding = new System.Windows.Forms.Padding(7);
@@ -285,11 +249,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(87, 195);
+            this.label1.Location = new System.Drawing.Point(135, 223);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 516;
@@ -297,7 +260,6 @@
             // 
             // G2TxbxLastname
             // 
-            this.G2TxbxLastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxLastname.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.BorderThickness = 2;
             this.G2TxbxLastname.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -311,7 +273,7 @@
             this.G2TxbxLastname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxLastname.Location = new System.Drawing.Point(91, 218);
+            this.G2TxbxLastname.Location = new System.Drawing.Point(139, 246);
             this.G2TxbxLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxLastname.Name = "G2TxbxLastname";
             this.G2TxbxLastname.Padding = new System.Windows.Forms.Padding(7);
@@ -323,7 +285,6 @@
             // 
             // G2BtnUpdate
             // 
-            this.G2BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2BtnUpdate.BorderRadius = 15;
             this.G2BtnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.G2BtnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -332,7 +293,7 @@
             this.G2BtnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnUpdate.Location = new System.Drawing.Point(437, 403);
+            this.G2BtnUpdate.Location = new System.Drawing.Point(503, 426);
             this.G2BtnUpdate.Name = "G2BtnUpdate";
             this.G2BtnUpdate.Size = new System.Drawing.Size(152, 36);
             this.G2BtnUpdate.TabIndex = 514;
@@ -343,9 +304,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1037, 12);
+            this.panel4.Location = new System.Drawing.Point(1154, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 526);
+            this.panel4.Size = new System.Drawing.Size(2, 522);
             this.panel4.TabIndex = 513;
             // 
             // panel3
@@ -354,16 +315,16 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(10, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 526);
+            this.panel3.Size = new System.Drawing.Size(2, 522);
             this.panel3.TabIndex = 512;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(10, 538);
+            this.panel2.Location = new System.Drawing.Point(10, 534);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1029, 2);
+            this.panel2.Size = new System.Drawing.Size(1146, 2);
             this.panel2.TabIndex = 511;
             // 
             // panel1
@@ -372,16 +333,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 2);
+            this.panel1.Size = new System.Drawing.Size(1146, 2);
             this.panel1.TabIndex = 510;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(87, 112);
+            this.label5.Location = new System.Drawing.Point(135, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 509;
@@ -390,7 +350,6 @@
             // 
             // G2TxbxFirstname
             // 
-            this.G2TxbxFirstname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxFirstname.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.BorderThickness = 2;
             this.G2TxbxFirstname.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -404,7 +363,7 @@
             this.G2TxbxFirstname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxFirstname.Location = new System.Drawing.Point(91, 135);
+            this.G2TxbxFirstname.Location = new System.Drawing.Point(139, 163);
             this.G2TxbxFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxFirstname.Name = "G2TxbxFirstname";
             this.G2TxbxFirstname.Padding = new System.Windows.Forms.Padding(7);
@@ -429,7 +388,7 @@
             this.G2BtnEdit.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.G2BtnEdit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.G2BtnEdit.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnEdit.Location = new System.Drawing.Point(989, 18);
+            this.G2BtnEdit.Location = new System.Drawing.Point(1106, 18);
             this.G2BtnEdit.Name = "G2BtnEdit";
             this.G2BtnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.G2BtnEdit.Size = new System.Drawing.Size(42, 36);
@@ -439,7 +398,6 @@
             // 
             // G2CmbxExpertise
             // 
-            this.G2CmbxExpertise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2CmbxExpertise.BackColor = System.Drawing.Color.Transparent;
             this.G2CmbxExpertise.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2CmbxExpertise.BorderThickness = 2;
@@ -461,7 +419,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.G2CmbxExpertise.Location = new System.Drawing.Point(91, 306);
+            this.G2CmbxExpertise.Location = new System.Drawing.Point(139, 334);
             this.G2CmbxExpertise.Name = "G2CmbxExpertise";
             this.G2CmbxExpertise.Size = new System.Drawing.Size(175, 36);
             this.G2CmbxExpertise.TabIndex = 564;
@@ -469,23 +427,23 @@
             // 
             // DTPEndTime
             // 
-            this.DTPEndTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTPEndTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DTPEndTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPEndTime.Location = new System.Drawing.Point(807, 305);
+            this.DTPEndTime.Location = new System.Drawing.Point(856, 338);
             this.DTPEndTime.Name = "DTPEndTime";
+            this.DTPEndTime.ShowUpDown = true;
             this.DTPEndTime.Size = new System.Drawing.Size(163, 26);
             this.DTPEndTime.TabIndex = 519;
             this.DTPEndTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
             // 
             // DTPStartTime
             // 
-            this.DTPStartTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTPStartTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPStartTime.Location = new System.Drawing.Point(587, 306);
+            this.DTPStartTime.Location = new System.Drawing.Point(637, 339);
             this.DTPStartTime.Name = "DTPStartTime";
+            this.DTPStartTime.ShowUpDown = true;
             this.DTPStartTime.Size = new System.Drawing.Size(163, 26);
             this.DTPStartTime.TabIndex = 521;
             this.DTPStartTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
@@ -500,10 +458,9 @@
             // 
             // panel19
             // 
-            this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(587, 301);
+            this.panel19.Location = new System.Drawing.Point(637, 334);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(163, 2);
             this.panel19.TabIndex = 522;
@@ -518,10 +475,9 @@
             // 
             // panel17
             // 
-            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel17.Controls.Add(this.panel18);
-            this.panel17.Location = new System.Drawing.Point(587, 301);
+            this.panel17.Location = new System.Drawing.Point(637, 334);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(2, 36);
             this.panel17.TabIndex = 525;
@@ -536,10 +492,9 @@
             // 
             // panel15
             // 
-            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(749, 301);
+            this.panel15.Location = new System.Drawing.Point(799, 334);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(2, 36);
             this.panel15.TabIndex = 526;
@@ -554,10 +509,9 @@
             // 
             // panel13
             // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(589, 305);
+            this.panel13.Location = new System.Drawing.Point(639, 338);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(160, 2);
             this.panel13.TabIndex = 523;
@@ -572,10 +526,9 @@
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(589, 331);
+            this.panel11.Location = new System.Drawing.Point(639, 364);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(160, 2);
             this.panel11.TabIndex = 524;
@@ -590,10 +543,9 @@
             // 
             // panel21
             // 
-            this.panel21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(587, 335);
+            this.panel21.Location = new System.Drawing.Point(637, 368);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(163, 2);
             this.panel21.TabIndex = 520;
@@ -608,10 +560,9 @@
             // 
             // panel35
             // 
-            this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(806, 301);
+            this.panel35.Location = new System.Drawing.Point(855, 334);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(163, 2);
             this.panel35.TabIndex = 528;
@@ -626,10 +577,9 @@
             // 
             // panel33
             // 
-            this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(806, 301);
+            this.panel33.Location = new System.Drawing.Point(855, 334);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(2, 36);
             this.panel33.TabIndex = 531;
@@ -644,10 +594,9 @@
             // 
             // panel29
             // 
-            this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(968, 301);
+            this.panel29.Location = new System.Drawing.Point(1017, 334);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(2, 36);
             this.panel29.TabIndex = 532;
@@ -662,10 +611,9 @@
             // 
             // panel27
             // 
-            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(808, 305);
+            this.panel27.Location = new System.Drawing.Point(857, 338);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(160, 2);
             this.panel27.TabIndex = 529;
@@ -680,10 +628,9 @@
             // 
             // panel25
             // 
-            this.panel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(808, 330);
+            this.panel25.Location = new System.Drawing.Point(857, 363);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(160, 2);
             this.panel25.TabIndex = 530;
@@ -698,10 +645,9 @@
             // 
             // panel23
             // 
-            this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(806, 335);
+            this.panel23.Location = new System.Drawing.Point(855, 368);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(163, 2);
             this.panel23.TabIndex = 527;
@@ -711,11 +657,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1049, 550);
+            this.ClientSize = new System.Drawing.Size(1166, 546);
             this.Controls.Add(this.G2CmbxExpertise);
             this.Controls.Add(this.G2BtnEdit);
-            this.Controls.Add(this.LblTutorID);
-            this.Controls.Add(this.LblAvailbalityID);
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel25);
@@ -773,9 +717,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblTutorID;
-        private System.Windows.Forms.Label LblAvailbalityID;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxHourlyRate;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxDaysAvailable;

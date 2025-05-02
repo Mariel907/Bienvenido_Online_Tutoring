@@ -108,7 +108,7 @@
             this.G2TxbxFirstname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxFirstname.Location = new System.Drawing.Point(101, 125);
+            this.G2TxbxFirstname.Location = new System.Drawing.Point(150, 171);
             this.G2TxbxFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxFirstname.Name = "G2TxbxFirstname";
             this.G2TxbxFirstname.Padding = new System.Windows.Forms.Padding(7);
@@ -120,12 +120,10 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(97, 100);
+            this.label5.Location = new System.Drawing.Point(146, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 433;
@@ -137,16 +135,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 2);
+            this.panel1.Size = new System.Drawing.Size(1146, 2);
             this.panel1.TabIndex = 434;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(10, 499);
+            this.panel2.Location = new System.Drawing.Point(10, 534);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1013, 2);
+            this.panel2.Size = new System.Drawing.Size(1146, 2);
             this.panel2.TabIndex = 435;
             // 
             // panel3
@@ -155,16 +153,16 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(10, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(2, 487);
+            this.panel3.Size = new System.Drawing.Size(2, 522);
             this.panel3.TabIndex = 436;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1021, 12);
+            this.panel4.Location = new System.Drawing.Point(1154, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 487);
+            this.panel4.Size = new System.Drawing.Size(2, 522);
             this.panel4.TabIndex = 437;
             // 
             // G2BtnUpdate
@@ -177,7 +175,7 @@
             this.G2BtnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnUpdate.Location = new System.Drawing.Point(436, 406);
+            this.G2BtnUpdate.Location = new System.Drawing.Point(513, 402);
             this.G2BtnUpdate.Name = "G2BtnUpdate";
             this.G2BtnUpdate.Size = new System.Drawing.Size(152, 36);
             this.G2BtnUpdate.TabIndex = 438;
@@ -186,12 +184,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(97, 183);
+            this.label1.Location = new System.Drawing.Point(146, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 440;
@@ -212,7 +208,7 @@
             this.G2TxbxLastname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxLastname.Location = new System.Drawing.Point(101, 208);
+            this.G2TxbxLastname.Location = new System.Drawing.Point(150, 254);
             this.G2TxbxLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxLastname.Name = "G2TxbxLastname";
             this.G2TxbxLastname.Padding = new System.Windows.Forms.Padding(7);
@@ -224,12 +220,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(97, 271);
+            this.label2.Location = new System.Drawing.Point(146, 317);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 21);
             this.label2.TabIndex = 442;
@@ -250,7 +244,7 @@
             this.G2TxbxExpertise.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxExpertise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxExpertise.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxExpertise.Location = new System.Drawing.Point(272, 296);
+            this.G2TxbxExpertise.Location = new System.Drawing.Point(321, 342);
             this.G2TxbxExpertise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxExpertise.Name = "G2TxbxExpertise";
             this.G2TxbxExpertise.Padding = new System.Windows.Forms.Padding(7);
@@ -264,7 +258,7 @@
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(595, 329);
+            this.panel21.Location = new System.Drawing.Point(644, 375);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(163, 2);
             this.panel21.TabIndex = 470;
@@ -281,7 +275,7 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(597, 325);
+            this.panel11.Location = new System.Drawing.Point(646, 371);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(160, 2);
             this.panel11.TabIndex = 481;
@@ -298,7 +292,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(597, 299);
+            this.panel13.Location = new System.Drawing.Point(646, 345);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(160, 2);
             this.panel13.TabIndex = 478;
@@ -315,7 +309,7 @@
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(757, 295);
+            this.panel15.Location = new System.Drawing.Point(806, 341);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(2, 36);
             this.panel15.TabIndex = 484;
@@ -332,7 +326,7 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel17.Controls.Add(this.panel18);
-            this.panel17.Location = new System.Drawing.Point(595, 295);
+            this.panel17.Location = new System.Drawing.Point(644, 341);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(2, 36);
             this.panel17.TabIndex = 482;
@@ -349,7 +343,7 @@
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(595, 295);
+            this.panel19.Location = new System.Drawing.Point(644, 341);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(163, 2);
             this.panel19.TabIndex = 477;
@@ -367,8 +361,9 @@
             this.DTPStartTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.DTPStartTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPStartTime.Location = new System.Drawing.Point(595, 300);
+            this.DTPStartTime.Location = new System.Drawing.Point(644, 346);
             this.DTPStartTime.Name = "DTPStartTime";
+            this.DTPStartTime.ShowUpDown = true;
             this.DTPStartTime.Size = new System.Drawing.Size(163, 26);
             this.DTPStartTime.TabIndex = 475;
             this.DTPStartTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
@@ -378,20 +373,19 @@
             this.DTPEndTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DTPEndTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPEndTime.Location = new System.Drawing.Point(816, 301);
+            this.DTPEndTime.Location = new System.Drawing.Point(865, 347);
             this.DTPEndTime.Name = "DTPEndTime";
+            this.DTPEndTime.ShowUpDown = true;
             this.DTPEndTime.Size = new System.Drawing.Size(163, 26);
             this.DTPEndTime.TabIndex = 466;
             this.DTPEndTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(593, 271);
+            this.label3.Location = new System.Drawing.Point(642, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 21);
             this.label3.TabIndex = 496;
@@ -399,12 +393,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(814, 271);
+            this.label4.Location = new System.Drawing.Point(863, 317);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 497;
@@ -412,12 +404,10 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(589, 100);
+            this.label6.Location = new System.Drawing.Point(638, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 498;
@@ -446,7 +436,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(593, 129);
+            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(642, 175);
             this.G2CmbxDaysAvailable.Name = "G2CmbxDaysAvailable";
             this.G2CmbxDaysAvailable.Size = new System.Drawing.Size(172, 36);
             this.G2CmbxDaysAvailable.TabIndex = 499;
@@ -467,7 +457,7 @@
             this.G2TxbxDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxDaysAvailable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(763, 129);
+            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(812, 175);
             this.G2TxbxDaysAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxDaysAvailable.Name = "G2TxbxDaysAvailable";
             this.G2TxbxDaysAvailable.Padding = new System.Windows.Forms.Padding(7);
@@ -479,12 +469,10 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(593, 183);
+            this.label7.Location = new System.Drawing.Point(642, 229);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 503;
@@ -505,7 +493,7 @@
             this.G2TxbxHourlyRate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxHourlyRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxHourlyRate.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxHourlyRate.Location = new System.Drawing.Point(597, 208);
+            this.G2TxbxHourlyRate.Location = new System.Drawing.Point(646, 254);
             this.G2TxbxHourlyRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxHourlyRate.Name = "G2TxbxHourlyRate";
             this.G2TxbxHourlyRate.Padding = new System.Windows.Forms.Padding(7);
@@ -519,7 +507,7 @@
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(815, 330);
+            this.panel23.Location = new System.Drawing.Point(864, 376);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(163, 2);
             this.panel23.TabIndex = 485;
@@ -536,7 +524,7 @@
             // 
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(817, 326);
+            this.panel25.Location = new System.Drawing.Point(866, 372);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(160, 2);
             this.panel25.TabIndex = 488;
@@ -553,7 +541,7 @@
             // 
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(817, 300);
+            this.panel27.Location = new System.Drawing.Point(866, 346);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(160, 2);
             this.panel27.TabIndex = 487;
@@ -570,7 +558,7 @@
             // 
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(977, 296);
+            this.panel29.Location = new System.Drawing.Point(1026, 342);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(2, 36);
             this.panel29.TabIndex = 490;
@@ -587,7 +575,7 @@
             // 
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(815, 296);
+            this.panel33.Location = new System.Drawing.Point(864, 342);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(2, 36);
             this.panel33.TabIndex = 489;
@@ -604,7 +592,7 @@
             // 
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(815, 296);
+            this.panel35.Location = new System.Drawing.Point(864, 342);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(163, 2);
             this.panel35.TabIndex = 486;
@@ -619,12 +607,10 @@
             // 
             // LblAvailbalityID
             // 
-            this.LblAvailbalityID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblAvailbalityID.AutoSize = true;
             this.LblAvailbalityID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAvailbalityID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblAvailbalityID.Location = new System.Drawing.Point(706, 100);
+            this.LblAvailbalityID.Location = new System.Drawing.Point(755, 146);
             this.LblAvailbalityID.Name = "LblAvailbalityID";
             this.LblAvailbalityID.Size = new System.Drawing.Size(19, 21);
             this.LblAvailbalityID.TabIndex = 506;
@@ -632,12 +618,10 @@
             // 
             // LblTutorID
             // 
-            this.LblTutorID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTutorID.AutoSize = true;
             this.LblTutorID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTutorID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblTutorID.Location = new System.Drawing.Point(174, 100);
+            this.LblTutorID.Location = new System.Drawing.Point(223, 146);
             this.LblTutorID.Name = "LblTutorID";
             this.LblTutorID.Size = new System.Drawing.Size(19, 21);
             this.LblTutorID.TabIndex = 507;
@@ -681,7 +665,7 @@
             this.G2CmbxExpertise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2CmbxExpertise.IntegralHeight = false;
             this.G2CmbxExpertise.ItemHeight = 30;
-            this.G2CmbxExpertise.Location = new System.Drawing.Point(101, 296);
+            this.G2CmbxExpertise.Location = new System.Drawing.Point(150, 342);
             this.G2CmbxExpertise.Name = "G2CmbxExpertise";
             this.G2CmbxExpertise.Size = new System.Drawing.Size(173, 36);
             this.G2CmbxExpertise.TabIndex = 509;
@@ -696,7 +680,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1033, 511);
+            this.ClientSize = new System.Drawing.Size(1166, 546);
             this.Controls.Add(this.G2CmbxExpertise);
             this.Controls.Add(this.panel33);
             this.Controls.Add(this.G2BtnAdd);

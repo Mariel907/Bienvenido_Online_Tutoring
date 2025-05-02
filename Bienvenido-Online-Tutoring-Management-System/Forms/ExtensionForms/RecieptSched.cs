@@ -33,8 +33,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             {
                 new ReportParameter("StudentName", stud.StudentName),
                 new ReportParameter("Date", currentDate),
-                new ReportParameter("Cash", stud.Cash.ToString("F2")),
-                new ReportParameter("Changed", stud.Changed.ToString("F2")),
+                new ReportParameter("Cash", $"P{stud.Cash.ToString("F2")}"),
+                new ReportParameter("Changed", $"P{stud.Changed.ToString("F2")}"),
                 new ReportParameter("StudentID", stud.StudentID.ToString())
             };
             RVSchedulePayment.LocalReport.SetParameters(p);

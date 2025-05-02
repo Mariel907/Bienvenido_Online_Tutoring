@@ -1,11 +1,7 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Model;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
 {
@@ -51,6 +47,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("ContactDetails", stud.ContactDetails)
             };
             dl.ExecuteData("Student_AddEditShow", sp);
+        }
+        public void Search(string Txbx, DataGridView DGV)
+        {
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("Action","SearchTxbx"),
+                new SqlParameter("Txbx", Txbx)
+            };
+            dl.LoadData("Search_Student", DGV, sp);
         }
     }
 }

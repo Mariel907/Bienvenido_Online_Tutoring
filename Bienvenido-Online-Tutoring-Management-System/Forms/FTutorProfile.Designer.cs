@@ -34,9 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTutorProfile));
             this.DGVTutor = new Guna.UI2.WinForms.Guna2DataGridView();
             this.G2BtnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Expertise = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,9 +63,13 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVTutor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVTutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVTutor.AutoGenerateColumns = false;
             this.DGVTutor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.DGVTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DGVTutor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,7 +101,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVTutor.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVTutor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
-            this.DGVTutor.Location = new System.Drawing.Point(23, 72);
+            this.DGVTutor.Location = new System.Drawing.Point(23, 58);
             this.DGVTutor.Margin = new System.Windows.Forms.Padding(4);
             this.DGVTutor.Name = "DGVTutor";
             this.DGVTutor.ReadOnly = true;
@@ -113,7 +119,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVTutor.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGVTutor.Size = new System.Drawing.Size(1129, 404);
+            this.DGVTutor.Size = new System.Drawing.Size(1129, 418);
             this.DGVTutor.TabIndex = 234;
             this.DGVTutor.TabStop = false;
             this.DGVTutor.Tag = "book_id";
@@ -125,7 +131,7 @@
             this.DGVTutor.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.DGVTutor.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVTutor.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.DGVTutor.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVTutor.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DGVTutor.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DGVTutor.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVTutor.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
@@ -142,7 +148,7 @@
             // 
             // G2BtnUpdate
             // 
-            this.G2BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.G2BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.G2BtnUpdate.BorderRadius = 15;
             this.G2BtnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.G2BtnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -160,7 +166,7 @@
             // 
             // G2BtnEdit
             // 
-            this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.G2BtnEdit.BorderRadius = 15;
             this.G2BtnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.G2BtnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -176,6 +182,33 @@
             this.G2BtnEdit.Text = "Edit";
             this.G2BtnEdit.Click += new System.EventHandler(this.G2BtnEdit_Click);
             // 
+            // G2TxbxSearch
+            // 
+            this.G2TxbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.G2TxbxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2TxbxSearch.BorderThickness = 2;
+            this.G2TxbxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.G2TxbxSearch.DefaultText = "";
+            this.G2TxbxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.G2TxbxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.G2TxbxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.G2TxbxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.G2TxbxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.G2TxbxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.G2TxbxSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2TxbxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2TxbxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.G2TxbxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("G2TxbxSearch.IconLeft")));
+            this.G2TxbxSearch.Location = new System.Drawing.Point(24, 14);
+            this.G2TxbxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.G2TxbxSearch.Name = "G2TxbxSearch";
+            this.G2TxbxSearch.PlaceholderText = "";
+            this.G2TxbxSearch.SelectedText = "";
+            this.G2TxbxSearch.Size = new System.Drawing.Size(1129, 36);
+            this.G2TxbxSearch.TabIndex = 517;
+            this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
+            // 
             // TutorID
             // 
             this.TutorID.DataPropertyName = "TutorID";
@@ -187,7 +220,7 @@
             // Fullname
             // 
             this.Fullname.DataPropertyName = "Fullname";
-            this.Fullname.HeaderText = "Fullname";
+            this.Fullname.HeaderText = "Tutor Name";
             this.Fullname.Name = "Fullname";
             this.Fullname.ReadOnly = true;
             // 
@@ -260,6 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 532);
+            this.Controls.Add(this.G2TxbxSearch);
             this.Controls.Add(this.G2BtnEdit);
             this.Controls.Add(this.G2BtnUpdate);
             this.Controls.Add(this.DGVTutor);
@@ -280,6 +314,7 @@
         private System.Windows.Forms.BindingSource mTutorProfileBindingSource;
         private Guna.UI2.WinForms.Guna2Button G2BtnUpdate;
         private Guna.UI2.WinForms.Guna2Button G2BtnEdit;
+        private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Expertise;
