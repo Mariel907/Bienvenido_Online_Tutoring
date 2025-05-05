@@ -24,7 +24,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             return DataLoader.ExecuteStoredProcedure("Schedule_ShowAdd", new Dictionary<string, object> { { "Action", "Tutor" }, { "Expertise", Expertise } }, reader => new MTutorProfile
             {
                 TutorID = int.Parse(reader["TutorID"].ToString()),
-                Fullname = reader["Fullname"].ToString(),
+                TutorName = reader["Fullname"].ToString(),
                 HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString())
             });
         }
@@ -230,7 +230,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             {
                 if (row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase)) continue;
 
-                int InvoiceID = CAutoIncrementID.NextInvoiceID();
                 SqlParameter[] sp = new SqlParameter[]
                 {
                   new SqlParameter("Action", "Paid"),
@@ -241,5 +240,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 _loader.ExecuteData("Schedule_ShowAdd", sp);
             }
         }
+
+        
     }
 }

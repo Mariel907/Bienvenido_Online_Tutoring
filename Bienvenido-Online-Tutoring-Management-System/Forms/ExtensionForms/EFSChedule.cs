@@ -152,7 +152,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 DataGridViewRow row = DGVStudent.Rows[rowIndex];
                 row.Cells["SessionID"].Value = sessionID;
                 row.Cells["TutorID"].Value = tutor.TutorID;
-                row.Cells["TutorName"].Value = tutor.Fullname;
+                row.Cells["TutorName"].Value = tutor.TutorName;
                 row.Cells["Subject"].Value = sub.SubjectName;
                 row.Cells["StartTime"].Value = STime;
                 row.Cells["EndTime"].Value = ETime;
@@ -162,6 +162,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["TotalHours"].Value = formatedTotalHours;
                 row.Cells["InvoiceID"].Value = InvoiceID;
                 row.Cells["StatusBill"].Value = "Pending";
+                row.Cells["Status"].Value = "Draft";
 
                 schedule.Insert(sub, tutor, LblStudentID.Text, STime, ETime, G2CmbxDateAvailable.SelectedValue, totalAmount, InvoiceID, totalHours);
                 SlotsDateAvailable();

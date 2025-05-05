@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Tutor_Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tutor_Profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Subjects_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Subjects_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Transaction_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Transaction_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Payment_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Payment_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dashboard_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dashboard_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Earnings_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Earnings_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

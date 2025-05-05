@@ -18,6 +18,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private FormManager form = new FormManager();
         private Dashboard _Dashboard;
         private CStudents _Students = new CStudents();
+        private BindingSource _BindingSource = new BindingSource();
         public FStudents(Dashboard dashboard)
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private void FStudents_Load(object sender, EventArgs e)
         {
             DGVStudent.DataSource = CStudents.Students();
+            //_BindingSource.DataSource = CStudents.Students();
         }
 
         private void G2BtnAdd_Click(object sender, EventArgs e)

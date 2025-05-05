@@ -14,7 +14,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             return DataLoader.ExecuteStoredProcedure("Tutor_AddUpdateDelete", new Dictionary<string, object> { { "Action", "Show" } }, reader => new MTutorProfile
             {
                 TutorID = int.Parse(reader["TutorID"].ToString()),
-                Fullname = reader["Fullname"].ToString(),
+                TutorName = reader["Fullname"].ToString(),
                 Expertise = reader["Expertise"].ToString(),
                 HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
                 AvailabilityID = int.Parse(reader["AvailabilityID"].ToString()),

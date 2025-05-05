@@ -1,5 +1,6 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Class;
 using Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms;
+using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -25,19 +26,24 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
         private void FTransaction_Load(object sender, EventArgs e)
         {
-            DGVScheduled.DataSource = CSchedule.Transaction();
+            //DGVScheduled.DataSource = CSchedule.Transaction();
             ShowStudentCMBX();
         }
         private void ShowStudentCMBX()
         {
-            G2CmbxStudentName.DataSource = CTransaction.StudentsName();
+            G2CmbxStudentName.DataSource = CTransaction.StudentsName(LblID.Text);
             G2CmbxStudentName.DisplayMember = "StudentName";
         }
         private void G2CmbxStudentName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string Cmbx = G2CmbxStudentName.Text;
+            if(G2CmbxStudentName.SelectedValue != null)
+            {
+                MStudent stud = G2CmbxStudentName.SelectedItem as MStudent;
+                LblID.Text = stud.StudentID.ToString();
 
-            transaction.Search(Cmbx, DGVScheduled);
+                string Lbl = LblID.Text;
+                transaction.Search(Lbl, DGVScheduled);
+            }
         }
 
         private void DGVScheduled_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

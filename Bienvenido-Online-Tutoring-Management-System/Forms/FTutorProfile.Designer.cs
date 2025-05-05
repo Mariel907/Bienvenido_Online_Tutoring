@@ -39,19 +39,19 @@
             this.G2BtnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Expertise = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AvailabilityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DaysAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mTutorProfileBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mTutorProfileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Expertise = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._AvailabilityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._DaysAvailable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVTutor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mTutorProfileBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTutorProfileBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVTutor
@@ -81,17 +81,17 @@
             this.DGVTutor.ColumnHeadersHeight = 35;
             this.DGVTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DGVTutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TutorID,
-            this.Fullname,
-            this.Expertise,
-            this.HourlyRate,
-            this.AvailabilityID,
-            this.StartTime,
-            this.EndTime,
-            this.DaysAvailable,
-            this.Firstname,
-            this.lastname});
-            this.DGVTutor.DataSource = this.mTutorProfileBindingSource;
+            this._TutorID,
+            this.TutorName,
+            this._Expertise,
+            this._AvailabilityID,
+            this._StartTime,
+            this._EndTime,
+            this._HourlyRate,
+            this._DaysAvailable,
+            this._Firstname,
+            this._lastname});
+            this.DGVTutor.DataSource = this.mTutorProfileBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,6 +144,7 @@
             this.DGVTutor.ThemeStyle.RowsStyle.Height = 22;
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.DGVTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTutor_CellClick);
             this.DGVTutor.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTutor_CellContentDoubleClick);
             // 
             // G2BtnUpdate
@@ -209,83 +210,83 @@
             this.G2TxbxSearch.TabIndex = 517;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
-            // TutorID
+            // mTutorProfileBindingSource1
             // 
-            this.TutorID.DataPropertyName = "TutorID";
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
+            this.mTutorProfileBindingSource1.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MTutorProfile);
             // 
-            // Fullname
+            // _TutorID
             // 
-            this.Fullname.DataPropertyName = "Fullname";
-            this.Fullname.HeaderText = "Tutor Name";
-            this.Fullname.Name = "Fullname";
-            this.Fullname.ReadOnly = true;
+            this._TutorID.DataPropertyName = "TutorID";
+            this._TutorID.HeaderText = "TutorID";
+            this._TutorID.Name = "_TutorID";
+            this._TutorID.ReadOnly = true;
+            this._TutorID.Visible = false;
             // 
-            // Expertise
+            // TutorName
             // 
-            this.Expertise.DataPropertyName = "Expertise";
-            this.Expertise.HeaderText = "Expertise";
-            this.Expertise.Name = "Expertise";
-            this.Expertise.ReadOnly = true;
+            this.TutorName.DataPropertyName = "TutorName";
+            this.TutorName.HeaderText = "Tutor Name";
+            this.TutorName.Name = "TutorName";
+            this.TutorName.ReadOnly = true;
             // 
-            // HourlyRate
+            // _Expertise
             // 
-            this.HourlyRate.DataPropertyName = "HourlyRate";
-            this.HourlyRate.HeaderText = "Hourly Rate";
-            this.HourlyRate.Name = "HourlyRate";
-            this.HourlyRate.ReadOnly = true;
+            this._Expertise.DataPropertyName = "Expertise";
+            this._Expertise.HeaderText = "Expertise";
+            this._Expertise.Name = "_Expertise";
+            this._Expertise.ReadOnly = true;
             // 
-            // AvailabilityID
+            // _AvailabilityID
             // 
-            this.AvailabilityID.DataPropertyName = "AvailabilityID";
-            this.AvailabilityID.HeaderText = "AvailabilityID";
-            this.AvailabilityID.Name = "AvailabilityID";
-            this.AvailabilityID.ReadOnly = true;
-            this.AvailabilityID.Visible = false;
+            this._AvailabilityID.DataPropertyName = "AvailabilityID";
+            this._AvailabilityID.HeaderText = "AvailabilityID";
+            this._AvailabilityID.Name = "_AvailabilityID";
+            this._AvailabilityID.ReadOnly = true;
+            this._AvailabilityID.Visible = false;
             // 
-            // StartTime
+            // _StartTime
             // 
-            this.StartTime.DataPropertyName = "StartTime";
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
+            this._StartTime.DataPropertyName = "StartTime";
+            this._StartTime.HeaderText = "Start Time";
+            this._StartTime.Name = "_StartTime";
+            this._StartTime.ReadOnly = true;
             // 
-            // EndTime
+            // _EndTime
             // 
-            this.EndTime.DataPropertyName = "EndTime";
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
+            this._EndTime.DataPropertyName = "EndTime";
+            this._EndTime.HeaderText = "End Time";
+            this._EndTime.Name = "_EndTime";
+            this._EndTime.ReadOnly = true;
             // 
-            // DaysAvailable
+            // _HourlyRate
             // 
-            this.DaysAvailable.DataPropertyName = "DaysAvailable";
-            this.DaysAvailable.HeaderText = "Days Available";
-            this.DaysAvailable.Name = "DaysAvailable";
-            this.DaysAvailable.ReadOnly = true;
+            this._HourlyRate.DataPropertyName = "HourlyRate";
+            this._HourlyRate.HeaderText = "Hourly Rate";
+            this._HourlyRate.Name = "_HourlyRate";
+            this._HourlyRate.ReadOnly = true;
             // 
-            // Firstname
+            // _DaysAvailable
             // 
-            this.Firstname.DataPropertyName = "Firstname";
-            this.Firstname.HeaderText = "Firstname";
-            this.Firstname.Name = "Firstname";
-            this.Firstname.ReadOnly = true;
-            this.Firstname.Visible = false;
+            this._DaysAvailable.DataPropertyName = "DaysAvailable";
+            this._DaysAvailable.HeaderText = "Days Available";
+            this._DaysAvailable.Name = "_DaysAvailable";
+            this._DaysAvailable.ReadOnly = true;
             // 
-            // lastname
+            // _Firstname
             // 
-            this.lastname.DataPropertyName = "lastname";
-            this.lastname.HeaderText = "lastname";
-            this.lastname.Name = "lastname";
-            this.lastname.ReadOnly = true;
-            this.lastname.Visible = false;
+            this._Firstname.DataPropertyName = "Firstname";
+            this._Firstname.HeaderText = "Firstname";
+            this._Firstname.Name = "_Firstname";
+            this._Firstname.ReadOnly = true;
+            this._Firstname.Visible = false;
             // 
-            // mTutorProfileBindingSource
+            // _lastname
             // 
-            this.mTutorProfileBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MTutorProfile);
+            this._lastname.DataPropertyName = "lastname";
+            this._lastname.HeaderText = "lastname";
+            this._lastname.Name = "_lastname";
+            this._lastname.ReadOnly = true;
+            this._lastname.Visible = false;
             // 
             // FTutorProfile
             // 
@@ -303,7 +304,7 @@
             this.Text = "FTutorProfile";
             this.Load += new System.EventHandler(this.FTutorProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVTutor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mTutorProfileBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTutorProfileBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,7 +312,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView DGVTutor;
-        private System.Windows.Forms.BindingSource mTutorProfileBindingSource;
         private Guna.UI2.WinForms.Guna2Button G2BtnUpdate;
         private Guna.UI2.WinForms.Guna2Button G2BtnEdit;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
@@ -325,5 +325,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DaysAvailable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
+        private System.Windows.Forms.BindingSource mTutorProfileBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _TutorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TutorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Expertise;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _AvailabilityID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _EndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _HourlyRate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _DaysAvailable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Firstname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _lastname;
     }
 }

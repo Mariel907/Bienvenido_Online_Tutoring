@@ -62,7 +62,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +77,8 @@
             this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVScheduled)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -213,7 +214,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(9, 20);
+            this.label5.Location = new System.Drawing.Point(9, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 21);
             this.label5.TabIndex = 567;
@@ -446,10 +447,6 @@
             this.label3.TabIndex = 583;
             this.label3.Text = "OnGoing";
             // 
-            // mSessionBindingSource
-            // 
-            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
-            // 
             // SessionID
             // 
             this.SessionID.DataPropertyName = "SessionID";
@@ -563,12 +560,28 @@
             this.TotalHours.ReadOnly = true;
             this.TotalHours.Visible = false;
             // 
+            // mSessionBindingSource
+            // 
+            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
+            // 
+            // LblID
+            // 
+            this.LblID.AutoSize = true;
+            this.LblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.LblID.Location = new System.Drawing.Point(115, 17);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(19, 21);
+            this.LblID.TabIndex = 584;
+            this.LblID.Text = "0";
+            // 
             // FTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 532);
+            this.Controls.Add(this.LblID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -657,5 +670,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
+        private System.Windows.Forms.Label LblID;
     }
 }

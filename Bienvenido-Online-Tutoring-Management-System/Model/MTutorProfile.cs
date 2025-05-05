@@ -10,7 +10,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
     public class MTutorProfile
     {
         public int TutorID { get; set; }
-        public string Fullname { get; set; }
+        public string TutorName { get; set; }
         public string Expertise { get; set; }
         public decimal HourlyRate { get; set; }
         public int AvailabilityID { get; set; }
