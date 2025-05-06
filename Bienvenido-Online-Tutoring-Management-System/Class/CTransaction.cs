@@ -10,16 +10,29 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
     public class CTransaction
     {
         private DataLoader _loader = new DataLoader();
-        public void Search(string Txbx, DataGridView DGV)
+        public void Search(string Lbl, DataGridView DGV)
         {
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@StudentID", Txbx),
+                new SqlParameter("@StudentID", Lbl),
                 new SqlParameter("Action", "StudentName")
             };
             _loader.LoadData("Transaction_Search", DGV, sp);
         }
-
+        public void StatusCmbxSearch(string Lbl, string Cmbx, DataGridView DGV)
+        {
+            SqlParameter[] sp = new SqlParameter[]
+            {
+                new SqlParameter("Action", "CmbxSearch"),
+                new SqlParameter("StudentID", Lbl),
+                new SqlParameter("Status", Cmbx)
+            };
+            _loader.LoadData("Transaction_Search", DGV, sp);
+        }
+        public void UpdateStatus(DataGridView DGV)
+        {
+            _loader.LoadData("Session_", DGV);
+        }
         public static List<MStudent> StudentsName(string Txbx)
         {
             return DataLoader.ExecuteStoredProcedure("Transaction_Search", new Dictionary<string, object> { { "Action", "ShowCmbxStudentName" }, { "StudentID", Txbx } }, reader => new MStudent

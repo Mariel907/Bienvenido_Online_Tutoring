@@ -16,6 +16,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
     {
         private MTutorProfile mt;
         private CEarnings earnings = new CEarnings();
+        private CTransaction transaction = new CTransaction();
         public FEarningsTutor(MTutorProfile mt)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             TutorName();
             FillInFields();
+            transaction.UpdateStatus(DGV);
         }
         private void TutorName()
         {
@@ -75,6 +77,40 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             earnings.Earnings(ref update, "LastYearEarnings", LblId);
             LblLastYear.Text = update;  
+        }
+
+        private void DGV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridViewRow row = DGV.Rows[e.RowIndex];
+            string Status = row.Cells["Status"].Value?.ToString();
+
+            switch(Status)
+            {
+                case "Scheduled":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 128);
+                    break;
+                case "OnGoing":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(153, 255, 153);
+                    break;
+                case "Done":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 128, 128);
+                    break;
+            }
+        }
+
+        private void G2CmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchStatus();
+        }
+        private void SearchStatus()
+        {
+            string Cmbx = G2CmbxStatus.Text;
+            string Lbl = LblID.Text;
+            if (Cmbx == "All")
+                ShowDGV();
+            else
+                earnings.SearchCmbx(DGV, Lbl);
+
         }
     }
 }

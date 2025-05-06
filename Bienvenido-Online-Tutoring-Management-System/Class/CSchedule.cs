@@ -58,24 +58,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             });
         }
 
-        public static List<MSession> Transaction()
-        {
-            return DataLoader.ExecuteStoredProcedure("Session_", null, reader => new MSession
-            {
-                StudentID = int.Parse(reader["StudentID"].ToString()),
-                TutorID = int.Parse(reader["TutorID"].ToString()),
-                SessionID = int.Parse(reader["SessionID"].ToString()),
-                TutorName = reader["TutorName"].ToString(),
-                StudName = reader["StudName"].ToString(),
-                Subject = reader["Subject"].ToString(),
-                StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
-                EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
-                SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
-                HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
-                TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
-                Status = reader["Status"].ToString()
-            });
-        }
         public static Dictionary<DateTime, List<TimeSpan>> GetTimeslotsByDate(string TutorID, string Day)
         {
             Slots slots = new Slots { GroupedTimeslots = new Dictionary<DateTime, List<TimeSpan>>() };
@@ -154,6 +136,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("SessionID", row.Cells["SessionID"].Value),
+                new SqlParameter("InvoiceID", row.Cells["InvoiceID"].Value),
                 new SqlParameter("Action", "Void")
             };
             _loader.ExecuteData("Schedule_ShowAdd", sp);

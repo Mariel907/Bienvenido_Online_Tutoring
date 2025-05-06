@@ -59,7 +59,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             {
                 case "Dashboard":
                     LblTitle.Text = "Dashboard";
-                    FDashboard fDashboard = new FDashboard();
+                    FCalendar fDashboard = new FCalendar();
                     form.OpenForm(fDashboard, PnlDashboard);
                     break;
                 case "Students":

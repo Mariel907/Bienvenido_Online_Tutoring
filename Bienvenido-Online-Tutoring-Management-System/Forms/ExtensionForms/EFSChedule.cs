@@ -48,7 +48,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["EndTime"].Value = session.EndTime;
                 row.Cells["HourlyRate"].Value = session.HourlyRate;
                 row.Cells["TotalAmount"].Value = session.TotalAmount;
-                row.Cells["SessionDate"].Value = session.SessionDate.ToString("MM-dd-yyyy");
+                row.Cells["SessionDate"].Value = session.SessionDate.ToString("MM/dd/yyyy");
                 row.Cells["TotalHours"].Value = session.TotalHours;
                 row.Cells["InvoiceID"].Value = session.InvoiceID;
                 row.Cells["StatusBill"].Value = session.StatusBill;
@@ -67,7 +67,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private void TutorExprtise()
         {
             G2CmbxTutorName.DataSource = CSchedule.TutorExpertise(G2CmbxPreferredSubjects.Text);
-            G2CmbxTutorName.DisplayMember = "Fullname";
+            G2CmbxTutorName.DisplayMember = "TutorName";
             G2CmbxTutorName.ValueMember = "TutorID";
         }
         private void AVDay()

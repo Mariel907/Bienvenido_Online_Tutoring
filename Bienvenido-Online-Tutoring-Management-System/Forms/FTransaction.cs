@@ -3,6 +3,7 @@ using Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms;
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Drawing;
+using System.Security;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms
@@ -12,6 +13,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private Dashboard _dashboard;
         private FormManager _FormManager = new FormManager();
         private CTransaction transaction = new CTransaction();
+        private string Lbl;
         public FTransaction(Dashboard dashboard)
         {
             InitializeComponent();
@@ -26,8 +28,9 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
         private void FTransaction_Load(object sender, EventArgs e)
         {
-            //DGVScheduled.DataSource = CSchedule.Transaction();
+            transaction.UpdateStatus(DGVScheduled);
             ShowStudentCMBX();
+
         }
         private void ShowStudentCMBX()
         {
@@ -41,7 +44,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                 MStudent stud = G2CmbxStudentName.SelectedItem as MStudent;
                 LblID.Text = stud.StudentID.ToString();
 
-                string Lbl = LblID.Text;
+                Lbl = LblID.Text;
                 transaction.Search(Lbl, DGVScheduled);
             }
         }
@@ -63,12 +66,26 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 128, 128);
                     break;
                 case "Cancel":
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 194, 102);
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 131, 193);
                     break;
                 case "Draft":
-                    //row.DefaultCellStyle.BackColor = Color.FromArgb(153, 255, 153);
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(84, 126, 255);
                     break;
             }
+        }
+
+        private void G2CmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchStatus();
+        }
+        private void SearchStatus()
+        {
+            Lbl = LblID.Text;
+            string Cmbx = G2CmbxStatus.Text;
+            if (Cmbx == "All")
+                transaction.Search(Lbl, DGVScheduled);
+            else
+                transaction.StatusCmbxSearch(Lbl, Cmbx, DGVScheduled);
         }
     }
 }
