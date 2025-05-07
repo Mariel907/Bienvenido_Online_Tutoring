@@ -47,6 +47,7 @@
             // lstSessions
             // 
             this.lstSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.lstSessions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstSessions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstSessions.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstSessions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -57,8 +58,9 @@
             this.lstSessions.Name = "lstSessions";
             this.lstSessions.Size = new System.Drawing.Size(179, 143);
             this.lstSessions.TabIndex = 2;
-            this.lstSessions.SelectedIndexChanged += new System.EventHandler(this.lstSessions_SelectedIndexChanged);
-            this.lstSessions.MouseHover += new System.EventHandler(this.lstSessions_MouseHover);
+            this.lstSessions.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstSessions_DrawItem);
+            this.lstSessions.MouseLeave += new System.EventHandler(this.lstSessions_MouseLeave);
+            this.lstSessions.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lstSessions_MouseMove);
             // 
             // CustomCalendar
             // 
