@@ -90,7 +90,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private void Dashboard_Load(object sender, EventArgs e)
         {
             LblTitle.Text = "Dashboard";
-            FDashboard fDashboard = new FDashboard();
+            FCalendar fDashboard = new FCalendar();
             form.OpenForm(fDashboard, PnlDashboard);
         }
     }

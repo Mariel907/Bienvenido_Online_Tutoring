@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCalendar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.TblLytPnlCalendar = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,21 +43,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.LblMonth = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.PCtrNext = new System.Windows.Forms.PictureBox();
             this.PctrPrevious = new System.Windows.Forms.PictureBox();
+            this.PCtrNext = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,8 +81,22 @@
             this.panel2.Size = new System.Drawing.Size(873, 526);
             this.panel2.TabIndex = 1;
             // 
+            // panel6
+            // 
+            this.panel6.AutoScroll = true;
+            this.panel6.Controls.Add(this.TblLytPnlCalendar);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(10, 118);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(853, 398);
+            this.panel6.TabIndex = 0;
+            // 
             // TblLytPnlCalendar
             // 
+            this.TblLytPnlCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TblLytPnlCalendar.AutoSize = true;
             this.TblLytPnlCalendar.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.TblLytPnlCalendar.ColumnCount = 7;
             this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -92,8 +106,8 @@
             this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TblLytPnlCalendar.Location = new System.Drawing.Point(0, 0);
+            this.TblLytPnlCalendar.Location = new System.Drawing.Point(0, -1);
+            this.TblLytPnlCalendar.Margin = new System.Windows.Forms.Padding(0);
             this.TblLytPnlCalendar.Name = "TblLytPnlCalendar";
             this.TblLytPnlCalendar.RowCount = 6;
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -116,7 +130,8 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -132,7 +147,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -158,7 +172,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(637, 6);
+            this.label6.Location = new System.Drawing.Point(638, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 21);
             this.label6.TabIndex = 515;
@@ -182,7 +196,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(374, 6);
+            this.label3.Location = new System.Drawing.Point(375, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 21);
             this.label3.TabIndex = 513;
@@ -206,7 +220,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(145, 6);
+            this.label1.Location = new System.Drawing.Point(146, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 21);
             this.label1.TabIndex = 511;
@@ -218,7 +232,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(27, 6);
+            this.label5.Location = new System.Drawing.Point(28, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 21);
             this.label5.TabIndex = 510;
@@ -234,11 +248,26 @@
             this.panel4.Size = new System.Drawing.Size(853, 40);
             this.panel4.TabIndex = 3;
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.LblMonth, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(853, 40);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
             // LblMonth
             // 
             this.LblMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.LblMonth.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblMonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMonth.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.LblMonth.Location = new System.Drawing.Point(2, 2);
             this.LblMonth.Margin = new System.Windows.Forms.Padding(0);
@@ -258,29 +287,17 @@
             this.panel5.Size = new System.Drawing.Size(853, 34);
             this.panel5.TabIndex = 5;
             // 
-            // tableLayoutPanel3
+            // PctrPrevious
             // 
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.LblMonth, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(853, 40);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.TblLytPnlCalendar);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(10, 118);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(853, 398);
-            this.panel6.TabIndex = 0;
+            this.PctrPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PctrPrevious.Image = ((System.Drawing.Image)(resources.GetObject("PctrPrevious.Image")));
+            this.PctrPrevious.Location = new System.Drawing.Point(775, 2);
+            this.PctrPrevious.Name = "PctrPrevious";
+            this.PctrPrevious.Size = new System.Drawing.Size(38, 30);
+            this.PctrPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrPrevious.TabIndex = 1;
+            this.PctrPrevious.TabStop = false;
+            this.PctrPrevious.Click += new System.EventHandler(this.PctrPrevious_Click);
             // 
             // PCtrNext
             // 
@@ -293,17 +310,6 @@
             this.PCtrNext.TabIndex = 0;
             this.PCtrNext.TabStop = false;
             this.PCtrNext.Click += new System.EventHandler(this.PCtrNext_Click);
-            // 
-            // PctrPrevious
-            // 
-            this.PctrPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PctrPrevious.Image = ((System.Drawing.Image)(resources.GetObject("PctrPrevious.Image")));
-            this.PctrPrevious.Location = new System.Drawing.Point(768, 2);
-            this.PctrPrevious.Name = "PctrPrevious";
-            this.PctrPrevious.Size = new System.Drawing.Size(38, 30);
-            this.PctrPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrPrevious.TabIndex = 1;
-            this.PctrPrevious.TabStop = false;
             // 
             // FCalendar
             // 
@@ -319,15 +325,16 @@
             this.Text = "Calendar";
             this.Load += new System.EventHandler(this.FCalendar_Load);
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).EndInit();
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).EndInit();
             this.ResumeLayout(false);
 
         }

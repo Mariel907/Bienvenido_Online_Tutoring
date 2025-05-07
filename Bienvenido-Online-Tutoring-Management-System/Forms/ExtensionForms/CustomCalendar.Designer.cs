@@ -36,11 +36,11 @@
             // 
             this.LblDay.AutoSize = true;
             this.LblDay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LblDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblDay.Location = new System.Drawing.Point(10, 10);
+            this.LblDay.Location = new System.Drawing.Point(0, 0);
             this.LblDay.Name = "LblDay";
-            this.LblDay.Size = new System.Drawing.Size(37, 21);
+            this.LblDay.Size = new System.Drawing.Size(33, 19);
             this.LblDay.TabIndex = 510;
             this.LblDay.Text = "Day";
             // 
@@ -48,13 +48,17 @@
             // 
             this.lstSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.lstSessions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstSessions.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstSessions.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstSessions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.lstSessions.FormattingEnabled = true;
-            this.lstSessions.ItemHeight = 21;
-            this.lstSessions.Location = new System.Drawing.Point(10, 31);
+            this.lstSessions.IntegralHeight = false;
+            this.lstSessions.ItemHeight = 17;
+            this.lstSessions.Location = new System.Drawing.Point(0, 19);
             this.lstSessions.Name = "lstSessions";
-            this.lstSessions.Size = new System.Drawing.Size(130, 109);
+            this.lstSessions.Size = new System.Drawing.Size(179, 143);
             this.lstSessions.TabIndex = 2;
+            this.lstSessions.SelectedIndexChanged += new System.EventHandler(this.lstSessions_SelectedIndexChanged);
+            this.lstSessions.MouseHover += new System.EventHandler(this.lstSessions_MouseHover);
             // 
             // CustomCalendar
             // 
@@ -64,7 +68,7 @@
             this.Controls.Add(this.lstSessions);
             this.Controls.Add(this.LblDay);
             this.Name = "CustomCalendar";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Size = new System.Drawing.Size(179, 162);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,13 +22,31 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             LblDay.Text = day.ToString();
         }
 
-        public void UpdateSessions(List<MSession> sessionDetails)
+        public void UpdateSessions(List<MSession> sessionDetails, DateTime targetDate)
         {
-            Sessions = sessionDetails;
+            Sessions = sessionDetails.Where(s => s.SessionDate.Date == targetDate.Date).ToList();
+
             lstSessions.Items.Clear();
-            foreach(var session in sessionDetails)
+            foreach (var session in Sessions)
             {
-                lstSessions.Items.Add(session);
+                lstSessions.Items.Add($"{session.StartTime} - {session.EndTime}");
+            }
+        }
+
+        private void lstSessions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstSessions.SelectedIndex >= 0)
+            {
+                string selectedSession = lstSessions.SelectedItem.ToString();
+
+            }
+        }
+
+        private void lstSessions_MouseHover(object sender, EventArgs e)
+        {
+            if(lstSessions.SelectedIndex >= 0)
+            {
+
             }
         }
     }
