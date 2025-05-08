@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -13,8 +14,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private int month = DateTime.Now.Month;
         private int year = DateTime.Now.Year;
         private CCalendar cCalendar = new CCalendar();
-
-
+        private string cmbx;
         public FCalendar()
         {
             InitializeComponent();
@@ -69,7 +69,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 CustomCalendar dayControl = new CustomCalendar(day);
                 int row = (day + firstDayColumn - 1) / 7;
                 int column = (day + firstDayColumn - 1) % 7;
-                List<MSession> sessionData = cCalendar.GetSessionsForDayStudent(day);
+                List<MSession> sessionData = cCalendar.GetSessionsForDayBoth(day);
                 //List<MSession> sessionList = cCalendar.GetSessionsForDayTutor(day);
 
                 //sessionData.AddRange(sessionList);
@@ -79,52 +79,90 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 TblLytPnlCalendar.Controls.Add(dayControl, column, row);
             }
         }
-        private void RefreshCalendar(string statusFilter)
+        private void RefreshCalendar(List<string> statusFilter)
         {
-            TblLytPnlCalendar.Controls.Clear();
+            String monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LblMonth.Text = $"{monthName}  {year}";
+
             DateTime firstDayOfMonth = new DateTime(year, month, 1);
             DayOfWeek startDay = firstDayOfMonth.DayOfWeek;
 
             int firstDayColumn = (int)startDay;
+
+            string searchedName = G2CmbxName.Text;
+            if (string.IsNullOrEmpty(searchedName)) return;
+
+
+            TblLytPnlCalendar.Controls.Clear();
             for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
             {
                 CustomCalendar dayControl = new CustomCalendar(day);
                 int row = (day + firstDayColumn - 1) / 7;
                 int column = (day + firstDayColumn - 1) % 7;
-                List<MSession> sessionData = cCalendar.GetSessionsForDayStudent(day);
+                List<MSession> sessionData = cCalendar.GetSessionsForDayBoth(day);
 
-                if(!string.IsNullOrEmpty(statusFilter))
-                    sessionData = sessionData.Where(s => s.Status == statusFilter).ToList();
+                if (sessionData.Any())
+                {
+                    sessionData = sessionData.Where(s =>
+                        (s.StudName.Contains(searchedName) || s.TutorName.Contains(searchedName))
+                        && (!statusFilter.Any() || statusFilter.Contains(s.Status)) // Ensures filtering works even if no status is selected
+                    ).ToList();
+                }
 
                 DateTime targetDaet = new DateTime(year, month, day);
                 dayControl.UpdateSessions(sessionData, targetDaet);
 
-                TblLytPnlCalendar.Controls.Add(dayControl);
+                TblLytPnlCalendar.Controls.Add(dayControl, column, row);
             }
         }
 
-        private void CHKDone_CheckedChanged(object sender, EventArgs e)
+        private void CHK_CheckedChanged(object sender, EventArgs e)
         {
-            if (CHKDone.Checked)
-                RefreshCalendar("Done");
-            else
-                RefreshCalendar("");
+            StatusChecked();
+        }
+        private void StatusChecked()
+        {
+            List<string> selectedStatus = new List<string>();
+            if (CHKDone.Checked) selectedStatus.Add("Done");
+            if (CHKScheduled.Checked) selectedStatus.Add("Scheduled");
+            if (CHKOnGoing.Checked) selectedStatus.Add("OnGoing");
+            RefreshCalendar(selectedStatus);
+        }
+        private void CmbxCategoryName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Category();
         }
 
-        private void CHKScheduled_CheckedChanged(object sender, EventArgs e)
+        private void Category()
         {
-            if (CHKScheduled.Checked)
-                RefreshCalendar("Scheduled");
+            cmbx = CmbxCategoryName.Text;
+            var sessionDays = CCalendar.GetSessionsForDayStudent();
+            if (cmbx == "Student")
+            {
+                G2CmbxName.DataSource = sessionDays;
+                G2CmbxName.DisplayMember = "StudName";
+                G2CmbxName.ValueMember = "StudentID";
+            }
             else
-                RefreshCalendar("");
+            {
+                G2CmbxName.DataSource = sessionDays;
+                G2CmbxName.DisplayMember = "TutorName";
+                G2CmbxName.ValueMember = "TutorID";
+            }
         }
 
-        private void CHKOnGoing_CheckedChanged(object sender, EventArgs e)
+        private void G2CmbxName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CHKOnGoing.Checked)
-                RefreshCalendar("OnGoing");
-            else
-                RefreshCalendar("");
+            cmbx = CmbxCategoryName.Text;
+            if (G2CmbxName.SelectedValue != null)
+            {
+                MSession session = G2CmbxName.SelectedItem as MSession;
+                if (cmbx == "Student")
+                    LblID.Text = session.StudentID.ToString();
+                else
+                    LblID.Text = session.TutorID.ToString();
+            }
+            StatusChecked();
         }
     }
 }

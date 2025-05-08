@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCalendar));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.PnlDays = new System.Windows.Forms.Panel();
             this.TblLytPnlCalendar = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,7 +56,7 @@
             this.CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
             this.CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
             this.CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CmbxCategoryName = new System.Windows.Forms.ComboBox();
             this.LblID = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -75,7 +75,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.G2CmbxStudentName = new System.Windows.Forms.ComboBox();
+            this.G2CmbxName = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.PctrPrevious = new System.Windows.Forms.PictureBox();
             this.PCtrNext = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.PnlDays.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,7 +113,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.PnlDays);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel5);
@@ -123,33 +123,28 @@
             this.panel2.Size = new System.Drawing.Size(1067, 526);
             this.panel2.TabIndex = 1;
             // 
-            // panel6
+            // PnlDays
             // 
-            this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.TblLytPnlCalendar);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 176);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1067, 350);
-            this.panel6.TabIndex = 0;
+            this.PnlDays.AutoScroll = true;
+            this.PnlDays.Controls.Add(this.TblLytPnlCalendar);
+            this.PnlDays.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlDays.Location = new System.Drawing.Point(0, 176);
+            this.PnlDays.Name = "PnlDays";
+            this.PnlDays.Size = new System.Drawing.Size(1067, 350);
+            this.PnlDays.TabIndex = 0;
             // 
             // TblLytPnlCalendar
             // 
-            this.TblLytPnlCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TblLytPnlCalendar.AutoSize = true;
-            this.TblLytPnlCalendar.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.TblLytPnlCalendar.ColumnCount = 7;
             this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.TblLytPnlCalendar.Location = new System.Drawing.Point(0, -1);
-            this.TblLytPnlCalendar.Margin = new System.Windows.Forms.Padding(0);
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
+            this.TblLytPnlCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TblLytPnlCalendar.Location = new System.Drawing.Point(0, 0);
             this.TblLytPnlCalendar.Name = "TblLytPnlCalendar";
             this.TblLytPnlCalendar.RowCount = 6;
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -159,7 +154,7 @@
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TblLytPnlCalendar.Size = new System.Drawing.Size(1067, 350);
-            this.TblLytPnlCalendar.TabIndex = 6;
+            this.TblLytPnlCalendar.TabIndex = 0;
             // 
             // panel3
             // 
@@ -328,7 +323,7 @@
             this.panel5.Controls.Add(this.CHKScheduled);
             this.panel5.Controls.Add(this.CHKOnGoing);
             this.panel5.Controls.Add(this.CHKDone);
-            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.CmbxCategoryName);
             this.panel5.Controls.Add(this.LblID);
             this.panel5.Controls.Add(this.panel16);
             this.panel5.Controls.Add(this.panel14);
@@ -339,7 +334,7 @@
             this.panel5.Controls.Add(this.panel18);
             this.panel5.Controls.Add(this.panel20);
             this.panel5.Controls.Add(this.panel21);
-            this.panel5.Controls.Add(this.G2CmbxStudentName);
+            this.panel5.Controls.Add(this.G2CmbxName);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label10);
@@ -375,7 +370,7 @@
             // 
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(122, 10);
+            this.panel27.Location = new System.Drawing.Point(89, 10);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(2, 23);
             this.panel27.TabIndex = 599;
@@ -394,7 +389,7 @@
             this.panel25.Controls.Add(this.panel26);
             this.panel25.Location = new System.Drawing.Point(3, 32);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(121, 2);
+            this.panel25.Size = new System.Drawing.Size(88, 2);
             this.panel25.TabIndex = 594;
             // 
             // panel26
@@ -411,7 +406,7 @@
             this.panel23.Controls.Add(this.panel24);
             this.panel23.Location = new System.Drawing.Point(3, 9);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(121, 2);
+            this.panel23.Size = new System.Drawing.Size(88, 2);
             this.panel23.TabIndex = 593;
             // 
             // panel24
@@ -438,7 +433,7 @@
             this.CHKScheduled.UncheckedState.BorderRadius = 0;
             this.CHKScheduled.UncheckedState.BorderThickness = 0;
             this.CHKScheduled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKScheduled.CheckedChanged += new System.EventHandler(this.CHKScheduled_CheckedChanged);
+            this.CHKScheduled.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
             // 
             // CHKOnGoing
             // 
@@ -456,7 +451,7 @@
             this.CHKOnGoing.UncheckedState.BorderRadius = 0;
             this.CHKOnGoing.UncheckedState.BorderThickness = 0;
             this.CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHKOnGoing_CheckedChanged);
+            this.CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
             // 
             // CHKDone
             // 
@@ -476,30 +471,31 @@
             this.CHKDone.UncheckedState.BorderThickness = 0;
             this.CHKDone.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.CHKDone.UseVisualStyleBackColor = false;
-            this.CHKDone.CheckedChanged += new System.EventHandler(this.CHKDone_CheckedChanged);
+            this.CHKDone.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
             // 
-            // comboBox1
+            // CmbxCategoryName
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CmbxCategoryName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.CmbxCategoryName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmbxCategoryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CmbxCategoryName.FormattingEnabled = true;
+            this.CmbxCategoryName.Items.AddRange(new object[] {
             "Student",
             "Tutor"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
-            this.comboBox1.TabIndex = 604;
+            this.CmbxCategoryName.Location = new System.Drawing.Point(3, 9);
+            this.CmbxCategoryName.Name = "CmbxCategoryName";
+            this.CmbxCategoryName.Size = new System.Drawing.Size(88, 25);
+            this.CmbxCategoryName.TabIndex = 604;
+            this.CmbxCategoryName.SelectedIndexChanged += new System.EventHandler(this.CmbxCategoryName_SelectedIndexChanged);
             // 
             // LblID
             // 
             this.LblID.AutoSize = true;
-            this.LblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblID.Location = new System.Drawing.Point(130, 12);
+            this.LblID.Location = new System.Drawing.Point(94, 12);
             this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(19, 21);
+            this.LblID.Size = new System.Drawing.Size(17, 19);
             this.LblID.TabIndex = 601;
             this.LblID.Text = "0";
             // 
@@ -647,22 +643,22 @@
             this.panel22.Size = new System.Drawing.Size(179, 2);
             this.panel22.TabIndex = 442;
             // 
-            // G2CmbxStudentName
+            // G2CmbxName
             // 
-            this.G2CmbxStudentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.G2CmbxStudentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.G2CmbxStudentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2CmbxStudentName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.G2CmbxStudentName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2CmbxStudentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxStudentName.Location = new System.Drawing.Point(7, 41);
-            this.G2CmbxStudentName.Name = "G2CmbxStudentName";
-            this.G2CmbxStudentName.Size = new System.Drawing.Size(179, 35);
-            this.G2CmbxStudentName.TabIndex = 591;
+            this.G2CmbxName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.G2CmbxName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.G2CmbxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.G2CmbxName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.G2CmbxName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CmbxName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CmbxName.Location = new System.Drawing.Point(7, 41);
+            this.G2CmbxName.Name = "G2CmbxName";
+            this.G2CmbxName.Size = new System.Drawing.Size(179, 35);
+            this.G2CmbxName.TabIndex = 591;
+            this.G2CmbxName.SelectedIndexChanged += new System.EventHandler(this.G2CmbxName_SelectedIndexChanged);
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -674,7 +670,6 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -686,7 +681,6 @@
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -698,7 +692,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(282, 69);
             this.pictureBox3.Name = "pictureBox3";
@@ -709,7 +702,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(282, 40);
             this.pictureBox2.Name = "pictureBox2";
@@ -720,7 +712,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(282, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -766,8 +757,7 @@
             this.Text = "Calendar";
             this.Load += new System.EventHandler(this.FCalendar_Load);
             this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.PnlDays.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -798,7 +788,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TableLayoutPanel TblLytPnlCalendar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label7;
@@ -812,7 +801,7 @@
         private System.Windows.Forms.Label LblMonth;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel PnlDays;
         private System.Windows.Forms.PictureBox PctrPrevious;
         private System.Windows.Forms.PictureBox PCtrNext;
         private System.Windows.Forms.Label label8;
@@ -839,8 +828,8 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.ComboBox G2CmbxStudentName;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox G2CmbxName;
+        private System.Windows.Forms.ComboBox CmbxCategoryName;
         private Guna.UI2.WinForms.Guna2CheckBox CHKScheduled;
         private Guna.UI2.WinForms.Guna2CheckBox CHKOnGoing;
         private Guna.UI2.WinForms.Guna2CheckBox CHKDone;
@@ -852,5 +841,6 @@
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.TableLayoutPanel TblLytPnlCalendar;
     }
 }

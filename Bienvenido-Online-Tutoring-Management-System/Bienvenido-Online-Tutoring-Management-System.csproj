@@ -193,6 +193,12 @@
     <Compile Include="Forms\ExtensionForms\FEarningsTutor.Designer.cs">
       <DependentUpon>FEarningsTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\ListSessionsCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\ListSessionsCalendar.Designer.cs">
+      <DependentUpon>ListSessionsCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExtensionForms\RecieptSched.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\FEarningsTutor.resx">
       <DependentUpon>FEarningsTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\ListSessionsCalendar.resx">
+      <DependentUpon>ListSessionsCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\RecieptSched.resx">
       <DependentUpon>RecieptSched.cs</DependentUpon>

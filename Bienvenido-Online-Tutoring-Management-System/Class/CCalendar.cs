@@ -4,38 +4,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.Design;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
 {
     public class CCalendar
     {
-        public List<MSession> GetSessionsForDayTutor(int Day)
+        public List<MSession> GetSessionsForDayTutor()
         {
             return DataLoader.ExecuteStoredProcedure("Calendar_", new Dictionary<string, object> { { "Action", "Tutor" } }, reader => new MSession
             {
-                //StudentID = int.Parse(reader["StudentID"].ToString()),
-                //TutorID = int.Parse(reader["TutorID"].ToString()),
                 TutorName = reader["TutorName"].ToString(),
-                StudName = reader["StudName"].ToString(),
                 Subject = reader["Subject"].ToString(),
-                StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
-                EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
+                //StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
+                //EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
                 //SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()).Date,
-                //HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
-                //TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
                 //Status = reader["Status"].ToString(),
-                //StatusBill = reader["StatusBill"].ToString(),
-                //InvoiceID = int.Parse(reader["InvoiceID"].ToString()),
-                //TotalHours = Convert.ToDecimal(reader["TotalHours"].ToString()),
-                //SessionID = int.Parse(reader["SessionID"].ToString())
             });
         }
-        public List<MSession> GetSessionsForDayStudent(int Day)
+        public static List<MSession> GetSessionsForDayStudent()
         {
             return DataLoader.ExecuteStoredProcedure("Calendar_", new Dictionary<string, object> { { "Action", "SessionDateShowAll" } }, reader => new MSession
             {
-                //StudentID = int.Parse(reader["StudentID"].ToString()),
-                //TutorID = int.Parse(reader["TutorID"].ToString()),
+                StudName = reader["StudName"].ToString(),
+                Subject = reader["Subject"].ToString(),
+                TutorName = reader["TutorName"].ToString(),
+                TutorID = int.Parse(reader["TUtorID"].ToString()),
+                StudentID = int.Parse(reader["StudentID"].ToString())
+                //StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
+                //EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
+                //SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()).Date,
+                //Status = reader["Status"].ToString(),
+            });
+        }
+        public List<MSession> GetSessionsForDayBoth(int Day)
+        {
+            return DataLoader.ExecuteStoredProcedure("Calendar_", new Dictionary<string, object> { { "Action", "SessionDateShowAll" } }, reader => new MSession
+            {
                 TutorName = reader["TutorName"].ToString(),
                 StudName = reader["StudName"].ToString(),
                 Subject = reader["Subject"].ToString(),
@@ -43,13 +48,10 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
                 SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()).Date,
                 Status = reader["Status"].ToString(),
-                //HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
-                //TotalAmount = Convert.ToDecimal(reader["TotalAmount"].ToString()),
-                //StatusBill = reader["StatusBill"].ToString(),
-                //InvoiceID = int.Parse(reader["InvoiceID"].ToString()),
-                //TotalHours = Convert.ToDecimal(reader["TotalHours"].ToString()),
-                //SessionID = int.Parse(reader["SessionID"].ToString())
+                TutorID = int.Parse(reader["TUtorID"].ToString()),
+                StudentID = int.Parse(reader["StudentID"].ToString())
             });
         }
+
     }
 }

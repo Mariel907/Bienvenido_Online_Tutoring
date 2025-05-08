@@ -32,7 +32,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 lstSessions.Items.Add($"{session.StartTime} - {session.EndTime}                                                                       \nSession Date : {session.SessionDate.ToString("MM/dd/yyyy")}  \nSubject : {session.Subject} \nStudent Name : {session.StudName} \nTutor Name: {session.TutorName} \nStatus : {session.Status}");
             }
         }
-
+       
         private void lstSessions_MouseMove(object sender, MouseEventArgs e)
         {
             int index = lstSessions.IndexFromPoint(e.Location);
@@ -96,7 +96,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 }
             }
 
-            SolidBrush customBrush = new SolidBrush(Color.FromArgb(28, 42, 68)); 
+            SolidBrush customBrush = new SolidBrush(Color.FromArgb(28, 42, 68));
             using (StringFormat format = new StringFormat())
             {
                 format.LineAlignment = StringAlignment.Center;
