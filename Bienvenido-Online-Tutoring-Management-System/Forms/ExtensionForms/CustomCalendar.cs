@@ -75,8 +75,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             string sessionDetails = lstSessions.Items[e.Index].ToString();
             Color backColor = Color.White;
 
-            if (sessionDetails.Contains("Done")) backColor = Color.FromArgb(255, 235, 230);
-            else if (sessionDetails.Contains("Scheduled")) backColor = Color.FromArgb(255, 255, 204);
+            if (sessionDetails.Contains("Done")) backColor = Color.FromArgb(255, 128, 128);
+            else if (sessionDetails.Contains("Scheduled")) backColor = Color.FromArgb(255, 255, 0);
             else if (sessionDetails.Contains("OnGoing")) backColor = Color.FromArgb(204, 255, 204);
 
             Rectangle bounds = new Rectangle(e.Bounds.X + 8, e.Bounds.Y + 2, e.Bounds.Width - 10, e.Bounds.Height - 4);

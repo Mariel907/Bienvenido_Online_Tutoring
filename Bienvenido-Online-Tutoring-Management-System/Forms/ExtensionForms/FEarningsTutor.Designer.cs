@@ -89,31 +89,32 @@
             this.DGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.G2CmbxTutorName = new System.Windows.Forms.ComboBox();
             this.G2TxbxFirstname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.G2CmbxStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -143,9 +144,9 @@
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -236,11 +237,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.panel23, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel24, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 415);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(220, 415);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(590, 82);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(919, 82);
             this.tableLayoutPanel2.TabIndex = 608;
             // 
             // panel23
@@ -251,11 +252,11 @@
             this.panel23.Controls.Add(this.pictureBox14);
             this.panel23.Controls.Add(this.label11);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(295, 0);
+            this.panel23.Location = new System.Drawing.Point(459, 0);
             this.panel23.Margin = new System.Windows.Forms.Padding(0);
             this.panel23.Name = "panel23";
             this.panel23.Padding = new System.Windows.Forms.Padding(10);
-            this.panel23.Size = new System.Drawing.Size(295, 82);
+            this.panel23.Size = new System.Drawing.Size(460, 82);
             this.panel23.TabIndex = 6;
             // 
             // LblDailyEarnings
@@ -277,7 +278,7 @@
             this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(263, 53);
+            this.pictureBox13.Location = new System.Drawing.Point(428, 53);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(20, 21);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -289,7 +290,7 @@
             this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(262, 12);
+            this.pictureBox14.Location = new System.Drawing.Point(427, 12);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(20, 21);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,7 +322,7 @@
             this.panel24.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(10);
-            this.panel24.Size = new System.Drawing.Size(285, 82);
+            this.panel24.Size = new System.Drawing.Size(449, 82);
             this.panel24.TabIndex = 0;
             // 
             // pictureBox15
@@ -329,7 +330,7 @@
             this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(252, 53);
+            this.pictureBox15.Location = new System.Drawing.Point(416, 53);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(20, 21);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -341,7 +342,7 @@
             this.pictureBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(252, 12);
+            this.pictureBox16.Location = new System.Drawing.Point(416, 12);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(20, 21);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -442,8 +443,8 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 82);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 98);
             this.tableLayoutPanel1.TabIndex = 606;
             // 
             // panel20
@@ -458,7 +459,7 @@
             this.panel20.Margin = new System.Windows.Forms.Padding(0);
             this.panel20.Name = "panel20";
             this.panel20.Padding = new System.Windows.Forms.Padding(10);
-            this.panel20.Size = new System.Drawing.Size(230, 82);
+            this.panel20.Size = new System.Drawing.Size(230, 98);
             this.panel20.TabIndex = 8;
             // 
             // LblLastYear
@@ -467,7 +468,7 @@
             this.LblLastYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.LblLastYear.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLastYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblLastYear.Location = new System.Drawing.Point(16, 47);
+            this.LblLastYear.Location = new System.Drawing.Point(16, 63);
             this.LblLastYear.Name = "LblLastYear";
             this.LblLastYear.Size = new System.Drawing.Size(165, 26);
             this.LblLastYear.TabIndex = 18;
@@ -479,7 +480,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(197, 53);
+            this.pictureBox6.Location = new System.Drawing.Point(197, 69);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(20, 21);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -523,7 +524,7 @@
             this.panel19.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel19.Name = "panel19";
             this.panel19.Padding = new System.Windows.Forms.Padding(10);
-            this.panel19.Size = new System.Drawing.Size(219, 82);
+            this.panel19.Size = new System.Drawing.Size(219, 98);
             this.panel19.TabIndex = 7;
             // 
             // LblThisYear
@@ -533,7 +534,7 @@
             this.LblThisYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.LblThisYear.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblThisYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblThisYear.Location = new System.Drawing.Point(21, 46);
+            this.LblThisYear.Location = new System.Drawing.Point(21, 62);
             this.LblThisYear.Name = "LblThisYear";
             this.LblThisYear.Size = new System.Drawing.Size(24, 28);
             this.LblThisYear.TabIndex = 18;
@@ -545,7 +546,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(186, 53);
+            this.pictureBox2.Location = new System.Drawing.Point(186, 69);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -589,7 +590,7 @@
             this.panel18.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel18.Name = "panel18";
             this.panel18.Padding = new System.Windows.Forms.Padding(10);
-            this.panel18.Size = new System.Drawing.Size(219, 82);
+            this.panel18.Size = new System.Drawing.Size(219, 98);
             this.panel18.TabIndex = 6;
             // 
             // LblLastMonth
@@ -598,7 +599,7 @@
             this.LblLastMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.LblLastMonth.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblLastMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblLastMonth.Location = new System.Drawing.Point(16, 48);
+            this.LblLastMonth.Location = new System.Drawing.Point(16, 64);
             this.LblLastMonth.Name = "LblLastMonth";
             this.LblLastMonth.Size = new System.Drawing.Size(165, 26);
             this.LblLastMonth.TabIndex = 18;
@@ -610,7 +611,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(187, 53);
+            this.pictureBox4.Location = new System.Drawing.Point(187, 69);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(20, 21);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -654,7 +655,7 @@
             this.PnlBackEarnings.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.PnlBackEarnings.Name = "PnlBackEarnings";
             this.PnlBackEarnings.Padding = new System.Windows.Forms.Padding(10);
-            this.PnlBackEarnings.Size = new System.Drawing.Size(219, 82);
+            this.PnlBackEarnings.Size = new System.Drawing.Size(219, 98);
             this.PnlBackEarnings.TabIndex = 0;
             // 
             // pictureBox5
@@ -662,7 +663,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(186, 53);
+            this.pictureBox5.Location = new System.Drawing.Point(186, 69);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 21);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -687,7 +688,7 @@
             this.LblMontlyEarnings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.LblMontlyEarnings.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMontlyEarnings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblMontlyEarnings.Location = new System.Drawing.Point(15, 46);
+            this.LblMontlyEarnings.Location = new System.Drawing.Point(15, 62);
             this.LblMontlyEarnings.Name = "LblMontlyEarnings";
             this.LblMontlyEarnings.Size = new System.Drawing.Size(165, 26);
             this.LblMontlyEarnings.TabIndex = 11;
@@ -794,7 +795,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
-            this.DGV.Location = new System.Drawing.Point(11, 96);
+            this.DGV.Location = new System.Drawing.Point(220, 112);
             this.DGV.Margin = new System.Windows.Forms.Padding(4);
             this.DGV.Name = "DGV";
             this.DGV.ReadOnly = true;
@@ -812,7 +813,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV.Size = new System.Drawing.Size(1128, 312);
+            this.DGV.Size = new System.Drawing.Size(919, 296);
             this.DGV.TabIndex = 609;
             this.DGV.TabStop = false;
             this.DGV.Tag = "book_id";
@@ -868,7 +869,7 @@
             this.G2TxbxFirstname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxFirstname.Location = new System.Drawing.Point(22, 138);
+            this.G2TxbxFirstname.Location = new System.Drawing.Point(248, 148);
             this.G2TxbxFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxFirstname.Name = "G2TxbxFirstname";
             this.G2TxbxFirstname.Padding = new System.Windows.Forms.Padding(7);
@@ -878,81 +879,12 @@
             this.G2TxbxFirstname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxFirstname.TabIndex = 611;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(913, 470);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 21);
-            this.label2.TabIndex = 617;
-            this.label2.Text = "Scheduled";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(1033, 470);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
-            this.label4.TabIndex = 618;
-            this.label4.Text = "OnGoing";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(828, 470);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 21);
-            this.label7.TabIndex = 616;
-            this.label7.Text = "Done";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(1096, 463);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 615;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(985, 463);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 614;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(866, 463);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 613;
-            this.pictureBox11.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(602, 436);
+            this.label9.Location = new System.Drawing.Point(13, 87);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 21);
             this.label9.TabIndex = 622;
@@ -975,123 +907,96 @@
             this.G2CmbxStatus.ItemHeight = 30;
             this.G2CmbxStatus.Items.AddRange(new object[] {
             "All",
+            "Scheduled",
+            "OnGoing",
             "Done"});
-            this.G2CmbxStatus.Location = new System.Drawing.Point(606, 461);
+            this.G2CmbxStatus.Location = new System.Drawing.Point(17, 112);
             this.G2CmbxStatus.Name = "G2CmbxStatus";
-            this.G2CmbxStatus.Size = new System.Drawing.Size(178, 36);
+            this.G2CmbxStatus.Size = new System.Drawing.Size(180, 36);
             this.G2CmbxStatus.TabIndex = 621;
             this.G2CmbxStatus.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStatus_SelectedIndexChanged);
             // 
-            // PaidDate
+            // label10
             // 
-            this.PaidDate.DataPropertyName = "PaidDate";
-            this.PaidDate.HeaderText = "Paid Date";
-            this.PaidDate.Name = "PaidDate";
-            this.PaidDate.ReadOnly = true;
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label10.Location = new System.Drawing.Point(57, 214);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 21);
+            this.label10.TabIndex = 627;
+            this.label10.Text = "Scheduled";
             // 
-            // SessionID
+            // label12
             // 
-            this.SessionID.DataPropertyName = "SessionID";
-            this.SessionID.HeaderText = "SessionID";
-            this.SessionID.Name = "SessionID";
-            this.SessionID.ReadOnly = true;
-            this.SessionID.Visible = false;
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label12.Location = new System.Drawing.Point(57, 255);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 21);
+            this.label12.TabIndex = 628;
+            this.label12.Text = "OnGoing";
             // 
-            // TutorID
+            // label14
             // 
-            this.TutorID.DataPropertyName = "TutorID";
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label14.Location = new System.Drawing.Point(57, 173);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 21);
+            this.label14.TabIndex = 626;
+            this.label14.Text = "Done";
             // 
-            // StudName
+            // pictureBox12
             // 
-            this.StudName.DataPropertyName = "StudName";
-            this.StudName.HeaderText = "Student Name";
-            this.StudName.Name = "StudName";
-            this.StudName.ReadOnly = true;
+            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(17, 246);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 625;
+            this.pictureBox12.TabStop = false;
             // 
-            // Subject
+            // pictureBox17
             // 
-            this.Subject.DataPropertyName = "Subject";
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
+            this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(17, 206);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 624;
+            this.pictureBox17.TabStop = false;
             // 
-            // _TutorName
+            // pictureBox18
             // 
-            this._TutorName.DataPropertyName = "TutorName";
-            this._TutorName.HeaderText = "TutorName";
-            this._TutorName.Name = "_TutorName";
-            this._TutorName.ReadOnly = true;
-            this._TutorName.Visible = false;
+            this.pictureBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(17, 166);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 623;
+            this.pictureBox18.TabStop = false;
             // 
-            // StudentID
+            // panel21
             // 
-            this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Visible = false;
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(10, 10);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(200, 487);
+            this.panel21.TabIndex = 629;
             // 
-            // StartTime
+            // mSessionBindingSource
             // 
-            this.StartTime.DataPropertyName = "StartTime";
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.DataPropertyName = "EndTime";
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            // 
-            // SessionDate
-            // 
-            this.SessionDate.DataPropertyName = "SessionDate";
-            this.SessionDate.HeaderText = "Session Date";
-            this.SessionDate.Name = "SessionDate";
-            this.SessionDate.ReadOnly = true;
-            // 
-            // HourlyRate
-            // 
-            this.HourlyRate.DataPropertyName = "HourlyRate";
-            this.HourlyRate.HeaderText = "Hourly Rate";
-            this.HourlyRate.Name = "HourlyRate";
-            this.HourlyRate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.DataPropertyName = "TotalAmount";
-            this.TotalAmount.HeaderText = "Total Amount";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // StatusBill
-            // 
-            this.StatusBill.DataPropertyName = "StatusBill";
-            this.StatusBill.HeaderText = "StatusBill";
-            this.StatusBill.Name = "StatusBill";
-            this.StatusBill.ReadOnly = true;
-            this.StatusBill.Visible = false;
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.DataPropertyName = "InvoiceID";
-            this.InvoiceID.HeaderText = "InvoiceID";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            this.InvoiceID.Visible = false;
+            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
             // 
             // TotalHours
             // 
@@ -1101,9 +1006,117 @@
             this.TotalHours.ReadOnly = true;
             this.TotalHours.Visible = false;
             // 
-            // mSessionBindingSource
+            // InvoiceID
             // 
-            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
+            this.InvoiceID.DataPropertyName = "InvoiceID";
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            this.InvoiceID.Visible = false;
+            // 
+            // StatusBill
+            // 
+            this.StatusBill.DataPropertyName = "StatusBill";
+            this.StatusBill.HeaderText = "StatusBill";
+            this.StatusBill.Name = "StatusBill";
+            this.StatusBill.ReadOnly = true;
+            this.StatusBill.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // PaidDate
+            // 
+            this.PaidDate.DataPropertyName = "PaidDate";
+            this.PaidDate.HeaderText = "Paid Date";
+            this.PaidDate.Name = "PaidDate";
+            this.PaidDate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.DataPropertyName = "TotalAmount";
+            this.TotalAmount.HeaderText = "Total Amount";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
+            // HourlyRate
+            // 
+            this.HourlyRate.DataPropertyName = "HourlyRate";
+            this.HourlyRate.HeaderText = "Hourly Rate";
+            this.HourlyRate.Name = "HourlyRate";
+            this.HourlyRate.ReadOnly = true;
+            // 
+            // SessionDate
+            // 
+            this.SessionDate.DataPropertyName = "SessionDate";
+            this.SessionDate.HeaderText = "Session Date";
+            this.SessionDate.Name = "SessionDate";
+            this.SessionDate.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.DataPropertyName = "EndTime";
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "StartTime";
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // StudentID
+            // 
+            this.StudentID.DataPropertyName = "StudentID";
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            this.StudentID.Visible = false;
+            // 
+            // _TutorName
+            // 
+            this._TutorName.DataPropertyName = "TutorName";
+            this._TutorName.HeaderText = "TutorName";
+            this._TutorName.Name = "_TutorName";
+            this._TutorName.ReadOnly = true;
+            this._TutorName.Visible = false;
+            // 
+            // Subject
+            // 
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // StudName
+            // 
+            this.StudName.DataPropertyName = "StudName";
+            this.StudName.HeaderText = "Student Name";
+            this.StudName.Name = "StudName";
+            this.StudName.ReadOnly = true;
+            // 
+            // TutorID
+            // 
+            this.TutorID.DataPropertyName = "TutorID";
+            this.TutorID.HeaderText = "TutorID";
+            this.TutorID.Name = "TutorID";
+            this.TutorID.ReadOnly = true;
+            this.TutorID.Visible = false;
+            // 
+            // SessionID
+            // 
+            this.SessionID.DataPropertyName = "SessionID";
+            this.SessionID.HeaderText = "SessionID";
+            this.SessionID.Name = "SessionID";
+            this.SessionID.ReadOnly = true;
+            this.SessionID.Visible = false;
             // 
             // FEarningsTutor
             // 
@@ -1111,14 +1124,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1150, 507);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.G2CmbxStatus);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel2);
@@ -1135,10 +1148,10 @@
             this.Controls.Add(this.G2CmbxTutorName);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.G2TxbxFirstname);
+            this.Controls.Add(this.panel21);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FEarningsTutor";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1179,9 +1192,9 @@
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1245,14 +1258,15 @@
         private System.Windows.Forms.BindingSource mSessionBindingSource;
         private System.Windows.Forms.ComboBox G2CmbxTutorName;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxFirstname;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStatus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudName;

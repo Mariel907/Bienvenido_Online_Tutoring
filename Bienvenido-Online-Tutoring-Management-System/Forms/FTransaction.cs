@@ -18,6 +18,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         {
             InitializeComponent();
             _dashboard = dashboard;
+           
         }
 
         private void G2BtnSchedule_Click(object sender, EventArgs e)
@@ -46,6 +47,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
                 Lbl = LblID.Text;
                 transaction.Search(Lbl, DGVScheduled);
+                G2CmbxStatus.Text = "Scheduled";
+                SearchStatus();
             }
         }
 
@@ -70,6 +73,9 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                     break;
                 case "Draft":
                     row.DefaultCellStyle.BackColor = Color.FromArgb(84, 126, 255);
+                    break;
+                case "CanceledBySystem":
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(204, 153, 0);
                     break;
             }
         }

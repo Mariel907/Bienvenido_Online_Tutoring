@@ -180,6 +180,43 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             _loader.ExecuteData("Schedule_ShowAdd", sp);
         }
 
+        public void ValidationDraft(DataGridView DGV)
+        {
+            string Result = string.Empty;
+
+            foreach (DataGridViewRow row in DGV.Rows)
+            {
+                if (row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase)) continue;
+                try
+                {
+
+                    SqlParameter[] sp = new SqlParameter[]
+                    {
+                    new SqlParameter("Action", "ValidationDraft"),
+                    new SqlParameter("SessionDate", row.Cells["SessionDate"].Value),
+                    new SqlParameter("StartTime", row.Cells["StartTime"].Value),
+                    new SqlParameter("EndTime", row.Cells["EndTime"].Value)
+                    };
+                    _loader.ExecuteData("Schedule_ShowAdd", sp);
+                }
+                catch (SqlException ex)
+                {
+
+                    if (ex.Class == 16 && ex.Message.Contains("Conflict_Trigger"))
+                    {
+                        string Message = $"System canceled the session because the other student already paid this session:\n" +
+                            $"TutorName: {row.Cells["TutorName"].Value}\n" +
+                            $"Subject: {row.Cells["Subject"].Value}\n" +
+                            $"Start Time: {row.Cells["StartTime"].Value}\n" +
+                            $"End Time: {row.Cells["EndTime"].Value}";
+                        MessageBox.Show(Message, "Scheduled Conflict", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                        MessageBox.Show(ex.Message, "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         public void FillInInvoices(DataGridView DGV, MStudent stud)
         {
             var list = new List<MSession>();

@@ -33,6 +33,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             TutorName();
             FillInFields();
             transaction.UpdateStatus(DGV);
+            ShowDGV();
+            G2CmbxStatus.Text = "Scheduled";
         }
         private void TutorName()
         {
@@ -52,6 +54,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 MTutorProfile mt = G2CmbxTutorName.SelectedItem as MTutorProfile;
                 LblID.Text = mt.TutorID.ToString();
                 ShowDGV();
+              
             }
             UpdateLbl();
         }
@@ -109,8 +112,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             if (Cmbx == "All")
                 ShowDGV();
             else
-                earnings.SearchCmbx(DGV, Lbl);
-
+                earnings.SearchCmbx(DGV, Lbl, Cmbx);
         }
     }
 }

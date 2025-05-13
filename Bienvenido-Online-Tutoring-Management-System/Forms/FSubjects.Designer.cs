@@ -42,13 +42,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGVSubjects = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxEdit = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
-            this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -167,6 +167,8 @@
             // 
             this.DGVSubjects.AllowUserToAddRows = false;
             this.DGVSubjects.AllowUserToDeleteRows = false;
+            this.DGVSubjects.AllowUserToResizeColumns = false;
+            this.DGVSubjects.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
@@ -246,6 +248,25 @@
             this.DGVSubjects.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSubjects_CellClick);
             // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "SubjectName";
+            this.SubjectName.HeaderText = "Subject";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            // 
+            // SubID
+            // 
+            this.SubID.DataPropertyName = "SubID";
+            this.SubID.HeaderText = "SubID";
+            this.SubID.Name = "SubID";
+            this.SubID.ReadOnly = true;
+            this.SubID.Visible = false;
+            // 
+            // mSubjectsBindingSource
+            // 
+            this.mSubjectsBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSubjects);
+            // 
             // G2BtnEdit
             // 
             this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,25 +334,6 @@
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(0, 19);
             this.LblID.TabIndex = 439;
-            // 
-            // mSubjectsBindingSource
-            // 
-            this.mSubjectsBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSubjects);
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.DataPropertyName = "SubjectName";
-            this.SubjectName.HeaderText = "Subject";
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.ReadOnly = true;
-            // 
-            // SubID
-            // 
-            this.SubID.DataPropertyName = "SubID";
-            this.SubID.HeaderText = "SubID";
-            this.SubID.Name = "SubID";
-            this.SubID.ReadOnly = true;
-            this.SubID.Visible = false;
             // 
             // FSubjects
             // 

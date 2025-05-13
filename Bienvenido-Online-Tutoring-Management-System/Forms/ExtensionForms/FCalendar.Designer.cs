@@ -128,9 +128,9 @@
             this.PnlDays.AutoScroll = true;
             this.PnlDays.Controls.Add(this.TblLytPnlCalendar);
             this.PnlDays.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlDays.Location = new System.Drawing.Point(0, 176);
+            this.PnlDays.Location = new System.Drawing.Point(0, 154);
             this.PnlDays.Name = "PnlDays";
-            this.PnlDays.Size = new System.Drawing.Size(1067, 350);
+            this.PnlDays.Size = new System.Drawing.Size(1067, 372);
             this.PnlDays.TabIndex = 0;
             // 
             // TblLytPnlCalendar
@@ -153,14 +153,14 @@
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TblLytPnlCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.TblLytPnlCalendar.Size = new System.Drawing.Size(1067, 350);
+            this.TblLytPnlCalendar.Size = new System.Drawing.Size(1067, 372);
             this.TblLytPnlCalendar.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 142);
+            this.panel3.Location = new System.Drawing.Point(0, 120);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1067, 34);
             this.panel3.TabIndex = 4;
@@ -279,7 +279,7 @@
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 102);
+            this.panel4.Location = new System.Drawing.Point(0, 80);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1067, 40);
@@ -346,7 +346,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1067, 102);
+            this.panel5.Size = new System.Drawing.Size(1067, 80);
             this.panel5.TabIndex = 5;
             // 
             // panel29
@@ -425,7 +425,7 @@
             this.CHKScheduled.CheckedState.BorderThickness = 0;
             this.CHKScheduled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.CHKScheduled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHKScheduled.Location = new System.Drawing.Point(261, 46);
+            this.CHKScheduled.Location = new System.Drawing.Point(666, 56);
             this.CHKScheduled.Name = "CHKScheduled";
             this.CHKScheduled.Size = new System.Drawing.Size(15, 14);
             this.CHKScheduled.TabIndex = 607;
@@ -443,7 +443,7 @@
             this.CHKOnGoing.CheckedState.BorderThickness = 0;
             this.CHKOnGoing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.CHKOnGoing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHKOnGoing.Location = new System.Drawing.Point(261, 75);
+            this.CHKOnGoing.Location = new System.Drawing.Point(937, 56);
             this.CHKOnGoing.Name = "CHKOnGoing";
             this.CHKOnGoing.Size = new System.Drawing.Size(15, 14);
             this.CHKOnGoing.TabIndex = 606;
@@ -462,7 +462,7 @@
             this.CHKDone.CheckedState.BorderThickness = 0;
             this.CHKDone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.CHKDone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CHKDone.Location = new System.Drawing.Point(261, 17);
+            this.CHKDone.Location = new System.Drawing.Point(820, 57);
             this.CHKDone.Name = "CHKDone";
             this.CHKDone.Size = new System.Drawing.Size(15, 14);
             this.CHKDone.TabIndex = 605;
@@ -487,6 +487,7 @@
             this.CmbxCategoryName.Size = new System.Drawing.Size(88, 25);
             this.CmbxCategoryName.TabIndex = 604;
             this.CmbxCategoryName.SelectedIndexChanged += new System.EventHandler(this.CmbxCategoryName_SelectedIndexChanged);
+            this.CmbxCategoryName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbxCategoryName_KeyPress);
             // 
             // LblID
             // 
@@ -662,7 +663,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(316, 41);
+            this.label8.Location = new System.Drawing.Point(721, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 21);
             this.label8.TabIndex = 588;
@@ -673,7 +674,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(316, 70);
+            this.label9.Location = new System.Drawing.Point(992, 51);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 21);
             this.label9.TabIndex = 589;
@@ -684,7 +685,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label10.Location = new System.Drawing.Point(316, 11);
+            this.label10.Location = new System.Drawing.Point(875, 51);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 21);
             this.label10.TabIndex = 587;
@@ -693,7 +694,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(282, 69);
+            this.pictureBox3.Location = new System.Drawing.Point(958, 50);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -703,7 +704,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(282, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(687, 50);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,7 +714,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(282, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(841, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

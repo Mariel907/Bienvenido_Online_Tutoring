@@ -27,30 +27,30 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void PCtrNext_Click(object sender, EventArgs e)
         {
-            if (month > 12)
+            if (month == 12)
             {
-                month++;
+                month = 1;
                 year++;
             }
             else
             {
                 month++;
             }
-            DaysCalendar();
+            StatusChecked();
         }
 
         private void PctrPrevious_Click(object sender, EventArgs e)
         {
-            if (month > 12)
+            if (month == 1)
             {
-                month--;
+                month = 12;
                 year--;
             }
             else
             {
                 month--;
             }
-            DaysCalendar();
+            StatusChecked();
         }
 
         private void DaysCalendar()
@@ -90,8 +90,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             int firstDayColumn = (int)startDay;
 
             string searchedName = G2CmbxName.Text;
-            if (string.IsNullOrEmpty(searchedName)) return;
-
 
             TblLytPnlCalendar.Controls.Clear();
             for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
@@ -104,7 +102,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 if (sessionData.Any())
                 {
                     sessionData = sessionData.Where(s =>
-                        (s.StudName.Contains(searchedName) || s.TutorName.Contains(searchedName))
+                        (string.IsNullOrEmpty(searchedName) || s.StudName.Contains(searchedName) || s.TutorName.Contains(searchedName))
                         && (!statusFilter.Any() || statusFilter.Contains(s.Status)) // Ensures filtering works even if no status is selected
                     ).ToList();
                 }
@@ -163,6 +161,11 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     LblID.Text = session.TutorID.ToString();
             }
             StatusChecked();
+        }
+
+        private void CmbxCategoryName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

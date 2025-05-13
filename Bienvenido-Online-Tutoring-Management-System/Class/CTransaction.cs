@@ -35,7 +35,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         }
         public static List<MStudent> StudentsName(string Txbx)
         {
-            return DataLoader.ExecuteStoredProcedure("Transaction_Search", new Dictionary<string, object> { { "Action", "ShowCmbxStudentName" }, { "StudentID", Txbx } }, reader => new MStudent
+            return DataLoader.ExecuteStoredProcedure("Transaction_Search", new Dictionary<string, object> { { "Action", "ShowCmbxStudentName" }}, reader => new MStudent
             {
                 StudentName = reader["StudentName"].ToString(),
                 StudentID = int.Parse(reader["StudentID"].ToString())

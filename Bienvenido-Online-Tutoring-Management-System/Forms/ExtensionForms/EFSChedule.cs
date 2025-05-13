@@ -29,8 +29,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             PrefferedSubject();
             TutorExprtise();
             AVDay();
-            ShowAllSchedStudent();
+            DraftValidation();
             UpdateTotallbl();
+        }
+        private void DraftValidation()
+        {
+            string Result = string.Empty;
+            ShowAllSchedStudent();
+            schedule.ValidationDraft(DGVStudent);
+            DGVStudent.Rows.Clear();
+            ShowAllSchedStudent();
         }
         private void ShowAllSchedStudent()
         {
@@ -240,7 +248,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         }
         private bool IsSufficientCash()
         {
-            if(string.IsNullOrEmpty(guna2TextBoxCash.Text))
+            if (string.IsNullOrEmpty(guna2TextBoxCash.Text))
             {
                 MessageBox.Show("Please enter a valid cash amount.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -249,12 +257,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             decimal cash = Convert.ToDecimal(guna2TextBoxCash.Text);
             decimal TotalAmount = Convert.ToDecimal(LblGrandTotal.Text.Replace("P", "").Trim());
 
-            if (cash < TotalAmount )
+            if (cash < TotalAmount)
             {
                 MessageBox.Show("Insufficient cash amount", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-                return true;
+            return true;
         }
 
         private void guna2TextBoxCash_KeyDown(object sender, KeyEventArgs e)
@@ -298,7 +306,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void MarkAsPaid()
         {
-            foreach(DataGridViewRow row in DGVStudent.Rows)
+            foreach (DataGridViewRow row in DGVStudent.Rows)
             {
                 if (row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase))
                 {
