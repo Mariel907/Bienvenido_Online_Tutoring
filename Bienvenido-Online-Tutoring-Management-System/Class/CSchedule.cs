@@ -226,7 +226,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase))
                     continue;
 
-
                 var session = new MSession();
 
                 session.TutorName = row.Cells["TutorName"].Value.ToString();

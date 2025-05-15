@@ -798,7 +798,6 @@
             this.G2CmbxStartTime.Name = "G2CmbxStartTime";
             this.G2CmbxStartTime.Size = new System.Drawing.Size(126, 36);
             this.G2CmbxStartTime.TabIndex = 638;
-            this.G2CmbxStartTime.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStartTime_SelectedIndexChanged);
             // 
             // sessionIDDataGridViewTextBoxColumn
             // 

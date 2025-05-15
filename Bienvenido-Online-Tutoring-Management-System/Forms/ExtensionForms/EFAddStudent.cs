@@ -2,12 +2,7 @@
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -19,51 +14,36 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             InitializeComponent();
         }
 
-        private void G2TxbxFirstname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void G2CmbxPreferredSubjects_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (G2CmbxPreferredSubjects.SelectedValue != null)
-            {
-                MSubjects Sub = G2CmbxPreferredSubjects.SelectedItem as MSubjects;
-                string selectedGenre = Sub.SubjectName.ToString();
-                string currentText = G2TxbxPreferredSubjects.Text;
-
-                if (currentText.Length > 0) G2TxbxPreferredSubjects.Text = currentText + ", " + selectedGenre;
-                else G2TxbxPreferredSubjects.Text = selectedGenre;
-            }
-        }
-
         private void EFAddStudent_Load(object sender, EventArgs e)
         {
-            G2CmbxPreferredSubjects.SelectedIndexChanged -= G2CmbxPreferredSubjects_SelectedIndexChanged;
-            var Sub = CFSubjects.Subjects();
-            G2CmbxPreferredSubjects.DataSource = Sub;
-            G2CmbxPreferredSubjects.DisplayMember = "SubjectName";
-            G2CmbxPreferredSubjects.ValueMember = "SubID";
-            G2CmbxPreferredSubjects.Text = string.Empty;
-
-            G2CmbxPreferredSubjects.SelectedIndexChanged += G2CmbxPreferredSubjects_SelectedIndexChanged;
+            ShowSubject();
         }
 
+        private void ShowSubject()
+        {
+            LstBxExpertise.Items.Clear();
+            foreach (var Subject in CFSubjects.Subjects())
+                LstBxExpertise.Items.Add(Subject.SubjectName);
+        }
         private void G2BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+                List<string> selectedItem = new List<string>();
+                foreach(var Item in LstBxExpertise.SelectedItems) 
+                    selectedItem.Add(Item.ToString());
+
                 MStudent student = new MStudent();
                 student.Firstname = G2TxbxFirstname.Text;
                 student.Lastname = G2TxbxLastname.Text;
-                student.PrefferedSubjects = G2TxbxPreferredSubjects.Text;
+                student.PrefferedSubjects = string.Join(",", selectedItem);
                 student.ContactDetails = G2TxbxContactDetails.Text;
 
                 CStudents students = new CStudents();
                 students.Insert(student);
                 EmptyFields();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -72,8 +52,24 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             G2TxbxFirstname.Text = string.Empty;
             G2TxbxLastname.Text = string.Empty;
-            G2TxbxPreferredSubjects.Text = string.Empty;
             G2TxbxContactDetails.Text = string.Empty;
+            LstBxExpertise.ClearSelected();
+        }
+
+        private void LstBxExpertise_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            bool isSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
+
+            Color selectionColor = isSelected ? Color.FromArgb(188, 184, 177) : e.BackColor;
+            Color textColor = Color.FromArgb(28, 42, 68);
+
+            using (SolidBrush backgroundBrush = new SolidBrush(selectionColor))
+            using (SolidBrush textBrush = new SolidBrush(textColor))
+            {
+                e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
+                e.Graphics.DrawString(LstBxExpertise.Items[e.Index].ToString(), e.Font, textBrush, RestoreBounds.Left + 20, e.Bounds.Top);
+            }
+            e.DrawFocusRectangle();
         }
     }
 }

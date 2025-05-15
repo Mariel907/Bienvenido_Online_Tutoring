@@ -14,18 +14,19 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         {
             SqlParameter[] sp = new SqlParameter[]
             {
-                new SqlParameter("@StudentID", Lbl),
+                new SqlParameter("StudentID", Lbl),
                 new SqlParameter("Action", "StudentName")
             };
             _loader.LoadData("Transaction_Search", DGV, sp);
         }
-        public void StatusCmbxSearch(string Lbl, string Cmbx, DataGridView DGV)
+        public void StatusCmbxSearch(string Lbl, List<string> StatusFilter, DataGridView DGV)
         {
+            string Status = string.Join(",", StatusFilter);
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("Action", "CmbxSearch"),
                 new SqlParameter("StudentID", Lbl),
-                new SqlParameter("Status", Cmbx)
+                new SqlParameter("Status", Status)
             };
             _loader.LoadData("Transaction_Search", DGV, sp);
         }

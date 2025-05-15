@@ -15,16 +15,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 {
     public partial class FTutorProfile : Form
     {
-        private EditTutorProfile _AddEditTutorProfile;
         private FormManager form = new FormManager();
         private Dashboard _dashboard;
         private CTutorProfile _CTutorProfile = new CTutorProfile();
 
-
-        public FTutorProfile(EditTutorProfile addEditTutorProfile, Dashboard dashboard)
+        public FTutorProfile(Dashboard dashboard)
         {
             InitializeComponent();
-            _AddEditTutorProfile = addEditTutorProfile;
             _dashboard = dashboard;
         }
 
@@ -35,12 +32,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         private void RefreshedDgv()
         {
             DGVTutor.DataSource = CTutorProfile.Tutors();
-        }
-
-
-        private void DGVTutor_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
         }
 
         private void G2BtnUpdate_Click(object sender, EventArgs e)
@@ -54,7 +45,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             MTutorProfile MTutor = new MTutorProfile();
             DataGridViewRow selectedRow = DGVTutor.SelectedRows[0];
 
-            MTutor.TutorID = Convert.ToInt32(selectedRow.Cells["TutorID"].Value.ToString());
+            MTutor.TutorID = Convert.ToInt32(selectedRow.Cells["_TutorID"].Value.ToString());
             MTutor.Firstname = selectedRow.Cells["_Firstname"].Value.ToString();
             MTutor.lastname = selectedRow.Cells["_Lastname"].Value.ToString();
             MTutor.Expertise = selectedRow.Cells["_Expertise"].Value.ToString();

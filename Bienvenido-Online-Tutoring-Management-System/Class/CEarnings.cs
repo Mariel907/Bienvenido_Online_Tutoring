@@ -63,13 +63,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
           lblEarnings = "P" + count.ToString("N2");
         }
 
-        public void SearchCmbx(DataGridView Dgv, string LblID, string Cmbx)
+        public void SearchCmbx(DataGridView Dgv, string LblID, List<string> StatusFilter)
         {
+            string statusString = string.Join(",", StatusFilter);
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("Action", "Done"),
                 new SqlParameter("TutorID", LblID),
-                new SqlParameter("Status", Cmbx)
+                new SqlParameter("Status", statusString)
             };
             dl.LoadData("Earnings_", Dgv, sp);
         }

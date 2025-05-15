@@ -34,7 +34,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             FillInFields();
             transaction.UpdateStatus(DGV);
             ShowDGV();
-            G2CmbxStatus.Text = "Scheduled";
+            G2CHKScheduled.Checked = true;
         }
         private void TutorName()
         {
@@ -53,8 +53,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             {
                 MTutorProfile mt = G2CmbxTutorName.SelectedItem as MTutorProfile;
                 LblID.Text = mt.TutorID.ToString();
-                ShowDGV();
-              
+                StatusChecked();
             }
             UpdateLbl();
         }
@@ -100,19 +99,29 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     break;
             }
         }
+        private void StatusChecked()
+        {
+            string Lbl = LblID.Text;
+            List<string> Checked = new List<string>();
 
+            if (G2CHKDone.Checked) Checked.Add("Done");
+            if (G2CHKScheduled.Checked) Checked.Add("Scheduled");
+            if (G2CHKOnGoing.Checked) Checked.Add("OnGoing");
+
+            earnings.SearchCmbx(DGV, Lbl, Checked);
+        }
         private void G2CmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SearchStatus();
         }
-        private void SearchStatus()
+       
+        private void CHKChecked_CheckedChanged(object sender, EventArgs e)
         {
-            string Cmbx = G2CmbxStatus.Text;
-            string Lbl = LblID.Text;
-            if (Cmbx == "All")
-                ShowDGV();
-            else
-                earnings.SearchCmbx(DGV, Lbl, Cmbx);
+            StatusChecked();
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -145,7 +145,6 @@
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTutor_CellClick);
-            this.DGVTutor.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTutor_CellContentDoubleClick);
             // 
             // G2BtnUpdate
             // 

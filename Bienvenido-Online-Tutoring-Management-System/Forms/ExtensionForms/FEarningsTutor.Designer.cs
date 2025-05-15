@@ -87,10 +87,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G2CmbxTutorName = new System.Windows.Forms.ComboBox();
             this.G2TxbxFirstname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.G2CmbxStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -98,23 +97,25 @@
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.G2CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -147,6 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -444,7 +446,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(917, 98);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(919, 98);
             this.tableLayoutPanel1.TabIndex = 606;
             // 
             // panel20
@@ -459,7 +461,7 @@
             this.panel20.Margin = new System.Windows.Forms.Padding(0);
             this.panel20.Name = "panel20";
             this.panel20.Padding = new System.Windows.Forms.Padding(10);
-            this.panel20.Size = new System.Drawing.Size(230, 98);
+            this.panel20.Size = new System.Drawing.Size(232, 98);
             this.panel20.TabIndex = 8;
             // 
             // LblLastYear
@@ -480,7 +482,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(197, 69);
+            this.pictureBox6.Location = new System.Drawing.Point(199, 69);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(20, 21);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -492,7 +494,7 @@
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(197, 12);
+            this.pictureBox8.Location = new System.Drawing.Point(199, 12);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(20, 21);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -840,6 +842,13 @@
             this.DGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGV_CellFormatting);
             // 
+            // PaidDate
+            // 
+            this.PaidDate.DataPropertyName = "PaidDate";
+            this.PaidDate.HeaderText = "Paid Date";
+            this.PaidDate.Name = "PaidDate";
+            this.PaidDate.ReadOnly = true;
+            // 
             // G2CmbxTutorName
             // 
             this.G2CmbxTutorName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -879,50 +888,13 @@
             this.G2TxbxFirstname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxFirstname.TabIndex = 611;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(13, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 21);
-            this.label9.TabIndex = 622;
-            this.label9.Text = "Status";
-            // 
-            // G2CmbxStatus
-            // 
-            this.G2CmbxStatus.BackColor = System.Drawing.Color.Transparent;
-            this.G2CmbxStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxStatus.BorderThickness = 2;
-            this.G2CmbxStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.G2CmbxStatus.DropDownHeight = 150;
-            this.G2CmbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.G2CmbxStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2CmbxStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2CmbxStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxStatus.IntegralHeight = false;
-            this.G2CmbxStatus.ItemHeight = 30;
-            this.G2CmbxStatus.Items.AddRange(new object[] {
-            "All",
-            "Scheduled",
-            "OnGoing",
-            "Done"});
-            this.G2CmbxStatus.Location = new System.Drawing.Point(17, 112);
-            this.G2CmbxStatus.Name = "G2CmbxStatus";
-            this.G2CmbxStatus.Size = new System.Drawing.Size(180, 36);
-            this.G2CmbxStatus.TabIndex = 621;
-            this.G2CmbxStatus.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStatus_SelectedIndexChanged);
-            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label10.Location = new System.Drawing.Point(57, 214);
+            this.label10.Location = new System.Drawing.Point(45, 148);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 21);
             this.label10.TabIndex = 627;
@@ -934,7 +906,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label12.Location = new System.Drawing.Point(57, 255);
+            this.label12.Location = new System.Drawing.Point(45, 188);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 21);
             this.label12.TabIndex = 628;
@@ -946,7 +918,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label14.Location = new System.Drawing.Point(57, 173);
+            this.label14.Location = new System.Drawing.Point(45, 108);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 21);
             this.label14.TabIndex = 626;
@@ -956,7 +928,7 @@
             // 
             this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(17, 246);
+            this.pictureBox12.Location = new System.Drawing.Point(11, 181);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 34);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -967,18 +939,19 @@
             // 
             this.pictureBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(17, 206);
+            this.pictureBox17.Location = new System.Drawing.Point(11, 141);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(43, 34);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 624;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox18
             // 
             this.pictureBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(17, 166);
+            this.pictureBox18.Location = new System.Drawing.Point(11, 101);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(43, 34);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -988,127 +961,74 @@
             // panel21
             // 
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Controls.Add(this.label10);
+            this.panel21.Controls.Add(this.label12);
+            this.panel21.Controls.Add(this.G2CHKDone);
+            this.panel21.Controls.Add(this.label14);
+            this.panel21.Controls.Add(this.G2CHKScheduled);
+            this.panel21.Controls.Add(this.G2CHKOnGoing);
+            this.panel21.Controls.Add(this.pictureBox18);
+            this.panel21.Controls.Add(this.pictureBox17);
+            this.panel21.Controls.Add(this.pictureBox12);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel21.Location = new System.Drawing.Point(10, 10);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(200, 487);
             this.panel21.TabIndex = 629;
             // 
-            // mSessionBindingSource
+            // G2CHKDone
             // 
-            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
+            this.G2CHKDone.AutoSize = true;
+            this.G2CHKDone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDone.CheckedState.BorderRadius = 0;
+            this.G2CHKDone.CheckedState.BorderThickness = 0;
+            this.G2CHKDone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKDone.Location = new System.Drawing.Point(4, 111);
+            this.G2CHKDone.Name = "G2CHKDone";
+            this.G2CHKDone.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKDone.TabIndex = 627;
+            this.G2CHKDone.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDone.UncheckedState.BorderRadius = 0;
+            this.G2CHKDone.UncheckedState.BorderThickness = 0;
+            this.G2CHKDone.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDone.CheckedChanged += new System.EventHandler(this.CHKChecked_CheckedChanged);
             // 
-            // TotalHours
+            // G2CHKScheduled
             // 
-            this.TotalHours.DataPropertyName = "TotalHours";
-            this.TotalHours.HeaderText = "TotalHours";
-            this.TotalHours.Name = "TotalHours";
-            this.TotalHours.ReadOnly = true;
-            this.TotalHours.Visible = false;
+            this.G2CHKScheduled.AutoSize = true;
+            this.G2CHKScheduled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKScheduled.CheckedState.BorderRadius = 0;
+            this.G2CHKScheduled.CheckedState.BorderThickness = 0;
+            this.G2CHKScheduled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKScheduled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKScheduled.Location = new System.Drawing.Point(4, 151);
+            this.G2CHKScheduled.Name = "G2CHKScheduled";
+            this.G2CHKScheduled.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKScheduled.TabIndex = 626;
+            this.G2CHKScheduled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKScheduled.UncheckedState.BorderRadius = 0;
+            this.G2CHKScheduled.UncheckedState.BorderThickness = 0;
+            this.G2CHKScheduled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKScheduled.CheckedChanged += new System.EventHandler(this.CHKChecked_CheckedChanged);
             // 
-            // InvoiceID
+            // G2CHKOnGoing
             // 
-            this.InvoiceID.DataPropertyName = "InvoiceID";
-            this.InvoiceID.HeaderText = "InvoiceID";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            this.InvoiceID.Visible = false;
-            // 
-            // StatusBill
-            // 
-            this.StatusBill.DataPropertyName = "StatusBill";
-            this.StatusBill.HeaderText = "StatusBill";
-            this.StatusBill.Name = "StatusBill";
-            this.StatusBill.ReadOnly = true;
-            this.StatusBill.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // PaidDate
-            // 
-            this.PaidDate.DataPropertyName = "PaidDate";
-            this.PaidDate.HeaderText = "Paid Date";
-            this.PaidDate.Name = "PaidDate";
-            this.PaidDate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.DataPropertyName = "TotalAmount";
-            this.TotalAmount.HeaderText = "Total Amount";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
-            // 
-            // HourlyRate
-            // 
-            this.HourlyRate.DataPropertyName = "HourlyRate";
-            this.HourlyRate.HeaderText = "Hourly Rate";
-            this.HourlyRate.Name = "HourlyRate";
-            this.HourlyRate.ReadOnly = true;
-            // 
-            // SessionDate
-            // 
-            this.SessionDate.DataPropertyName = "SessionDate";
-            this.SessionDate.HeaderText = "Session Date";
-            this.SessionDate.Name = "SessionDate";
-            this.SessionDate.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.DataPropertyName = "EndTime";
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            // 
-            // StartTime
-            // 
-            this.StartTime.DataPropertyName = "StartTime";
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // StudentID
-            // 
-            this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Visible = false;
-            // 
-            // _TutorName
-            // 
-            this._TutorName.DataPropertyName = "TutorName";
-            this._TutorName.HeaderText = "TutorName";
-            this._TutorName.Name = "_TutorName";
-            this._TutorName.ReadOnly = true;
-            this._TutorName.Visible = false;
-            // 
-            // Subject
-            // 
-            this.Subject.DataPropertyName = "Subject";
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // StudName
-            // 
-            this.StudName.DataPropertyName = "StudName";
-            this.StudName.HeaderText = "Student Name";
-            this.StudName.Name = "StudName";
-            this.StudName.ReadOnly = true;
-            // 
-            // TutorID
-            // 
-            this.TutorID.DataPropertyName = "TutorID";
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
+            this.G2CHKOnGoing.AutoSize = true;
+            this.G2CHKOnGoing.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKOnGoing.CheckedState.BorderRadius = 0;
+            this.G2CHKOnGoing.CheckedState.BorderThickness = 0;
+            this.G2CHKOnGoing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKOnGoing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKOnGoing.Location = new System.Drawing.Point(4, 191);
+            this.G2CHKOnGoing.Name = "G2CHKOnGoing";
+            this.G2CHKOnGoing.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKOnGoing.TabIndex = 608;
+            this.G2CHKOnGoing.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKOnGoing.UncheckedState.BorderRadius = 0;
+            this.G2CHKOnGoing.UncheckedState.BorderThickness = 0;
+            this.G2CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHKChecked_CheckedChanged);
             // 
             // SessionID
             // 
@@ -1118,20 +1038,121 @@
             this.SessionID.ReadOnly = true;
             this.SessionID.Visible = false;
             // 
+            // TutorID
+            // 
+            this.TutorID.DataPropertyName = "TutorID";
+            this.TutorID.HeaderText = "TutorID";
+            this.TutorID.Name = "TutorID";
+            this.TutorID.ReadOnly = true;
+            this.TutorID.Visible = false;
+            // 
+            // StudName
+            // 
+            this.StudName.DataPropertyName = "StudName";
+            this.StudName.HeaderText = "Student Name";
+            this.StudName.Name = "StudName";
+            this.StudName.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // _TutorName
+            // 
+            this._TutorName.DataPropertyName = "TutorName";
+            this._TutorName.HeaderText = "TutorName";
+            this._TutorName.Name = "_TutorName";
+            this._TutorName.ReadOnly = true;
+            this._TutorName.Visible = false;
+            // 
+            // StudentID
+            // 
+            this.StudentID.DataPropertyName = "StudentID";
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            this.StudentID.Visible = false;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "StartTime";
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.DataPropertyName = "EndTime";
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
+            // SessionDate
+            // 
+            this.SessionDate.DataPropertyName = "SessionDate";
+            this.SessionDate.HeaderText = "Session Date";
+            this.SessionDate.Name = "SessionDate";
+            this.SessionDate.ReadOnly = true;
+            // 
+            // HourlyRate
+            // 
+            this.HourlyRate.DataPropertyName = "HourlyRate";
+            this.HourlyRate.HeaderText = "Hourly Rate";
+            this.HourlyRate.Name = "HourlyRate";
+            this.HourlyRate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.DataPropertyName = "TotalAmount";
+            this.TotalAmount.HeaderText = "Total Amount";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // StatusBill
+            // 
+            this.StatusBill.DataPropertyName = "StatusBill";
+            this.StatusBill.HeaderText = "StatusBill";
+            this.StatusBill.Name = "StatusBill";
+            this.StatusBill.ReadOnly = true;
+            this.StatusBill.Visible = false;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.DataPropertyName = "InvoiceID";
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            this.InvoiceID.Visible = false;
+            // 
+            // TotalHours
+            // 
+            this.TotalHours.DataPropertyName = "TotalHours";
+            this.TotalHours.HeaderText = "TotalHours";
+            this.TotalHours.Name = "TotalHours";
+            this.TotalHours.ReadOnly = true;
+            this.TotalHours.Visible = false;
+            // 
+            // mSessionBindingSource
+            // 
+            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
+            // 
             // FEarningsTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1150, 507);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.G2CmbxStatus);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel2);
@@ -1195,6 +1216,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1258,8 +1281,6 @@
         private System.Windows.Forms.BindingSource mSessionBindingSource;
         private System.Windows.Forms.ComboBox G2CmbxTutorName;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxFirstname;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
@@ -1283,5 +1304,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKOnGoing;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKScheduled;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKDone;
     }
 }

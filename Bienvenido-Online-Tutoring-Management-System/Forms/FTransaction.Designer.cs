@@ -57,8 +57,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.G2CmbxStudentName = new System.Windows.Forms.ComboBox();
             this.LblID = new System.Windows.Forms.Label();
-            this.G2CmbxStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,6 +69,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.G2CHKCanceledBySystem = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKDraft = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKCancel = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.G2CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,7 +92,6 @@
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel18 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DGVScheduled)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -103,8 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).BeginInit();
             this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVScheduled
@@ -116,6 +120,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVScheduled.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGVScheduled.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGVScheduled.AutoGenerateColumns = false;
             this.DGVScheduled.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.DGVScheduled.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -156,7 +163,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVScheduled.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVScheduled.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
-            this.DGVScheduled.Location = new System.Drawing.Point(197, 4);
+            this.DGVScheduled.Location = new System.Drawing.Point(217, 21);
             this.DGVScheduled.Margin = new System.Windows.Forms.Padding(4);
             this.DGVScheduled.Name = "DGVScheduled";
             this.DGVScheduled.ReadOnly = true;
@@ -174,7 +181,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVScheduled.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGVScheduled.Size = new System.Drawing.Size(956, 475);
+            this.DGVScheduled.Size = new System.Drawing.Size(935, 458);
             this.DGVScheduled.TabIndex = 236;
             this.DGVScheduled.TabStop = false;
             this.DGVScheduled.Tag = "book_id";
@@ -212,7 +219,7 @@
             this.G2BtnSchedule.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnSchedule.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnSchedule.Location = new System.Drawing.Point(1001, 484);
+            this.G2BtnSchedule.Location = new System.Drawing.Point(1001, 486);
             this.G2BtnSchedule.Name = "G2BtnSchedule";
             this.G2BtnSchedule.Size = new System.Drawing.Size(152, 36);
             this.G2BtnSchedule.TabIndex = 519;
@@ -224,7 +231,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(8, 22);
+            this.label5.Location = new System.Drawing.Point(2, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 21);
             this.label5.TabIndex = 567;
@@ -393,59 +400,18 @@
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblID.Location = new System.Drawing.Point(114, 23);
+            this.LblID.Location = new System.Drawing.Point(108, 11);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(19, 21);
             this.LblID.TabIndex = 584;
             this.LblID.Text = "0";
             // 
-            // G2CmbxStatus
-            // 
-            this.G2CmbxStatus.BackColor = System.Drawing.Color.Transparent;
-            this.G2CmbxStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxStatus.BorderThickness = 2;
-            this.G2CmbxStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.G2CmbxStatus.DropDownHeight = 150;
-            this.G2CmbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.G2CmbxStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2CmbxStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2CmbxStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxStatus.IntegralHeight = false;
-            this.G2CmbxStatus.ItemHeight = 30;
-            this.G2CmbxStatus.Items.AddRange(new object[] {
-            "All",
-            "Done",
-            "Draft",
-            "Cancel",
-            "CanceledBySystem",
-            "OnGoing",
-            "Scheduled"});
-            this.G2CmbxStatus.Location = new System.Drawing.Point(12, 128);
-            this.G2CmbxStatus.Name = "G2CmbxStatus";
-            this.G2CmbxStatus.Size = new System.Drawing.Size(178, 36);
-            this.G2CmbxStatus.TabIndex = 589;
-            this.G2CmbxStatus.SelectedIndexChanged += new System.EventHandler(this.G2CmbxStatus_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(8, 103);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
-            this.label7.TabIndex = 590;
-            this.label7.Text = "Status";
-            // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(51, 336);
+            this.label6.Location = new System.Drawing.Point(51, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 21);
             this.label6.TabIndex = 600;
@@ -453,11 +419,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(51, 297);
+            this.label4.Location = new System.Drawing.Point(51, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 21);
             this.label4.TabIndex = 598;
@@ -465,11 +430,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(51, 217);
+            this.label2.Location = new System.Drawing.Point(51, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 595;
@@ -477,11 +441,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(51, 258);
+            this.label3.Location = new System.Drawing.Point(51, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 596;
@@ -489,11 +452,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(51, 176);
+            this.label1.Location = new System.Drawing.Point(51, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 21);
             this.label1.TabIndex = 594;
@@ -501,9 +463,8 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 329);
+            this.pictureBox5.Location = new System.Drawing.Point(11, 252);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(43, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -512,9 +473,8 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(11, 289);
+            this.pictureBox4.Location = new System.Drawing.Point(11, 212);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(43, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -523,9 +483,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 249);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 172);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(43, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -534,9 +493,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 209);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 132);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -545,9 +503,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 92);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -556,11 +513,10 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(51, 369);
+            this.label8.Location = new System.Drawing.Point(51, 288);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 42);
             this.label8.TabIndex = 602;
@@ -568,14 +524,149 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(11, 369);
+            this.pictureBox6.Location = new System.Drawing.Point(11, 292);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(43, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 601;
             this.pictureBox6.TabStop = false;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.G2CHKCanceledBySystem);
+            this.panel18.Controls.Add(this.G2CHKDraft);
+            this.panel18.Controls.Add(this.G2CHKCancel);
+            this.panel18.Controls.Add(this.G2CHKDone);
+            this.panel18.Controls.Add(this.G2CHKScheduled);
+            this.panel18.Controls.Add(this.G2CHKOnGoing);
+            this.panel18.Controls.Add(this.label8);
+            this.panel18.Controls.Add(this.LblID);
+            this.panel18.Controls.Add(this.pictureBox6);
+            this.panel18.Controls.Add(this.label6);
+            this.panel18.Controls.Add(this.label4);
+            this.panel18.Controls.Add(this.pictureBox4);
+            this.panel18.Controls.Add(this.label2);
+            this.panel18.Controls.Add(this.pictureBox5);
+            this.panel18.Controls.Add(this.label3);
+            this.panel18.Controls.Add(this.label1);
+            this.panel18.Controls.Add(this.label5);
+            this.panel18.Controls.Add(this.pictureBox1);
+            this.panel18.Controls.Add(this.pictureBox2);
+            this.panel18.Controls.Add(this.pictureBox3);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel18.Location = new System.Drawing.Point(10, 10);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(200, 512);
+            this.panel18.TabIndex = 603;
+            // 
+            // G2CHKCanceledBySystem
+            // 
+            this.G2CHKCanceledBySystem.AutoSize = true;
+            this.G2CHKCanceledBySystem.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKCanceledBySystem.CheckedState.BorderRadius = 0;
+            this.G2CHKCanceledBySystem.CheckedState.BorderThickness = 0;
+            this.G2CHKCanceledBySystem.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKCanceledBySystem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKCanceledBySystem.Location = new System.Drawing.Point(2, 302);
+            this.G2CHKCanceledBySystem.Name = "G2CHKCanceledBySystem";
+            this.G2CHKCanceledBySystem.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKCanceledBySystem.TabIndex = 633;
+            this.G2CHKCanceledBySystem.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKCanceledBySystem.UncheckedState.BorderRadius = 0;
+            this.G2CHKCanceledBySystem.UncheckedState.BorderThickness = 0;
+            this.G2CHKCanceledBySystem.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKCanceledBySystem.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
+            // 
+            // G2CHKDraft
+            // 
+            this.G2CHKDraft.AutoSize = true;
+            this.G2CHKDraft.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDraft.CheckedState.BorderRadius = 0;
+            this.G2CHKDraft.CheckedState.BorderThickness = 0;
+            this.G2CHKDraft.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDraft.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKDraft.Location = new System.Drawing.Point(2, 262);
+            this.G2CHKDraft.Name = "G2CHKDraft";
+            this.G2CHKDraft.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKDraft.TabIndex = 632;
+            this.G2CHKDraft.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDraft.UncheckedState.BorderRadius = 0;
+            this.G2CHKDraft.UncheckedState.BorderThickness = 0;
+            this.G2CHKDraft.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDraft.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
+            // 
+            // G2CHKCancel
+            // 
+            this.G2CHKCancel.AutoSize = true;
+            this.G2CHKCancel.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKCancel.CheckedState.BorderRadius = 0;
+            this.G2CHKCancel.CheckedState.BorderThickness = 0;
+            this.G2CHKCancel.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKCancel.Location = new System.Drawing.Point(2, 222);
+            this.G2CHKCancel.Name = "G2CHKCancel";
+            this.G2CHKCancel.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKCancel.TabIndex = 631;
+            this.G2CHKCancel.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKCancel.UncheckedState.BorderRadius = 0;
+            this.G2CHKCancel.UncheckedState.BorderThickness = 0;
+            this.G2CHKCancel.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKCancel.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
+            // 
+            // G2CHKDone
+            // 
+            this.G2CHKDone.AutoSize = true;
+            this.G2CHKDone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDone.CheckedState.BorderRadius = 0;
+            this.G2CHKDone.CheckedState.BorderThickness = 0;
+            this.G2CHKDone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKDone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKDone.Location = new System.Drawing.Point(2, 102);
+            this.G2CHKDone.Name = "G2CHKDone";
+            this.G2CHKDone.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKDone.TabIndex = 630;
+            this.G2CHKDone.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDone.UncheckedState.BorderRadius = 0;
+            this.G2CHKDone.UncheckedState.BorderThickness = 0;
+            this.G2CHKDone.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKDone.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
+            // 
+            // G2CHKScheduled
+            // 
+            this.G2CHKScheduled.AutoSize = true;
+            this.G2CHKScheduled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKScheduled.CheckedState.BorderRadius = 0;
+            this.G2CHKScheduled.CheckedState.BorderThickness = 0;
+            this.G2CHKScheduled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKScheduled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKScheduled.Location = new System.Drawing.Point(2, 142);
+            this.G2CHKScheduled.Name = "G2CHKScheduled";
+            this.G2CHKScheduled.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKScheduled.TabIndex = 629;
+            this.G2CHKScheduled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKScheduled.UncheckedState.BorderRadius = 0;
+            this.G2CHKScheduled.UncheckedState.BorderThickness = 0;
+            this.G2CHKScheduled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKScheduled.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
+            // 
+            // G2CHKOnGoing
+            // 
+            this.G2CHKOnGoing.AutoSize = true;
+            this.G2CHKOnGoing.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKOnGoing.CheckedState.BorderRadius = 0;
+            this.G2CHKOnGoing.CheckedState.BorderThickness = 0;
+            this.G2CHKOnGoing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2CHKOnGoing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2CHKOnGoing.Location = new System.Drawing.Point(2, 182);
+            this.G2CHKOnGoing.Name = "G2CHKOnGoing";
+            this.G2CHKOnGoing.Size = new System.Drawing.Size(15, 14);
+            this.G2CHKOnGoing.TabIndex = 628;
+            this.G2CHKOnGoing.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKOnGoing.UncheckedState.BorderRadius = 0;
+            this.G2CHKOnGoing.UncheckedState.BorderThickness = 0;
+            this.G2CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.G2CHKOnGoing.CheckedChanged += new System.EventHandler(this.G2CHKState_CheckedChanged);
             // 
             // SessionID
             // 
@@ -695,36 +786,12 @@
             // 
             this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
             // 
-            // panel18
-            // 
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.label8);
-            this.panel18.Controls.Add(this.pictureBox1);
-            this.panel18.Controls.Add(this.pictureBox6);
-            this.panel18.Controls.Add(this.pictureBox2);
-            this.panel18.Controls.Add(this.label6);
-            this.panel18.Controls.Add(this.pictureBox3);
-            this.panel18.Controls.Add(this.label4);
-            this.panel18.Controls.Add(this.pictureBox4);
-            this.panel18.Controls.Add(this.label2);
-            this.panel18.Controls.Add(this.pictureBox5);
-            this.panel18.Controls.Add(this.label3);
-            this.panel18.Controls.Add(this.label1);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(200, 532);
-            this.panel18.TabIndex = 603;
-            // 
             // FTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 532);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.G2CmbxStatus);
-            this.Controls.Add(this.LblID);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel12);
@@ -735,12 +802,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.G2CmbxStudentName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.G2BtnSchedule);
             this.Controls.Add(this.DGVScheduled);
             this.Controls.Add(this.panel18);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FTransaction";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "FTransaction";
             this.Load += new System.EventHandler(this.FTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVScheduled)).EndInit();
@@ -758,11 +825,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mSessionBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -793,8 +859,6 @@
         private System.Windows.Forms.ComboBox G2CmbxStudentName;
         private System.Windows.Forms.BindingSource mSessionBindingSource;
         private System.Windows.Forms.Label LblID;
-        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxStatus;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudName;
@@ -823,5 +887,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel18;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKCanceledBySystem;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKDraft;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKCancel;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKDone;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKScheduled;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKOnGoing;
     }
 }

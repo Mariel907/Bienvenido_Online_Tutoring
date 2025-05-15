@@ -2,6 +2,7 @@
 using Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms;
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Security;
 using System.Windows.Forms;
@@ -31,7 +32,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         {
             transaction.UpdateStatus(DGVScheduled);
             ShowStudentCMBX();
-
+            G2CHKScheduled.Checked = true;
         }
         private void ShowStudentCMBX()
         {
@@ -44,11 +45,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             {
                 MStudent stud = G2CmbxStudentName.SelectedItem as MStudent;
                 LblID.Text = stud.StudentID.ToString();
-
-                Lbl = LblID.Text;
-                transaction.Search(Lbl, DGVScheduled);
-                G2CmbxStatus.Text = "Scheduled";
-                SearchStatus();
+                StatusChecked();
             }
         }
 
@@ -80,18 +77,23 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             }
         }
 
-        private void G2CmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        private void G2CHKState_CheckedChanged(object sender, EventArgs e)
         {
-            SearchStatus();
+            StatusChecked();
         }
-        private void SearchStatus()
+        private void StatusChecked()
         {
             Lbl = LblID.Text;
-            string Cmbx = G2CmbxStatus.Text;
-            if (Cmbx == "All")
-                transaction.Search(Lbl, DGVScheduled);
-            else
-                transaction.StatusCmbxSearch(Lbl, Cmbx, DGVScheduled);
+            List<string> Checked = new List<string>();
+
+            if (G2CHKDone.Checked) Checked.Add("Done");
+            if (G2CHKScheduled.Checked) Checked.Add("Scheduled");
+            if (G2CHKOnGoing.Checked) Checked.Add("OnGoing");
+            if (G2CHKCancel.Checked) Checked.Add("Cancel");
+            if (G2CHKDraft.Checked) Checked.Add("Draft");
+            if (G2CHKCanceledBySystem.Checked) Checked.Add("CanceledBySystem");
+
+            transaction.StatusCmbxSearch(Lbl, Checked, DGVScheduled);
         }
     }
 }

@@ -22,7 +22,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void FCalendar_Load(object sender, EventArgs e)
         {
-            DaysCalendar();
+            cCalendar.UpdateStatus();
+            StatusChecked();
         }
 
         private void PCtrNext_Click(object sender, EventArgs e)
@@ -53,32 +54,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             StatusChecked();
         }
 
-        private void DaysCalendar()
-        {
-
-            String monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            LblMonth.Text = $"{monthName}  {year}";
-
-            DateTime firstDayOfMonth = new DateTime(year, month, 1);
-            DayOfWeek startDay = firstDayOfMonth.DayOfWeek;
-
-            int firstDayColumn = (int)startDay;
-            TblLytPnlCalendar.Controls.Clear();
-            for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
-            {
-                CustomCalendar dayControl = new CustomCalendar(day);
-                int row = (day + firstDayColumn - 1) / 7;
-                int column = (day + firstDayColumn - 1) % 7;
-                List<MSession> sessionData = cCalendar.GetSessionsForDayBoth(day);
-                //List<MSession> sessionList = cCalendar.GetSessionsForDayTutor(day);
-
-                //sessionData.AddRange(sessionList);
-                DateTime targetDate = new DateTime(year, month, day);
-
-                dayControl.UpdateSessions(sessionData, targetDate);
-                TblLytPnlCalendar.Controls.Add(dayControl, column, row);
-            }
-        }
         private void RefreshCalendar(List<string> statusFilter)
         {
             String monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
@@ -89,7 +64,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             int firstDayColumn = (int)startDay;
 
-            string searchedName = G2CmbxName.Text;
+            string searchedName = G2TxbxSearch.Text;
 
             TblLytPnlCalendar.Controls.Clear();
             for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
@@ -102,8 +77,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 if (sessionData.Any())
                 {
                     sessionData = sessionData.Where(s =>
-                        (string.IsNullOrEmpty(searchedName) || s.StudName.Contains(searchedName) || s.TutorName.Contains(searchedName))
-                        && (!statusFilter.Any() || statusFilter.Contains(s.Status)) // Ensures filtering works even if no status is selected
+                        (string.IsNullOrEmpty(searchedName) || s.StudName.Contains(searchedName) || s.TutorName.Contains(searchedName) || s.Subject.Contains(searchedName))
+                        && (!statusFilter.Any() || statusFilter.Contains(s.Status)) 
                     ).ToList();
                 }
 
@@ -133,39 +108,44 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void Category()
         {
-            cmbx = CmbxCategoryName.Text;
-            var sessionDays = CCalendar.GetSessionsForDayStudent();
-            if (cmbx == "Student")
-            {
-                G2CmbxName.DataSource = sessionDays;
-                G2CmbxName.DisplayMember = "StudName";
-                G2CmbxName.ValueMember = "StudentID";
-            }
-            else
-            {
-                G2CmbxName.DataSource = sessionDays;
-                G2CmbxName.DisplayMember = "TutorName";
-                G2CmbxName.ValueMember = "TutorID";
-            }
+            //cmbx = CmbxCategoryName.Text;
+            //var sessionDays = CCalendar.GetSessionsForDayStudent();
+            //if (cmbx == "Student")
+            //{
+            //    G2CmbxName.DataSource = sessionDays;
+            //    G2CmbxName.DisplayMember = "StudName";
+            //    G2CmbxName.ValueMember = "StudentID";
+            //}
+            //else
+            //{
+            //    G2CmbxName.DataSource = sessionDays;
+            //    G2CmbxName.DisplayMember = "TutorName";
+            //    G2CmbxName.ValueMember = "TutorID";
+            //}
         }
 
         private void G2CmbxName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbx = CmbxCategoryName.Text;
-            if (G2CmbxName.SelectedValue != null)
-            {
-                MSession session = G2CmbxName.SelectedItem as MSession;
-                if (cmbx == "Student")
-                    LblID.Text = session.StudentID.ToString();
-                else
-                    LblID.Text = session.TutorID.ToString();
-            }
+            //cmbx = CmbxCategoryName.Text;
+            //if (G2CmbxName.SelectedValue != null)
+            //{
+            //    MSession session = G2CmbxName.SelectedItem as MSession;
+            //    if (cmbx == "Student")
+            //        LblID.Text = session.StudentID.ToString();
+            //    else
+            //        LblID.Text = session.TutorID.ToString();
+            //}
             StatusChecked();
         }
 
         private void CmbxCategoryName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            StatusChecked();
         }
     }
 }

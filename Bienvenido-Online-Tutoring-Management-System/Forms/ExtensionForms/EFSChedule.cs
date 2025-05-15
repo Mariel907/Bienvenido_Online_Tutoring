@@ -309,15 +309,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             foreach (DataGridViewRow row in DGVStudent.Rows)
             {
                 if (row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase))
-                {
                     row.Cells["StatusBill"].Value = "Paid";
-                }
             }
-        }
-
-        private void G2CmbxStartTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void DGVStudent_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

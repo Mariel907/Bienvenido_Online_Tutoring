@@ -2,12 +2,7 @@
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -32,12 +27,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void AddTutorProfile_Load(object sender, EventArgs e)
         {
-            var Subject = CFSubjects.Subjects();
-            G2CmbxExpertise.DataSource = Subject;
-            G2CmbxExpertise.DisplayMember = "SubjectName";
-            G2CmbxExpertise.ValueMember = "SubID";
-            G2TxbxExpertise.Text = string.Empty;
-
+            ShowSubjects();
+        }
+        private void ShowSubjects()
+        {
+            LstBxExpertise.Items.Clear();
+            foreach (var subject in CFSubjects.Subjects())
+            {
+                LstBxExpertise.Items.Add(subject.SubjectName);
+            }
         }
 
         private void G2CmbxDaysAvailable_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,27 +48,20 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             if (currentText.Length > 0) G2TxbxDaysAvailable.Text = currentText + ", " + selectedGenre;
             else G2TxbxDaysAvailable.Text = selectedGenre;
         }
-        private void G2TestingExpertise_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (G2CmbxExpertise.SelectedValue != null)
-            {
-                MSubjects Sub = G2CmbxExpertise.SelectedItem as MSubjects;
-                string selectedGenre = Sub.SubjectName.ToString();
-                string currentText = G2TxbxExpertise.Text;
 
-                if (currentText.Length > 0) G2TxbxExpertise.Text = currentText + ", " + selectedGenre;
-                else G2TxbxExpertise.Text = selectedGenre;
-            }
-        }
-
-        private void G2BtnUpdate_Click(object sender, EventArgs e)
+        private void G2BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+                List<string> selectedExpertise = new List<string>();
+
+                foreach(var item in LstBxExpertise.SelectedItems)
+                    selectedExpertise.Add(item.ToString());
+
                 MTutorProfile mTutor = new MTutorProfile();
                 mTutor.Firstname = G2TxbxFirstname.Text;
                 mTutor.lastname = G2TxbxLastname.Text;
-                mTutor.Expertise = G2TxbxExpertise.Text;
+                mTutor.Expertise = string.Join(", ", selectedExpertise);
                 mTutor.HourlyRate = Convert.ToDecimal(G2TxbxHourlyRate.Text);
                 mTutor.StartTime = Convert.ToDateTime(DTPStartTime.Text).TimeOfDay;
                 mTutor.EndTime = Convert.ToDateTime(DTPEndTime.Text).TimeOfDay;
@@ -79,9 +70,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 CTutorProfile CTutor = new CTutorProfile();
                 CTutor.Insert(mTutor);
 
-
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -91,21 +81,28 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             G2TxbxFirstname.Text = string.Empty;
             G2TxbxLastname.Text = string.Empty;
-            G2TxbxExpertise.Text = string.Empty;
             G2TxbxDaysAvailable.Text = string.Empty;
             G2TxbxHourlyRate.Text = string.Empty;
             DTPStartTime.Value = DateTime.Now;
             DTPEndTime.Value = DateTime.Now;
+            G2CmbxDaysAvailable.SelectedIndex = -1;                             
+            LstBxExpertise.ClearSelected();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void LstBxExpertise_DrawItem(object sender, DrawItemEventArgs e)
         {
+            bool isSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
 
-        }
+            Color selectionColor = isSelected ? Color.FromArgb(188, 184, 177) : e.BackColor;
+            Color textColor = Color.FromArgb(28, 42, 68);
 
-        private void LblTutorID_Click(object sender, EventArgs e)
-        {
-
+            using (SolidBrush backgroundBrush = new SolidBrush(selectionColor))
+            using (SolidBrush textBrush = new SolidBrush(textColor))
+            {
+                e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
+                e.Graphics.DrawString(LstBxExpertise.Items[e.Index].ToString(), e.Font, textBrush, RestoreBounds.Left + 20, e.Bounds.Top);
+            }
+            e.DrawFocusRectangle();
         }
     }
 }

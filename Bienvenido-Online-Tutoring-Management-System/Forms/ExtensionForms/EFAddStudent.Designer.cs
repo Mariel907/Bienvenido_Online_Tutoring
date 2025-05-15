@@ -32,9 +32,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.G2CmbxPreferredSubjects = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.G2TxbxPreferredSubjects = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.G2TxbxLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +40,19 @@
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.G2TxbxContactDetails = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.LstBxExpertise = new System.Windows.Forms.ListBox();
+            this.panel30.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -80,27 +91,6 @@
             this.panel1.Size = new System.Drawing.Size(1146, 2);
             this.panel1.TabIndex = 514;
             // 
-            // G2CmbxPreferredSubjects
-            // 
-            this.G2CmbxPreferredSubjects.BackColor = System.Drawing.Color.Transparent;
-            this.G2CmbxPreferredSubjects.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxPreferredSubjects.BorderThickness = 2;
-            this.G2CmbxPreferredSubjects.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.G2CmbxPreferredSubjects.DropDownHeight = 150;
-            this.G2CmbxPreferredSubjects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.G2CmbxPreferredSubjects.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2CmbxPreferredSubjects.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxPreferredSubjects.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2CmbxPreferredSubjects.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2CmbxPreferredSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxPreferredSubjects.IntegralHeight = false;
-            this.G2CmbxPreferredSubjects.ItemHeight = 30;
-            this.G2CmbxPreferredSubjects.Location = new System.Drawing.Point(453, 355);
-            this.G2CmbxPreferredSubjects.Name = "G2CmbxPreferredSubjects";
-            this.G2CmbxPreferredSubjects.Size = new System.Drawing.Size(126, 36);
-            this.G2CmbxPreferredSubjects.TabIndex = 573;
-            this.G2CmbxPreferredSubjects.SelectedIndexChanged += new System.EventHandler(this.G2CmbxPreferredSubjects_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -111,31 +101,6 @@
             this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 571;
             this.label2.Text = " Preffered Subjects";
-            // 
-            // G2TxbxPreferredSubjects
-            // 
-            this.G2TxbxPreferredSubjects.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxPreferredSubjects.BorderThickness = 2;
-            this.G2TxbxPreferredSubjects.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.G2TxbxPreferredSubjects.DefaultText = "";
-            this.G2TxbxPreferredSubjects.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.G2TxbxPreferredSubjects.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.G2TxbxPreferredSubjects.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.G2TxbxPreferredSubjects.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.G2TxbxPreferredSubjects.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2TxbxPreferredSubjects.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2TxbxPreferredSubjects.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.G2TxbxPreferredSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxPreferredSubjects.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxPreferredSubjects.Location = new System.Drawing.Point(577, 355);
-            this.G2TxbxPreferredSubjects.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.G2TxbxPreferredSubjects.Name = "G2TxbxPreferredSubjects";
-            this.G2TxbxPreferredSubjects.Padding = new System.Windows.Forms.Padding(7);
-            this.G2TxbxPreferredSubjects.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxPreferredSubjects.PlaceholderText = "";
-            this.G2TxbxPreferredSubjects.SelectedText = "";
-            this.G2TxbxPreferredSubjects.Size = new System.Drawing.Size(209, 36);
-            this.G2TxbxPreferredSubjects.TabIndex = 570;
             // 
             // label1
             // 
@@ -170,7 +135,7 @@
             this.G2TxbxLastname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.PlaceholderText = "";
             this.G2TxbxLastname.SelectedText = "";
-            this.G2TxbxLastname.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxLastname.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxLastname.TabIndex = 568;
             // 
             // label5
@@ -206,9 +171,8 @@
             this.G2TxbxFirstname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.PlaceholderText = "";
             this.G2TxbxFirstname.SelectedText = "";
-            this.G2TxbxFirstname.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxFirstname.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxFirstname.TabIndex = 566;
-            this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged);
             // 
             // G2BtnAdd
             // 
@@ -220,7 +184,7 @@
             this.G2BtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnAdd.Location = new System.Drawing.Point(556, 417);
+            this.G2BtnAdd.Location = new System.Drawing.Point(561, 492);
             this.G2BtnAdd.Name = "G2BtnAdd";
             this.G2BtnAdd.Size = new System.Drawing.Size(152, 36);
             this.G2BtnAdd.TabIndex = 575;
@@ -260,8 +224,92 @@
             this.G2TxbxContactDetails.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxContactDetails.PlaceholderText = "";
             this.G2TxbxContactDetails.SelectedText = "";
-            this.G2TxbxContactDetails.Size = new System.Drawing.Size(333, 36);
+            this.G2TxbxContactDetails.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxContactDetails.TabIndex = 576;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel30.Controls.Add(this.panel31);
+            this.panel30.Location = new System.Drawing.Point(447, 354);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(2, 121);
+            this.panel30.TabIndex = 579;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel31.Location = new System.Drawing.Point(0, -10);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(179, 2);
+            this.panel31.TabIndex = 442;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Location = new System.Drawing.Point(447, 475);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(382, 2);
+            this.panel9.TabIndex = 582;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel10.Location = new System.Drawing.Point(0, -10);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(179, 2);
+            this.panel10.TabIndex = 442;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(828, 356);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(2, 121);
+            this.panel7.TabIndex = 578;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel8.Location = new System.Drawing.Point(0, -10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(179, 2);
+            this.panel8.TabIndex = 442;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(448, 354);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(382, 2);
+            this.panel5.TabIndex = 581;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
+            this.panel6.Location = new System.Drawing.Point(0, -10);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(179, 2);
+            this.panel6.TabIndex = 442;
+            // 
+            // LstBxExpertise
+            // 
+            this.LstBxExpertise.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.LstBxExpertise.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.LstBxExpertise.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LstBxExpertise.FormattingEnabled = true;
+            this.LstBxExpertise.HorizontalScrollbar = true;
+            this.LstBxExpertise.IntegralHeight = false;
+            this.LstBxExpertise.ItemHeight = 30;
+            this.LstBxExpertise.Location = new System.Drawing.Point(448, 355);
+            this.LstBxExpertise.Name = "LstBxExpertise";
+            this.LstBxExpertise.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.LstBxExpertise.Size = new System.Drawing.Size(382, 122);
+            this.LstBxExpertise.TabIndex = 580;
+            this.LstBxExpertise.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.LstBxExpertise_DrawItem);
             // 
             // EFAddStudent
             // 
@@ -269,12 +317,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 546);
+            this.Controls.Add(this.panel30);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.LstBxExpertise);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.G2TxbxContactDetails);
             this.Controls.Add(this.G2BtnAdd);
-            this.Controls.Add(this.G2CmbxPreferredSubjects);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.G2TxbxPreferredSubjects);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.G2TxbxLastname);
             this.Controls.Add(this.label5);
@@ -288,6 +339,10 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "EFAddStudent";
             this.Load += new System.EventHandler(this.EFAddStudent_Load);
+            this.panel30.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,9 +354,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ComboBox G2CmbxPreferredSubjects;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox G2TxbxPreferredSubjects;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxLastname;
         private System.Windows.Forms.Label label5;
@@ -309,5 +362,14 @@
         private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxContactDetails;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ListBox LstBxExpertise;
     }
 }

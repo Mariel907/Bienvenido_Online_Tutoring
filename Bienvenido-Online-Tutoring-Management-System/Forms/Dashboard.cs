@@ -75,8 +75,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
                 case "TutorProfile":
                     LblTitle.Text = "Tutors Profile";
                     MTutorProfile tutor = new MTutorProfile();  
-                    EditTutorProfile edit = new EditTutorProfile(this, tutor);
-                    FTutorProfile fTutorProfile = new FTutorProfile(edit, this);
+                    FTutorProfile fTutorProfile = new FTutorProfile(this);
                     form.OpenForm(fTutorProfile, PnlDashboard);
                     break;
                 case "Subjects":

@@ -10,6 +10,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
 {
     public class CCalendar
     {
+        private DataLoader DL = new DataLoader();
         public List<MSession> GetSessionsForDayTutor()
         {
             return DataLoader.ExecuteStoredProcedure("Calendar_", new Dictionary<string, object> { { "Action", "Tutor" } }, reader => new MSession
@@ -51,6 +52,10 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 TutorID = int.Parse(reader["TUtorID"].ToString()),
                 StudentID = int.Parse(reader["StudentID"].ToString())
             });
+        }
+        public void UpdateStatus()
+        {
+            DL.LoadData("Session_", null, null);
         }
 
     }
