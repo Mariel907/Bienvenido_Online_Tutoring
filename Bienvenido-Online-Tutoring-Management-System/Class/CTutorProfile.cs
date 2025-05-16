@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Class
@@ -26,8 +27,26 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 lastname = reader["Lastname"].ToString()
             });
         }
-        public void Insert(MTutorProfile mTutor)
+        private static List<MSubjects> SubjectShow()
         {
+            return DataLoader.ExecuteStoredProcedure("Subject_UpdateDeleteAdd", new Dictionary<string, object> { { "Action", "Show" } }, reader => new MSubjects
+            {
+                SubID = int.Parse(reader["SubjectID"].ToString()),
+                SubjectName = reader["SubjectName"].ToString()
+            });
+        }
+        //private void SearchSubID(List<string> SubName)
+        //{
+        //    string selectedSubName = string.join
+        //    SqlParameter[] sp = new SqlParameter[]
+        //    {
+        //        new SqlParameter("Action", "SearchSubID"),
+        //        new SqlParameter("SubName", )
+        //    }
+        //}
+        public void Insert(MTutorProfile mTutor, List<string> SubExpert)
+        {
+            string sub = string.Join(", ", SubExpert);
             int TutorID = CAutoIncrementID.NextTutorID();
             int AvailID = CAutoIncrementID.NextAvailability();
             SqlParameter[] sp = new SqlParameter[]
@@ -36,7 +55,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("AvailabilityID", AvailID),
                 new SqlParameter("Firstname", mTutor.Firstname),
                 new SqlParameter("Lastname", mTutor.lastname),
-                new SqlParameter("Expertise", mTutor.Expertise),
+                new SqlParameter("Expertise", sub),
                 new SqlParameter("HourlyRate", mTutor.HourlyRate),
                 new SqlParameter("StartTime", mTutor.StartTime),
                 new SqlParameter("EndTime", mTutor.EndTime),
@@ -46,14 +65,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }
 
-        public void Update(MTutorProfile tutor)
+        public void Update(MTutorProfile tutor, List<string> SubExpert)
         {
+            string sub = string.Join(",", SubExpert);
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("Action", "Update"),
                 new SqlParameter("Firstname", tutor.Firstname),
                 new SqlParameter("Lastname", tutor.lastname),
-                new SqlParameter("Expertise", tutor.Expertise),
+                new SqlParameter("Expertise", sub),
                 new SqlParameter("HourlyRate", tutor.HourlyRate),
                 new SqlParameter("StartTime", tutor.StartTime),
                 new SqlParameter("EndTime", tutor.EndTime),

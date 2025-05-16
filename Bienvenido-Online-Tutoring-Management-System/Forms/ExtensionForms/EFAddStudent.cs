@@ -40,7 +40,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 student.ContactDetails = G2TxbxContactDetails.Text;
 
                 CStudents students = new CStudents();
-                students.Insert(student);
+                students.Insert(student, selectedItem);
                 EmptyFields();
             }
             catch (Exception ex)

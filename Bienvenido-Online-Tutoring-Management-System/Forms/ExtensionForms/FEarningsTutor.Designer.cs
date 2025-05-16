@@ -87,7 +87,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G2CmbxTutorName = new System.Windows.Forms.ComboBox();
             this.G2TxbxFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -100,10 +99,12 @@
             this.G2CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
             this.G2CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
             this.G2CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,11 +112,11 @@
             this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mSessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -775,6 +776,7 @@
             this.TutorID,
             this.StudName,
             this.Subject,
+            this.ContactDetails,
             this._TutorName,
             this.StudentID,
             this.StartTime,
@@ -841,13 +843,6 @@
             this.DGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGV_CellFormatting);
-            // 
-            // PaidDate
-            // 
-            this.PaidDate.DataPropertyName = "PaidDate";
-            this.PaidDate.HeaderText = "Paid Date";
-            this.PaidDate.Name = "PaidDate";
-            this.PaidDate.ReadOnly = true;
             // 
             // G2CmbxTutorName
             // 
@@ -1030,6 +1025,10 @@
             this.G2CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.G2CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHKChecked_CheckedChanged);
             // 
+            // mSessionBindingSource
+            // 
+            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
+            // 
             // SessionID
             // 
             this.SessionID.DataPropertyName = "SessionID";
@@ -1059,6 +1058,13 @@
             this.Subject.HeaderText = "Subject";
             this.Subject.Name = "Subject";
             this.Subject.ReadOnly = true;
+            // 
+            // ContactDetails
+            // 
+            this.ContactDetails.DataPropertyName = "ContactDetails";
+            this.ContactDetails.HeaderText = "Contact Details";
+            this.ContactDetails.Name = "ContactDetails";
+            this.ContactDetails.ReadOnly = true;
             // 
             // _TutorName
             // 
@@ -1111,6 +1117,13 @@
             this.TotalAmount.Name = "TotalAmount";
             this.TotalAmount.ReadOnly = true;
             // 
+            // PaidDate
+            // 
+            this.PaidDate.DataPropertyName = "PaidDate";
+            this.PaidDate.HeaderText = "Paid Date";
+            this.PaidDate.Name = "PaidDate";
+            this.PaidDate.ReadOnly = true;
+            // 
             // Status
             // 
             this.Status.DataPropertyName = "Status";
@@ -1143,16 +1156,13 @@
             this.TotalHours.ReadOnly = true;
             this.TotalHours.Visible = false;
             // 
-            // mSessionBindingSource
-            // 
-            this.mSessionBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSession);
-            // 
             // FEarningsTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1150, 507);
+            this.Controls.Add(this.DGV);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel2);
@@ -1167,7 +1177,6 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.G2CmbxTutorName);
-            this.Controls.Add(this.DGV);
             this.Controls.Add(this.G2TxbxFirstname);
             this.Controls.Add(this.panel21);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1288,10 +1297,14 @@
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.Panel panel21;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKOnGoing;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKScheduled;
+        private Guna.UI2.WinForms.Guna2CheckBox G2CHKDone;
         private System.Windows.Forms.DataGridViewTextBoxColumn SessionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn _TutorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
@@ -1304,8 +1317,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalHours;
-        private Guna.UI2.WinForms.Guna2CheckBox G2CHKOnGoing;
-        private Guna.UI2.WinForms.Guna2CheckBox G2CHKScheduled;
-        private Guna.UI2.WinForms.Guna2CheckBox G2CHKDone;
     }
 }

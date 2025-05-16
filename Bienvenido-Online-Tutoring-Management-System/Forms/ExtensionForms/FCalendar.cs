@@ -147,5 +147,10 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             StatusChecked();
         }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

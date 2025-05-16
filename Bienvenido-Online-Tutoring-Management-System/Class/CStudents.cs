@@ -20,15 +20,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 StudentName = reader["Fullname"].ToString()
             });
         }
-        public void Insert(MStudent stud)
+        public void Insert(MStudent stud,List<string> sub)
         {
+            string subject = string.Join(",", sub);
             int studID = CAutoIncrementID.NextStudentID();
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("Action","Add"),
                 new SqlParameter("Firstname", stud.Firstname),
                 new SqlParameter("Lastname", stud.Lastname),
-                new SqlParameter("PreferredSubjects", stud.PrefferedSubjects),
+                new SqlParameter("PreferredSubjects", subject),
                 new SqlParameter("ContactDetails", stud.ContactDetails),
                 new SqlParameter("StudentID", studID)
             };

@@ -39,32 +39,27 @@
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxAdd = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGVSubjects = new Guna.UI2.WinForms.Guna2DataGridView();
             this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.G2TxbxEdit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoEllipsis = true;
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(712, 23);
+            this.label1.Location = new System.Drawing.Point(916, 159);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(441, 40);
+            this.label1.Size = new System.Drawing.Size(119, 28);
             this.label1.TabIndex = 431;
             this.label1.Text = "Add Subject";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // G2BtnAdd
             // 
@@ -77,7 +72,7 @@
             this.G2BtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnAdd.Location = new System.Drawing.Point(936, 165);
+            this.G2BtnAdd.Location = new System.Drawing.Point(1001, 293);
             this.G2BtnAdd.Name = "G2BtnAdd";
             this.G2BtnAdd.Size = new System.Drawing.Size(152, 36);
             this.G2BtnAdd.TabIndex = 430;
@@ -86,7 +81,8 @@
             // 
             // G2TxbxAdd
             // 
-            this.G2TxbxAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.G2TxbxAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxAdd.BorderThickness = 2;
             this.G2TxbxAdd.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -100,7 +96,7 @@
             this.G2TxbxAdd.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxAdd.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxAdd.Location = new System.Drawing.Point(755, 122);
+            this.G2TxbxAdd.Location = new System.Drawing.Point(820, 250);
             this.G2TxbxAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxAdd.Name = "G2TxbxAdd";
             this.G2TxbxAdd.Padding = new System.Windows.Forms.Padding(7);
@@ -117,24 +113,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(751, 97);
+            this.label5.Location = new System.Drawing.Point(816, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 428;
             this.label5.Text = "Subject";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(701, 275);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 40);
-            this.label2.TabIndex = 435;
-            this.label2.Text = "Edit Subject";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // G2TxbxSearch
             // 
@@ -159,7 +143,7 @@
             this.G2TxbxSearch.Name = "G2TxbxSearch";
             this.G2TxbxSearch.PlaceholderText = "";
             this.G2TxbxSearch.SelectedText = "";
-            this.G2TxbxSearch.Size = new System.Drawing.Size(665, 36);
+            this.G2TxbxSearch.Size = new System.Drawing.Size(792, 36);
             this.G2TxbxSearch.TabIndex = 243;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
@@ -221,7 +205,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVSubjects.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGVSubjects.Size = new System.Drawing.Size(665, 422);
+            this.DGVSubjects.Size = new System.Drawing.Size(792, 451);
             this.DGVSubjects.TabIndex = 233;
             this.DGVSubjects.TabStop = false;
             this.DGVSubjects.Tag = "book_id";
@@ -267,74 +251,6 @@
             // 
             this.mSubjectsBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSubjects);
             // 
-            // G2BtnEdit
-            // 
-            this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.G2BtnEdit.BorderRadius = 15;
-            this.G2BtnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2BtnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2BtnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2BtnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.Location = new System.Drawing.Point(936, 413);
-            this.G2BtnEdit.Name = "G2BtnEdit";
-            this.G2BtnEdit.Size = new System.Drawing.Size(152, 36);
-            this.G2BtnEdit.TabIndex = 438;
-            this.G2BtnEdit.Text = "Update";
-            this.G2BtnEdit.Click += new System.EventHandler(this.G2BtnEdit_Click);
-            // 
-            // G2TxbxEdit
-            // 
-            this.G2TxbxEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.G2TxbxEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxEdit.BorderThickness = 2;
-            this.G2TxbxEdit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.G2TxbxEdit.DefaultText = "";
-            this.G2TxbxEdit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.G2TxbxEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.G2TxbxEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.G2TxbxEdit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.G2TxbxEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2TxbxEdit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(162)))));
-            this.G2TxbxEdit.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.G2TxbxEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxEdit.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxEdit.Location = new System.Drawing.Point(755, 370);
-            this.G2TxbxEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.G2TxbxEdit.Name = "G2TxbxEdit";
-            this.G2TxbxEdit.Padding = new System.Windows.Forms.Padding(7);
-            this.G2TxbxEdit.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2TxbxEdit.PlaceholderText = "";
-            this.G2TxbxEdit.SelectedText = "";
-            this.G2TxbxEdit.Size = new System.Drawing.Size(333, 36);
-            this.G2TxbxEdit.TabIndex = 437;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(751, 345);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 21);
-            this.label3.TabIndex = 436;
-            this.label3.Text = "Subject";
-            // 
-            // LblID
-            // 
-            this.LblID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblID.AutoSize = true;
-            this.LblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblID.Location = new System.Drawing.Point(811, 346);
-            this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(0, 19);
-            this.LblID.TabIndex = 439;
-            // 
             // FSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,12 +258,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 532);
             this.Controls.Add(this.G2TxbxSearch);
-            this.Controls.Add(this.LblID);
-            this.Controls.Add(this.G2BtnEdit);
-            this.Controls.Add(this.G2TxbxEdit);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.G2BtnAdd);
             this.Controls.Add(this.DGVSubjects);
             this.Controls.Add(this.G2TxbxAdd);
@@ -369,14 +280,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource mSubjectsBindingSource;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
         private Guna.UI2.WinForms.Guna2DataGridView DGVSubjects;
-        private Guna.UI2.WinForms.Guna2Button G2BtnEdit;
-        private Guna.UI2.WinForms.Guna2TextBox G2TxbxEdit;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubID;
     }

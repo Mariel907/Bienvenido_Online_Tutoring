@@ -68,7 +68,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 mTutor.DaysAvailable = G2TxbxDaysAvailable.Text;
 
                 CTutorProfile CTutor = new CTutorProfile();
-                CTutor.Insert(mTutor);
+                CTutor.Insert(mTutor, selectedExpertise);
 
             }
             catch (Exception ex)

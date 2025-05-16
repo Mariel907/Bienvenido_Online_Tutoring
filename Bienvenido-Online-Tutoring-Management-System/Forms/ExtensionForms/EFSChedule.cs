@@ -298,10 +298,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             stud.Changed = Convert.ToDecimal(guna2TextBoxChange.Text);
 
             schedule.PaidStatusBill(DGVStudent);
-            UpdateTotallbl();
             schedule.FillInInvoices(DGVStudent, stud);
             MarkAsPaid();
+            emptyfield();
+        }
 
+        private void emptyfield()
+        {
+            LblGrandTotal.Text = string.Empty;
+            guna2TextBoxCash.Text = string.Empty;
+            guna2TextBoxChange.Text = string.Empty;
         }
 
         private void MarkAsPaid()

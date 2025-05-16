@@ -19,6 +19,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public string StatusBill { get; set; }
         public int InvoiceID { get; set; }
         public decimal TotalHours { get; set; }
+        public string ContactDetails { get; set; }
 
         public override string ToString()
         {

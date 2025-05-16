@@ -17,6 +17,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private MTutorProfile mt;
         private CEarnings earnings = new CEarnings();
         private CTransaction transaction = new CTransaction();
+        private BindingSource bindingSource = new BindingSource();
         public FEarningsTutor(MTutorProfile mt)
         {
             InitializeComponent();
@@ -27,13 +28,18 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             G2CmbxTutorName.Text = mt.TutorName;
         }
+        private void DgvBinding()
+        {
+            bindingSource.DataSource = CEarnings.TutorSched(LblID.Text);
+        }
 
         private void FEarningsTutor_Load(object sender, EventArgs e)
         {
             TutorName();
             FillInFields();
             transaction.UpdateStatus(DGV);
-            ShowDGV();
+            DgvBinding();
+            //ShowDGV();
             G2CHKScheduled.Checked = true;
         }
         private void TutorName()

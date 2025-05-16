@@ -44,31 +44,31 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.LblMonth = new System.Windows.Forms.Label();
-            this.PCtrNext = new System.Windows.Forms.PictureBox();
-            this.PctrPrevious = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CHKDone = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PctrPrevious = new System.Windows.Forms.PictureBox();
+            this.PCtrNext = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.PnlDays.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -258,6 +258,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1067, 40);
             this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // LblMonth
             // 
@@ -275,157 +276,25 @@
             this.LblMonth.Text = "MONTH";
             this.LblMonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PCtrNext
+            // panel5
             // 
-            this.PCtrNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PCtrNext.Image = ((System.Drawing.Image)(resources.GetObject("PCtrNext.Image")));
-            this.PCtrNext.Location = new System.Drawing.Point(1029, 0);
-            this.PCtrNext.Name = "PCtrNext";
-            this.PCtrNext.Size = new System.Drawing.Size(38, 30);
-            this.PCtrNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PCtrNext.TabIndex = 0;
-            this.PCtrNext.TabStop = false;
-            this.PCtrNext.Click += new System.EventHandler(this.PCtrNext_Click);
-            // 
-            // PctrPrevious
-            // 
-            this.PctrPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PctrPrevious.Image = ((System.Drawing.Image)(resources.GetObject("PctrPrevious.Image")));
-            this.PctrPrevious.Location = new System.Drawing.Point(992, 0);
-            this.PctrPrevious.Name = "PctrPrevious";
-            this.PctrPrevious.Size = new System.Drawing.Size(38, 30);
-            this.PctrPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PctrPrevious.TabIndex = 1;
-            this.PctrPrevious.TabStop = false;
-            this.PctrPrevious.Click += new System.EventHandler(this.PctrPrevious_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(857, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 584;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(718, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 585;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(957, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 586;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label10.Location = new System.Drawing.Point(892, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 21);
-            this.label10.TabIndex = 587;
-            this.label10.Text = "Done";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(991, 44);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 21);
-            this.label9.TabIndex = 589;
-            this.label9.Text = "OnGoing";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(754, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 21);
-            this.label8.TabIndex = 588;
-            this.label8.Text = "Scheduled";
-            // 
-            // CHKDone
-            // 
-            this.CHKDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CHKDone.AutoSize = true;
-            this.CHKDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKDone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKDone.CheckedState.BorderRadius = 0;
-            this.CHKDone.CheckedState.BorderThickness = 0;
-            this.CHKDone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKDone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CHKDone.Location = new System.Drawing.Point(848, 49);
-            this.CHKDone.Name = "CHKDone";
-            this.CHKDone.Size = new System.Drawing.Size(15, 14);
-            this.CHKDone.TabIndex = 605;
-            this.CHKDone.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKDone.UncheckedState.BorderRadius = 0;
-            this.CHKDone.UncheckedState.BorderThickness = 0;
-            this.CHKDone.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKDone.UseVisualStyleBackColor = false;
-            this.CHKDone.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
-            // 
-            // CHKOnGoing
-            // 
-            this.CHKOnGoing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CHKOnGoing.AutoSize = true;
-            this.CHKOnGoing.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKOnGoing.CheckedState.BorderRadius = 0;
-            this.CHKOnGoing.CheckedState.BorderThickness = 0;
-            this.CHKOnGoing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKOnGoing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHKOnGoing.Location = new System.Drawing.Point(950, 47);
-            this.CHKOnGoing.Name = "CHKOnGoing";
-            this.CHKOnGoing.Size = new System.Drawing.Size(15, 14);
-            this.CHKOnGoing.TabIndex = 606;
-            this.CHKOnGoing.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKOnGoing.UncheckedState.BorderRadius = 0;
-            this.CHKOnGoing.UncheckedState.BorderThickness = 0;
-            this.CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
-            // 
-            // CHKScheduled
-            // 
-            this.CHKScheduled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CHKScheduled.AutoSize = true;
-            this.CHKScheduled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKScheduled.CheckedState.BorderRadius = 0;
-            this.CHKScheduled.CheckedState.BorderThickness = 0;
-            this.CHKScheduled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.CHKScheduled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CHKScheduled.Location = new System.Drawing.Point(706, 49);
-            this.CHKScheduled.Name = "CHKScheduled";
-            this.CHKScheduled.Size = new System.Drawing.Size(15, 14);
-            this.CHKScheduled.TabIndex = 607;
-            this.CHKScheduled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKScheduled.UncheckedState.BorderRadius = 0;
-            this.CHKScheduled.UncheckedState.BorderThickness = 0;
-            this.CHKScheduled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.CHKScheduled.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
+            this.panel5.Controls.Add(this.G2TxbxSearch);
+            this.panel5.Controls.Add(this.CHKScheduled);
+            this.panel5.Controls.Add(this.CHKOnGoing);
+            this.panel5.Controls.Add(this.CHKDone);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Controls.Add(this.PctrPrevious);
+            this.panel5.Controls.Add(this.PCtrNext);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1067, 80);
+            this.panel5.TabIndex = 5;
             // 
             // G2TxbxSearch
             // 
@@ -456,25 +325,157 @@
             this.G2TxbxSearch.TabIndex = 608;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
-            // panel5
+            // CHKScheduled
             // 
-            this.panel5.Controls.Add(this.G2TxbxSearch);
-            this.panel5.Controls.Add(this.CHKScheduled);
-            this.panel5.Controls.Add(this.CHKOnGoing);
-            this.panel5.Controls.Add(this.CHKDone);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Controls.Add(this.PctrPrevious);
-            this.panel5.Controls.Add(this.PCtrNext);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1067, 80);
-            this.panel5.TabIndex = 5;
+            this.CHKScheduled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CHKScheduled.AutoSize = true;
+            this.CHKScheduled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKScheduled.CheckedState.BorderRadius = 0;
+            this.CHKScheduled.CheckedState.BorderThickness = 0;
+            this.CHKScheduled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKScheduled.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHKScheduled.Location = new System.Drawing.Point(706, 49);
+            this.CHKScheduled.Name = "CHKScheduled";
+            this.CHKScheduled.Size = new System.Drawing.Size(15, 14);
+            this.CHKScheduled.TabIndex = 607;
+            this.CHKScheduled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKScheduled.UncheckedState.BorderRadius = 0;
+            this.CHKScheduled.UncheckedState.BorderThickness = 0;
+            this.CHKScheduled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKScheduled.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
+            // 
+            // CHKOnGoing
+            // 
+            this.CHKOnGoing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CHKOnGoing.AutoSize = true;
+            this.CHKOnGoing.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKOnGoing.CheckedState.BorderRadius = 0;
+            this.CHKOnGoing.CheckedState.BorderThickness = 0;
+            this.CHKOnGoing.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKOnGoing.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHKOnGoing.Location = new System.Drawing.Point(950, 47);
+            this.CHKOnGoing.Name = "CHKOnGoing";
+            this.CHKOnGoing.Size = new System.Drawing.Size(15, 14);
+            this.CHKOnGoing.TabIndex = 606;
+            this.CHKOnGoing.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKOnGoing.UncheckedState.BorderRadius = 0;
+            this.CHKOnGoing.UncheckedState.BorderThickness = 0;
+            this.CHKOnGoing.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKOnGoing.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
+            // 
+            // CHKDone
+            // 
+            this.CHKDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CHKDone.AutoSize = true;
+            this.CHKDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKDone.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKDone.CheckedState.BorderRadius = 0;
+            this.CHKDone.CheckedState.BorderThickness = 0;
+            this.CHKDone.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.CHKDone.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CHKDone.Location = new System.Drawing.Point(848, 49);
+            this.CHKDone.Name = "CHKDone";
+            this.CHKDone.Size = new System.Drawing.Size(15, 14);
+            this.CHKDone.TabIndex = 605;
+            this.CHKDone.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKDone.UncheckedState.BorderRadius = 0;
+            this.CHKDone.UncheckedState.BorderThickness = 0;
+            this.CHKDone.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CHKDone.UseVisualStyleBackColor = false;
+            this.CHKDone.CheckedChanged += new System.EventHandler(this.CHK_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label8.Location = new System.Drawing.Point(754, 44);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 21);
+            this.label8.TabIndex = 588;
+            this.label8.Text = "Scheduled";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label9.Location = new System.Drawing.Point(991, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 21);
+            this.label9.TabIndex = 589;
+            this.label9.Text = "OnGoing";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label10.Location = new System.Drawing.Point(892, 44);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 21);
+            this.label10.TabIndex = 587;
+            this.label10.Text = "Done";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(957, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 586;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(718, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 585;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(857, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 584;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PctrPrevious
+            // 
+            this.PctrPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PctrPrevious.Image = ((System.Drawing.Image)(resources.GetObject("PctrPrevious.Image")));
+            this.PctrPrevious.Location = new System.Drawing.Point(992, 0);
+            this.PctrPrevious.Name = "PctrPrevious";
+            this.PctrPrevious.Size = new System.Drawing.Size(38, 30);
+            this.PctrPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PctrPrevious.TabIndex = 1;
+            this.PctrPrevious.TabStop = false;
+            this.PctrPrevious.Click += new System.EventHandler(this.PctrPrevious_Click);
+            // 
+            // PCtrNext
+            // 
+            this.PCtrNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PCtrNext.Image = ((System.Drawing.Image)(resources.GetObject("PCtrNext.Image")));
+            this.PCtrNext.Location = new System.Drawing.Point(1029, 0);
+            this.PCtrNext.Name = "PCtrNext";
+            this.PCtrNext.Size = new System.Drawing.Size(38, 30);
+            this.PCtrNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PCtrNext.TabIndex = 0;
+            this.PCtrNext.TabStop = false;
+            this.PCtrNext.Click += new System.EventHandler(this.PCtrNext_Click);
             // 
             // FCalendar
             // 
@@ -495,13 +496,13 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctrPrevious)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PCtrNext)).EndInit();
             this.ResumeLayout(false);
 
         }

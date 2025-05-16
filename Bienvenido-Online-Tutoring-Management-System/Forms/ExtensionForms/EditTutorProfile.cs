@@ -92,7 +92,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 mTutor.AvailabilityID = Convert.ToInt32(LblAvailbalityID.Text);
 
                 CTutorProfile CTutor = new CTutorProfile();
-                CTutor.Update(mTutor);
+                CTutor.Update(mTutor, selectedItem);
             }
             catch (Exception ex)
             {

@@ -9,7 +9,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
     {
         private CFSubjects _fsubjects = new CFSubjects();
         private MSubjects sub = new MSubjects();
-        
+
         public FSubjects()
         {
             InitializeComponent();
@@ -28,10 +28,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             try
             {
                 sub.SubjectName = G2TxbxAdd.Text;
-                _fsubjects.ExecuteAction("Add", sub);
-                RefreshedDGV();
+                DialogResult result = MessageBox.Show($"Please check the spelling carefully, as you won’t be able to edit or delete it after submission.\nSubject: {sub.SubjectName}", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    _fsubjects.ExecuteAction("Add", sub);
+                    RefreshedDGV();
 
-                G2TxbxAdd.Text = string.Empty;
+                    G2TxbxAdd.Text = string.Empty;
+                }
             }
             catch (Exception ex)
             {
@@ -41,23 +45,23 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
 
         private void DGVSubjects_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow selectedRow = DGVSubjects.SelectedRows[0];
-            G2TxbxEdit.Text = selectedRow.Cells["SubjectName"].Value.ToString();
-            LblID.Text = selectedRow.Cells["SubID"].Value.ToString();
+            //DataGridViewRow selectedRow = DGVSubjects.SelectedRows[0];
+            //G2TxbxEdit.Text = selectedRow.Cells["SubjectName"].Value.ToString();
+            //LblID.Text = selectedRow.Cells["SubID"].Value.ToString();
         }
 
         private void G2BtnEdit_Click(object sender, EventArgs e)
         {
             try
             {
-                sub.SubID = Convert.ToInt32(LblID.Text);
-                sub.SubjectName = G2TxbxEdit.Text;
-                _fsubjects.ExecuteAction("Update", sub);
+                //sub.SubID = Convert.ToInt32(LblID.Text);
+                //sub.SubjectName = G2TxbxEdit.Text;
+                //_fsubjects.ExecuteAction("Update", sub);
 
-                _fsubjects.RefreshInSearch(LblID.Text, DGVSubjects);
+                //_fsubjects.RefreshInSearch(LblID.Text, DGVSubjects);
 
-                G2TxbxEdit.Text = string.Empty;
-                LblID.Text = string.Empty;
+                //G2TxbxEdit.Text = string.Empty;
+                //LblID.Text = string.Empty;
             }
             catch (Exception ex)
             {

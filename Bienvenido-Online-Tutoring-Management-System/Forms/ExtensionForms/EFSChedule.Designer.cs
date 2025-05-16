@@ -1021,12 +1021,14 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Visible = false;
             // 
             // StatusBill
             // 
             this.StatusBill.HeaderText = "StatusBill";
             this.StatusBill.Name = "StatusBill";
             this.StatusBill.ReadOnly = true;
+            this.StatusBill.Visible = false;
             // 
             // InvoiceID
             // 

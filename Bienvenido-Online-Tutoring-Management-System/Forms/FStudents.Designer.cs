@@ -36,16 +36,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FStudents));
             this.DGVStudent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrefferedSubjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.mStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PrefferedSubjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mStudentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -137,20 +137,6 @@
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             // 
-            // StudentName
-            // 
-            this.StudentName.DataPropertyName = "StudentName";
-            this.StudentName.HeaderText = "Student Name";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            // 
-            // PrefferedSubjects
-            // 
-            this.PrefferedSubjects.DataPropertyName = "PrefferedSubjects";
-            this.PrefferedSubjects.HeaderText = "Preferred Subjects";
-            this.PrefferedSubjects.Name = "PrefferedSubjects";
-            this.PrefferedSubjects.ReadOnly = true;
-            // 
             // G2BtnEdit
             // 
             this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,13 +200,23 @@
             this.G2TxbxSearch.TabIndex = 519;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
+            // mStudentBindingSource
+            // 
+            this.mStudentBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MStudent);
+            // 
             // StudentID
             // 
             this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.HeaderText = "Student ID";
             this.StudentID.Name = "StudentID";
             this.StudentID.ReadOnly = true;
-            this.StudentID.Visible = false;
+            // 
+            // StudentName
+            // 
+            this.StudentName.DataPropertyName = "StudentName";
+            this.StudentName.HeaderText = "Student Name";
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
             // 
             // Firstname
             // 
@@ -245,9 +241,12 @@
             this.ContactDetails.Name = "ContactDetails";
             this.ContactDetails.ReadOnly = true;
             // 
-            // mStudentBindingSource
+            // PrefferedSubjects
             // 
-            this.mStudentBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MStudent);
+            this.PrefferedSubjects.DataPropertyName = "PrefferedSubjects";
+            this.PrefferedSubjects.HeaderText = "Preferred Subjects";
+            this.PrefferedSubjects.Name = "PrefferedSubjects";
+            this.PrefferedSubjects.ReadOnly = true;
             // 
             // FStudents
             // 
@@ -276,12 +275,12 @@
         private Guna.UI2.WinForms.Guna2Button G2BtnAdd;
         private System.Windows.Forms.BindingSource mStudentBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
+        private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lastname;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrefferedSubjects;
-        private Guna.UI2.WinForms.Guna2TextBox G2TxbxSearch;
     }
 }

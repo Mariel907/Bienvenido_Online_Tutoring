@@ -19,7 +19,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
         {
             InitializeComponent();
             _dashboard = dashboard;
-           
         }
 
         private void G2BtnSchedule_Click(object sender, EventArgs e)

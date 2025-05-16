@@ -19,7 +19,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         {
             return DataLoader.ExecuteStoredProcedure("Earnings_", new Dictionary<string, object> { { "Action", "TutorName" }, { "TutorID", TutorID } }, reader => new MSession
             {
-                StudName = reader["StudentName"].ToString(),
+                StudName = reader["StudName"].ToString(),
                 Subject = reader["Subject"].ToString(),
                 StartTime = Convert.ToDateTime(reader["StartTime"].ToString()).TimeOfDay,
                 EndTime = Convert.ToDateTime(reader["EndTime"].ToString()).TimeOfDay,
@@ -30,7 +30,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 SessionDate = Convert.ToDateTime(reader["SessionDate"].ToString()),
                 SessionID = int.Parse(reader["SessionID"].ToString()),
                 TutorID = int.Parse(reader["TutorID"].ToString()),
-                StudentID = int.Parse(reader["StudentID"].ToString())
+                StudentID = int.Parse(reader["StudentID"].ToString()),
+                ContactDetails = reader["ContactDetails"].ToString()
             });
         }
         public static List<MTutorProfile> TutorShow()
