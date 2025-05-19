@@ -208,7 +208,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                             $"TutorName: {row.Cells["TutorName"].Value}\n" +
                             $"Subject: {row.Cells["Subject"].Value}\n" +
                             $"Start Time: {row.Cells["StartTime"].Value}\n" +
-                            $"End Time: {row.Cells["EndTime"].Value}";
+                            $"End Time: {row.Cells["EndTime"].Value}\n" +
+                            $"Date Scheduled: {row.Cells["SessionDate"].Value}";
                         MessageBox.Show(Message, "Scheduled Conflict", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }

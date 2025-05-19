@@ -49,6 +49,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.LstBxExpertise = new System.Windows.Forms.ListBox();
+            this.LblFirstname = new System.Windows.Forms.Label();
+            this.LblLastname = new System.Windows.Forms.Label();
+            this.LblEmail = new System.Windows.Forms.Label();
+            this.LblSubject = new System.Windows.Forms.Label();
             this.panel30.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -96,7 +100,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(444, 331);
+            this.label2.Location = new System.Drawing.Point(430, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 571;
@@ -107,7 +111,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(449, 160);
+            this.label1.Location = new System.Drawing.Point(429, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 569;
@@ -128,7 +132,7 @@
             this.G2TxbxLastname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxLastname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxLastname.Location = new System.Drawing.Point(453, 183);
+            this.G2TxbxLastname.Location = new System.Drawing.Point(433, 133);
             this.G2TxbxLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxLastname.Name = "G2TxbxLastname";
             this.G2TxbxLastname.Padding = new System.Windows.Forms.Padding(7);
@@ -137,13 +141,15 @@
             this.G2TxbxLastname.SelectedText = "";
             this.G2TxbxLastname.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxLastname.TabIndex = 568;
+            this.G2TxbxLastname.TextChanged += new System.EventHandler(this.G2TxbxLastname_TextChanged);
+            this.G2TxbxLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(449, 77);
+            this.label5.Location = new System.Drawing.Point(429, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 567;
@@ -164,7 +170,7 @@
             this.G2TxbxFirstname.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxFirstname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxFirstname.Location = new System.Drawing.Point(453, 100);
+            this.G2TxbxFirstname.Location = new System.Drawing.Point(433, 50);
             this.G2TxbxFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxFirstname.Name = "G2TxbxFirstname";
             this.G2TxbxFirstname.Padding = new System.Windows.Forms.Padding(7);
@@ -173,6 +179,8 @@
             this.G2TxbxFirstname.SelectedText = "";
             this.G2TxbxFirstname.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxFirstname.TabIndex = 566;
+            this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged);
+            this.G2TxbxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
             // 
             // G2BtnAdd
             // 
@@ -184,7 +192,7 @@
             this.G2BtnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnAdd.Location = new System.Drawing.Point(561, 492);
+            this.G2BtnAdd.Location = new System.Drawing.Point(556, 474);
             this.G2BtnAdd.Name = "G2BtnAdd";
             this.G2BtnAdd.Size = new System.Drawing.Size(152, 36);
             this.G2BtnAdd.TabIndex = 575;
@@ -196,11 +204,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(449, 246);
+            this.label3.Location = new System.Drawing.Point(429, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 21);
+            this.label3.Size = new System.Drawing.Size(48, 21);
             this.label3.TabIndex = 577;
-            this.label3.Text = "Contact Details";
+            this.label3.Text = "Email";
             // 
             // G2TxbxContactDetails
             // 
@@ -217,7 +225,7 @@
             this.G2TxbxContactDetails.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxContactDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxContactDetails.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxContactDetails.Location = new System.Drawing.Point(453, 269);
+            this.G2TxbxContactDetails.Location = new System.Drawing.Point(433, 219);
             this.G2TxbxContactDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxContactDetails.Name = "G2TxbxContactDetails";
             this.G2TxbxContactDetails.Padding = new System.Windows.Forms.Padding(7);
@@ -226,12 +234,13 @@
             this.G2TxbxContactDetails.SelectedText = "";
             this.G2TxbxContactDetails.Size = new System.Drawing.Size(376, 36);
             this.G2TxbxContactDetails.TabIndex = 576;
+            this.G2TxbxContactDetails.TextChanged += new System.EventHandler(this.G2TxbxContactDetails_TextChanged);
             // 
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(447, 354);
+            this.panel30.Location = new System.Drawing.Point(433, 304);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(2, 121);
             this.panel30.TabIndex = 579;
@@ -248,7 +257,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(447, 475);
+            this.panel9.Location = new System.Drawing.Point(433, 425);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(382, 2);
             this.panel9.TabIndex = 582;
@@ -265,7 +274,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(828, 356);
+            this.panel7.Location = new System.Drawing.Point(814, 306);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(2, 121);
             this.panel7.TabIndex = 578;
@@ -282,7 +291,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(448, 354);
+            this.panel5.Location = new System.Drawing.Point(434, 304);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(382, 2);
             this.panel5.TabIndex = 581;
@@ -304,12 +313,57 @@
             this.LstBxExpertise.HorizontalScrollbar = true;
             this.LstBxExpertise.IntegralHeight = false;
             this.LstBxExpertise.ItemHeight = 30;
-            this.LstBxExpertise.Location = new System.Drawing.Point(448, 355);
+            this.LstBxExpertise.Location = new System.Drawing.Point(433, 304);
             this.LstBxExpertise.Name = "LstBxExpertise";
             this.LstBxExpertise.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.LstBxExpertise.Size = new System.Drawing.Size(382, 122);
             this.LstBxExpertise.TabIndex = 580;
             this.LstBxExpertise.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.LstBxExpertise_DrawItem);
+            this.LstBxExpertise.SelectedIndexChanged += new System.EventHandler(this.LstBxExpertise_SelectedIndexChanged);
+            // 
+            // LblFirstname
+            // 
+            this.LblFirstname.AutoSize = true;
+            this.LblFirstname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFirstname.ForeColor = System.Drawing.Color.Red;
+            this.LblFirstname.Location = new System.Drawing.Point(430, 90);
+            this.LblFirstname.Name = "LblFirstname";
+            this.LblFirstname.Size = new System.Drawing.Size(54, 15);
+            this.LblFirstname.TabIndex = 583;
+            this.LblFirstname.Text = "Required";
+            // 
+            // LblLastname
+            // 
+            this.LblLastname.AutoSize = true;
+            this.LblLastname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLastname.ForeColor = System.Drawing.Color.Red;
+            this.LblLastname.Location = new System.Drawing.Point(430, 173);
+            this.LblLastname.Name = "LblLastname";
+            this.LblLastname.Size = new System.Drawing.Size(54, 15);
+            this.LblLastname.TabIndex = 584;
+            this.LblLastname.Text = "Required";
+            // 
+            // LblEmail
+            // 
+            this.LblEmail.AutoSize = true;
+            this.LblEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmail.ForeColor = System.Drawing.Color.Red;
+            this.LblEmail.Location = new System.Drawing.Point(430, 259);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(131, 15);
+            this.LblEmail.TabIndex = 585;
+            this.LblEmail.Text = "example@domain.com";
+            // 
+            // LblSubject
+            // 
+            this.LblSubject.AutoSize = true;
+            this.LblSubject.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSubject.ForeColor = System.Drawing.Color.Red;
+            this.LblSubject.Location = new System.Drawing.Point(431, 430);
+            this.LblSubject.Name = "LblSubject";
+            this.LblSubject.Size = new System.Drawing.Size(232, 15);
+            this.LblSubject.TabIndex = 586;
+            this.LblSubject.Text = "Please select the area of preffered subjects.";
             // 
             // EFAddStudent
             // 
@@ -317,6 +371,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 546);
+            this.Controls.Add(this.LblSubject);
+            this.Controls.Add(this.LblEmail);
+            this.Controls.Add(this.LblLastname);
+            this.Controls.Add(this.LblFirstname);
             this.Controls.Add(this.panel30);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
@@ -371,5 +429,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ListBox LstBxExpertise;
+        private System.Windows.Forms.Label LblFirstname;
+        private System.Windows.Forms.Label LblLastname;
+        private System.Windows.Forms.Label LblEmail;
+        private System.Windows.Forms.Label LblSubject;
     }
 }

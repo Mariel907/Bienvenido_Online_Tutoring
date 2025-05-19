@@ -937,7 +937,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!TotalAmount.Value, "DSSchedule")</Value>
+                    <Value>="P" &amp; Format(Sum(Fields!TotalAmount.Value, "DSSchedule"), "N2)</Value>
                     <Style>
                       <FontFamily>Segoe UI</FontFamily>
                       <FontSize>12pt</FontSize>

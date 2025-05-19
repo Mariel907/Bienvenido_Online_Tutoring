@@ -22,6 +22,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             _MTutorProfile = mTutor;
             ObjectReference();
         }
+        private void Visible_()
+        {
+            LblFirstname.Visible = false;
+            LblLastname.Visible = false;
+            LblExpertise.Visible = false;
+            LblDaysAvailable.Visible = false;
+            LblHourlyRate.Visible = false;
+            LblStartTime.Visible = false;
+            LblEndTime.Visible = false;
+        }
 
         private void ObjectReference()
         {
@@ -75,6 +85,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             try
             {
+                if (isFieldsIsEmpty()) return;
+
                 List<string> selectedItem = new List<string>();
 
                 foreach(var item in LstBxExpertise.SelectedItems)
@@ -100,6 +112,74 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             }
             EmptyFields();
         }
+        private bool isFieldsIsEmpty()
+        {
+            bool hasError = false;
+
+            if (string.IsNullOrEmpty(G2TxbxFirstname.Text))
+            {
+                LblFirstname.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblFirstname.Visible = false;
+            }
+
+            if (string.IsNullOrEmpty(G2TxbxLastname.Text))
+            {
+                LblLastname.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblLastname.Visible = false;
+            }
+
+            if (string.IsNullOrEmpty(G2TxbxHourlyRate.Text))
+            {
+                LblHourlyRate.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblHourlyRate.Visible = false;
+            }
+
+            if (string.IsNullOrEmpty(G2TxbxDaysAvailable.Text))
+            {
+                LblDaysAvailable.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblDaysAvailable.Visible = false;
+            }
+
+            if (DTPStartTime.Value == DTPEndTime.Value)
+            {
+                LblStartTime.Visible = true;
+                LblEndTime.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblStartTime.Visible = false;
+                LblEndTime.Visible = false;
+            }
+
+            if (LstBxExpertise.SelectedItems.Count == 0)
+            {
+                LblExpertise.Visible = true;
+                hasError = true;
+            }
+            else
+            {
+                LblExpertise.Visible = false;
+            }
+            return hasError;
+        }
+
         private void EmptyFields()
         {
             G2TxbxFirstname.Text = string.Empty;
@@ -110,9 +190,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             DTPEndTime.Value = DateTime.Now;
             G2CmbxDaysAvailable.SelectedIndex = -1;
             LstBxExpertise.ClearSelected();
+            LblTutorID.Text = string.Empty;
+            LblAvailbalityID.Text = string.Empty;
         }
         private void EditTutorProfile_Load(object sender, EventArgs e)
         {
+            Visible_();
         }
         private void ExpertiseCmbx()
         {
@@ -137,6 +220,53 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 e.Graphics.DrawString(LstBxExpertise.Items[e.Index].ToString(), e.Font, textBrush, RestoreBounds.Left + 20, e.Bounds.Top);
             }
             e.DrawFocusRectangle();
+        }
+
+        private void DTPEndTime_ValueChanged(object sender, EventArgs e)
+        {
+            LblEndTime.Visible = false;
+        }
+
+        private void G2TxbxDaysAvailable_TextChanged(object sender, EventArgs e)
+        {
+            LblDaysAvailable.Visible = false;
+        }
+
+        private void G2TxbxLastname_TextChanged(object sender, EventArgs e)
+        {
+            LblLastname.Visible = false;
+        }
+
+        private void G2TxbxHourlyRate_TextChanged(object sender, EventArgs e)
+        {
+            LblHourlyRate.Visible = false;
+        }
+
+        private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LblExpertise.Visible = false;
+        }
+
+        private void DTPStartTime_ValueChanged(object sender, EventArgs e)
+        {
+            LblStartTime.Visible = false;
+        }
+
+        private void G2TxbxFirstname_TextChanged(object sender, EventArgs e)
+        {
+            LblFirstname.Visible = false;
+        }
+
+        private void Name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void G2TxbxHourlyRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

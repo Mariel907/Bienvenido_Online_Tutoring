@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
         //        new SqlParameter("SubName", )
         //    }
         //}
-        public void Insert(MTutorProfile mTutor, List<string> SubExpert)
+        public void Insert(MTutorProfile mTutor, List<string> SubExpert, DateTime STime, DateTime ETime)
         {
             string sub = string.Join(", ", SubExpert);
             int TutorID = CAutoIncrementID.NextTutorID();
@@ -57,8 +58,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("Lastname", mTutor.lastname),
                 new SqlParameter("Expertise", sub),
                 new SqlParameter("HourlyRate", mTutor.HourlyRate),
-                new SqlParameter("StartTime", mTutor.StartTime),
-                new SqlParameter("EndTime", mTutor.EndTime),
+                new SqlParameter("StartTime", STime),
+                new SqlParameter("EndTime", ETime),
                 new SqlParameter("DaysAvailable", mTutor.DaysAvailable),
                 new SqlParameter("Action", "Add"),
             };

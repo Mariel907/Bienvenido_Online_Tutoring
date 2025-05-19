@@ -3,6 +3,7 @@ using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -13,12 +14,61 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             InitializeComponent();
         }
-
+        private void Visible_()
+        {
+            LblFirstname.Visible = false;
+            LblLastname.Visible = false;
+            LblEmail.Visible = false;
+            LblSubject.Visible = false;
+        }
         private void EFAddStudent_Load(object sender, EventArgs e)
         {
+            Visible_();
             ShowSubject();
         }
+        private bool IsValidEmail()
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(G2TxbxContactDetails.Text, pattern);
+        }
+        private bool IsFieldEmpty()
+        {
+            bool hasError = false;
 
+            if (string.IsNullOrEmpty(G2TxbxFirstname.Text))
+            {
+                LblFirstname.Visible = true;
+                hasError = true;
+            }
+            else
+                LblFirstname.Visible = false;
+
+            if (string.IsNullOrEmpty(G2TxbxLastname.Text))
+            {
+                LblLastname.Visible = true;
+                hasError = true;
+            }
+            else
+                LblLastname.Visible = false;
+
+            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            {
+                LblEmail.Visible = true;
+                hasError = true;
+            }
+            else
+                LblEmail.Visible = false;
+
+            if (LstBxExpertise.SelectedItems.Count == 0)
+            {
+                LblEmail.Visible = true;
+                hasError = true;
+            }
+            else
+                LblEmail.Visible = false;
+
+            return hasError;
+        }
         private void ShowSubject()
         {
             LstBxExpertise.Items.Clear();
@@ -29,6 +79,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             try
             {
+                if (IsFieldEmpty()) return;
+
                 List<string> selectedItem = new List<string>();
                 foreach(var Item in LstBxExpertise.SelectedItems) 
                     selectedItem.Add(Item.ToString());
@@ -70,6 +122,32 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 e.Graphics.DrawString(LstBxExpertise.Items[e.Index].ToString(), e.Font, textBrush, RestoreBounds.Left + 20, e.Bounds.Top);
             }
             e.DrawFocusRectangle();
+        }
+
+        private void G2TxbxFirstname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void G2TxbxLastname_TextChanged(object sender, EventArgs e)
+        {
+            LblLastname.Visible = false;
+        }
+
+        private void G2TxbxFirstname_TextChanged(object sender, EventArgs e)
+        {
+            LblFirstname.Visible = false;
+        }
+
+        private void G2TxbxContactDetails_TextChanged(object sender, EventArgs e)
+        {
+          LblEmail.Visible = false; 
+        }
+
+        private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LblSubject.Visible = false;
         }
     }
 }

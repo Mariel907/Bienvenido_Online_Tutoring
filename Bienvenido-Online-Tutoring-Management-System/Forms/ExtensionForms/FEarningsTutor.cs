@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private CEarnings earnings = new CEarnings();
         private CTransaction transaction = new CTransaction();
         private BindingSource bindingSource = new BindingSource();
+        private DateTime SDate;
+        private DateTime EDate;
         public FEarningsTutor(MTutorProfile mt)
         {
             InitializeComponent();
@@ -116,18 +119,70 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             earnings.SearchCmbx(DGV, Lbl, Checked);
         }
-        private void G2CmbxStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-       
+
         private void CHKChecked_CheckedChanged(object sender, EventArgs e)
         {
             StatusChecked();
         }
 
-        private void pictureBox17_Click(object sender, EventArgs e)
+        private void Fetch(DateTime SDate, DateTime EDate)
         {
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is EFTrackingEarnings) return;
+            }
+            MTutorProfile mt = new MTutorProfile();
+            mt.SDate = SDate;
+            mt.EDate = EDate;
+            mt.TutorID = Convert.ToInt32(LblID.Text);
+            mt.TutorName = G2CmbxTutorName.Text;
 
+            EFTrackingEarnings eFTrackingEarnings = new EFTrackingEarnings(mt);
+            eFTrackingEarnings.Show();
+        }
+
+        private void MonthlyEarnings_Click(object sender, EventArgs e)
+        {
+            SDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            EDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+            Fetch(SDate, EDate);
+        }
+
+        private void PostMonthEarnings_Click(object sender, EventArgs e)
+        {
+            SDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month - 1, 1);
+            EDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month - 1, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month - 1));
+            Fetch(SDate, EDate);
+        }
+
+        private void ThisYearEarnings_Click(object sender, EventArgs e)
+        {
+            SDate = new DateTime(DateTime.Now.Year, 1, 1);
+            EDate = new DateTime(DateTime.Now.Year, 12, 31);
+            Fetch(SDate, EDate);
+        }
+
+        private void LastYearEarnings_Click(object sender, EventArgs e)
+        {
+            SDate = new DateTime(DateTime.Now.Year -1, 1, 1);
+            EDate = new DateTime(DateTime.Now.Year - 1, 12, 31);
+            Fetch(SDate,EDate);
+        }
+
+        private void WeeklyEarnings_Click(object sender, EventArgs e)
+        {
+            DateTime Today = DateTime.Now;
+            DayOfWeek firstDayofWeek = DayOfWeek.Monday;
+            SDate = Today.AddDays(-(int)Today.DayOfWeek + (int)firstDayofWeek);
+            EDate = SDate.AddDays(6);
+            Fetch(SDate, EDate);
+        }
+
+        private void DailyEarnings_Click(object sender, EventArgs e)
+        {
+            SDate = DateTime.Now;
+            EDate = DateTime.Now;
+            Fetch(SDate, EDate);
         }
     }
 }

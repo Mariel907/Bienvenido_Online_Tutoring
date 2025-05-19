@@ -121,6 +121,7 @@
     <Compile Include="Class\CFSubjects.cs" />
     <Compile Include="Class\CSchedule.cs" />
     <Compile Include="Class\CStudents.cs" />
+    <Compile Include="Class\CTrackingEarnings.cs" />
     <Compile Include="Class\CTransaction.cs" />
     <Compile Include="Class\CTutor.cs" />
     <Compile Include="Class\CTutorProfile.cs" />
@@ -144,6 +145,12 @@
     </Compile>
     <Compile Include="Forms\ExtensionForms\EFCalendarSched.Designer.cs">
       <DependentUpon>EFCalendarSched.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFTrackingEarnings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFTrackingEarnings.Designer.cs">
+      <DependentUpon>EFTrackingEarnings.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ExtensionForms\FCalendar.cs">
       <SubType>Form</SubType>
@@ -265,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\EFCalendarSched.resx">
       <DependentUpon>EFCalendarSched.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFTrackingEarnings.resx">
+      <DependentUpon>EFTrackingEarnings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\FCalendar.resx">
       <DependentUpon>FCalendar.cs</DependentUpon>

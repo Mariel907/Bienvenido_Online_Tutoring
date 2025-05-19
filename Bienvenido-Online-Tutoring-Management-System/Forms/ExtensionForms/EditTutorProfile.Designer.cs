@@ -75,7 +75,6 @@
             this.LblAvailbalityID = new System.Windows.Forms.Label();
             this.LblTutorID = new System.Windows.Forms.Label();
             this.G2BtnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -85,6 +84,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.LstBxExpertise = new System.Windows.Forms.ListBox();
+            this.LblEndTime = new System.Windows.Forms.Label();
+            this.LblStartTime = new System.Windows.Forms.Label();
+            this.LblHourlyRate = new System.Windows.Forms.Label();
+            this.LblExpertise = new System.Windows.Forms.Label();
+            this.LblLastname = new System.Windows.Forms.Label();
+            this.LblFirstname = new System.Windows.Forms.Label();
+            this.LblDaysAvailable = new System.Windows.Forms.Label();
+            this.mSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel21.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -97,11 +104,11 @@
             this.panel29.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).BeginInit();
             this.panel30.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // G2TxbxFirstname
@@ -128,6 +135,8 @@
             this.G2TxbxFirstname.SelectedText = "";
             this.G2TxbxFirstname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxFirstname.TabIndex = 431;
+            this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged);
+            this.G2TxbxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_KeyPress);
             // 
             // label5
             // 
@@ -228,6 +237,8 @@
             this.G2TxbxLastname.SelectedText = "";
             this.G2TxbxLastname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxLastname.TabIndex = 439;
+            this.G2TxbxLastname.TextChanged += new System.EventHandler(this.G2TxbxLastname_TextChanged);
+            this.G2TxbxLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_KeyPress);
             // 
             // label2
             // 
@@ -353,6 +364,7 @@
             this.DTPStartTime.Size = new System.Drawing.Size(163, 26);
             this.DTPStartTime.TabIndex = 475;
             this.DTPStartTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
+            this.DTPStartTime.ValueChanged += new System.EventHandler(this.DTPStartTime_ValueChanged);
             // 
             // DTPEndTime
             // 
@@ -365,6 +377,7 @@
             this.DTPEndTime.Size = new System.Drawing.Size(163, 26);
             this.DTPEndTime.TabIndex = 466;
             this.DTPEndTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
+            this.DTPEndTime.ValueChanged += new System.EventHandler(this.DTPEndTime_ValueChanged);
             // 
             // label3
             // 
@@ -452,6 +465,8 @@
             this.G2TxbxDaysAvailable.SelectedText = "";
             this.G2TxbxDaysAvailable.Size = new System.Drawing.Size(216, 36);
             this.G2TxbxDaysAvailable.TabIndex = 501;
+            this.G2TxbxDaysAvailable.TextChanged += new System.EventHandler(this.G2TxbxDaysAvailable_TextChanged);
+            this.G2TxbxDaysAvailable.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_KeyPress);
             // 
             // label7
             // 
@@ -488,6 +503,8 @@
             this.G2TxbxHourlyRate.SelectedText = "";
             this.G2TxbxHourlyRate.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxHourlyRate.TabIndex = 502;
+            this.G2TxbxHourlyRate.TextChanged += new System.EventHandler(this.G2TxbxHourlyRate_TextChanged);
+            this.G2TxbxHourlyRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxHourlyRate_KeyPress);
             // 
             // panel23
             // 
@@ -635,10 +652,6 @@
             this.G2BtnAdd.Text = "<";
             this.G2BtnAdd.Click += new System.EventHandler(this.G2BtnAdd_Click);
             // 
-            // mSubjectsBindingSource
-            // 
-            this.mSubjectsBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSubjects);
-            // 
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -722,6 +735,89 @@
             this.LstBxExpertise.Size = new System.Drawing.Size(382, 122);
             this.LstBxExpertise.TabIndex = 570;
             this.LstBxExpertise.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.LstBxExpertise_DrawItem);
+            this.LstBxExpertise.SelectedIndexChanged += new System.EventHandler(this.LstBxExpertise_SelectedIndexChanged);
+            // 
+            // LblEndTime
+            // 
+            this.LblEndTime.AutoSize = true;
+            this.LblEndTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEndTime.ForeColor = System.Drawing.Color.Red;
+            this.LblEndTime.Location = new System.Drawing.Point(859, 380);
+            this.LblEndTime.Name = "LblEndTime";
+            this.LblEndTime.Size = new System.Drawing.Size(159, 30);
+            this.LblEndTime.TabIndex = 581;
+            this.LblEndTime.Text = "End time  must not be equal \r\nto start time.";
+            // 
+            // LblStartTime
+            // 
+            this.LblStartTime.AutoSize = true;
+            this.LblStartTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStartTime.ForeColor = System.Drawing.Color.Red;
+            this.LblStartTime.Location = new System.Drawing.Point(643, 380);
+            this.LblStartTime.Name = "LblStartTime";
+            this.LblStartTime.Size = new System.Drawing.Size(165, 30);
+            this.LblStartTime.TabIndex = 580;
+            this.LblStartTime.Text = "Start Time  must not be equal \r\nto End Time.";
+            // 
+            // LblHourlyRate
+            // 
+            this.LblHourlyRate.AutoSize = true;
+            this.LblHourlyRate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHourlyRate.ForeColor = System.Drawing.Color.Red;
+            this.LblHourlyRate.Location = new System.Drawing.Point(643, 293);
+            this.LblHourlyRate.Name = "LblHourlyRate";
+            this.LblHourlyRate.Size = new System.Drawing.Size(247, 15);
+            this.LblHourlyRate.TabIndex = 579;
+            this.LblHourlyRate.Text = "Kindly specify the hourly rate you want to set.";
+            // 
+            // LblExpertise
+            // 
+            this.LblExpertise.AutoSize = true;
+            this.LblExpertise.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblExpertise.ForeColor = System.Drawing.Color.Red;
+            this.LblExpertise.Location = new System.Drawing.Point(147, 467);
+            this.LblExpertise.Name = "LblExpertise";
+            this.LblExpertise.Size = new System.Drawing.Size(344, 30);
+            this.LblExpertise.TabIndex = 577;
+            this.LblExpertise.Text = "Please select the area of expertise in which you have specialized \r\nknowledge and" +
+    " proficiency.";
+            // 
+            // LblLastname
+            // 
+            this.LblLastname.AutoSize = true;
+            this.LblLastname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLastname.ForeColor = System.Drawing.Color.Red;
+            this.LblLastname.Location = new System.Drawing.Point(147, 293);
+            this.LblLastname.Name = "LblLastname";
+            this.LblLastname.Size = new System.Drawing.Size(54, 15);
+            this.LblLastname.TabIndex = 576;
+            this.LblLastname.Text = "Required";
+            // 
+            // LblFirstname
+            // 
+            this.LblFirstname.AutoSize = true;
+            this.LblFirstname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFirstname.ForeColor = System.Drawing.Color.Red;
+            this.LblFirstname.Location = new System.Drawing.Point(147, 211);
+            this.LblFirstname.Name = "LblFirstname";
+            this.LblFirstname.Size = new System.Drawing.Size(54, 15);
+            this.LblFirstname.TabIndex = 575;
+            this.LblFirstname.Text = "Required";
+            // 
+            // LblDaysAvailable
+            // 
+            this.LblDaysAvailable.AutoSize = true;
+            this.LblDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDaysAvailable.ForeColor = System.Drawing.Color.Red;
+            this.LblDaysAvailable.Location = new System.Drawing.Point(641, 214);
+            this.LblDaysAvailable.Name = "LblDaysAvailable";
+            this.LblDaysAvailable.Size = new System.Drawing.Size(278, 15);
+            this.LblDaysAvailable.TabIndex = 578;
+            this.LblDaysAvailable.Text = "Please indicate the days on which you are available.";
+            // 
+            // mSubjectsBindingSource
+            // 
+            this.mSubjectsBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MSubjects);
             // 
             // EditTutorProfile
             // 
@@ -729,6 +825,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 546);
+            this.Controls.Add(this.LblEndTime);
+            this.Controls.Add(this.LblStartTime);
+            this.Controls.Add(this.LblHourlyRate);
+            this.Controls.Add(this.LblExpertise);
+            this.Controls.Add(this.LblLastname);
+            this.Controls.Add(this.LblFirstname);
+            this.Controls.Add(this.LblDaysAvailable);
             this.Controls.Add(this.panel30);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
@@ -787,11 +890,11 @@
             this.panel29.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).EndInit();
             this.panel30.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mSubjectsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -854,5 +957,12 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ListBox LstBxExpertise;
+        private System.Windows.Forms.Label LblEndTime;
+        private System.Windows.Forms.Label LblStartTime;
+        private System.Windows.Forms.Label LblHourlyRate;
+        private System.Windows.Forms.Label LblExpertise;
+        private System.Windows.Forms.Label LblLastname;
+        private System.Windows.Forms.Label LblFirstname;
+        private System.Windows.Forms.Label LblDaysAvailable;
     }
 }

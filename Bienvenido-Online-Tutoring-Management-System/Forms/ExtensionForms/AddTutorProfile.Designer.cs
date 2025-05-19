@@ -49,54 +49,61 @@
             this.DTPEndTime = new System.Windows.Forms.DateTimePicker();
             this.DTPStartTime = new System.Windows.Forms.DateTimePicker();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
+            this.PnlTopStartTime = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.PnlLeftStartTime = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.PnlRightStartTime = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.PnlBottomStartTime = new System.Windows.Forms.Panel();
             this.panel36 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
+            this.PnlETimeTop = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
+            this.PnlETimeLeft = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
+            this.PnlETimeRight = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
+            this.PnlETimeBottom = new System.Windows.Forms.Panel();
             this.LstBxExpertise = new System.Windows.Forms.ListBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.PnlLstTop = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.PnlLstRight = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.PnlLstBottom = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.PnlLstLeft = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.panel19.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.LblFirstname = new System.Windows.Forms.Label();
+            this.LblLastname = new System.Windows.Forms.Label();
+            this.LblExpertise = new System.Windows.Forms.Label();
+            this.LblDaysAvailable = new System.Windows.Forms.Label();
+            this.LblHourlyRate = new System.Windows.Forms.Label();
+            this.LblStartTime = new System.Windows.Forms.Label();
+            this.LblEndTime = new System.Windows.Forms.Label();
+            this.PnlTopStartTime.SuspendLayout();
+            this.PnlLeftStartTime.SuspendLayout();
+            this.PnlRightStartTime.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel29.SuspendLayout();
+            this.PnlBottomStartTime.SuspendLayout();
+            this.PnlETimeTop.SuspendLayout();
+            this.PnlETimeLeft.SuspendLayout();
+            this.PnlETimeRight.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel25.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel30.SuspendLayout();
+            this.PnlETimeBottom.SuspendLayout();
+            this.PnlLstTop.SuspendLayout();
+            this.PnlLstRight.SuspendLayout();
+            this.PnlLstBottom.SuspendLayout();
+            this.PnlLstLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -104,7 +111,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(633, 176);
+            this.label7.Location = new System.Drawing.Point(635, 178);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 540;
@@ -134,6 +141,8 @@
             this.G2TxbxHourlyRate.SelectedText = "";
             this.G2TxbxHourlyRate.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxHourlyRate.TabIndex = 539;
+            this.G2TxbxHourlyRate.TextChanged += new System.EventHandler(this.G2TxbxHourlyRte_TextChanged_1);
+            this.G2TxbxHourlyRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxHourlyRate_KeyPress);
             // 
             // G2TxbxDaysAvailable
             // 
@@ -159,6 +168,8 @@
             this.G2TxbxDaysAvailable.SelectedText = "";
             this.G2TxbxDaysAvailable.Size = new System.Drawing.Size(213, 36);
             this.G2TxbxDaysAvailable.TabIndex = 538;
+            this.G2TxbxDaysAvailable.TextChanged += new System.EventHandler(this.G2TxbxDaysAvailable_TextChanged_1);
+            this.G2TxbxDaysAvailable.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
             // 
             // G2CmbxDaysAvailable
             // 
@@ -268,6 +279,8 @@
             this.G2TxbxLastname.SelectedText = "";
             this.G2TxbxLastname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxLastname.TabIndex = 515;
+            this.G2TxbxLastname.TextChanged += new System.EventHandler(this.G2TxbxLastName_TextChanged_1);
+            this.G2TxbxLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
             // 
             // G2BtnUpdate
             // 
@@ -357,6 +370,8 @@
             this.G2TxbxFirstname.SelectedText = "";
             this.G2TxbxFirstname.Size = new System.Drawing.Size(382, 36);
             this.G2TxbxFirstname.TabIndex = 508;
+            this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged_1);
+            this.G2TxbxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
             // 
             // G2BtnEdit
             // 
@@ -384,25 +399,27 @@
             // DTPEndTime
             // 
             this.DTPEndTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.DTPEndTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPEndTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPEndTime.Location = new System.Drawing.Point(858, 293);
+            this.DTPEndTime.Location = new System.Drawing.Point(857, 292);
             this.DTPEndTime.Name = "DTPEndTime";
             this.DTPEndTime.ShowUpDown = true;
-            this.DTPEndTime.Size = new System.Drawing.Size(163, 26);
+            this.DTPEndTime.Size = new System.Drawing.Size(163, 29);
             this.DTPEndTime.TabIndex = 519;
             this.DTPEndTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
+            this.DTPEndTime.ValueChanged += new System.EventHandler(this.DTPEndTime_ValueChanged);
             // 
             // DTPStartTime
             // 
-            this.DTPStartTime.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPStartTime.Location = new System.Drawing.Point(639, 294);
+            this.DTPStartTime.Location = new System.Drawing.Point(639, 292);
             this.DTPStartTime.Name = "DTPStartTime";
             this.DTPStartTime.ShowUpDown = true;
-            this.DTPStartTime.Size = new System.Drawing.Size(163, 26);
+            this.DTPStartTime.Size = new System.Drawing.Size(163, 29);
             this.DTPStartTime.TabIndex = 521;
             this.DTPStartTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
+            this.DTPStartTime.ValueChanged += new System.EventHandler(this.DTPStartTime_ValueChanged);
             // 
             // panel20
             // 
@@ -412,14 +429,14 @@
             this.panel20.Size = new System.Drawing.Size(179, 2);
             this.panel20.TabIndex = 442;
             // 
-            // panel19
+            // PnlTopStartTime
             // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(639, 289);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(163, 2);
-            this.panel19.TabIndex = 522;
+            this.PnlTopStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlTopStartTime.Controls.Add(this.panel20);
+            this.PnlTopStartTime.Location = new System.Drawing.Point(639, 289);
+            this.PnlTopStartTime.Name = "PnlTopStartTime";
+            this.PnlTopStartTime.Size = new System.Drawing.Size(163, 2);
+            this.PnlTopStartTime.TabIndex = 522;
             // 
             // panel18
             // 
@@ -429,14 +446,14 @@
             this.panel18.Size = new System.Drawing.Size(179, 2);
             this.panel18.TabIndex = 442;
             // 
-            // panel17
+            // PnlLeftStartTime
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel17.Controls.Add(this.panel18);
-            this.panel17.Location = new System.Drawing.Point(639, 289);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(2, 36);
-            this.panel17.TabIndex = 525;
+            this.PnlLeftStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlLeftStartTime.Controls.Add(this.panel18);
+            this.PnlLeftStartTime.Location = new System.Drawing.Point(639, 289);
+            this.PnlLeftStartTime.Name = "PnlLeftStartTime";
+            this.PnlLeftStartTime.Size = new System.Drawing.Size(2, 36);
+            this.PnlLeftStartTime.TabIndex = 525;
             // 
             // panel16
             // 
@@ -446,14 +463,14 @@
             this.panel16.Size = new System.Drawing.Size(179, 2);
             this.panel16.TabIndex = 442;
             // 
-            // panel15
+            // PnlRightStartTime
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(801, 289);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(2, 36);
-            this.panel15.TabIndex = 526;
+            this.PnlRightStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlRightStartTime.Controls.Add(this.panel16);
+            this.PnlRightStartTime.Location = new System.Drawing.Point(801, 289);
+            this.PnlRightStartTime.Name = "PnlRightStartTime";
+            this.PnlRightStartTime.Size = new System.Drawing.Size(2, 36);
+            this.PnlRightStartTime.TabIndex = 526;
             // 
             // panel14
             // 
@@ -467,7 +484,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(641, 293);
+            this.panel13.Location = new System.Drawing.Point(641, 292);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(160, 2);
             this.panel13.TabIndex = 523;
@@ -497,14 +514,14 @@
             this.panel22.Size = new System.Drawing.Size(179, 2);
             this.panel22.TabIndex = 442;
             // 
-            // panel21
+            // PnlBottomStartTime
             // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(639, 323);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(163, 2);
-            this.panel21.TabIndex = 520;
+            this.PnlBottomStartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlBottomStartTime.Controls.Add(this.panel22);
+            this.PnlBottomStartTime.Location = new System.Drawing.Point(639, 323);
+            this.PnlBottomStartTime.Name = "PnlBottomStartTime";
+            this.PnlBottomStartTime.Size = new System.Drawing.Size(163, 2);
+            this.PnlBottomStartTime.TabIndex = 520;
             // 
             // panel36
             // 
@@ -514,14 +531,14 @@
             this.panel36.Size = new System.Drawing.Size(179, 2);
             this.panel36.TabIndex = 442;
             // 
-            // panel35
+            // PnlETimeTop
             // 
-            this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(857, 289);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(163, 2);
-            this.panel35.TabIndex = 528;
+            this.PnlETimeTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlETimeTop.Controls.Add(this.panel36);
+            this.PnlETimeTop.Location = new System.Drawing.Point(857, 289);
+            this.PnlETimeTop.Name = "PnlETimeTop";
+            this.PnlETimeTop.Size = new System.Drawing.Size(163, 2);
+            this.PnlETimeTop.TabIndex = 528;
             // 
             // panel34
             // 
@@ -531,14 +548,14 @@
             this.panel34.Size = new System.Drawing.Size(179, 2);
             this.panel34.TabIndex = 442;
             // 
-            // panel33
+            // PnlETimeLeft
             // 
-            this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(857, 289);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(2, 36);
-            this.panel33.TabIndex = 531;
+            this.PnlETimeLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlETimeLeft.Controls.Add(this.panel34);
+            this.PnlETimeLeft.Location = new System.Drawing.Point(857, 289);
+            this.PnlETimeLeft.Name = "PnlETimeLeft";
+            this.PnlETimeLeft.Size = new System.Drawing.Size(2, 36);
+            this.PnlETimeLeft.TabIndex = 531;
             // 
             // panel32
             // 
@@ -548,14 +565,14 @@
             this.panel32.Size = new System.Drawing.Size(179, 2);
             this.panel32.TabIndex = 442;
             // 
-            // panel29
+            // PnlETimeRight
             // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(1019, 289);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(2, 36);
-            this.panel29.TabIndex = 532;
+            this.PnlETimeRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlETimeRight.Controls.Add(this.panel32);
+            this.PnlETimeRight.Location = new System.Drawing.Point(1019, 289);
+            this.PnlETimeRight.Name = "PnlETimeRight";
+            this.PnlETimeRight.Size = new System.Drawing.Size(2, 36);
+            this.PnlETimeRight.TabIndex = 532;
             // 
             // panel28
             // 
@@ -569,7 +586,7 @@
             // 
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(859, 293);
+            this.panel27.Location = new System.Drawing.Point(859, 292);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(160, 2);
             this.panel27.TabIndex = 529;
@@ -586,7 +603,7 @@
             // 
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(859, 318);
+            this.panel25.Location = new System.Drawing.Point(859, 319);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(160, 2);
             this.panel25.TabIndex = 530;
@@ -599,14 +616,14 @@
             this.panel24.Size = new System.Drawing.Size(179, 2);
             this.panel24.TabIndex = 442;
             // 
-            // panel23
+            // PnlETimeBottom
             // 
-            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(857, 323);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(163, 2);
-            this.panel23.TabIndex = 527;
+            this.PnlETimeBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlETimeBottom.Controls.Add(this.panel24);
+            this.PnlETimeBottom.Location = new System.Drawing.Point(857, 323);
+            this.PnlETimeBottom.Name = "PnlETimeBottom";
+            this.PnlETimeBottom.Size = new System.Drawing.Size(163, 2);
+            this.PnlETimeBottom.TabIndex = 527;
             // 
             // LstBxExpertise
             // 
@@ -623,15 +640,16 @@
             this.LstBxExpertise.Size = new System.Drawing.Size(382, 122);
             this.LstBxExpertise.TabIndex = 565;
             this.LstBxExpertise.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.LstBxExpertise_DrawItem);
+            this.LstBxExpertise.SelectedIndexChanged += new System.EventHandler(this.LstBxExpertise_SelectedIndexChanged);
             // 
-            // panel5
+            // PnlLstTop
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(141, 290);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(382, 2);
-            this.panel5.TabIndex = 566;
+            this.PnlLstTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlLstTop.Controls.Add(this.panel6);
+            this.PnlLstTop.Location = new System.Drawing.Point(141, 290);
+            this.PnlLstTop.Name = "PnlLstTop";
+            this.PnlLstTop.Size = new System.Drawing.Size(382, 2);
+            this.PnlLstTop.TabIndex = 566;
             // 
             // panel6
             // 
@@ -641,14 +659,14 @@
             this.panel6.Size = new System.Drawing.Size(179, 2);
             this.panel6.TabIndex = 442;
             // 
-            // panel7
+            // PnlLstRight
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(521, 292);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 121);
-            this.panel7.TabIndex = 526;
+            this.PnlLstRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlLstRight.Controls.Add(this.panel8);
+            this.PnlLstRight.Location = new System.Drawing.Point(521, 292);
+            this.PnlLstRight.Name = "PnlLstRight";
+            this.PnlLstRight.Size = new System.Drawing.Size(2, 121);
+            this.PnlLstRight.TabIndex = 526;
             // 
             // panel8
             // 
@@ -658,14 +676,14 @@
             this.panel8.Size = new System.Drawing.Size(179, 2);
             this.panel8.TabIndex = 442;
             // 
-            // panel9
+            // PnlLstBottom
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(140, 411);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(382, 2);
-            this.panel9.TabIndex = 567;
+            this.PnlLstBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlLstBottom.Controls.Add(this.panel10);
+            this.PnlLstBottom.Location = new System.Drawing.Point(140, 411);
+            this.PnlLstBottom.Name = "PnlLstBottom";
+            this.PnlLstBottom.Size = new System.Drawing.Size(382, 2);
+            this.PnlLstBottom.TabIndex = 567;
             // 
             // panel10
             // 
@@ -675,14 +693,14 @@
             this.panel10.Size = new System.Drawing.Size(179, 2);
             this.panel10.TabIndex = 442;
             // 
-            // panel30
+            // PnlLstLeft
             // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(140, 290);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(2, 121);
-            this.panel30.TabIndex = 527;
+            this.PnlLstLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.PnlLstLeft.Controls.Add(this.panel31);
+            this.PnlLstLeft.Location = new System.Drawing.Point(140, 290);
+            this.PnlLstLeft.Name = "PnlLstLeft";
+            this.PnlLstLeft.Size = new System.Drawing.Size(2, 121);
+            this.PnlLstLeft.TabIndex = 527;
             // 
             // panel31
             // 
@@ -692,37 +710,121 @@
             this.panel31.Size = new System.Drawing.Size(179, 2);
             this.panel31.TabIndex = 442;
             // 
+            // LblFirstname
+            // 
+            this.LblFirstname.AutoSize = true;
+            this.LblFirstname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFirstname.ForeColor = System.Drawing.Color.Red;
+            this.LblFirstname.Location = new System.Drawing.Point(138, 158);
+            this.LblFirstname.Name = "LblFirstname";
+            this.LblFirstname.Size = new System.Drawing.Size(54, 15);
+            this.LblFirstname.TabIndex = 568;
+            this.LblFirstname.Text = "Required";
+            // 
+            // LblLastname
+            // 
+            this.LblLastname.AutoSize = true;
+            this.LblLastname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLastname.ForeColor = System.Drawing.Color.Red;
+            this.LblLastname.Location = new System.Drawing.Point(138, 241);
+            this.LblLastname.Name = "LblLastname";
+            this.LblLastname.Size = new System.Drawing.Size(54, 15);
+            this.LblLastname.TabIndex = 569;
+            this.LblLastname.Text = "Required";
+            // 
+            // LblExpertise
+            // 
+            this.LblExpertise.AutoSize = true;
+            this.LblExpertise.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblExpertise.ForeColor = System.Drawing.Color.Red;
+            this.LblExpertise.Location = new System.Drawing.Point(138, 414);
+            this.LblExpertise.Name = "LblExpertise";
+            this.LblExpertise.Size = new System.Drawing.Size(344, 30);
+            this.LblExpertise.TabIndex = 570;
+            this.LblExpertise.Text = "Please select the area of expertise in which you have specialized \r\nknowledge and" +
+    " proficiency.";
+            // 
+            // LblDaysAvailable
+            // 
+            this.LblDaysAvailable.AutoSize = true;
+            this.LblDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDaysAvailable.ForeColor = System.Drawing.Color.Red;
+            this.LblDaysAvailable.Location = new System.Drawing.Point(638, 158);
+            this.LblDaysAvailable.Name = "LblDaysAvailable";
+            this.LblDaysAvailable.Size = new System.Drawing.Size(278, 15);
+            this.LblDaysAvailable.TabIndex = 571;
+            this.LblDaysAvailable.Text = "Please indicate the days on which you are available.";
+            // 
+            // LblHourlyRate
+            // 
+            this.LblHourlyRate.AutoSize = true;
+            this.LblHourlyRate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHourlyRate.ForeColor = System.Drawing.Color.Red;
+            this.LblHourlyRate.Location = new System.Drawing.Point(638, 241);
+            this.LblHourlyRate.Name = "LblHourlyRate";
+            this.LblHourlyRate.Size = new System.Drawing.Size(247, 15);
+            this.LblHourlyRate.TabIndex = 572;
+            this.LblHourlyRate.Text = "Kindly specify the hourly rate you want to set.";
+            // 
+            // LblStartTime
+            // 
+            this.LblStartTime.AutoSize = true;
+            this.LblStartTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStartTime.ForeColor = System.Drawing.Color.Red;
+            this.LblStartTime.Location = new System.Drawing.Point(638, 328);
+            this.LblStartTime.Name = "LblStartTime";
+            this.LblStartTime.Size = new System.Drawing.Size(165, 30);
+            this.LblStartTime.TabIndex = 573;
+            this.LblStartTime.Text = "Start Time  must not be equal \r\nto End Time.";
+            // 
+            // LblEndTime
+            // 
+            this.LblEndTime.AutoSize = true;
+            this.LblEndTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEndTime.ForeColor = System.Drawing.Color.Red;
+            this.LblEndTime.Location = new System.Drawing.Point(854, 328);
+            this.LblEndTime.Name = "LblEndTime";
+            this.LblEndTime.Size = new System.Drawing.Size(159, 30);
+            this.LblEndTime.TabIndex = 574;
+            this.LblEndTime.Text = "End time  must not be equal \r\nto start time.";
+            // 
             // AddTutorProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1166, 546);
-            this.Controls.Add(this.panel30);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.LblEndTime);
+            this.Controls.Add(this.LblStartTime);
+            this.Controls.Add(this.LblHourlyRate);
+            this.Controls.Add(this.LblExpertise);
+            this.Controls.Add(this.LblLastname);
+            this.Controls.Add(this.LblFirstname);
+            this.Controls.Add(this.PnlLstLeft);
+            this.Controls.Add(this.PnlLstBottom);
+            this.Controls.Add(this.PnlLstRight);
+            this.Controls.Add(this.PnlLstTop);
             this.Controls.Add(this.LstBxExpertise);
             this.Controls.Add(this.G2BtnEdit);
-            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.PnlETimeBottom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel25);
             this.Controls.Add(this.G2TxbxHourlyRate);
             this.Controls.Add(this.panel27);
-            this.Controls.Add(this.panel29);
+            this.Controls.Add(this.PnlETimeRight);
             this.Controls.Add(this.G2TxbxDaysAvailable);
-            this.Controls.Add(this.panel33);
-            this.Controls.Add(this.panel35);
+            this.Controls.Add(this.PnlETimeLeft);
+            this.Controls.Add(this.PnlETimeTop);
             this.Controls.Add(this.G2CmbxDaysAvailable);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel21);
+            this.Controls.Add(this.PnlBottomStartTime);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel17);
-            this.Controls.Add(this.panel19);
+            this.Controls.Add(this.PnlRightStartTime);
+            this.Controls.Add(this.PnlLeftStartTime);
+            this.Controls.Add(this.PnlTopStartTime);
             this.Controls.Add(this.DTPStartTime);
             this.Controls.Add(this.DTPEndTime);
             this.Controls.Add(this.label2);
@@ -735,6 +837,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.G2TxbxFirstname);
+            this.Controls.Add(this.LblDaysAvailable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -742,22 +845,22 @@
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "Bienvenido Online Tutor";
             this.Load += new System.EventHandler(this.AddTutorProfile_Load);
-            this.panel19.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
+            this.PnlTopStartTime.ResumeLayout(false);
+            this.PnlLeftStartTime.ResumeLayout(false);
+            this.PnlRightStartTime.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
+            this.PnlBottomStartTime.ResumeLayout(false);
+            this.PnlETimeTop.ResumeLayout(false);
+            this.PnlETimeLeft.ResumeLayout(false);
+            this.PnlETimeRight.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel30.ResumeLayout(false);
+            this.PnlETimeBottom.ResumeLayout(false);
+            this.PnlLstTop.ResumeLayout(false);
+            this.PnlLstRight.ResumeLayout(false);
+            this.PnlLstBottom.ResumeLayout(false);
+            this.PnlLstLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -785,37 +888,44 @@
         private System.Windows.Forms.DateTimePicker DTPEndTime;
         private System.Windows.Forms.DateTimePicker DTPStartTime;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel PnlTopStartTime;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel PnlLeftStartTime;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel PnlRightStartTime;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel PnlBottomStartTime;
         private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel PnlETimeTop;
         private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel PnlETimeLeft;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel PnlETimeRight;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel PnlETimeBottom;
         private System.Windows.Forms.ListBox LstBxExpertise;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel PnlLstTop;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PnlLstRight;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel PnlLstBottom;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Panel PnlLstLeft;
         private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Label LblFirstname;
+        private System.Windows.Forms.Label LblLastname;
+        private System.Windows.Forms.Label LblExpertise;
+        private System.Windows.Forms.Label LblDaysAvailable;
+        private System.Windows.Forms.Label LblHourlyRate;
+        private System.Windows.Forms.Label LblStartTime;
+        private System.Windows.Forms.Label LblEndTime;
     }
 }

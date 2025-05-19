@@ -20,6 +20,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public int InvoiceID { get; set; }
         public decimal TotalHours { get; set; }
         public string ContactDetails { get; set; }
+        public DateTime PaidDate { get; set; }
 
         public override string ToString()
         {

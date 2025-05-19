@@ -19,5 +19,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public string DaysAvailable { get; set; }
         public string Firstname { get; set; }
         public string lastname { get; set; }
+        public DateTime SDate { get; set; }
+        public DateTime EDate { get; set; }
     }
 }
