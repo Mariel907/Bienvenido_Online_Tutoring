@@ -218,7 +218,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LblExpertise.Visible = false;
+                LblExpertise.Visible = false;
         }
 
         private void DTPEndTime_ValueChanged(object sender, EventArgs e)

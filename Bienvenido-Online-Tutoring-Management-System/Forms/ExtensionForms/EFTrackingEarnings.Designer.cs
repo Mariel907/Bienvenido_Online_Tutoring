@@ -200,7 +200,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV.Size = new System.Drawing.Size(919, 417);
+            this.DGV.Size = new System.Drawing.Size(1122, 417);
             this.DGV.TabIndex = 610;
             this.DGV.TabStop = false;
             this.DGV.Tag = "book_id";
@@ -232,7 +232,7 @@
             this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel23.Controls.Add(this.panel24);
-            this.panel23.Location = new System.Drawing.Point(769, 71);
+            this.panel23.Location = new System.Drawing.Point(972, 71);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(163, 2);
             this.panel23.TabIndex = 626;
@@ -250,7 +250,7 @@
             this.panel25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel25.BackColor = System.Drawing.Color.White;
             this.panel25.Controls.Add(this.panel26);
-            this.panel25.Location = new System.Drawing.Point(771, 67);
+            this.panel25.Location = new System.Drawing.Point(974, 67);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(160, 2);
             this.panel25.TabIndex = 629;
@@ -268,7 +268,7 @@
             this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.White;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Location = new System.Drawing.Point(771, 40);
+            this.panel27.Location = new System.Drawing.Point(974, 40);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(160, 2);
             this.panel27.TabIndex = 628;
@@ -286,7 +286,7 @@
             this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel29.Controls.Add(this.panel32);
-            this.panel29.Location = new System.Drawing.Point(931, 37);
+            this.panel29.Location = new System.Drawing.Point(1134, 37);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(2, 36);
             this.panel29.TabIndex = 631;
@@ -304,7 +304,7 @@
             this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel33.Controls.Add(this.panel34);
-            this.panel33.Location = new System.Drawing.Point(769, 37);
+            this.panel33.Location = new System.Drawing.Point(972, 37);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(2, 36);
             this.panel33.TabIndex = 630;
@@ -322,7 +322,7 @@
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Location = new System.Drawing.Point(769, 37);
+            this.panel35.Location = new System.Drawing.Point(972, 37);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(163, 2);
             this.panel35.TabIndex = 627;
@@ -341,7 +341,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(765, 14);
+            this.label4.Location = new System.Drawing.Point(968, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 21);
             this.label4.TabIndex = 633;
@@ -353,7 +353,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(593, 14);
+            this.label3.Location = new System.Drawing.Point(796, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 21);
             this.label3.TabIndex = 632;
@@ -364,7 +364,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(595, 71);
+            this.panel1.Location = new System.Drawing.Point(798, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(163, 2);
             this.panel1.TabIndex = 619;
@@ -382,7 +382,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(597, 67);
+            this.panel3.Location = new System.Drawing.Point(800, 67);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(160, 2);
             this.panel3.TabIndex = 623;
@@ -400,7 +400,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(597, 40);
+            this.panel5.Location = new System.Drawing.Point(800, 40);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(160, 2);
             this.panel5.TabIndex = 622;
@@ -418,7 +418,7 @@
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(757, 37);
+            this.panel7.Location = new System.Drawing.Point(960, 37);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(2, 36);
             this.panel7.TabIndex = 625;
@@ -436,7 +436,7 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(595, 37);
+            this.panel9.Location = new System.Drawing.Point(798, 37);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(2, 36);
             this.panel9.TabIndex = 624;
@@ -454,7 +454,7 @@
             this.panel30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel30.Controls.Add(this.panel31);
-            this.panel30.Location = new System.Drawing.Point(595, 37);
+            this.panel30.Location = new System.Drawing.Point(798, 37);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(163, 2);
             this.panel30.TabIndex = 621;
@@ -472,9 +472,8 @@
             this.DTPStartTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTPStartTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPStartTime.Location = new System.Drawing.Point(595, 40);
+            this.DTPStartTime.Location = new System.Drawing.Point(798, 40);
             this.DTPStartTime.Name = "DTPStartTime";
-            this.DTPStartTime.ShowUpDown = true;
             this.DTPStartTime.Size = new System.Drawing.Size(163, 29);
             this.DTPStartTime.TabIndex = 620;
             this.DTPStartTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
@@ -486,9 +485,8 @@
             this.DTPEndTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DTPEndTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPEndTime.Location = new System.Drawing.Point(770, 40);
+            this.DTPEndTime.Location = new System.Drawing.Point(973, 40);
             this.DTPEndTime.Name = "DTPEndTime";
-            this.DTPEndTime.ShowUpDown = true;
             this.DTPEndTime.Size = new System.Drawing.Size(163, 29);
             this.DTPEndTime.TabIndex = 618;
             this.DTPEndTime.Value = new System.DateTime(2025, 3, 25, 14, 14, 8, 0);
@@ -498,7 +496,7 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel11.Controls.Add(this.panel12);
-            this.panel11.Location = new System.Drawing.Point(16, 35);
+            this.panel11.Location = new System.Drawing.Point(14, 35);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(2, 36);
             this.panel11.TabIndex = 637;
@@ -515,7 +513,7 @@
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.panel13.Controls.Add(this.panel14);
-            this.panel13.Location = new System.Drawing.Point(16, 71);
+            this.panel13.Location = new System.Drawing.Point(14, 71);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(181, 5);
             this.panel13.TabIndex = 641;
@@ -532,7 +530,7 @@
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.panel15.Controls.Add(this.panel16);
-            this.panel15.Location = new System.Drawing.Point(21, 37);
+            this.panel15.Location = new System.Drawing.Point(19, 37);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(2, 32);
             this.panel15.TabIndex = 638;
@@ -550,7 +548,7 @@
             this.LblID.AutoSize = true;
             this.LblID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblID.Location = new System.Drawing.Point(101, 10);
+            this.LblID.Location = new System.Drawing.Point(99, 10);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(19, 21);
             this.LblID.TabIndex = 642;
@@ -560,7 +558,7 @@
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.panel17.Controls.Add(this.panel18);
-            this.panel17.Location = new System.Drawing.Point(196, 37);
+            this.panel17.Location = new System.Drawing.Point(194, 37);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(4, 36);
             this.panel17.TabIndex = 640;
@@ -577,7 +575,7 @@
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
             this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(18, 38);
+            this.panel19.Location = new System.Drawing.Point(16, 38);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(176, 5);
             this.panel19.TabIndex = 639;
@@ -594,7 +592,7 @@
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel21.Controls.Add(this.panel22);
-            this.panel21.Location = new System.Drawing.Point(16, 34);
+            this.panel21.Location = new System.Drawing.Point(14, 34);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(179, 2);
             this.panel21.TabIndex = 635;
@@ -612,7 +610,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(12, 10);
+            this.label5.Location = new System.Drawing.Point(10, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 21);
             this.label5.TabIndex = 634;
@@ -622,7 +620,7 @@
             // 
             this.panel37.BackColor = System.Drawing.Color.White;
             this.panel37.Controls.Add(this.panel38);
-            this.panel37.Location = new System.Drawing.Point(18, 64);
+            this.panel37.Location = new System.Drawing.Point(16, 64);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(176, 5);
             this.panel37.TabIndex = 636;
@@ -643,7 +641,7 @@
             this.G2CmbxTutorName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.G2CmbxTutorName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2CmbxTutorName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2CmbxTutorName.Location = new System.Drawing.Point(21, 40);
+            this.G2CmbxTutorName.Location = new System.Drawing.Point(19, 40);
             this.G2CmbxTutorName.Name = "G2CmbxTutorName";
             this.G2CmbxTutorName.Size = new System.Drawing.Size(179, 35);
             this.G2CmbxTutorName.TabIndex = 643;
@@ -653,7 +651,7 @@
             // 
             this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel39.Controls.Add(this.panel40);
-            this.panel39.Location = new System.Drawing.Point(16, 69);
+            this.panel39.Location = new System.Drawing.Point(14, 69);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(179, 2);
             this.panel39.TabIndex = 636;
@@ -670,7 +668,7 @@
             // 
             this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.panel41.Controls.Add(this.panel42);
-            this.panel41.Location = new System.Drawing.Point(194, 34);
+            this.panel41.Location = new System.Drawing.Point(192, 34);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(2, 36);
             this.panel41.TabIndex = 638;
@@ -689,6 +687,7 @@
             this.ContactDetails.HeaderText = "Contact Details";
             this.ContactDetails.Name = "ContactDetails";
             this.ContactDetails.ReadOnly = true;
+            this.ContactDetails.Visible = false;
             // 
             // PaidDate
             // 
@@ -785,7 +784,6 @@
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Visible = false;
             // 
             // StatusBill
             // 
@@ -820,7 +818,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(947, 507);
+            this.ClientSize = new System.Drawing.Size(1150, 507);
             this.Controls.Add(this.panel41);
             this.Controls.Add(this.panel39);
             this.Controls.Add(this.panel11);

@@ -39,6 +39,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGVStudent = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.G2TxbxFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,20 +107,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SessionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusBill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HourlyRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudent)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -246,10 +246,98 @@
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVStudent.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGVStudent_CellFormatting);
             // 
+            // TutorName
+            // 
+            this.TutorName.HeaderText = "Tutor Name";
+            this.TutorName.Name = "TutorName";
+            this.TutorName.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // SessionID
+            // 
+            this.SessionID.HeaderText = "SessionID";
+            this.SessionID.Name = "SessionID";
+            this.SessionID.ReadOnly = true;
+            this.SessionID.Visible = false;
+            // 
+            // TutorID
+            // 
+            this.TutorID.HeaderText = "TutorID";
+            this.TutorID.Name = "TutorID";
+            this.TutorID.ReadOnly = true;
+            this.TutorID.Visible = false;
+            // 
+            // SessionDate
+            // 
+            this.SessionDate.HeaderText = "Session Date";
+            this.SessionDate.Name = "SessionDate";
+            this.SessionDate.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
+            // StudentID
+            // 
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            this.StudentID.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // StatusBill
+            // 
+            this.StatusBill.HeaderText = "StatusBill";
+            this.StatusBill.Name = "StatusBill";
+            this.StatusBill.ReadOnly = true;
+            this.StatusBill.Visible = false;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            this.InvoiceID.Visible = false;
+            // 
+            // TotalHours
+            // 
+            this.TotalHours.HeaderText = "Total Hours";
+            this.TotalHours.Name = "TotalHours";
+            this.TotalHours.ReadOnly = true;
+            // 
+            // HourlyRate
+            // 
+            this.HourlyRate.HeaderText = "Hourly Rate";
+            this.HourlyRate.Name = "HourlyRate";
+            this.HourlyRate.ReadOnly = true;
+            // 
+            // TotalAmount
+            // 
+            this.TotalAmount.HeaderText = "Total Amount";
+            this.TotalAmount.Name = "TotalAmount";
+            this.TotalAmount.ReadOnly = true;
+            // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -288,8 +376,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -323,7 +409,6 @@
             // 
             // LblStudentID
             // 
-            this.LblStudentID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblStudentID.AutoSize = true;
             this.LblStudentID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -335,8 +420,6 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -378,8 +461,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -427,7 +509,6 @@
             // 
             // G2TxbxHourlyRate
             // 
-            this.G2TxbxHourlyRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxHourlyRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxHourlyRate.BorderThickness = 2;
             this.G2TxbxHourlyRate.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -454,8 +535,6 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -724,8 +803,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
@@ -964,96 +1042,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 643;
             this.pictureBox1.TabStop = false;
-            // 
-            // TutorName
-            // 
-            this.TutorName.HeaderText = "Tutor Name";
-            this.TutorName.Name = "TutorName";
-            this.TutorName.ReadOnly = true;
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // SessionID
-            // 
-            this.SessionID.HeaderText = "SessionID";
-            this.SessionID.Name = "SessionID";
-            this.SessionID.ReadOnly = true;
-            this.SessionID.Visible = false;
-            // 
-            // TutorID
-            // 
-            this.TutorID.HeaderText = "TutorID";
-            this.TutorID.Name = "TutorID";
-            this.TutorID.ReadOnly = true;
-            this.TutorID.Visible = false;
-            // 
-            // SessionDate
-            // 
-            this.SessionDate.HeaderText = "Session Date";
-            this.SessionDate.Name = "SessionDate";
-            this.SessionDate.ReadOnly = true;
-            // 
-            // StartTime
-            // 
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            // 
-            // StudentID
-            // 
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // StatusBill
-            // 
-            this.StatusBill.HeaderText = "StatusBill";
-            this.StatusBill.Name = "StatusBill";
-            this.StatusBill.ReadOnly = true;
-            this.StatusBill.Visible = false;
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.HeaderText = "InvoiceID";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            this.InvoiceID.Visible = false;
-            // 
-            // TotalHours
-            // 
-            this.TotalHours.HeaderText = "Total Hours";
-            this.TotalHours.Name = "TotalHours";
-            this.TotalHours.ReadOnly = true;
-            // 
-            // HourlyRate
-            // 
-            this.HourlyRate.HeaderText = "Hourly Rate";
-            this.HourlyRate.Name = "HourlyRate";
-            this.HourlyRate.ReadOnly = true;
-            // 
-            // TotalAmount
-            // 
-            this.TotalAmount.HeaderText = "Total Amount";
-            this.TotalAmount.Name = "TotalAmount";
-            this.TotalAmount.ReadOnly = true;
             // 
             // EFSChedule
             // 

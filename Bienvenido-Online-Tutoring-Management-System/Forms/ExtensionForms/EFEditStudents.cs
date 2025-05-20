@@ -2,13 +2,10 @@
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -86,7 +83,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblLastname.Visible = false;
 
-            if(string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
             {
                 LblEmail.Visible = true;
                 hasError = true;
@@ -94,21 +91,21 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblEmail.Visible = false;
 
-            if(LstBxExpertise.SelectedItems.Count == 0)
+            if (LstBxExpertise.SelectedItems.Count == 0)
             {
-                LblEmail.Visible = true;
+                LblSubject.Visible = true;
                 hasError = true;
             }
             else
-                LblEmail.Visible= false;
+                LblSubject.Visible = false;
 
-                return hasError;
+            return hasError;
         }
         private void ShowSubject()
         {
             LstBxExpertise.Items.Clear();
 
-            foreach(var sub in  CFSubjects.Subjects())
+            foreach (var sub in CFSubjects.Subjects())
                 LstBxExpertise.Items.Add(sub.SubjectName);
         }
         private void G2BtnUpdate_Click(object sender, EventArgs e)
@@ -119,20 +116,20 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
                 List<string> selectedItems = new List<string>();
 
-                foreach(var item in LstBxExpertise.SelectedItems)
+                foreach (var item in LstBxExpertise.SelectedItems)
                     selectedItems.Add(item.ToString());
 
                 MStudent student = new MStudent();
                 student.Firstname = G2TxbxFirstname.Text;
                 student.Lastname = G2TxbxLastname.Text;
-                student.PrefferedSubjects = string.Join(", ",selectedItems);
+                student.PrefferedSubjects = string.Join(", ", selectedItems);
                 student.ContactDetails = G2TxbxContactDetails.Text;
                 student.StudentID = Convert.ToInt32(LblStudentID.Text);
 
                 _cStudents.Update(student);
                 EmptyFields();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "An Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -175,13 +172,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxContactDetails_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
-            {
-                LblEmail.Visible = true;
-                return;
-            }
-            else
-                LblEmail.Visible = false;
+            LblEmail.Visible = false;
         }
 
         private void G2TxbxFirstname_TextChanged(object sender, EventArgs e)

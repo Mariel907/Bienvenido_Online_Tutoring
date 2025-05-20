@@ -36,15 +36,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 SubjectName = reader["SubjectName"].ToString()
             });
         }
-        //private void SearchSubID(List<string> SubName)
-        //{
-        //    string selectedSubName = string.join
-        //    SqlParameter[] sp = new SqlParameter[]
-        //    {
-        //        new SqlParameter("Action", "SearchSubID"),
-        //        new SqlParameter("SubName", )
-        //    }
-        //}
+        
         public void Insert(MTutorProfile mTutor, List<string> SubExpert, DateTime STime, DateTime ETime)
         {
             string sub = string.Join(", ", SubExpert);
@@ -68,7 +60,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
 
         public void Update(MTutorProfile tutor, List<string> SubExpert)
         {
-            string sub = string.Join(",", SubExpert);
+            string sub = string.Join(", ", SubExpert);
             SqlParameter[] sp = new SqlParameter[]
             {
                 new SqlParameter("Action", "Update"),

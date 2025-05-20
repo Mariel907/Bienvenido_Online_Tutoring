@@ -30,6 +30,7 @@
         {
             this.LblDay = new System.Windows.Forms.Label();
             this.lstSessions = new System.Windows.Forms.ListBox();
+            this.Lblweather = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblDay
@@ -62,11 +63,21 @@
             this.lstSessions.MouseLeave += new System.EventHandler(this.lstSessions_MouseLeave);
             this.lstSessions.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lstSessions_MouseMove);
             // 
+            // Lblweather
+            // 
+            this.Lblweather.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lblweather.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.Lblweather.Location = new System.Drawing.Point(80, 0);
+            this.Lblweather.Name = "Lblweather";
+            this.Lblweather.Size = new System.Drawing.Size(96, 19);
+            this.Lblweather.TabIndex = 512;
+            // 
             // CustomCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.Lblweather);
             this.Controls.Add(this.lstSessions);
             this.Controls.Add(this.LblDay);
             this.Name = "CustomCalendar";
@@ -80,5 +91,6 @@
 
         private System.Windows.Forms.Label LblDay;
         private System.Windows.Forms.ListBox lstSessions;
+        private System.Windows.Forms.Label Lblweather;
     }
 }

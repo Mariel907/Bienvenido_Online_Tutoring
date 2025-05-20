@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -69,7 +70,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             TblLytPnlCalendar.Controls.Clear();
             for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
             {
-                CustomCalendar dayControl = new CustomCalendar(day);
+                CustomCalendar dayControl = new CustomCalendar(day, year, month);
                 int row = (day + firstDayColumn - 1) / 7;
                 int column = (day + firstDayColumn - 1) % 7;
                 List<MSession> sessionData = cCalendar.GetSessionsForDayBoth(day);
@@ -100,10 +101,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             if (CHKScheduled.Checked) selectedStatus.Add("Scheduled");
             if (CHKOnGoing.Checked) selectedStatus.Add("OnGoing");
             RefreshCalendar(selectedStatus);
-        }
-        private void CmbxCategoryName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Category();
         }
 
         private void Category()
@@ -145,12 +142,17 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
         {
-            StatusChecked();
+            
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void G2BtnSearch_Click(object sender, EventArgs e)
+        {
+            StatusChecked();
         }
     }
 }

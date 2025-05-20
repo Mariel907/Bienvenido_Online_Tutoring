@@ -57,6 +57,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PctrPrevious = new System.Windows.Forms.PictureBox();
             this.PCtrNext = new System.Windows.Forms.PictureBox();
+            this.G2BtnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.PnlDays.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -278,6 +279,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.G2BtnSearch);
             this.panel5.Controls.Add(this.G2TxbxSearch);
             this.panel5.Controls.Add(this.CHKScheduled);
             this.panel5.Controls.Add(this.CHKOnGoing);
@@ -298,8 +300,6 @@
             // 
             // G2TxbxSearch
             // 
-            this.G2TxbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.G2TxbxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxSearch.BorderThickness = 2;
             this.G2TxbxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -321,7 +321,7 @@
             this.G2TxbxSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxSearch.PlaceholderText = "";
             this.G2TxbxSearch.SelectedText = "";
-            this.G2TxbxSearch.Size = new System.Drawing.Size(670, 36);
+            this.G2TxbxSearch.Size = new System.Drawing.Size(514, 36);
             this.G2TxbxSearch.TabIndex = 608;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
@@ -477,8 +477,26 @@
             this.PCtrNext.TabStop = false;
             this.PCtrNext.Click += new System.EventHandler(this.PCtrNext_Click);
             // 
+            // G2BtnSearch
+            // 
+            this.G2BtnSearch.BorderRadius = 15;
+            this.G2BtnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2BtnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2BtnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2BtnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2BtnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.G2BtnSearch.Location = new System.Drawing.Point(521, 40);
+            this.G2BtnSearch.Name = "G2BtnSearch";
+            this.G2BtnSearch.Size = new System.Drawing.Size(152, 36);
+            this.G2BtnSearch.TabIndex = 609;
+            this.G2BtnSearch.Text = "Search";
+            this.G2BtnSearch.Click += new System.EventHandler(this.G2BtnSearch_Click);
+            // 
             // FCalendar
             // 
+            this.AcceptButton = this.G2BtnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
@@ -536,5 +554,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox PctrPrevious;
         private System.Windows.Forms.PictureBox PCtrNext;
+        private Guna.UI2.WinForms.Guna2Button G2BtnSearch;
     }
 }

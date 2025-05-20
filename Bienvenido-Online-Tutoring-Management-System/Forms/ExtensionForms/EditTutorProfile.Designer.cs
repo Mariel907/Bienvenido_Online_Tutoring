@@ -195,7 +195,7 @@
             this.G2BtnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2BtnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G2BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnUpdate.Location = new System.Drawing.Point(526, 478);
+            this.G2BtnUpdate.Location = new System.Drawing.Point(539, 479);
             this.G2BtnUpdate.Name = "G2BtnUpdate";
             this.G2BtnUpdate.Size = new System.Drawing.Size(152, 36);
             this.G2BtnUpdate.TabIndex = 438;
@@ -406,7 +406,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(638, 146);
+            this.label6.Location = new System.Drawing.Point(642, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 498;
@@ -435,7 +435,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(642, 175);
+            this.G2CmbxDaysAvailable.Location = new System.Drawing.Point(646, 171);
             this.G2CmbxDaysAvailable.Name = "G2CmbxDaysAvailable";
             this.G2CmbxDaysAvailable.Size = new System.Drawing.Size(172, 36);
             this.G2CmbxDaysAvailable.TabIndex = 499;
@@ -456,7 +456,7 @@
             this.G2TxbxDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.G2TxbxDaysAvailable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.G2TxbxDaysAvailable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(812, 175);
+            this.G2TxbxDaysAvailable.Location = new System.Drawing.Point(816, 171);
             this.G2TxbxDaysAvailable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.G2TxbxDaysAvailable.Name = "G2TxbxDaysAvailable";
             this.G2TxbxDaysAvailable.Padding = new System.Windows.Forms.Padding(7);
@@ -613,7 +613,7 @@
             this.LblAvailbalityID.AutoSize = true;
             this.LblAvailbalityID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAvailbalityID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblAvailbalityID.Location = new System.Drawing.Point(755, 146);
+            this.LblAvailbalityID.Location = new System.Drawing.Point(754, 146);
             this.LblAvailbalityID.Name = "LblAvailbalityID";
             this.LblAvailbalityID.Size = new System.Drawing.Size(19, 21);
             this.LblAvailbalityID.TabIndex = 506;
@@ -809,7 +809,7 @@
             this.LblDaysAvailable.AutoSize = true;
             this.LblDaysAvailable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDaysAvailable.ForeColor = System.Drawing.Color.Red;
-            this.LblDaysAvailable.Location = new System.Drawing.Point(641, 214);
+            this.LblDaysAvailable.Location = new System.Drawing.Point(645, 210);
             this.LblDaysAvailable.Name = "LblDaysAvailable";
             this.LblDaysAvailable.Size = new System.Drawing.Size(278, 15);
             this.LblDaysAvailable.TabIndex = 578;
@@ -821,6 +821,7 @@
             // 
             // EditTutorProfile
             // 
+            this.AcceptButton = this.G2BtnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));

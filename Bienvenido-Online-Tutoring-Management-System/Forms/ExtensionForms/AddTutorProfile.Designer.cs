@@ -45,7 +45,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.G2TxbxFirstname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.DTPEndTime = new System.Windows.Forms.DateTimePicker();
             this.DTPStartTime = new System.Windows.Forms.DateTimePicker();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -372,29 +371,6 @@
             this.G2TxbxFirstname.TabIndex = 508;
             this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged_1);
             this.G2TxbxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.G2TxbxFirstname_KeyPress);
-            // 
-            // G2BtnEdit
-            // 
-            this.G2BtnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.G2BtnEdit.BorderRadius = 15;
-            this.G2BtnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2BtnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2BtnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2BtnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnEdit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnEdit.Location = new System.Drawing.Point(1106, 18);
-            this.G2BtnEdit.Name = "G2BtnEdit";
-            this.G2BtnEdit.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnEdit.Size = new System.Drawing.Size(42, 36);
-            this.G2BtnEdit.TabIndex = 543;
-            this.G2BtnEdit.Text = ">";
-            this.G2BtnEdit.Click += new System.EventHandler(this.G2BtnEdit_Click);
             // 
             // DTPEndTime
             // 
@@ -790,6 +766,7 @@
             // 
             // AddTutorProfile
             // 
+            this.AcceptButton = this.G2BtnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
@@ -805,7 +782,6 @@
             this.Controls.Add(this.PnlLstRight);
             this.Controls.Add(this.PnlLstTop);
             this.Controls.Add(this.LstBxExpertise);
-            this.Controls.Add(this.G2BtnEdit);
             this.Controls.Add(this.PnlETimeBottom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel25);
@@ -884,7 +860,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox G2TxbxFirstname;
-        private Guna.UI2.WinForms.Guna2Button G2BtnEdit;
         private System.Windows.Forms.DateTimePicker DTPEndTime;
         private System.Windows.Forms.DateTimePicker DTPStartTime;
         private System.Windows.Forms.Panel panel20;

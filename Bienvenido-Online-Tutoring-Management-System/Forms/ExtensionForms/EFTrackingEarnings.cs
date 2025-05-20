@@ -74,5 +74,22 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             ShowBindingSource();
         }
+        //private void StatusChecked()
+        //{
+        //string LblId = LblID.Text;
+        //List<string> checked_ = new List<string>();
+
+        //if (G2CHKDone.Checked) checked_.Add("Done");
+        //if (G2CHKScheduled.Checked) checked_.Add("Scheduled");
+        //if (G2CHKOnGoing.Checked) checked_.Add("OnGoing");
+
+        //CEarnings earnings = new CEarnings();
+        //earnings.SearchCmbx(DGV, LblId, checked_);
+        //}
+
+        //private void Status_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    StatusChecked();
+        //}
     }
 }

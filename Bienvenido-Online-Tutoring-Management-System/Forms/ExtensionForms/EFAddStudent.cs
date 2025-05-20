@@ -61,11 +61,11 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             if (LstBxExpertise.SelectedItems.Count == 0)
             {
-                LblEmail.Visible = true;
+                LblSubject.Visible = true;
                 hasError = true;
             }
             else
-                LblEmail.Visible = false;
+                LblSubject.Visible = false;
 
             return hasError;
         }
@@ -142,7 +142,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxContactDetails_TextChanged(object sender, EventArgs e)
         {
-          LblEmail.Visible = false; 
+            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            {
+                LblEmail.Visible = true;
+            }
+            else
+                LblEmail.Visible = false; LblEmail.Visible = false; 
         }
 
         private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)

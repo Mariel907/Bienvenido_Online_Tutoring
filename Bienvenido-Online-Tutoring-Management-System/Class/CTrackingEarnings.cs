@@ -2,6 +2,7 @@
 using LiveCharts;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,5 +31,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 PaidDate = Convert.ToDateTime(reader["PaidDate"])
             });
         }
+        //public void SearchStatus(DateTime SDate, DateTime EDate, string ID)
+        //{
+        //    SqlParameter[] sp = new SqlParameter[]
+        //    {
+        //        new SqlParameter("Action", "SearchStatusTrackingEarnings"),
+        //        new SqlParameter("StartDate", 
+        //    }
+        //}
     }
 }

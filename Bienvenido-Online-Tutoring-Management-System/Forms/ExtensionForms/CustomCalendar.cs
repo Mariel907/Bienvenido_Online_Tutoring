@@ -1,10 +1,13 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Model;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -14,14 +17,63 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private EFCalendarSched eFCalendarSched;
         public int Day { get; set; }
         public List<MSession> Sessions { get; set; } = new List<MSession>();
-        public CustomCalendar(int day)
+        public CustomCalendar(int day, int year, int month)
         {
             InitializeComponent();
             Day = day;
             LblDay.Text = day.ToString();
-            lstSessions.DrawMode = DrawMode.OwnerDrawFixed;
+            _ = LoadWeatherAsync(day, year, month);
         }
 
+        public async Task LoadWeatherAsync(int day, int year, int month)
+        {
+            var weatherDataByDay = await GetWeatherForMonth(year, month);
+               Lblweather.Text = weatherDataByDay[day];
+        }
+        public static async Task<Dictionary<int, string>> GetWeatherForMonth(int year, int month)
+        {
+            string apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=7.051399&longitude=125.59477&hourly=temperature_2m,rain,precipitation,relative_humidity_2m,dew_point_2m&timezone=auto";
+
+            Dictionary<int, string> weatherDataByDay = new Dictionary<int, string>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+                if (response.IsSuccessStatusCode)
+                {
+                    string jsonResponse = await response.Content.ReadAsStringAsync();
+                    JObject weatherData = JObject.Parse(jsonResponse);
+
+                    var temp = weatherData["hourly"]["temperature_2m"];
+                    var rain = weatherData["hourly"]["rain"];
+                    var humidity = weatherData["hourly"]["relative_humidity_2m"];
+
+                    // Loop through all days in the month
+                    int totalDays = DateTime.DaysInMonth(year, month);
+                    for (int day = 1; day <= totalDays; day++)
+                    {
+                        int totalHoursAvailable = temp.Count(); // Get total hourly entries
+                        int hoursPerDay = totalHoursAvailable / totalDays; // Ensure correct count
+                        int hourIndex = (day - 1) * hoursPerDay + hoursPerDay / 2; // Midday selection
+
+                        string temperature = temp?[hourIndex]?.ToString() ?? "N/A";
+                        string rainVolume = rain?[hourIndex]?.ToString() ?? "N/A";
+                        string humidityValue = humidity?[hourIndex]?.ToString() ?? "N/A";
+
+                        weatherDataByDay[day] = $"🌡️ {temperature}°C";
+                    }
+                }
+                else
+                {
+                    for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
+                    {
+                        weatherDataByDay[day] = "⚠️ Unable to fetch weather data.";
+                    }
+                }
+            }
+
+            return weatherDataByDay;
+        }
         public void UpdateSessions(List<MSession> sessionDetails, DateTime targetDate)
         {
             Sessions = sessionDetails.Where(s => s.SessionDate.Date == targetDate.Date).ToList();
@@ -32,7 +84,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 lstSessions.Items.Add($"{session.StartTime} - {session.EndTime}                                                                       \nSession Date : {session.SessionDate.ToString("MM/dd/yyyy")}  \nSubject : {session.Subject} \nStudent Name : {session.StudName} \nTutor Name: {session.TutorName} \nStatus : {session.Status}");
             }
         }
-       
+
         private void lstSessions_MouseMove(object sender, MouseEventArgs e)
         {
             int index = lstSessions.IndexFromPoint(e.Location);
