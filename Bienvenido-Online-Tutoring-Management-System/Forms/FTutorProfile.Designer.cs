@@ -36,13 +36,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTutorProfile));
             this.DGVTutor = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mTutorProfileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.G2BtnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.G2BtnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.mTutorProfileBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this._TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._Expertise = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._AvailabilityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +85,7 @@
             this._TutorID,
             this.TutorName,
             this._Expertise,
+            this.Email,
             this._AvailabilityID,
             this._StartTime,
             this._EndTime,
@@ -145,6 +147,10 @@
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVTutor.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGVTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVTutor_CellClick);
+            // 
+            // mTutorProfileBindingSource1
+            // 
+            this.mTutorProfileBindingSource1.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MTutorProfile);
             // 
             // G2BtnUpdate
             // 
@@ -209,10 +215,6 @@
             this.G2TxbxSearch.TabIndex = 517;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
             // 
-            // mTutorProfileBindingSource1
-            // 
-            this.mTutorProfileBindingSource1.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MTutorProfile);
-            // 
             // _TutorID
             // 
             this._TutorID.DataPropertyName = "TutorID";
@@ -234,6 +236,13 @@
             this._Expertise.HeaderText = "Expertise";
             this._Expertise.Name = "_Expertise";
             this._Expertise.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // _AvailabilityID
             // 
@@ -328,6 +337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _TutorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn _Expertise;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn _AvailabilityID;
         private System.Windows.Forms.DataGridViewTextBoxColumn _StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn _EndTime;

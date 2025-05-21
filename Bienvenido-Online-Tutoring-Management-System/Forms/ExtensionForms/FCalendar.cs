@@ -2,6 +2,7 @@
 using Bienvenido_Online_Tutoring_Management_System.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
@@ -70,9 +71,18 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             TblLytPnlCalendar.Controls.Clear();
             for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
             {
-                CustomCalendar dayControl = new CustomCalendar(day, year, month);
                 int row = (day + firstDayColumn - 1) / 7;
                 int column = (day + firstDayColumn - 1) % 7;
+
+                DateTime targetDate = new DateTime(year, month, day);
+                DayOfWeek currentDayofWeek = targetDate.DayOfWeek;
+
+                Color dayColor = (currentDayofWeek == DayOfWeek.Saturday || currentDayofWeek == DayOfWeek.Sunday) 
+                    ? Color.Red 
+                    : Color.FromArgb(28, 42, 68);
+
+                CustomCalendar dayControl = new CustomCalendar(day, year, month, dayColor);
+
                 List<MSession> sessionData = cCalendar.GetSessionsForDayBoth(day);
 
                 if (sessionData.Any())
@@ -83,8 +93,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     ).ToList();
                 }
 
-                DateTime targetDaet = new DateTime(year, month, day);
-                dayControl.UpdateSessions(sessionData, targetDaet);
+                dayControl.UpdateSessions(sessionData, targetDate);
 
                 TblLytPnlCalendar.Controls.Add(dayControl, column, row);
             }

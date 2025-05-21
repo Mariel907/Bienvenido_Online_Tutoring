@@ -1,10 +1,12 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Model;
+using Bienvenido_Online_Tutoring_Management_System.Properties;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -17,24 +19,31 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private EFCalendarSched eFCalendarSched;
         public int Day { get; set; }
         public List<MSession> Sessions { get; set; } = new List<MSession>();
-        public CustomCalendar(int day, int year, int month)
+        public Color CalendarColor { get; set; }
+        public CustomCalendar(int day, int year, int month, Color bgColor)
         {
             InitializeComponent();
             Day = day;
             LblDay.Text = day.ToString();
+            CalendarColor = bgColor;
+            LblDay.ForeColor = bgColor;
             _ = LoadWeatherAsync(day, year, month);
         }
 
         public async Task LoadWeatherAsync(int day, int year, int month)
         {
             var weatherDataByDay = await GetWeatherForMonth(year, month);
-               Lblweather.Text = weatherDataByDay[day];
+               Lblweather.Text = weatherDataByDay[day].temp;
+            if (File.Exists(weatherDataByDay[day].image))
+                Pctr.Image = Image.FromFile(weatherDataByDay[day].image);
+            else
+                MessageBox.Show("Image file not found: " + weatherDataByDay[day].image);
         }
-        public static async Task<Dictionary<int, string>> GetWeatherForMonth(int year, int month)
+        public static async Task<Dictionary<int, (string temp, string image)>> GetWeatherForMonth(int year, int month)
         {
             string apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=7.051399&longitude=125.59477&hourly=temperature_2m,rain,precipitation,relative_humidity_2m,dew_point_2m&timezone=auto";
 
-            Dictionary<int, string> weatherDataByDay = new Dictionary<int, string>();
+            Dictionary<int,( string temp, string image)> weatherDataByDay = new Dictionary<int, (string, string)>();
 
             using (HttpClient client = new HttpClient())
             {
@@ -48,32 +57,41 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     var rain = weatherData["hourly"]["rain"];
                     var humidity = weatherData["hourly"]["relative_humidity_2m"];
 
-                    // Loop through all days in the month
                     int totalDays = DateTime.DaysInMonth(year, month);
                     for (int day = 1; day <= totalDays; day++)
                     {
-                        int totalHoursAvailable = temp.Count(); // Get total hourly entries
-                        int hoursPerDay = totalHoursAvailable / totalDays; // Ensure correct count
-                        int hourIndex = (day - 1) * hoursPerDay + hoursPerDay / 2; // Midday selection
+                        int totalHoursAvailable = temp.Count();
+                        int hoursPerDay = totalHoursAvailable / totalDays; 
+                        int hourIndex = (day - 1) * hoursPerDay + hoursPerDay / 2; 
 
                         string temperature = temp?[hourIndex]?.ToString() ?? "N/A";
-                        string rainVolume = rain?[hourIndex]?.ToString() ?? "N/A";
-                        string humidityValue = humidity?[hourIndex]?.ToString() ?? "N/A";
+                        //string rainVolume = rain?[hourIndex]?.ToString() ?? "N/A";
+                        //string humidityValue = humidity?[hourIndex]?.ToString() ?? "N/A";
 
-                        weatherDataByDay[day] = $"🌡️ {temperature}°C";
+                        string imagePath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Resources\\Cold.png");
+                        if(double.TryParse(temperature, out double tempValue))
+                        {
+                            if(tempValue > 30) imagePath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Resources\\Sun.png");
+                            else if (tempValue > 20) imagePath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Resources\\warm.png");
+                            else if(tempValue > 10) imagePath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Resources\\Cold.png");
+
+                        }
+                        weatherDataByDay[day] = (temperature + "°C", imagePath);
                     }
                 }
                 else
                 {
+                    string image = Path.Combine(Directory.GetParent(Environment.CurrentDirectory).Parent.FullName, "Resources\\error.png");
                     for (int day = 1; day <= DateTime.DaysInMonth(year, month); day++)
                     {
-                        weatherDataByDay[day] = "⚠️ Unable to fetch weather data.";
+                        weatherDataByDay[day] = ("No Data", image);
                     }
                 }
             }
 
             return weatherDataByDay;
         }
+
         public void UpdateSessions(List<MSession> sessionDetails, DateTime targetDate)
         {
             Sessions = sessionDetails.Where(s => s.SessionDate.Date == targetDate.Date).ToList();

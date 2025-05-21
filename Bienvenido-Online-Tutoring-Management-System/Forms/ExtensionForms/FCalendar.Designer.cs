@@ -45,6 +45,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.LblMonth = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.G2BtnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.CHKScheduled = new Guna.UI2.WinForms.Guna2CheckBox();
             this.CHKOnGoing = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -57,7 +58,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PctrPrevious = new System.Windows.Forms.PictureBox();
             this.PCtrNext = new System.Windows.Forms.PictureBox();
-            this.G2BtnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.PnlDays.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -158,11 +158,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(956, 6);
+            this.label7.Location = new System.Drawing.Point(950, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 21);
+            this.label7.Size = new System.Drawing.Size(78, 21);
             this.label7.TabIndex = 516;
-            this.label7.Text = "Sunday";
+            this.label7.Text = "Saturday";
             // 
             // label6
             // 
@@ -297,6 +297,23 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1067, 80);
             this.panel5.TabIndex = 5;
+            // 
+            // G2BtnSearch
+            // 
+            this.G2BtnSearch.BorderRadius = 15;
+            this.G2BtnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.G2BtnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.G2BtnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.G2BtnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.G2BtnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2BtnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.G2BtnSearch.Location = new System.Drawing.Point(521, 40);
+            this.G2BtnSearch.Name = "G2BtnSearch";
+            this.G2BtnSearch.Size = new System.Drawing.Size(152, 36);
+            this.G2BtnSearch.TabIndex = 609;
+            this.G2BtnSearch.Text = "Search";
+            this.G2BtnSearch.Click += new System.EventHandler(this.G2BtnSearch_Click);
             // 
             // G2TxbxSearch
             // 
@@ -476,23 +493,6 @@
             this.PCtrNext.TabIndex = 0;
             this.PCtrNext.TabStop = false;
             this.PCtrNext.Click += new System.EventHandler(this.PCtrNext_Click);
-            // 
-            // G2BtnSearch
-            // 
-            this.G2BtnSearch.BorderRadius = 15;
-            this.G2BtnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.G2BtnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.G2BtnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.G2BtnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.G2BtnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2BtnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.G2BtnSearch.Location = new System.Drawing.Point(521, 40);
-            this.G2BtnSearch.Name = "G2BtnSearch";
-            this.G2BtnSearch.Size = new System.Drawing.Size(152, 36);
-            this.G2BtnSearch.TabIndex = 609;
-            this.G2BtnSearch.Text = "Search";
-            this.G2BtnSearch.Click += new System.EventHandler(this.G2BtnSearch_Click);
             // 
             // FCalendar
             // 

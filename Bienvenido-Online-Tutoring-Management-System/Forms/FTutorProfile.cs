@@ -54,6 +54,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms
             MTutor.StartTime = Convert.ToDateTime(selectedRow.Cells["_StartTime"].Value.ToString()).TimeOfDay;
             MTutor.EndTime = Convert.ToDateTime(selectedRow.Cells["_EndTime"].Value.ToString()).TimeOfDay;
             MTutor.DaysAvailable = selectedRow.Cells["_DaysAvailable"].Value.ToString();
+            MTutor.Email = selectedRow.Cells["Email"].Value.ToString();
 
             EditTutorProfile edit= new EditTutorProfile(_dashboard, MTutor);
             form.OpenForm(edit, _dashboard.Panel);

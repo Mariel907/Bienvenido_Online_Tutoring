@@ -149,6 +149,12 @@
     <Compile Include="Forms\ExtensionForms\EFTrackingEarnings.Designer.cs">
       <DependentUpon>EFTrackingEarnings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExtensionForms\EFWeatherForeCast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtensionForms\EFWeatherForeCast.Designer.cs">
+      <DependentUpon>EFWeatherForeCast.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExtensionForms\FCalendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,12 +203,6 @@
     <Compile Include="Forms\ExtensionForms\FEarningsTutor.Designer.cs">
       <DependentUpon>FEarningsTutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ExtensionForms\ListSessionsCalendar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\ExtensionForms\ListSessionsCalendar.Designer.cs">
-      <DependentUpon>ListSessionsCalendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ExtensionForms\RecieptSched.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,12 +214,6 @@
     </Compile>
     <Compile Include="Forms\ExtensionForms\Tester.Designer.cs">
       <DependentUpon>Tester.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FDashboard.Designer.cs">
-      <DependentUpon>FDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FPayments.cs">
       <SubType>Form</SubType>
@@ -273,6 +267,9 @@
     <EmbeddedResource Include="Forms\ExtensionForms\EFTrackingEarnings.resx">
       <DependentUpon>EFTrackingEarnings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtensionForms\EFWeatherForeCast.resx">
+      <DependentUpon>EFWeatherForeCast.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\FCalendar.resx">
       <DependentUpon>FCalendar.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,17 +294,11 @@
     <EmbeddedResource Include="Forms\ExtensionForms\FEarningsTutor.resx">
       <DependentUpon>FEarningsTutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ExtensionForms\ListSessionsCalendar.resx">
-      <DependentUpon>ListSessionsCalendar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\RecieptSched.resx">
       <DependentUpon>RecieptSched.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtensionForms\Tester.resx">
       <DependentUpon>Tester.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FDashboard.resx">
-      <DependentUpon>FDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FPayments.resx">
       <DependentUpon>FPayments.cs</DependentUpon>
@@ -376,6 +367,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Earnings_Bien.png" />
+    <None Include="Resources\Sun.png" />
+    <None Include="Resources\Cold.png" />
+    <None Include="Resources\warm.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\Rain.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -63,6 +63,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cold {
+            get {
+                object obj = ResourceManager.GetObject("Cold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dashboard_Bien {
             get {
                 object obj = ResourceManager.GetObject("Dashboard_Bien", resourceCulture);
@@ -83,9 +93,29 @@ namespace Bienvenido_Online_Tutoring_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error {
+            get {
+                object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Payment_Bien {
             get {
                 object obj = ResourceManager.GetObject("Payment_Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rain {
+            get {
+                object obj = ResourceManager.GetObject("Rain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +143,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sun {
+            get {
+                object obj = ResourceManager.GetObject("Sun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Transaction_Bien {
             get {
                 object obj = ResourceManager.GetObject("Transaction_Bien", resourceCulture);
@@ -126,6 +166,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Properties {
         internal static System.Drawing.Bitmap Tutor_Profile {
             get {
                 object obj = ResourceManager.GetObject("Tutor_Profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warm {
+            get {
+                object obj = ResourceManager.GetObject("warm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

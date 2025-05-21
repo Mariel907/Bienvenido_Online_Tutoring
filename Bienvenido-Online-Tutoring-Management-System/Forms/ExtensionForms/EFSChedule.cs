@@ -56,7 +56,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["EndTime"].Value = session.EndTime;
                 row.Cells["HourlyRate"].Value = session.HourlyRate;
                 row.Cells["TotalAmount"].Value = session.TotalAmount;
-                row.Cells["SessionDate"].Value = session.SessionDate.ToString("MM/dd/yyyy");
+                row.Cells["SessionDate"].Value = session.SessionDate.ToString("M/dd/yyyy");
                 row.Cells["TotalHours"].Value = session.TotalHours;
                 row.Cells["InvoiceID"].Value = session.InvoiceID;
                 row.Cells["StatusBill"].Value = session.StatusBill;
@@ -141,7 +141,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             try
             {
                 if (ValidateStartAndEndTime()) return;
+                if (IsDraftSessiondateAndTimeExists())
+                {
+                    MessageBox.Show("Sorry we can't add this session because it overlaps in pending session", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 validationSched();
+
                 TimeSpan STime = (TimeSpan)G2CmbxStartTime.SelectedValue;
                 TimeSpan ETime = (TimeSpan)G2CmbxEndTime.SelectedValue;
 
@@ -186,6 +193,37 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
             UpdateTotallbl();
 
+        }
+
+        private bool IsDraftSessiondateAndTimeExists()
+        {
+            bool IsExists = false;
+
+            if (DGVStudent.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in DGVStudent.Rows)
+                {
+                    if (row.Cells["StatusBill"].Value.ToString().Equals("Paid", StringComparison.OrdinalIgnoreCase)) continue;
+
+                    TimeSpan sessionStart = DateTime.Parse(row.Cells["StartTime"].Value.ToString()).TimeOfDay;
+                    TimeSpan sessionEnd = DateTime.Parse(row.Cells["EndTime"].Value.ToString()).TimeOfDay;
+                    TimeSpan selectedStartTime = DateTime.Parse(G2CmbxStartTime.SelectedValue.ToString()).TimeOfDay;
+                    TimeSpan selectedEndTime = DateTime.Parse(G2CmbxEndTime.SelectedValue.ToString()).TimeOfDay;
+
+                    if (row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase) ||
+                        row.Cells["SessionDate"].Value.ToString().Equals(G2CmbxDateAvailable.SelectedValue.ToString(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        if ((selectedStartTime >= sessionStart && selectedStartTime  < sessionEnd) ||
+                            (selectedEndTime > sessionStart && selectedEndTime <= sessionEnd)||
+                            (selectedStartTime <= sessionStart && selectedEndTime >= sessionEnd) || selectedStartTime == sessionEnd)
+                        {
+                            IsExists = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            return IsExists;
         }
         private void UpdateTotallbl()
         {

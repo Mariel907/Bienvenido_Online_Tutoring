@@ -126,7 +126,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxFirstname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if(!char.IsLetter(e.KeyChar))
                 e.Handled = true;
         }
 
@@ -142,12 +142,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxContactDetails_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            if (!IsValidEmail())
             {
                 LblEmail.Visible = true;
             }
             else
-                LblEmail.Visible = false; LblEmail.Visible = false; 
+                LblEmail.Visible = false;
         }
 
         private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)

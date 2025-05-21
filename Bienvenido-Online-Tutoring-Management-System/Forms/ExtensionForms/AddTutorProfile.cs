@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Web.Configuration;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -18,7 +20,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             InitializeComponent();
             _dashboard = dashboard;
         }
-      
+
         private void G2BtnEdit_Click(object sender, EventArgs e)
         {
             EditTutorProfile Edit = new EditTutorProfile(_dashboard, tutor);
@@ -79,6 +81,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 mTutor.StartTime = Convert.ToDateTime(DTPStartTime.Text).TimeOfDay;
                 mTutor.EndTime = Convert.ToDateTime(DTPEndTime.Text).TimeOfDay;
                 mTutor.DaysAvailable = G2TxbxDaysAvailable.Text;
+                mTutor.Email = G2TxbxEmail.Text;
 
                 DateTime STime = DateTime.Today.Add(mTutor.StartTime);
                 DateTime ETime = DateTime.Today.Add(mTutor.EndTime);
@@ -107,6 +110,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             LblHourlyRate.Visible = false;
             LblStartTime.Visible = false;
             LblEndTime.Visible = false;
+            LblEmail.Visible = false;
+        }
+        private bool IsValidEmail()
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(G2TxbxEmail.Text, pattern);
         }
         private bool isFieldsIsEmpty()
         {
@@ -118,9 +127,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblFirstname.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxLastname.Text))
             {
@@ -128,9 +135,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblLastname.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxHourlyRate.Text))
             {
@@ -138,9 +143,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblHourlyRate.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxDaysAvailable.Text))
             {
@@ -148,9 +151,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblDaysAvailable.Visible = false;
-            }
 
             if (DTPStartTime.Value == DTPEndTime.Value)
             {
@@ -170,9 +171,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblExpertise.Visible = false;
+
+            if (string.IsNullOrEmpty(G2TxbxEmail.Text) || !IsValidEmail())
+            {
+                LblEmail.Visible = true;
+                hasError = true;
             }
+            else
+                LblEmail.Visible = false;
+
             return hasError;
         }
 
@@ -186,6 +194,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             DTPEndTime.Value = DateTime.Now;
             G2CmbxDaysAvailable.SelectedIndex = -1;
             LstBxExpertise.ClearSelected();
+            G2TxbxEmail.Text = string.Empty;
         }
 
         private void LstBxExpertise_DrawItem(object sender, DrawItemEventArgs e)
@@ -218,7 +227,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)
         {
-                LblExpertise.Visible = false;
+            LblExpertise.Visible = false;
         }
 
         private void DTPEndTime_ValueChanged(object sender, EventArgs e)
@@ -251,6 +260,14 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private void G2TxbxFirstname_TextChanged_1(object sender, EventArgs e)
         {
             LblFirstname.Visible = false;
+        }
+
+        private void G2TxbxEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!IsValidEmail())
+                LblEmail.Visible = true;
+            else
+                LblEmail.Visible = false;
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bienvenido_Online_Tutoring_Management_System.Forms
+namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 {
-    public partial class FDashboard : Form
+    public partial class EFWeatherForeCast : Form
     {
-        public FDashboard()
+        public EFWeatherForeCast()
         {
             InitializeComponent();
         }

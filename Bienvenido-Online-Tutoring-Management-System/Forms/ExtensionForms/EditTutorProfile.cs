@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -31,6 +32,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             LblHourlyRate.Visible = false;
             LblStartTime.Visible = false;
             LblEndTime.Visible = false;
+            LblEmail.Visible = false;
         }
 
         private void ObjectReference()
@@ -43,11 +45,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             DTPEndTime.Value = DateTime.Today.Add(_MTutorProfile.EndTime);
             LblAvailbalityID.Text = _MTutorProfile.AvailabilityID.ToString();
             LblTutorID.Text = _MTutorProfile.TutorID.ToString();
+            G2TxbxEmail.Text = _MTutorProfile.Email;
 
             ExpertiseCmbx();
 
             string[] selectedExpertise = _MTutorProfile.Expertise.Split(',')
-                                   .Select(e => e.Trim()) 
+                                   .Select(e => e.Trim())
                                    .ToArray();
 
             var itemsToSelect = new List<int>();
@@ -55,13 +58,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             foreach (var item in LstBxExpertise.Items)
             {
                 if (selectedExpertise.Any(e => e.Equals(item.ToString().Trim(), StringComparison.OrdinalIgnoreCase)))
-                    itemsToSelect.Add(LstBxExpertise.Items.IndexOf(item)); 
+                    itemsToSelect.Add(LstBxExpertise.Items.IndexOf(item));
             }
 
             foreach (var index in itemsToSelect)
                 LstBxExpertise.SetSelected(index, true);
 
-            LstBxExpertise.Refresh(); 
+            LstBxExpertise.Refresh();
         }
 
         private void G2CmbxDaysAvailable_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,7 +92,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
                 List<string> selectedItem = new List<string>();
 
-                foreach(var item in LstBxExpertise.SelectedItems)
+                foreach (var item in LstBxExpertise.SelectedItems)
                     selectedItem.Add(item.ToString());
 
                 MTutorProfile mTutor = new MTutorProfile();
@@ -102,6 +105,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 mTutor.DaysAvailable = G2TxbxDaysAvailable.Text;
                 mTutor.TutorID = Convert.ToInt32(LblTutorID.Text);
                 mTutor.AvailabilityID = Convert.ToInt32(LblAvailbalityID.Text);
+                mTutor.Email = G2TxbxEmail.Text;
 
                 CTutorProfile CTutor = new CTutorProfile();
                 CTutor.Update(mTutor, selectedItem);
@@ -112,6 +116,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             }
             EmptyFields();
         }
+        private bool IsValidEmail()
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(G2TxbxEmail.Text, pattern);
+        }
+
         private bool isFieldsIsEmpty()
         {
             bool hasError = false;
@@ -122,9 +132,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblFirstname.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxLastname.Text))
             {
@@ -132,9 +140,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblLastname.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxHourlyRate.Text))
             {
@@ -142,9 +148,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblHourlyRate.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(G2TxbxDaysAvailable.Text))
             {
@@ -152,9 +156,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblDaysAvailable.Visible = false;
-            }
 
             if (DTPStartTime.Value == DTPEndTime.Value)
             {
@@ -174,10 +176,17 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 hasError = true;
             }
             else
-            {
                 LblExpertise.Visible = false;
+
+            if (string.IsNullOrEmpty(G2TxbxEmail.Text) || !IsValidEmail())
+            {
+                LblEmail.Visible = true;
+                hasError = true;
             }
-            return hasError;
+            else
+                LblEmail.Visible = false;
+
+                return hasError;
         }
 
         private void EmptyFields()
@@ -192,6 +201,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             LstBxExpertise.ClearSelected();
             LblTutorID.Text = string.Empty;
             LblAvailbalityID.Text = string.Empty;
+            G2TxbxEmail.Text = string.Empty;
         }
         private void EditTutorProfile_Load(object sender, EventArgs e)
         {
@@ -265,8 +275,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxHourlyRate_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void G2TxbxEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!IsValidEmail())
+                LblEmail.Visible = true;
+            else
+                LblEmail.Visible = false;
         }
     }
 }

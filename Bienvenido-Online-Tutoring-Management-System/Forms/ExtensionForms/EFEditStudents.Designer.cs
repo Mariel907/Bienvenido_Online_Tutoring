@@ -198,6 +198,7 @@
             this.G2TxbxLastname.Size = new System.Drawing.Size(381, 36);
             this.G2TxbxLastname.TabIndex = 580;
             this.G2TxbxLastname.TextChanged += new System.EventHandler(this.G2TxbxLastname_TextChanged);
+            this.G2TxbxLastname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstAndLastname_KeyPress);
             // 
             // label5
             // 
@@ -235,6 +236,7 @@
             this.G2TxbxFirstname.Size = new System.Drawing.Size(381, 36);
             this.G2TxbxFirstname.TabIndex = 578;
             this.G2TxbxFirstname.TextChanged += new System.EventHandler(this.G2TxbxFirstname_TextChanged);
+            this.G2TxbxFirstname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstAndLastname_KeyPress);
             // 
             // LblStudentID
             // 

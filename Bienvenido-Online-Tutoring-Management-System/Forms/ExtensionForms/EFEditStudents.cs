@@ -179,5 +179,11 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             LblFirstname.Visible = false;
         }
+
+        private void FirstAndLastname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

@@ -25,7 +25,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 EndTime = TimeSpan.Parse(reader["EndTime"].ToString()),
                 DaysAvailable = reader["DaysAvailable"].ToString(),
                 Firstname = reader["Firstname"].ToString(),
-                lastname = reader["Lastname"].ToString()
+                lastname = reader["Lastname"].ToString(),
+                Email = reader["Email"].ToString()
             });
         }
         private static List<MSubjects> SubjectShow()
@@ -54,6 +55,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("EndTime", ETime),
                 new SqlParameter("DaysAvailable", mTutor.DaysAvailable),
                 new SqlParameter("Action", "Add"),
+                new SqlParameter("Email", mTutor.Email )
             };
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }
@@ -73,6 +75,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("DaysAvailable", tutor.DaysAvailable),
                 new SqlParameter("TutorID", tutor.TutorID),
                 new SqlParameter("AvailabilityID", tutor.AvailabilityID),
+                new SqlParameter("Email", tutor.Email),
             };
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }
