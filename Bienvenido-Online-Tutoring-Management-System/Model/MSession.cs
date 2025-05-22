@@ -21,6 +21,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Model
         public decimal TotalHours { get; set; }
         public string ContactDetails { get; set; }
         public DateTime PaidDate { get; set; }
+        public string Email { get; set; }
 
         public override string ToString()
         {

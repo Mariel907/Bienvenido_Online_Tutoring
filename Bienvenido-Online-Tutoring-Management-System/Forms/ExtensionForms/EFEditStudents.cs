@@ -67,7 +67,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             bool hasError = false;
 
-            if (string.IsNullOrEmpty(G2TxbxFirstname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxFirstname.Text))
             {
                 LblFirstname.Visible = true;
                 hasError = true;
@@ -75,7 +75,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblFirstname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxLastname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxLastname.Text))
             {
                 LblLastname.Visible = true;
                 hasError = true;
@@ -83,7 +83,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblLastname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            if (string.IsNullOrWhiteSpace(G2TxbxContactDetails.Text) || !IsValidEmail())
             {
                 LblEmail.Visible = true;
                 hasError = true;
@@ -182,7 +182,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void FirstAndLastname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
         }
     }

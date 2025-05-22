@@ -25,7 +25,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             {
                 TutorID = int.Parse(reader["TutorID"].ToString()),
                 TutorName = reader["Fullname"].ToString(),
-                HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString())
+                HourlyRate = Convert.ToDecimal(reader["HourlyRate"].ToString()),
+                Email = reader["Email"].ToString()
             });
         }
 
@@ -54,7 +55,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 StatusBill = reader["StatusBill"].ToString(),
                 InvoiceID = int.Parse(reader["InvoiceID"].ToString()),
                 TotalHours = Convert.ToDecimal(reader["TotalHours"].ToString()),
-                SessionID = int.Parse(reader["SessionID"].ToString())
+                SessionID = int.Parse(reader["SessionID"].ToString()),
+                Email = reader["Email"].ToString()
             });
         }
 
@@ -218,9 +220,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 }
             }
         }
-        public void FillInInvoices(DataGridView DGV, MStudent stud)
+        public bool FillInInvoices(DataGridView DGV, MStudent stud)
         {
+            bool HasError = false;
             var list = new List<MSession>();
+
+            var ListmTutor = new List<MTutorProfile>();
+
+            var uniqueEmails = new HashSet<string>();
+
             foreach (DataGridViewRow row in DGV.Rows)
             {
                 if (row.Cells["StatusBill"].Value != null &&
@@ -239,9 +247,27 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 session.TotalHours = Convert.ToDecimal(row.Cells["TotalHours"].Value.ToString());
 
                 list.Add(session);
+
+                var mTutor = new MTutorProfile();
+
+                string tutorEmail = row.Cells["EmailTutor"].Value.ToString();
+
+                if(uniqueEmails.Add(tutorEmail))
+                {
+                    mTutor.Email = row.Cells["EmailTutor"].Value.ToString();
+                    ListmTutor.Add(mTutor);
+                }
             }
-            RecieptSched rs = new RecieptSched(list, stud);
-            rs.ShowDialog();
+            RecieptSched rs = new RecieptSched(list, stud, ListmTutor);
+
+            if (rs.IsSendEmail())
+            {
+                HasError = true;
+
+                rs.ShowDialog();
+            }
+
+            return HasError;
         }
 
         public void PaidStatusBill(DataGridView DGV)
@@ -261,6 +287,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             }
         }
 
-        
+
     }
 }

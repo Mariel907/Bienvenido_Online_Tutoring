@@ -34,6 +34,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             DataGridViewRow selectedRow = DGVStudent.SelectedRows[0];
             stud.StudentName = selectedRow.Cells["StudentName"].Value.ToString();
             stud.StudentID = Convert.ToInt32(selectedRow.Cells["StudentID"].Value.ToString());
+            stud.ContactDetails = selectedRow.Cells["ContactDetails"].Value.ToString();
 
             EFSChedule schedule = new EFSChedule(stud);
             form.OpenForm(schedule, dashboard.Panel);

@@ -35,7 +35,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             bool hasError = false;
 
-            if (string.IsNullOrEmpty(G2TxbxFirstname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxFirstname.Text))
             {
                 LblFirstname.Visible = true;
                 hasError = true;
@@ -43,7 +43,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblFirstname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxLastname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxLastname.Text))
             {
                 LblLastname.Visible = true;
                 hasError = true;
@@ -51,7 +51,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblLastname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxContactDetails.Text) || !IsValidEmail())
+            if (string.IsNullOrWhiteSpace(G2TxbxContactDetails.Text) || !IsValidEmail())
             {
                 LblEmail.Visible = true;
                 hasError = true;
@@ -82,7 +82,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 if (IsFieldEmpty()) return;
 
                 List<string> selectedItem = new List<string>();
-                foreach(var Item in LstBxExpertise.SelectedItems) 
+                foreach (var Item in LstBxExpertise.SelectedItems)
                     selectedItem.Add(Item.ToString());
 
                 MStudent student = new MStudent();
@@ -126,7 +126,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxFirstname_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsLetter(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
         }
 
@@ -142,12 +142,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxContactDetails_TextChanged(object sender, EventArgs e)
         {
-            if (!IsValidEmail())
-            {
-                LblEmail.Visible = true;
-            }
-            else
-                LblEmail.Visible = false;
+            LblEmail.Visible = false;
         }
 
         private void LstBxExpertise_SelectedIndexChanged(object sender, EventArgs e)

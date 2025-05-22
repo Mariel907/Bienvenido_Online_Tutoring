@@ -36,15 +36,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EFSelectStudent));
             this.DGVStudent = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.G2BtnSelect = new Guna.UI2.WinForms.Guna2Button();
-            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lastname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrefferedSubjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.G2BtnSelect = new Guna.UI2.WinForms.Guna2Button();
+            this.G2TxbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mStudentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +136,50 @@
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGVStudent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             // 
+            // StudentID
+            // 
+            this.StudentID.DataPropertyName = "StudentID";
+            this.StudentID.HeaderText = "Student ID";
+            this.StudentID.Name = "StudentID";
+            this.StudentID.ReadOnly = true;
+            // 
+            // StudentName
+            // 
+            this.StudentName.DataPropertyName = "StudentName";
+            this.StudentName.HeaderText = "Student Name";
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
+            // 
+            // Firstname
+            // 
+            this.Firstname.DataPropertyName = "Firstname";
+            this.Firstname.HeaderText = "Firstname";
+            this.Firstname.Name = "Firstname";
+            this.Firstname.ReadOnly = true;
+            this.Firstname.Visible = false;
+            // 
+            // Lastname
+            // 
+            this.Lastname.DataPropertyName = "Lastname";
+            this.Lastname.HeaderText = "Lastname";
+            this.Lastname.Name = "Lastname";
+            this.Lastname.ReadOnly = true;
+            this.Lastname.Visible = false;
+            // 
+            // ContactDetails
+            // 
+            this.ContactDetails.DataPropertyName = "ContactDetails";
+            this.ContactDetails.HeaderText = "Contact Details";
+            this.ContactDetails.Name = "ContactDetails";
+            this.ContactDetails.ReadOnly = true;
+            // 
+            // PrefferedSubjects
+            // 
+            this.PrefferedSubjects.DataPropertyName = "PrefferedSubjects";
+            this.PrefferedSubjects.HeaderText = "Preferred Subjects";
+            this.PrefferedSubjects.Name = "PrefferedSubjects";
+            this.PrefferedSubjects.ReadOnly = true;
+            // 
             // mStudentBindingSource
             // 
             this.mStudentBindingSource.DataSource = typeof(Bienvenido_Online_Tutoring_Management_System.Model.MStudent);
@@ -184,50 +228,6 @@
             this.G2TxbxSearch.Size = new System.Drawing.Size(1140, 36);
             this.G2TxbxSearch.TabIndex = 577;
             this.G2TxbxSearch.TextChanged += new System.EventHandler(this.G2TxbxSearch_TextChanged);
-            // 
-            // StudentID
-            // 
-            this.StudentID.DataPropertyName = "StudentID";
-            this.StudentID.HeaderText = "Student ID";
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            // 
-            // StudentName
-            // 
-            this.StudentName.DataPropertyName = "StudentName";
-            this.StudentName.HeaderText = "Student Name";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            // 
-            // Firstname
-            // 
-            this.Firstname.DataPropertyName = "Firstname";
-            this.Firstname.HeaderText = "Firstname";
-            this.Firstname.Name = "Firstname";
-            this.Firstname.ReadOnly = true;
-            this.Firstname.Visible = false;
-            // 
-            // Lastname
-            // 
-            this.Lastname.DataPropertyName = "Lastname";
-            this.Lastname.HeaderText = "Lastname";
-            this.Lastname.Name = "Lastname";
-            this.Lastname.ReadOnly = true;
-            this.Lastname.Visible = false;
-            // 
-            // ContactDetails
-            // 
-            this.ContactDetails.DataPropertyName = "ContactDetails";
-            this.ContactDetails.HeaderText = "Contact Details";
-            this.ContactDetails.Name = "ContactDetails";
-            this.ContactDetails.ReadOnly = true;
-            // 
-            // PrefferedSubjects
-            // 
-            this.PrefferedSubjects.DataPropertyName = "PrefferedSubjects";
-            this.PrefferedSubjects.HeaderText = "Preferred Subjects";
-            this.PrefferedSubjects.Name = "PrefferedSubjects";
-            this.PrefferedSubjects.ReadOnly = true;
             // 
             // EFSelectStudent
             // 

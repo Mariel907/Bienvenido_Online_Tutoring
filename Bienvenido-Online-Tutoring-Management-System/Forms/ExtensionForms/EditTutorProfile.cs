@@ -126,7 +126,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             bool hasError = false;
 
-            if (string.IsNullOrEmpty(G2TxbxFirstname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxFirstname.Text))
             {
                 LblFirstname.Visible = true;
                 hasError = true;
@@ -134,7 +134,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblFirstname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxLastname.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxLastname.Text))
             {
                 LblLastname.Visible = true;
                 hasError = true;
@@ -142,7 +142,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblLastname.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxHourlyRate.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxHourlyRate.Text))
             {
                 LblHourlyRate.Visible = true;
                 hasError = true;
@@ -150,7 +150,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblHourlyRate.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxDaysAvailable.Text))
+            if (string.IsNullOrWhiteSpace(G2TxbxDaysAvailable.Text))
             {
                 LblDaysAvailable.Visible = true;
                 hasError = true;
@@ -178,7 +178,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblExpertise.Visible = false;
 
-            if (string.IsNullOrEmpty(G2TxbxEmail.Text) || !IsValidEmail())
+            if (string.IsNullOrWhiteSpace(G2TxbxEmail.Text) || !IsValidEmail())
             {
                 LblEmail.Visible = true;
                 hasError = true;
@@ -186,7 +186,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 LblEmail.Visible = false;
 
-                return hasError;
+            return hasError;
         }
 
         private void EmptyFields()
@@ -269,7 +269,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void Name_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != (char)Keys.Back)
                 e.Handled = true;
         }
 
@@ -281,10 +281,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxEmail_TextChanged(object sender, EventArgs e)
         {
-            if (!IsValidEmail())
-                LblEmail.Visible = true;
-            else
-                LblEmail.Visible = false;
+            LblEmail.Visible = false;
         }
     }
 }

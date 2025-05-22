@@ -23,6 +23,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         {
             LblStudentID.Text = student.StudentID.ToString();
             G2TxbxFullname.Text = student.StudentName;
+            LblEmail.Text = student.ContactDetails;
         }
         private void EFSChedule_Load(object sender, EventArgs e)
         {
@@ -56,12 +57,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["EndTime"].Value = session.EndTime;
                 row.Cells["HourlyRate"].Value = session.HourlyRate;
                 row.Cells["TotalAmount"].Value = session.TotalAmount;
-                row.Cells["SessionDate"].Value = session.SessionDate.ToString("M/dd/yyyy");
+                row.Cells["SessionDate"].Value = session.SessionDate.ToString("MM/dd/yyyy");
                 row.Cells["TotalHours"].Value = session.TotalHours;
                 row.Cells["InvoiceID"].Value = session.InvoiceID;
                 row.Cells["StatusBill"].Value = session.StatusBill;
                 row.Cells["Status"].Value = session.Status;
                 row.Cells["StudentID"].Value = session.StudentID;
+                row.Cells["EmailTutor"].Value = session.Email;
             }
         }
 
@@ -91,7 +93,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             var groupedSlots = CSchedule.GetTimeslotsByDate(LblTutorID.Text, G2CmbxAvailableDay.Text);
 
             G2CmbxDateAvailable.DataSource = groupedSlots.Keys
-                .Select(date => date.ToShortDateString())
+                .Select(date => date.ToString("MM/dd/yyyy"))
                 .ToList();
         }
         private void G2CmbxTutorName_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,7 +145,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 if (ValidateStartAndEndTime()) return;
                 if (IsDraftSessiondateAndTimeExists())
                 {
-                    MessageBox.Show("Sorry we can't add this session because it overlaps in pending session", "An error occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -178,6 +179,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 row.Cells["InvoiceID"].Value = InvoiceID;
                 row.Cells["StatusBill"].Value = "Pending";
                 row.Cells["Status"].Value = "Draft";
+                row.Cells["EmailTutor"].Value = tutor.Email;
 
                 schedule.Insert(sub, tutor, LblStudentID.Text, STime, ETime, G2CmbxDateAvailable.SelectedValue, totalAmount, InvoiceID, totalHours);
                 SlotsDateAvailable();
@@ -198,7 +200,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         private bool IsDraftSessiondateAndTimeExists()
         {
             bool IsExists = false;
-
+            string conflictMessage = "We're unable to schedule this session as it conflicts with a pending session. \n\n";
             if (DGVStudent.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in DGVStudent.Rows)
@@ -210,13 +212,22 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     TimeSpan selectedStartTime = DateTime.Parse(G2CmbxStartTime.SelectedValue.ToString()).TimeOfDay;
                     TimeSpan selectedEndTime = DateTime.Parse(G2CmbxEndTime.SelectedValue.ToString()).TimeOfDay;
 
-                    if (row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase) ||
+                    if (row.Cells["StatusBill"].Value.ToString().Equals("Pending", StringComparison.OrdinalIgnoreCase) &&
                         row.Cells["SessionDate"].Value.ToString().Equals(G2CmbxDateAvailable.SelectedValue.ToString(), StringComparison.OrdinalIgnoreCase))
                     {
-                        if ((selectedStartTime >= sessionStart && selectedStartTime  < sessionEnd) ||
-                            (selectedEndTime > sessionStart && selectedEndTime <= sessionEnd)||
-                            (selectedStartTime <= sessionStart && selectedEndTime >= sessionEnd) || selectedStartTime == sessionEnd)
+                        if ((selectedStartTime >= sessionStart && selectedStartTime < sessionEnd) ||
+                            (selectedEndTime > sessionStart && selectedEndTime <= sessionEnd) ||
+                            (selectedStartTime <= sessionStart && selectedEndTime >= sessionEnd) || selectedStartTime == sessionEnd || selectedEndTime == sessionStart)
                         {
+                            string overlappingTime = $"{sessionStart} - {sessionEnd}";
+                            string subject = row.Cells["Subject"].Value.ToString();
+                            string tutorName = row.Cells["TutorName"].Value.ToString();
+                            string Sessiondate = row.Cells["SessionDate"].Value.ToString();
+
+                            conflictMessage += $"Conflicting Pending Session:\nSubject: {subject}\nTutor: {tutorName}\nDate: {Sessiondate}\nTime: {overlappingTime}\n\n" +
+                                $"If you would like to proceed with this new session, please cancel the existing pending session first.";
+
+                            MessageBox.Show(conflictMessage, "Scheduling Conflict", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             IsExists = true;
                             break;
                         }
@@ -334,9 +345,12 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             stud.StudentName = G2TxbxFullname.Text;
             stud.Cash = Convert.ToDecimal(guna2TextBoxCash.Text);
             stud.Changed = Convert.ToDecimal(guna2TextBoxChange.Text);
+            stud.ContactDetails = LblEmail.Text;
 
             schedule.PaidStatusBill(DGVStudent);
-            schedule.FillInInvoices(DGVStudent, stud);
+            bool HasError = schedule.FillInInvoices(DGVStudent, stud);
+            if (HasError) return;
+
             MarkAsPaid();
             emptyfield();
         }
