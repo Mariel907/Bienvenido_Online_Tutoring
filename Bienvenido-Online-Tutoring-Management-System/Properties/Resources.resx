@@ -136,6 +136,9 @@
   <data name="Cold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Payment_Bien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Payment_Bien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,7 +154,7 @@
   <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="White_and_Blue_Illustrative_Class_Logo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\White_and_Blue_Illustrative_Class_Logo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

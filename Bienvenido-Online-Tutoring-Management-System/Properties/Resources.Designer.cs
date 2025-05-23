@@ -179,5 +179,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap White_and_Blue_Illustrative_Class_Logo_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("White_and_Blue_Illustrative_Class_Logo-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

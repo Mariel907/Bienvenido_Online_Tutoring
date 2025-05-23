@@ -104,10 +104,10 @@
       <Body>
         <ReportItems>
           <Line Name="Line3">
-            <Top>2.47982in</Top>
-            <Left>0.12375in</Left>
+            <Top>3.19384in</Top>
+            <Left>0.05685in</Left>
             <Height>0in</Height>
-            <Width>6.1168in</Width>
+            <Width>6.33818in</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -155,8 +155,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>3.72634in</Top>
-            <Left>0.12375in</Left>
+            <Top>4.44036in</Top>
+            <Left>0.05684in</Left>
             <Height>0.98958in</Height>
             <Width>6.33819in</Width>
             <ZIndex>1</ZIndex>
@@ -189,7 +189,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>0.93846in</Top>
+            <Top>1.65248in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>1.29514in</Width>
@@ -231,7 +231,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>StudentName</rd:DefaultName>
-            <Top>0.93845in</Top>
+            <Top>1.65247in</Top>
             <Left>1.35199in</Left>
             <Height>0.25in</Height>
             <Width>4.79583in</Width>
@@ -269,7 +269,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>0.61901in</Top>
+            <Top>1.33303in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -303,7 +303,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>StudentID</rd:DefaultName>
-            <Top>0.61901in</Top>
+            <Top>1.33303in</Top>
             <Left>1.35199in</Left>
             <Height>0.25in</Height>
             <Width>4.79583in</Width>
@@ -340,7 +340,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>1.2579in</Top>
+            <Top>1.97192in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>0.48958in</Width>
@@ -369,12 +369,20 @@
                       <FontWeight>Medium</FontWeight>
                     </Style>
                   </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Medium</FontWeight>
+                    </Style>
+                  </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Date</rd:DefaultName>
-            <Top>1.2579in</Top>
+            <Top>1.97192in</Top>
             <Left>1.35199in</Left>
             <Height>0.25in</Height>
             <Width>4.79583in</Width>
@@ -393,10 +401,10 @@
             </Style>
           </Textbox>
           <Line Name="Line2">
-            <Top>0.06944in</Top>
-            <Left>0.11208in</Left>
+            <Top>1.16069in</Top>
+            <Left>0.05685in</Left>
             <Height>0in</Height>
-            <Width>6.12847in</Width>
+            <Width>6.13852in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -944,8 +952,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DSSchedule</DataSetName>
-            <Top>1.7658in</Top>
-            <Left>0.05685in</Left>
+            <Top>2.47982in</Top>
+            <Left>0.05684in</Left>
             <Height>0.5in</Height>
             <Width>6.33819in</Width>
             <ZIndex>9</ZIndex>
@@ -974,7 +982,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox65</rd:DefaultName>
-            <Top>2.65847in</Top>
+            <Top>3.37249in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>1.29514in</Width>
@@ -1008,7 +1016,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox65</rd:DefaultName>
-            <Top>2.97791in</Top>
+            <Top>3.69193in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1042,7 +1050,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox65</rd:DefaultName>
-            <Top>3.29735in</Top>
+            <Top>4.01137in</Top>
             <Left>0.05685in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
@@ -1078,7 +1086,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Cash1</rd:DefaultName>
-            <Top>2.97791in</Top>
+            <Top>3.69193in</Top>
             <Left>1.43306in</Left>
             <Height>0.25in</Height>
             <Width>4.96197in</Width>
@@ -1114,7 +1122,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Changed1</rd:DefaultName>
-            <Top>3.29735in</Top>
+            <Top>4.01137in</Top>
             <Left>1.43306in</Left>
             <Height>0.25in</Height>
             <Width>4.96197in</Width>
@@ -1150,7 +1158,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Cash1</rd:DefaultName>
-            <Top>2.65847in</Top>
+            <Top>3.37249in</Top>
             <Left>1.43306in</Left>
             <Height>0.25in</Height>
             <Width>4.96197in</Width>
@@ -1165,112 +1173,101 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Scheduled Receipt Payment </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>20pt</FontSize>
+                      <FontWeight>ExtraBold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.24053in</Top>
+            <Left>1.43306in</Left>
+            <Height>0.45486in</Height>
+            <Width>4.53757in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Image Name="Logo">
+            <Source>Embedded</Source>
+            <Value>White_and_Blue_Illustrative_Class_Logoremovebgpreview</Value>
+            <Sizing>Fit</Sizing>
+            <Top>0.24053in</Top>
+            <Left>0.12375in</Left>
+            <Height>0.85071in</Height>
+            <Width>1.06883in</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Beinvenido Online Tutoring Management System</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>ExtraBold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox15</rd:DefaultName>
+            <Top>0.70138in</Top>
+            <Left>1.43306in</Left>
+            <Height>0.25in</Height>
+            <Width>4.53757in</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>4.91384in</Height>
+        <Height>6.44509in</Height>
         <Style />
       </Body>
-      <Width>6.60368in</Width>
+      <Width>6.58285in</Width>
       <Page>
-        <PageHeader>
-          <Height>0.98612in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Scheduled Receipt Payment </Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>20pt</FontSize>
-                        <FontWeight>ExtraBold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.08082in</Top>
-              <Left>1.43306in</Left>
-              <Height>0.45486in</Height>
-              <Width>4.53757in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Image Name="Logo">
-              <Source>Embedded</Source>
-              <Value>White_and_Blue_Illustrative_Class_Logoremovebgpreview</Value>
-              <Sizing>Fit</Sizing>
-              <Top>0.08082in</Top>
-              <Left>0.12375in</Left>
-              <Height>0.85071in</Height>
-              <Width>1.06883in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-            <Textbox Name="Textbox18">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Beinvenido Online Tutoring Management System</Value>
-                      <Style>
-                        <FontFamily>Segoe UI</FontFamily>
-                        <FontSize>12pt</FontSize>
-                        <FontWeight>ExtraBold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox15</rd:DefaultName>
-              <Top>0.54167in</Top>
-              <Left>1.43306in</Left>
-              <Height>0.25in</Height>
-              <Width>4.53757in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>

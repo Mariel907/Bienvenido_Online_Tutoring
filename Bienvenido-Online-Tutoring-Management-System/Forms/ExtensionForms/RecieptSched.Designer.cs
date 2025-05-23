@@ -34,11 +34,11 @@
             // 
             // RVSchedulePayment
             // 
-            this.RVSchedulePayment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RVSchedulePayment.Dock = System.Windows.Forms.DockStyle.Top;
             this.RVSchedulePayment.Location = new System.Drawing.Point(0, 0);
             this.RVSchedulePayment.Name = "RVSchedulePayment";
             this.RVSchedulePayment.ServerReport.BearerToken = null;
-            this.RVSchedulePayment.Size = new System.Drawing.Size(936, 450);
+            this.RVSchedulePayment.Size = new System.Drawing.Size(936, 451);
             this.RVSchedulePayment.TabIndex = 0;
             // 
             // RecieptSched

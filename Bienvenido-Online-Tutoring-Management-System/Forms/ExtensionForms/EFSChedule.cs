@@ -346,10 +346,10 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             stud.Cash = Convert.ToDecimal(guna2TextBoxCash.Text);
             stud.Changed = Convert.ToDecimal(guna2TextBoxChange.Text);
             stud.ContactDetails = LblEmail.Text;
+            stud.EnrollmentFee = Convert.ToDecimal(LblGrandTotal.Text.Replace("P", ""));
 
             schedule.PaidStatusBill(DGVStudent);
-            bool HasError = schedule.FillInInvoices(DGVStudent, stud);
-            if (HasError) return;
+            schedule.FillInInvoices(DGVStudent, stud);
 
             MarkAsPaid();
             emptyfield();

@@ -38,6 +38,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 DaysAvailable = reader["AvailableDay"].ToString(),
             });
         }
+
         public static List<MSession> ShowScheduled(string StudentID)
         {
             return DataLoader.ExecuteStoredProcedure("Schedule_ShowAdd", new Dictionary<string, object> { { "Action", "ShowSchedStudent" }, { "StudentID", StudentID } }, reader => new MSession
@@ -220,9 +221,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 }
             }
         }
-        public bool FillInInvoices(DataGridView DGV, MStudent stud)
+        public void FillInInvoices(DataGridView DGV, MStudent stud)
         {
-            bool HasError = false;
             var list = new List<MSession>();
 
             var ListmTutor = new List<MTutorProfile>();
@@ -260,14 +260,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
             }
             RecieptSched rs = new RecieptSched(list, stud, ListmTutor);
 
-            if (rs.IsSendEmail())
-            {
-                HasError = true;
+            //if (rs.IsSendEmail())
+            //{
+            //    HasError = true;
 
+            //}
+            //else
                 rs.ShowDialog();
-            }
-
-            return HasError;
         }
 
         public void PaidStatusBill(DataGridView DGV)

@@ -372,6 +372,7 @@
     <None Include="Resources\warm.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\Rain.png" />
+    <None Include="Resources\White_and_Blue_Illustrative_Class_Logo-removebg-preview.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

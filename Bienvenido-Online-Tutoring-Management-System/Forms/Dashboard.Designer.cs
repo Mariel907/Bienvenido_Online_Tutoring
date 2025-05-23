@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.G2Subjects = new Guna.UI2.WinForms.Guna2Button();
+            this.G2BtnTransaction = new Guna.UI2.WinForms.Guna2Button();
+            this.G2BtnStudents = new Guna.UI2.WinForms.Guna2Button();
+            this.G2BtnTutorsProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.G2BtnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.LblTitle = new System.Windows.Forms.Label();
             this.PnlDashboard = new System.Windows.Forms.Panel();
-            this.G2Subjects = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnTransaction = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnStudents = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnTutorsProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.G2BtnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,86 +65,6 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(184, 681);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 170);
-            this.panel2.TabIndex = 1;
-            this.panel2.Click += new System.EventHandler(this.Form_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(184, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(1166, 86);
-            this.panel3.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1146, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido Online Tutoring";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.label2.Location = new System.Drawing.Point(10, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1146, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Management System ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.panel4.Controls.Add(this.LblTitle);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(184, 86);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1166, 49);
-            this.panel4.TabIndex = 2;
-            // 
-            // LblTitle
-            // 
-            this.LblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.LblTitle.Location = new System.Drawing.Point(0, -1);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(1166, 50);
-            this.LblTitle.TabIndex = 2;
-            this.LblTitle.Text = "Dashboard";
-            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PnlDashboard
-            // 
-            this.PnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
-            this.PnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlDashboard.Location = new System.Drawing.Point(184, 135);
-            this.PnlDashboard.Name = "PnlDashboard";
-            this.PnlDashboard.Size = new System.Drawing.Size(1166, 546);
-            this.PnlDashboard.TabIndex = 3;
             // 
             // G2Subjects
             // 
@@ -251,6 +171,17 @@
             this.G2BtnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.G2BtnDashboard.Click += new System.EventHandler(this.Form_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(164, 170);
+            this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.Form_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -261,6 +192,75 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(184, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(10);
+            this.panel3.Size = new System.Drawing.Size(1166, 86);
+            this.panel3.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1146, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bienvenido Online Tutoring";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.label2.Location = new System.Drawing.Point(10, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1146, 37);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Management System ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.panel4.Controls.Add(this.LblTitle);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(184, 86);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1166, 49);
+            this.panel4.TabIndex = 2;
+            // 
+            // LblTitle
+            // 
+            this.LblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.LblTitle.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.LblTitle.Location = new System.Drawing.Point(0, -1);
+            this.LblTitle.Name = "LblTitle";
+            this.LblTitle.Size = new System.Drawing.Size(1166, 50);
+            this.LblTitle.TabIndex = 2;
+            this.LblTitle.Text = "Dashboard";
+            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PnlDashboard
+            // 
+            this.PnlDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(249)))), ((int)(((byte)(246)))));
+            this.PnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlDashboard.Location = new System.Drawing.Point(184, 135);
+            this.PnlDashboard.Name = "PnlDashboard";
+            this.PnlDashboard.Size = new System.Drawing.Size(1166, 546);
+            this.PnlDashboard.TabIndex = 3;
             // 
             // Dashboard
             // 
@@ -279,9 +279,9 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
