@@ -73,54 +73,16 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 {
                     tutorRows += $@"
           <tr>
-              <td>{t.TutorName}</td>
-              <td>{t.Subject}</td>
-              <td>{t.SessionDate.ToString("MM/dd/yyyy")}</td>
-              <td>{t.StartTime}</td>
-              <td>{t.EndTime}</td>
-              <td>{$"₱{t.HourlyRate.ToString("F2")}"}</td>
-              <td>{$"₱{t.TotalAmount.ToString("F2")}"}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.TutorName}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.Subject}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.SessionDate.ToString("MM/dd/yyyy")}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.StartTime}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.EndTime}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.HourlyRate.ToString("F2")}"}</td>
+              <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.TotalAmount.ToString("F2")}"}</td>
           </tr>";
                 }
 
-                string Style = @"  
-      <style>
-body { font-family: Segoe UI; }
-          .header-text {margin-left: 20px;}
-          .title { font-size: 24px;font-weight: bold; }
-          .subtitle{ font-size: 18px; color; #555; }
-          table, th, td {
-text-align: left;
-color: #fff;
-border: 1px  solid black;
-border-collapse: collapse;
-}
-         th {
-background-color: #06172e;
-}
-td {
-color: #000000;
-}
-          .student-info { margin-top: 15px;
-          font-size:16px;
-              
-              }
-              .payment-info p {
-               display: flex;
-              justify-content: space-between;
-              margin-top: 15px;
-              font-size: 16px;
-             width: 100px;
-              }
-              .payment-info .amount {
-              text-align: right;
-             flex-grow: 1;
-             max-width: 150px;
-              }
-      </style>
-";
-
-                string compute = $@"";
                 string StudentID = stud.StudentID.ToString();
                 string StudentName = stud.StudentName.ToString();
                 string Date = DateTime.Now.ToString("MM/dd/yyyy");
@@ -128,46 +90,64 @@ color: #000000;
                 MailMessage mailMessage = new MailMessage
                 {
                     From = new MailAddress(mymail),
-                    Subject = $"Your Bienvenido Online Tutoring Schedule Receipt from {DateTime.Now}",
+                    Subject = $"Your Bienvenido Online Tutoring Scheduled Receipt from {DateTime.Now}",
                     Body = $@"
                  <!DOCTYPE html>
   <HTML>
   <head>
-        {Style}
       </head>
-      <body>
-            <div class='header-text'>
-                <p class='title'>Scheduled Receipt Payment</p>
-                <p class='subtitle'>Beinvenido Online Tutoring Management System</p>
+      <body style='font-family: Segoe UI;'>
+            <div>
+                <p style='font-size: 24px; font-weight: bold; text-align: left;'>Scheduled Receipt Payment</p>
+                <p style='font-size: 18px; text-align: left;'>Beinvenido Online Tutoring Management System</p>
         </div>
        <hr>
-          <div class='student-info'>
+          <div style='margin-top: 15px; font-size: 16px;'>
              <p><strong>Student ID:</strong> {StudentID} </p>
              <p><strong>Student Name:</strong> {StudentName} </p>
              <p><strong>Date:</strong> {Date} </p>
           </div>
       <hr>
-      <table style='width:100%'>
+      <table style='width:100%; 
+                    text-align: left; 
+                    color: #fff;
+                    border: 1px  solid #c4cbe9;
+                    border-collapse: collapse;
+font-size:16px;'>
           <tr>
-              <th>Tutor Name</th>
-              <th>Subject</th>
-              <th>Date</th>
-              <th>Start Time</th>
-              <th>End Time</th>
-              <th>Hrly Rate</th>
-              <th>Total</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                      '>Tutor Name</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                       '>Subject</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                      '>Date</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                       '>Start Time</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                       '>End Time</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                      '>Hrly Rate</th>
+              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                        '>Total</th>
           </tr>
             {tutorRows}
       </table>
         <hr>
-          <div class='payment-info'>
-             <p><strong>Enrollment Fee:</strong> <span class='amount'>{Fee} </span></p>
-             <p><strong>Cash:</strong> <span class='amount'>{cash}</span> </p>
-             <p><strong>Changed:</strong> <span class='amount'>{Changed}</span></p>
+          <div style='margin-top: 15px;
+          font-size:16px;'>
+
+             <p><strong>Enrollment Fee:</strong> <span style=' 
+             text-align: right; max-width: 150px; justify-content: space-between;'>{Fee} </span></p>
+
+             <p><strong>Cash:</strong> <span style=' 
+            text-align: right; max-width: 150px;'>{cash}</span> </p>
+
+             <p><strong>Changed:</strong> <span style=' 
+            text-align: right; max-width: 150px;'>{Changed}</span></p>
           </div>
       <hr>
       
-    <p>Thank you for trusting our online tutoring service to support your academic journey. Your dedication to learning and excellence inspires us. We are honored to be part of your success, and we look forward to continuing to help you achieve your educational goals!</p>
+    <p style='font-size: 16px;'>Thank you for trusting our online tutoring service to support your academic journey. Your dedication to learning and excellence inspires us. We are honored to be part of your success, and we look forward to continuing to help you achieve your educational goals!</p>
   </body>
   </html>
 
