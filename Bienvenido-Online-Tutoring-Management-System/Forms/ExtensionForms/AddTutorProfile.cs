@@ -1,10 +1,14 @@
 ﻿using Bienvenido_Online_Tutoring_Management_System.Class;
 using Bienvenido_Online_Tutoring_Management_System.Model;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
@@ -67,6 +71,9 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     return;
                 }
 
+                //if (SendEmail())
+                //    return;
+
                 List<string> selectedExpertise = new List<string>();
 
                 foreach (var item in LstBxExpertise.SelectedItems)
@@ -100,6 +107,48 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             }
             EmptyFields();
         }
+        //public bool SendEmail()
+        //{
+        //    bool hasError = false;
+        //    try
+        //    {
+        //        string mymail = "eyyyyay7@gmail.com";
+        //        string pass = GlobalConnection.ConnectionName;
+        //        SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+        //        {
+        //            Port = 587,
+        //            Credentials = new NetworkCredential(mymail, pass),
+        //            EnableSsl = true
+        //        };
+        //        string TutorName = $"{G2TxbxFirstname.Text} {G2TxbxLastname.Text}";
+
+        //        MailMessage mailMessage = new MailMessage
+        //        {
+        //            From = new MailAddress(mymail),
+        //            Subject = $"Welcome to Bienvenido Online Tutor - Account Succesfully Created! ({DateTime.Now})",
+        //            Body = $@"Hi <b>{TutorName}</b>,<br/><br/>" +
+        //           "We are delighted to welcome you to Bienvenido Online Tutoring Management System!<br/><br/>" +
+        //           "Your account has been successfully created and is ready for use. Please check your email for any scheduled sessions.<br/><br/>" +
+        //           "Thank you for trusting us to support your tutoring journey. If you have any questions, feel free to reach out.<br/><br/>" +
+        //           "Best regards,<br/>Bienvenido Online Tutor Team",
+        //            IsBodyHtml = true
+        //        };
+
+        //        mailMessage.To.Add(G2TxbxEmail.Text);
+
+        //        smtpClient.Send(mailMessage);
+
+        //        MessageBox.Show("Email sent successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("The email address does not exist, so we are unable to send the scheduled receipt to your Gmail. Please verify the recipient's email and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        hasError = true;
+        //    }
+
+        //    return hasError;
+        //}
+
         private void Visible_()
         {
             LblFirstname.Visible = false;

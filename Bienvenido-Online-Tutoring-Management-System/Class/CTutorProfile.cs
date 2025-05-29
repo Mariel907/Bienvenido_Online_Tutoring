@@ -29,15 +29,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 Email = reader["Email"].ToString()
             });
         }
-        private static List<MSubjects> SubjectShow()
-        {
-            return DataLoader.ExecuteStoredProcedure("Subject_UpdateDeleteAdd", new Dictionary<string, object> { { "Action", "Show" } }, reader => new MSubjects
-            {
-                SubID = int.Parse(reader["SubjectID"].ToString()),
-                SubjectName = reader["SubjectName"].ToString()
-            });
-        }
-        
+     
         public void Insert(MTutorProfile mTutor, List<string> SubExpert, DateTime STime, DateTime ETime)
         {
             string sub = string.Join(", ", SubExpert);
@@ -55,7 +47,8 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("EndTime", ETime),
                 new SqlParameter("DaysAvailable", mTutor.DaysAvailable),
                 new SqlParameter("Action", "Add"),
-                new SqlParameter("Email", mTutor.Email )
+                new SqlParameter("Email", mTutor.Email ),
+                new SqlParameter("DateCreated", DateTime.Now)
             };
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }
@@ -76,6 +69,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Class
                 new SqlParameter("TutorID", tutor.TutorID),
                 new SqlParameter("AvailabilityID", tutor.AvailabilityID),
                 new SqlParameter("Email", tutor.Email),
+                new SqlParameter("DateUpdated", DateTime.Now)
             };
             dataLoader.ExecuteData("Tutor_AddUpdateDelete", sp);
         }

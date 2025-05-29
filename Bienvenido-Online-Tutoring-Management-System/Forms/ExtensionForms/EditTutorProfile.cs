@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -89,6 +91,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             try
             {
                 if (isFieldsIsEmpty()) return;
+                //if (SendEmail()) return;
 
                 List<string> selectedItem = new List<string>();
 
@@ -116,6 +119,66 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             }
             EmptyFields();
         }
+        //public bool SendEmail()
+        //{
+        //    bool hasError = false;
+        //    try
+        //    {
+        //        string mymail = "eyyyyay7@gmail.com";
+        //        string pass = GlobalConnection.ConnectionName;
+        //        SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+        //        {
+        //            Port = 587,
+        //            Credentials = new NetworkCredential(mymail, pass),
+        //            EnableSsl = true
+        //        };
+
+        //        string TutorName = $"{G2TxbxFirstname.Text} {G2TxbxLastname.Text}";
+        //        string Email = G2TxbxEmail.Text;
+                
+        //        List<string> selectedItem = new List<string>();
+
+        //        foreach (var item in LstBxExpertise.SelectedItems)
+        //            selectedItem.Add(item.ToString());
+
+        //        string lstExpertise = string.Join(", ", selectedItem);
+        //        string DaysAvailable = G2TxbxDaysAvailable.Text;
+        //        decimal HrlyRate = Convert.ToDecimal(G2TxbxHourlyRate.Text);
+        //        TimeSpan STime = Convert.ToDateTime(DTPStartTime.Text).TimeOfDay;
+        //        TimeSpan ETime = Convert.ToDateTime(DTPEndTime.Text).TimeOfDay;
+
+        //        MailMessage mailMessage = new MailMessage
+        //        {
+        //            From = new MailAddress(mymail),
+        //            Subject = $"Your Bienvenido Tutor Profile Has Been Successfully Updated! ({DateTime.Now})",
+        //            Body = $"Dear <b>{TutorName}</b>,<br/><br/>" +
+        //                   "We have received your updated profile and are pleased to confirm your account creation with Bienvenido Online Tutoring Management System.<br/><br/>" +
+        //                   "Your account is now active and ready for use. Please check your email for any scheduled sessions and updates.<br/><br/>" +
+        //                   "Below is the updated information we received:<br/><br/>" +
+        //                   $"List of Expertise: <b>{lstExpertise}</b><br/><br/>" +
+        //                   $"Days Available:    <b>{DaysAvailable}</b> <br/><br/>" +
+        //                   $"Hourly Rate:       <b>{HrlyRate}</b> <br/><br/>" +
+        //                   $"Start Time:        <b>{STime}</b> <br/><br/>" +
+        //                   $"End Time:          <b>{ETime}</b> <br/><br/>" +
+        //                   "Thank you for trusting us. If you have any further inquiries, feel free to reach out.<br/><br/>" +
+        //                   "Best regards,<br/>Bienvenido Online Tutor Team",
+        //            IsBodyHtml = true
+        //        };
+
+        //        mailMessage.To.Add(G2TxbxEmail.Text);
+
+        //        smtpClient.Send(mailMessage);
+
+        //        MessageBox.Show("Email sent successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (SmtpFailedRecipientException)
+        //    {
+        //        MessageBox.Show("The email address does not exist, so we are unable to send the scheduled receipt to your Gmail. Please verify the recipient's email and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        hasError = true;
+        //    }
+
+        //    return hasError;
+        //}
         private bool IsValidEmail()
         {
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";

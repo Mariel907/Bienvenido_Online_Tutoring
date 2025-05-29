@@ -44,13 +44,13 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             RVSchedulePayment.LocalReport.DataSources.Clear();
             RVSchedulePayment.LocalReport.DataSources.Add(ds);
 
-            IsSendEmail();
+            SendEmail();
 
             this.RVSchedulePayment.RefreshReport();
 
         }
 
-        public void IsSendEmail()
+        public void SendEmail()
         {
             try
             {
@@ -83,10 +83,47 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
           </tr>";
                 }
 
+                string Style = @"  
+      <style>
+body { font-family: Segoe UI; }
+          .header-text {margin-left: 20px;}
+          .title { font-size: 24px;font-weight: bold; }
+          .subtitle{ font-size: 18px; color; #555; }
+          table, th, td {
+text-align: left;
+color: #fff;
+border: 1px  solid black;
+border-collapse: collapse;
+}
+         th {
+background-color: #06172e;
+}
+td {
+color: #000000;
+}
+          .student-info { margin-top: 15px;
+          font-size:16px;
+              
+              }
+              .payment-info p {
+               display: flex;
+              justify-content: space-between;
+              margin-top: 15px;
+              font-size: 16px;
+             width: 100px;
+              }
+              .payment-info .amount {
+              text-align: right;
+             flex-grow: 1;
+             max-width: 150px;
+              }
+      </style>
+";
+
+                string compute = $@"";
                 string StudentID = stud.StudentID.ToString();
                 string StudentName = stud.StudentName.ToString();
                 string Date = DateTime.Now.ToString("MM/dd/yyyy");
-
 
                 MailMessage mailMessage = new MailMessage
                 {
@@ -96,41 +133,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                  <!DOCTYPE html>
   <HTML>
   <head>
-      <style>
-          body {{ font-family: Segoe UI; }}
-          .header-text {{margin-left: 20px;}}
-          .title {{ font-size: 24px;font-weight: bold; }}
-          .subtitle{{ font-size: 18px; color; #555; }}
-          table {{ width: 100%; border: 1px  solid black;
-          th, {{
-              background-color: #06172e;
-              color: #fff;
-              border: 1px solid black; 
-              padding: 8px;
-              text-align: left;
-              }}
-          td {{
-              border: 1px solid black;
-              padding: 8px;
-              text-align: left; 
-              }}
-          .student-info {{ margin-top: 15px;
-          font-size:16px;
-              
-              }}
-              .payment-info p {{
-               display: flex;
-              justify-content: space-between;
-              margin-top: 15px;
-              font-size: 16px;
-             width: 100px;
-              }}
-              .payment-info .amount {{
-              text-align: right;
-             flex-grow: 1;
-             max-width: 150px;
-              }}
-      </style>
+        {Style}
       </head>
       <body>
             <div class='header-text'>
@@ -144,7 +147,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
              <p><strong>Date:</strong> {Date} </p>
           </div>
       <hr>
-      <table>
+      <table style='width:100%'>
           <tr>
               <th>Tutor Name</th>
               <th>Subject</th>
