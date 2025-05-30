@@ -4,6 +4,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
@@ -20,14 +21,23 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
         public int Day { get; set; }
         public List<MSession> Sessions { get; set; } = new List<MSession>();
         public Color CalendarColor { get; set; }
+
         public CustomCalendar(int day, int year, int month, Color bgColor)
         {
             InitializeComponent();
             Day = day;
             LblDay.Text = day.ToString();
+            WhatDayToday(day, month, year);
             CalendarColor = bgColor;
             LblDay.ForeColor = bgColor;
             _ = LoadWeatherAsync(day, year, month);
+        }
+        private void WhatDayToday(int day, int month, int year)
+        {
+            if (day == DateTime.Now.Day && month == DateTime.Now.Month && year == DateTime.Now.Year)
+                LblDay.BackColor = Color.FromArgb(188, 184, 177);
+            else
+                LblDay.BackColor = Color.FromArgb(250, 249, 246);
         }
 
         public async Task LoadWeatherAsync(int day, int year, int month)
@@ -39,6 +49,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
             else
                 MessageBox.Show("Image file not found: " + weatherDataByDay[day].image);
         }
+
         public static async Task<Dictionary<int, (string temp, string image)>> GetWeatherForMonth(int year, int month)
         {
             string apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=7.051399&longitude=125.59477&hourly=temperature_2m,rain,precipitation,relative_humidity_2m,dew_point_2m&timezone=auto";
@@ -102,7 +113,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 lstSessions.Items.Add($"{session.StartTime} - {session.EndTime}                                                                       \nSession Date : {session.SessionDate.ToString("MM/dd/yyyy")}  \nSubject : {session.Subject} \nStudent Name : {session.StudName} \nTutor Name: {session.TutorName} \nStatus : {session.Status}");
             }
         }
-
         private void lstSessions_MouseMove(object sender, MouseEventArgs e)
         {
             int index = lstSessions.IndexFromPoint(e.Location);
@@ -137,7 +147,7 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 }
             }
         }
-
+         
         private void lstSessions_DrawItem(object sender, DrawItemEventArgs e)
         {
             if (e.Index < 0) return;

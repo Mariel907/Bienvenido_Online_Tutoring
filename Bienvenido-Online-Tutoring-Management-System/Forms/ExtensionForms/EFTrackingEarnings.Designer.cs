@@ -36,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EFTrackingEarnings));
             this.DGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ContactDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -85,8 +87,6 @@
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.ContactDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SessionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TutorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -182,7 +182,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
-            this.DGV.Location = new System.Drawing.Point(14, 76);
+            this.DGV.Location = new System.Drawing.Point(12, 83);
             this.DGV.Margin = new System.Windows.Forms.Padding(4);
             this.DGV.Name = "DGV";
             this.DGV.ReadOnly = true;
@@ -200,7 +200,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV.Size = new System.Drawing.Size(1122, 417);
+            this.DGV.Size = new System.Drawing.Size(1122, 410);
             this.DGV.TabIndex = 610;
             this.DGV.TabStop = false;
             this.DGV.Tag = "book_id";
@@ -226,6 +226,21 @@
             this.DGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(184)))), ((int)(((byte)(177)))));
             this.DGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
             this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);
+            // 
+            // ContactDetails
+            // 
+            this.ContactDetails.DataPropertyName = "ContactDetails";
+            this.ContactDetails.HeaderText = "Contact Details";
+            this.ContactDetails.Name = "ContactDetails";
+            this.ContactDetails.ReadOnly = true;
+            this.ContactDetails.Visible = false;
+            // 
+            // PaidDate
+            // 
+            this.PaidDate.DataPropertyName = "PaidDate";
+            this.PaidDate.HeaderText = "Paid Date";
+            this.PaidDate.Name = "PaidDate";
+            this.PaidDate.ReadOnly = true;
             // 
             // panel23
             // 
@@ -680,21 +695,6 @@
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(179, 2);
             this.panel42.TabIndex = 442;
-            // 
-            // ContactDetails
-            // 
-            this.ContactDetails.DataPropertyName = "ContactDetails";
-            this.ContactDetails.HeaderText = "Contact Details";
-            this.ContactDetails.Name = "ContactDetails";
-            this.ContactDetails.ReadOnly = true;
-            this.ContactDetails.Visible = false;
-            // 
-            // PaidDate
-            // 
-            this.PaidDate.DataPropertyName = "PaidDate";
-            this.PaidDate.HeaderText = "Paid Date";
-            this.PaidDate.Name = "PaidDate";
-            this.PaidDate.ReadOnly = true;
             // 
             // SessionID
             // 

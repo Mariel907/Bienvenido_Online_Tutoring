@@ -1151,6 +1151,14 @@
                       <FontWeight>Medium</FontWeight>
                     </Style>
                   </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Medium</FontWeight>
+                    </Style>
+                  </TextRun>
                 </TextRuns>
                 <Style>
                   <TextAlign>Right</TextAlign>

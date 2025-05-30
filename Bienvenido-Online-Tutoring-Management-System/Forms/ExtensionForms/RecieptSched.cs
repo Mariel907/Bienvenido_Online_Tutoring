@@ -72,15 +72,15 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                 foreach (var t in list)
                 {
                     tutorRows += $@"
-          <tr>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.TutorName}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.Subject}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.SessionDate.ToString("MM/dd/yyyy")}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.StartTime}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{t.EndTime}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.HourlyRate.ToString("F2")}"}</td>
-              <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.TotalAmount.ToString("F2")}"}</td>
-          </tr>";
+                                  <tr>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{t.TutorName}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{t.Subject}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{t.SessionDate.ToString("MM/dd/yyyy")}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{t.StartTime}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{t.EndTime}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.HourlyRate.ToString("F2")}"}</td>
+                                      <td style='color: black; border: 1px  solid #c4cbe9;'>{$"₱{t.TotalAmount.ToString("F2")}"}</td>
+                                  </tr>";
                 }
 
                 string StudentID = stud.StudentID.ToString();
@@ -92,68 +92,79 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
                     From = new MailAddress(mymail),
                     Subject = $"Your Bienvenido Online Tutoring Scheduled Receipt from {DateTime.Now}",
                     Body = $@"
-                 <!DOCTYPE html>
-  <HTML>
-  <head>
-      </head>
-      <body style='font-family: Segoe UI;'>
-            <div>
-                <p style='font-size: 24px; font-weight: bold; text-align: left;'>Scheduled Receipt Payment</p>
-                <p style='font-size: 18px; text-align: left;'>Beinvenido Online Tutoring Management System</p>
-        </div>
-       <hr>
-          <div style='margin-top: 15px; font-size: 16px;'>
-             <p><strong>Student ID:</strong> {StudentID} </p>
-             <p><strong>Student Name:</strong> {StudentName} </p>
-             <p><strong>Date:</strong> {Date} </p>
-          </div>
-      <hr>
-      <table style='width:100%; 
-                    text-align: left; 
-                    color: #fff;
-                    border: 1px  solid #c4cbe9;
-                    border-collapse: collapse;
-font-size:16px;'>
-          <tr>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                      '>Tutor Name</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                       '>Subject</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                      '>Date</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                       '>Start Time</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                       '>End Time</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                      '>Hrly Rate</th>
-              <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
-                        '>Total</th>
-          </tr>
-            {tutorRows}
-      </table>
-        <hr>
-          <div style='margin-top: 15px;
-          font-size:16px;'>
+                          <!DOCTYPE html>
 
-             <p><strong>Enrollment Fee:</strong> <span style=' 
-             text-align: right; max-width: 150px; justify-content: space-between;'>{Fee} </span></p>
+                          <HTML>
+                          <head>
+                              </head>
+                              <body style='font-family: Arial;'>
+                                    <div>
+                                        <p style='font-size: 18px; font-weight: bold; text-align: left;'>Scheduled Receipt Payment</p>
+                                        <p style='font-size: 14px; text-align: left;'>Beinvenido Online Tutoring Management System</p>
+                                </div>
+                               <hr>
+                                  <div style='margin-top: 15px; font-size: 14px;'>
+                                     <p><strong>Student ID:</strong>
+                                            <span style='display: inline-block; text-align: right; max-width: 150px'>{StudentID}</span></p>
+                                     <p><strong>Student Name:</strong> 
+                                            <span style='display: inline-block; text-align: right; max-width: 100px'>{StudentName}</span></p>
+                                     <p><strong>Date:</strong>
+                                            <span style='display: inline-block; text-align: right; max-width: 150px'>{Date}</span></p>
+                                  </div>
+                              <hr>
+                              <table style='width:100%; 
+                                            text-align: left; 
+                                            color: #fff;
+                                            border: 1px  solid #c4cbe9;
+                                            border-collapse: collapse;
+                        font-size:14px;'>
+                                  <tr>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                              '>Tutor Name</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                               '>Subject</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                              '>Session Date</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                               '>Start Time</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                               '>End Time</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                              '>Hrly Rate</th>
+                                      <th style='border: 1px  solid #c4cbe9; background-color: #06172e;
+                                                '>Total</th>
+                                  </tr>
+                                    {tutorRows}
+                              </table>
+                                <hr>
 
-             <p><strong>Cash:</strong> <span style=' 
-            text-align: right; max-width: 150px;'>{cash}</span> </p>
-
-             <p><strong>Changed:</strong> <span style=' 
-            text-align: right; max-width: 150px;'>{Changed}</span></p>
-          </div>
-      <hr>
+                                  <div style='margin-top: 15px;
+                                  font-size:14px;'>
+                                    <table style='width: 100%; border-collapse: collapse;'>
+                                    <tr>
+                                        <td><strong>Enrollment Fee:</strong></td>
+                                        <td style='text-align: right;'>{Fee}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cash:</strong></td>
+                                        <td style='text-align: right;'>{cash}</td>
+                                    </tr>
+                                    <tr>
+                                         <td><strong>Changed:</strong></td>
+                                         <td style='text-align: right;'>{Changed}</td>
+                                    </tr>
+                                    </table>
+                                  </div>
+                              <hr>
       
-    <p style='font-size: 16px;'>Thank you for trusting our online tutoring service to support your academic journey. Your dedication to learning and excellence inspires us. We are honored to be part of your success, and we look forward to continuing to help you achieve your educational goals!</p>
-  </body>
-  </html>
+                            <p style='font-size: 14px;'>Thank you for trusting our online tutoring service to support your academic journey. Your dedication to learning and excellence inspires us. We are honored to be part of your success, and we look forward to continuing to help you achieve your educational goals!</p>
+                          </body>
+                          </html>
 
-",
+                        ",
                     IsBodyHtml = true
                 };
+
 
                 foreach (var t in tutor)
                     mailMessage.To.Add(t.Email);

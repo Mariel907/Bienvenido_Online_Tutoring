@@ -151,7 +151,6 @@ namespace Bienvenido_Online_Tutoring_Management_System.Forms.ExtensionForms
 
         private void G2TxbxSearch_TextChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
